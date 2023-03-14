@@ -1,0 +1,66 @@
+.article-card {
+  &_type_media {
+    padding: 20px;
+  }
+  &__image {
+    margin-bottom: 10px;
+    width: 100%;
+    /* margin-top: 20px; */
+  }
+
+  &__date {
+    margin-bottom: 10px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 150%;
+    color: #4f4f4f;
+  }
+
+  &__title {
+    margin-bottom: 10px;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 150%;
+    color: #202020;
+    &_type_media {
+      -webkit-line-clamp: 3; /* Число отображаемых строк */
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      font-size: 20px;
+      line-height: 27px;
+      height: 81px;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      @media (min-width: 560px) {
+        font-size: 18px;
+      }
+    }
+  }
+
+  &__text {
+    max-height: 144px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    color: #202020;
+    &_type_media {
+      -webkit-line-clamp: 4; /* Число отображаемых строк */
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      text-overflow: ellipsis;
+      height: 96px;
+      margin-bottom: 20px;
+      overflow: hidden;
+      @media (max-width: 560px) {
+        font-size: 15px;
+      }
+    }
+  }
+
+  &__link {
+    color: #da8a3a;
+  }
+}
+.cards {
+  margin-top: 5px;
+}

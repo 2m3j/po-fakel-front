@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <title>Факел</title>
+  </head>
+
+  <body>
+    <header class="header">
+      <div class="container-header">
+        <div class="header__wrapper">
+          <img src="/src/images/logo.png" alt="logo" class="header__logo" />
+          <ul class="header__nav">
+            <li class="header__item">О нас</li>
+            <li class="header__item">Имена</li>
+            <button class="dropbtn" onclick="myFunction()">
+              <li class="header__item">Галерея</li>
+            </button>
+            <div class="vector">
+              <img
+                src="/src/images/vector-down.png"
+                alt="vector"
+                class="header__img-vector-down"
+                id="vectorId-down"
+              />
+              <img
+                src="/src/images/vector-up.png"
+                alt="vector"
+                class="header__img-vector-up"
+                id="vectorId-up"
+              />
+            </div>
+            <div class="dropdown-content" id="myDropdown">
+              <a class="header__sel" href="#">Фото</a>
+              <a class="header__sel" href="#">Видео</a>
+              <a class="header__sel" href="#">Аудио</a>
+            </div>
+            <li class="header__item">Новости</li>
+            <li class="header__item">Контакты</li>
+          </ul>
+          <div class="header__img-box">
+            <input
+              type="text"
+              placeholder="Поиск по сайту..."
+              class="header__search"
+            />
+            <img
+              src="/src/images/magnifier.png"
+              alt="magnifier"
+              class="header__magnifier"
+            />
+          </div>
+        </div>
+      </div>
+      <div class="rel">
+      <div class="navbar-tabl">
+        <img src="/src/images/logo.png" alt="logo" class="header__logo" />
+        <div class="nav-tabl">
+          <img
+          src="/src/images/magnifier.png"
+          alt="magnifier"
+          class="header-tabl__magnifier"
+          />
+        <div class="container-tabl">
+          <div class="navbar-tabl__wrap-tabl">
+            <div class="hamb-tabl">
+              <div class="hamb-tabl__field-tabl" id="hamb-tabl">
+                <span class="bar-tabl"></span>
+                 <span class="bar-tabl"></span>
+                <span class="bar-tabl"></span>
+              </div>
+            </div>
+            <ul class="menu-tabl" id="menu-tabl">
+              <li class="active-burger-item"><a href="#">О нас</a></li>
+              <li class="active-burger-item"><a href="#">Имена</a></li>
+              <li class="active-burger-item"><a href="#">Галерея</a></li>
+              <li class="active-burger-item"><a href="#">Новости</a></li>
+              <li class="active-burger-item"><a href="#">Контакты</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+          <div class="popup-tabl" id="popup-tabl"></div>
+      </div>
+    </div>
+    </header>
+    <main class="main">
+      <section class="promo">
+        <div class="promo-container">
+          <div class="promo__text">
+            <h1 class="promo__title">Поисковый отряд "Факел"</h1>
+            <h3 class="promo__subtitle">Возвращаем имена героев</h3>
+            <button class="promo__btn btn">Присоедениться</button>
+          </div>
+        </div>
+      </section>
+      <section class="about">
+        <div class="container-main container">
+          <div class="about__title-btn">
+            <div class="about__title">О нас</div>
+            <button class="about__btn btn">Подробнее</button>
+          </div>
+          <div class="about__grid container">
+            <div class="about__grid-one">
+              <img
+                src="/src/images/photo-one.png"
+                alt="photo"
+                class="about__img-one img-full"
+              />
+              <p class="about__text-one">
+                Мы — поисковый отряд «Факел» Вятского государственного
+                университета. Наш отряд был создан 27 декабря 2000 года приказом
+                № 169 ректора Кондратова Василия Михайловича. СДОД ДДТ
+                «Вдохновение».
+              </p>
+            </div>
+            <div class="about__grid-two">
+              <p class="about__text-two">
+                География поиска: Гридинская дорога, «Рамушевский коридор»,
+                заболоченные леса между д. Рамушево и д. Давыдово Старорусского
+                района Новгородской области. Также в разные годы отряд работал в
+                Демянском, Парфинском, Поддорском районах Новгородской области.
+              </p>
+              <img
+                src="/src/images/photo-two.png"
+                alt="photo"
+                class="about__img-two img-full"
+              />
+            </div>
+            <div class="about__grid-three">
+              <img
+                src="/src/images/photo-three.png"
+                alt="photo"
+                class="about__img-three img-full"
+              />
+              <p class="about__text-three">
+                Свыше 200 человек приняли участие в поисковых экспедициях.
+                Сейчас участники отряда — ребята из г. Кирова и области,
+                Удмуртии, Москвы, Пермского края, Рязанской области.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="numbers">
+        <div class="container-main container">
+          <div class="numbers__color">
+            <div class="numbers__blue">
+              <h2 class="numbers__num-blue flex-num">22</h2>
+              <p class="numbers__text-blue flex-txt">года существует отряд</p>
+            </div>
+            <div class="numbers__red">
+              <h2 class="numbers__num-red flex-num">31</h2>
+              <p class="numbers__text-red flex-txt">поисковая экспедиция</p>
+            </div>
+            <div class="numbers__green">
+              <h2 class="numbers__num-green flex-num">46</h2>
+              <p class="numbers__text-green flex-txt">
+                имен бойцов установлено
+              </p>
+            </div>
+            <div class="numbers__orange">
+              <h2 class="numbers__num-orange flex-num">688</h2>
+              <p class="numbers__text-orange flex-txt">бойцов найдены</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="main-names">
+        <div class="container">
+          <h2 class="main-names__title">Имена</h2>
+          <div class="swiper card-slider">
+            <div class="card-slider__navigation d-none d-md-block">
+              <span class="card-slider__navigation-left swiper-button-left">
+                <img src="/src/images/ar-left.png" alt="arrow" />
+              </span>
+              <span class="card-slider__navigation-right swiper-button-right">
+                <img src="/src/images/ar-right.png" alt="arrow" />
+              </span>
+            </div>
+            <div class="swiper-wrapper">
+              <div class="swiper-slide card-slider__item">
+                <div
+                  class="card-slider__item-card"
+                  style="background-image: url(../images/man-one.png)"
+                >
+                  <div class="card-slider__title">
+                    Феноберцев Роман Филиппович
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide card-slider__item">
+                <div
+                  class="card-slider__item-card"
+                  style="background-image: url(../images/man-two.png)"
+                >
+                  <div class="card-slider__title">
+                    Феноберцев Роман Филиппович
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide card-slider__item">
+                <div
+                  class="card-slider__item-card"
+                  style="background-image: url(../images/man-three.png)"
+                >
+                  <div class="card-slider__title">
+                    Феноберцев Роман Филиппович
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide card-slider__item">
+                <div
+                  class="card-slider__item-card"
+                  style="background-image: url(../images/man-four.png)"
+                >
+                  <div class="card-slider__title">
+                    Феноберцев Роман Филиппович
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide card-slider__item">
+                <div
+                  class="card-slider__item-card"
+                  style="background-image: url(../images/man-five.png)"
+                >
+                  <div class="card-slider__title">
+                    Феноберцев Роман Филиппович
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide card-slider__item">
+                <div
+                  class="card-slider__item-card"
+                  style="background-image: url(../images/man-six.png)"
+                >
+                  <div class="card-slider__title">
+                    Феноберцев Роман Филиппович
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide card-slider__item">
+                <div
+                  class="card-slider__item-card"
+                  style="background-image: url(../images/man-seven.png)"
+                >
+                  <div class="card-slider__title">
+                    Феноберцев Роман Филиппович
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide card-slider__item">
+                <div
+                  class="card-slider__item-card"
+                  style="background-image: url(../images/man-eight.png)"
+                ></div>
+              </div>
+            </div>
+            <div class="swiper-pagination"></div>
+          </div>
+          <div class="main-names__link-wrapper">
+            <a class="main-names__link btn" href="#">Перейти к разделу</a>
+          </div>
+        </div>
+      </section>
+      <section class="main-gallery">
+        <div class="container">
+          <h2 class="main-gallery__title">Галерея</h2>
+          <div class="row">
+            <div class="col-12 col-md-5 mb-4 mb-md-0">
+              <div class="image-tile">
+                <div
+                  class="image-tile__wrapper"
+                  style="background-image: url(../images/gallery-one.png)"
+                >
+                  <div class="image-tile__title">Фото</div>
+                  <button class="image-tile__btn btn">Перейти</button>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-md-7">
+              <div class="image-tile image-tile--half mb-4">
+                <div
+                  class="image-tile__wrapper"
+                  style="background-image: url(../images/gallery-two.png)"
+                >
+                  <div class="image-tile__title">Видео</div>
+                  <button class="image-tile__btn btn">Перейти</button>
+                </div>
+              </div>
+              <div class="image-tile image-tile--half">
+                <div
+                  class="image-tile__wrapper"
+                  style="background-image: url(../images/gallery-three.png)"
+                >
+                  <div class="image-tile__title">Аудио</div>
+                  <button class="image-tile__btn btn">Перейти</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="main-news">
+        <div class="container">
+          <h2 class="main-news__title">Новости</h2>
+          <div class="row">
+            <div class="col-12 col-md-6 col-lg-4 mb-4 mb-md-0">
+              <div class="article-card">
+                <img
+                  src="/src/images/news-one.png"
+                  alt="news"
+                  class="article-card__image"
+                />
+                <h6 class="article-card__date">27.12.2022</h6>
+                <h3 class="article-card__title">
+                  22Й ДЕНЬ РОЖДЕНИЯ ОТРЯДА «ФАКЕЛ»
+                </h3>
+                <div class="article-card__text">
+                  В этот день исполнилось 22 года нашему замечательному,
+                  любимому, боевому и трудовому поисковому отряду «Факел».
+                  Поисковый отряд «Факел» был основан студентами Вятского
+                  государственного университета…<a
+                    class="article-card__link"
+                    href="#"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >Читать далее</a
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4">
+              <div class="article-card">
+                <img
+                  src="/src/images/news-two.png"
+                  alt="news"
+                  class="article-card__image"
+                />
+                <h6 class="article-card__date">03.12.2022</h6>
+                <h3 class="article-card__title">ДЕНЬ НЕИЗВЕСТНОГО СОЛДАТА</h3>
+                <div class="article-card__text">
+                  Этот день можно по праву назвать ещё и «Днём поисковика». Не
+                  праздник, конечно, а своеобразный рубежный день, когда десятки
+                  и сотни поисковых отрядов подводят итоги своих полевых
+                  сезонов. В день…
+                  <a
+                    class="article-card__link"
+                    href="#"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >Читать далее</a
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4 d-none d-lg-flex">
+              <div class="article-card">
+                <img
+                  src="/src/images/news-three.png"
+                  alt="news"
+                  class="article-card__image"
+                />
+                <h6 class="article-card__date">19.10.2022</h6>
+                <h3 class="article-card__title">
+                  НАЙДЕНА СЕМЬЯ ФЕНОБЕРЦЕВА РОМАНА ФИЛИППОВИЧА
+                </h3>
+                <div class="article-card__text">
+                  Поисковики отряда «Факел» г. Киров, работая в ходе осеннего
+                  этапа межрегиональной Вахты Памяти «Поисковой экспедиции
+                  „Долина“, нашли останки 7 солдат. Личность одного из них
+                  удалось установить по записке из смертного...
+                  <a
+                    class="article-card__link"
+                    href="#"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >Читать далее</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="main-news__link-wrapper">
+            <a href="#" class="main-news__link btn">Больше новостей отряда</a>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="container" style="padding-top: 70px">
+        <div class="row justify-content-between">
+          <div class="col-12 col-md-4 col-lg-2">
+            <img src="/src/images/logo.png" alt="logo" class="footer__logo" />
+          </div>
+          <div class="col-12 col-md-5 col-lg-6">
+            <div class="row">
+              <div class="col-sm-12 col-lg-6">
+                <img
+                  src="/src/images/phone.png"
+                  alt="icon"
+                  class="footer__phone-img"
+                />
+                <p class="footer__phone-num">+79536952867</p>
+                <br />
+                <img
+                  src="/src/images/mail.png"
+                  alt="icon"
+                  class="footer__mail-img"
+                />
+                <p class="footer__mail-text">mporoshin@yandex.ru</p>
+              </div>
+              <div class="col-sm-12 col-lg-6">
+                <h4 class="footer__social-text">Мы в социальных сетях</h4>
+                <div class="footer__social-icons">
+                  <img
+                    src="/src/images/vk.png"
+                    alt="icon"
+                    class="footer__icons-vk"
+                  />
+                  <img
+                    src="/src/images/wp.png"
+                    alt="icon"
+                    class="footer__icons-wp"
+                  />
+                  <img
+                    src="/src/images/wb.png"
+                    alt="icon"
+                    class="footer__icons-wb"
+                  />
+                  <img
+                    src="/src/images/tg.png"
+                    alt="icon"
+                    class="footer__icons-tg"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-3 lg-4">
+            <div class="row">
+              <div class="col-12 col-md-6">
+                <ul class="footer__list">
+                  <li class="footer__item">
+                    <a
+                      class="footer__link"
+                      href="#"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      >О нас</a
+                    >
+                  </li>
+                  <li class="footer__item">
+                    <a
+                      class="footer__link"
+                      href="#"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      >Имена</a
+                    >
+                  </li>
+                  <li class="footer__item">
+                    <a
+                      class="footer__link"
+                      href="#"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      >Галерея</a
+                    >
+                  </li>
+                </ul>
+              </div>
+              <div class="col-12 col-md-6">
+                <ul>
+                  <li class="footer__item">
+                    <a
+                      class="footer__link"
+                      href="#"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      >Новости</a
+                    >
+                  </li>
+                  <li class="footer__item">
+                    <a
+                      class="footer__link"
+                      href="#"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      >Контакты</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="footer__line">
+          <img src="/src/images/line.png" alt="line" class="footer__line-img" />
+          <h3 class="footer__line-info">@ Fakel 2000-2023</h3>
+        </div>
+      </div>
+    </footer>
+    <!-- <template id="card-template">
+    <article class="card news__columns-one" aria-label="Карточка">
+            <div class="article-card-one">
+                <img src="/src/image/news-one.png" alt="news" class=" article-card__image">
+                <h6 class="article-card__date">${item.date}</h6>
+                <h3 class="article-card__title">${item.subtitle}</h3>
+                <p class="  article-card__text">${item.text}<a
+                            class="article-card__link" href="#" target="_blank" rel="noopener noreferrer">Читать
+                        далее</a></p>
+            </div>
+    </article>
+</template> -->
+  </body>
+</html>

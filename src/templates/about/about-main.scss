@@ -1,0 +1,60 @@
+.about-section-volonteer-stories {
+  background-clip: border-box;
+}
+.card-volonteer {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  &__text {
+    font-size: 20px;
+    line-height: 150%;
+    align-self: stretch;
+    @media (max-width: 1200px) {
+      font-size: 15px;
+    }
+  }
+  &__author {
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 150%;
+    text-align: end;
+    padding-right: 20px;
+  }
+  &__img {
+    background-position: center;
+    background-size: cover;
+    width: 350px;
+    height: 467px;
+    background-size: cover;
+    margin-right: 30px;
+    @media (min-width: 768px) {
+      width: 280px;
+      height: 460px;
+    }
+    @media (min-width: 1200px) {
+      width: 222px;
+      height: 296px;
+    }
+  }
+  &__item-card {
+    display: flex;
+    --bs-gutter-x: 0;
+    justify-content: center;
+  }
+  &__navigation {
+    position: absolute;
+    text-align: right;
+    top: -0;
+    right: 0;
+  }
+
+  &__navigation-left {
+    margin-right: 10px;
+  }
+
+  &__navigation-left,
+  &__navigation-right {
+    cursor: pointer;
+  }
+}

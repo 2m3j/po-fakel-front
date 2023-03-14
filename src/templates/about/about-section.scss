@@ -1,0 +1,115 @@
+.section {
+  margin-top: 100px;
+  color: #202020;
+  --font-size-md: 20px;
+
+  &__text {
+    font-size: 20px;
+    line-height: 150%;
+    color: #202020;
+
+    &_type_unfold {
+      height: fit-content;
+    }
+  }
+  &__span {
+    color: #da8a3a;
+  }
+
+  &__title-btn {
+    display: flex;
+    justify-content: space-between;
+    align-self: center;
+  }
+
+  &__title {
+    font-weight: 600;
+    font-size: 45px;
+    line-height: 60px;
+    margin-bottom: 50px;
+  }
+  &__button {
+    background: none;
+  }
+  &__btn {
+    width: 349px;
+    height: 56px;
+    background: #da8a3a;
+    border-radius: 10px;
+    font-weight: 600;
+    /*   font-size: 20px; */
+    line-height: 27px;
+    color: #ffffff;
+    @media (min-width: 768px) {
+      width: 103px;
+      /*  font-size: 20px; */
+    }
+    @media (max-width: 500px) {
+      height: 60px;
+      width: 100%;
+      /*  font-size: 20px; */
+    }
+  }
+  &__input {
+    height: 56px;
+    width: 100%;
+    /*    font-size: var(--font-size-md); */
+    &_type_date {
+      position: relative;
+      /*      font-size: var(--font-size-md); */
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+  }
+  &__icon {
+    position: absolute;
+    top: 10px;
+    right: 215px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .section {
+    margin-left: 165px;
+    margin-right: 165px;
+    --font-size-md: 18px;
+  }
+}
+@media (max-width: 800px) {
+  .section__text {
+    font-size: 18px;
+  }
+  .section__title {
+    margin-bottom: 38px;
+  }
+}
+@media (max-width: 500px) {
+  .section__text {
+    font-size: 15px;
+    height: 119px;
+    overflow: hidden;
+    &_type_unfold {
+      text-align: center;
+    }
+  }
+  .section__title {
+    margin-bottom: 30px;
+  }
+
+  .section__text_type_unfold {
+    height: fit-content;
+  }
+}
+:root {
+  --mdc-theme-primary: #da8a3a;
+  --mdc-button-outline-color: rgba(20, 20, 200, 0.2);
+  --mdc-typography-font-family: "Segoe UI";
+}
+.mdc-select {
+  height: 70px;
+}
+input {
+  border: 1px solid #9f9f9f;
+  border-radius: 5px;
+  --mdc-typography-font-size: var(--font-size-md);
+}

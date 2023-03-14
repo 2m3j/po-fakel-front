@@ -1,0 +1,32 @@
+@import "/src/components/article-card/style";
+
+.main-news {
+  padding: 80px 0;
+  background-color: #F3F3F3;
+  margin-top: 130px;
+
+  &__title {
+    font-weight: 600;
+    font-size: 45px;
+    line-height: 60px;
+    color: #202020;
+    margin-bottom: 50px;
+
+  }
+
+  &__link {
+    margin-top: 20px;
+    padding: 20px 45px;
+    background: #DA8A3A;
+    border-radius: 10px;
+    font-weight: 600;
+    font-size: 20px;
+    color: #FFFFFF;
+    text-align: center;
+  }
+
+  &__link-wrapper {
+    display: flex;
+    justify-content: center;
+  }
+}
