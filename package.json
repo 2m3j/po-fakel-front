@@ -26,8 +26,6 @@
     "@material/mwc-button": "^0.27.0",
     "@material/mwc-list": "^0.27.0",
     "@material/mwc-select": "^0.27.0",
-    "@material/web": "^1.0.0-pre.4",
-    "bootstrap": "^5.2.3",
-    "swiper": "^9.0.5"
+    "@material/web": "^1.0.0-pre.4"
   }
 }
