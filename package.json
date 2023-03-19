@@ -5,13 +5,19 @@
   "scripts": {
     "start": "webpack serve",
     "build": "webpack",
-    "watch": "webpack -w"
+    "watch": "webpack -w",
+    "sprite": "gulp sprite",
+    "svgmin": "gulp svgmin"
   },
   "devDependencies": {
     "@babel/core": "^7.20.12",
     "@babel/preset-env": "^7.20.2",
     "babel-loader": "^9.1.2",
     "css-loader": "^6.7.3",
+    "gulp": "^4.0.2",
+    "gulp-cheerio": "^1.0.0",
+    "gulp-svg-sprite": "^2.0.2",
+    "gulp-svgo": "^2.2.1",
     "html-loader": "^4.2.0",
     "html-webpack-plugin": "^5.5.0",
     "mini-css-extract-plugin": "^2.7.2",
