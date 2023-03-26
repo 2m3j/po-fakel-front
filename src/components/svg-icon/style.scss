@@ -1,0 +1,13 @@
+.svg-icon {
+  display: inline-block;
+  font-size: inherit;
+  height: 1em;
+  width: 1em;
+  overflow: visible;
+  vertical-align: -0.125em;
+
+  &_size_xl {
+    height: 1.5em;
+    width: 1.5em;
+  }
+}
