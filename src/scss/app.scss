@@ -1,11 +1,15 @@
-@import "fonts.css";
+@import "/src/css/fonts.css";
+@import "/src/css/bootstrap-grid.min.css";
 
+@import "media";
 @import "/src/templates/index/main-names";
 @import "/src/templates/index/main-news";
 @import "/src/templates/index/main-gallery";
 @import "/src/templates/about/about-section.scss";
 @import "/src/templates/about/about-main.scss";
 @import "src/components/flip/style.scss";
+@import "src/components/svg-icon/style";
+
 /* Обнуление стилей start */
 /*Обнуление стилей*/
 * {
@@ -111,6 +115,7 @@ h6 {
 }
 
 @import "header";
+@import "footer";
 
 .main {
   font-family: "Segoe UI";
@@ -127,6 +132,7 @@ h6 {
     object-position: center;
     width: 100%;
   }
+
   margin-top: 155px;
 
   &__title-btn {
@@ -309,96 +315,6 @@ h6 {
   transition: 0.3s all;
 }
 
-/* footer start*/
-.footer {
-  background: #4f4f4f;
-
-  &__columns {
-    padding-top: 50px;
-    display: flex;
-    justify-content: space-between;
-  }
-
-  &__contacts {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-  }
-
-  &__contacts-phone {
-    margin-bottom: 20px;
-  }
-
-  &__phone-img {
-    max-width: 24px;
-    max-height: 24px;
-  }
-
-  &__mail-img {
-    max-width: 24px;
-    max-height: 24px;
-  }
-
-  &__phone-num {
-    font-weight: 400;
-    font-size: 20px;
-    line-height: 27px;
-    color: #f3f3f3;
-    display: inline-block;
-  }
-
-  &__mail-text {
-    font-weight: 400;
-    font-size: 20px;
-    line-height: 27px;
-    color: #f3f3f3;
-    display: inline-block;
-  }
-
-  &__flex-c {
-    display: flex;
-  }
-
-  &__social-text {
-    margin-bottom: 20px;
-    font-weight: 400;
-    font-size: 20px;
-    line-height: 27px;
-    color: #f3f3f3;
-  }
-
-  &__item {
-    margin-bottom: 20px;
-    font-weight: 400;
-    font-size: 20px;
-    line-height: 27px;
-    color: #f3f3f3;
-  }
-
-  &__link {
-    color: #f3f3f3;
-  }
-
-  &__line {
-    margin-top: 40px;
-  }
-
-  &__line-img {
-    width: 100%;
-  }
-
-  &__line-info {
-    margin-top: 10px;
-    padding-bottom: 20px;
-    text-align: center;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 150%;
-    color: #f3f3f3;
-  }
-}
-/* footer end*/
-
 /* HOVER START*/
 .btn:hover {
   transition: 0.1s all;
@@ -427,22 +343,26 @@ h6 {
 
 /* Media start */
 
-@media (max-width: 991px){
+@media (max-width: 991px) {
   .about {
     &__title {
       font-weight: 600;
       font-size: 40px;
       line-height: 53px;
     }
+
     &__grid-one {
       grid-template-columns: 1fr;
     }
+
     &__grid-two {
       grid-template-columns: 1fr;
     }
+
     &__grid-three {
       grid-template-columns: 1fr;
     }
+
     &__btn {
       font-weight: 600;
       font-size: 18px;
@@ -525,6 +445,7 @@ h6 {
     text-align: center;
   }
 }
+
 @media (max-width: 576px) {
   .promo {
     padding-top: 100px;
@@ -547,14 +468,17 @@ h6 {
     &__btn {
       display: none;
     }
+
     &__text-one {
       font-size: 15px;
       padding: 30px;
     }
+
     &__text-two {
       font-size: 15px;
       padding: 30px;
     }
+
     &__text-three {
       font-size: 15px;
       padding: 30px;
@@ -567,4 +491,5 @@ h6 {
     }
   }
 }
+
 /* Media end */

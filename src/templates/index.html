@@ -5,7 +5,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap-grid.min.css"/>
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
     <title>Факел</title>
 </head>
@@ -358,107 +357,80 @@
     </section>
 </main>
 <footer class="footer">
-    <div class="container" style="padding-top: 70px">
+    <div class="container">
         <div class="row justify-content-between">
-            <div class="col-12 col-md-4 col-lg-2">
-                <img src="images/logo.png" alt="logo" class="footer__logo"/>
-            </div>
-            <div class="col-12 col-md-5 col-lg-6">
+            <div class="col-12 col-sm-6 col-md-9 col-lg-8">
                 <div class="row">
-                    <div class="col-sm-12 col-lg-6">
-                        <img
-                                src="images/phone.png"
-                                alt="icon"
-                                class="footer__phone-img"
-                        />
-                        <p class="footer__phone-num">+79536952867</p>
-                        <br/>
-                        <img
-                                src="images/mail.png"
-                                alt="icon"
-                                class="footer__mail-img"
-                        />
-                        <p class="footer__mail-text">mporoshin@yandex.ru</p>
+                    <div class="col-12 col-md-5 col-lg-3">
+                        <img src="images/logo.svg" alt="logo" class="footer__logo"/>
                     </div>
-                    <div class="col-sm-12 col-lg-6">
-                        <h4 class="footer__social-text">Мы в социальных сетях</h4>
-                        <div class="footer__social-icons">
-                            <img
-                                    src="images/vk.png"
-                                    alt="icon"
-                                    class="footer__icons-vk"
-                            />
-                            <img
-                                    src="images/wp.png"
-                                    alt="icon"
-                                    class="footer__icons-wp"
-                            />
-                            <img
-                                    src="images/wb.png"
-                                    alt="icon"
-                                    class="footer__icons-wb"
-                            />
-                            <img
-                                    src="images/tg.png"
-                                    alt="icon"
-                                    class="footer__icons-tg"
-                            />
+                    <div class="col-12 col-md-7 col-lg-9">
+                        <div class="row">
+                            <div class="col-sm-12 col-lg-6">
+                                <div class="footer__icon_text">
+                                    <svg class="svg-icon">
+                                        <use href="images/svg/symbol/svg/sprite.symbol.svg#phone"></use>
+                                    </svg>
+                                    +79536952867
+                                </div>
+                                <div class="footer__icon_text">
+                                    <svg class="svg-icon">
+                                        <use href="images/svg/symbol/svg/sprite.symbol.svg#envelope"></use>
+                                    </svg>
+                                    mporoshin@yandex.ru
+                                </div>
+                            </div>
+                            <div class="col-sm-12 col-lg-6">
+                                <h4 class="footer__social-text">Мы в социальных сетях</h4>
+                                <div class="footer__social-icons">
+                                    <a href="#">
+                                        <svg class="svg-icon svg-icon_size_xl">
+                                            <use href="images/svg/symbol/svg/sprite.symbol.svg#vk"></use>
+                                        </svg>
+                                    </a>
+                                    <a href="#">
+                                        <svg class="svg-icon svg-icon_size_xl">
+                                            <use href="images/svg/symbol/svg/sprite.symbol.svg#whatsapp"></use>
+                                        </svg>
+                                    </a>
+                                    <a href="#">
+                                        <svg class="svg-icon svg-icon_size_xl">
+                                            <use href="images/svg/symbol/svg/sprite.symbol.svg#viber"></use>
+                                        </svg>
+                                    </a>
+                                    <a href="#">
+                                        <svg class="svg-icon svg-icon_size_xl">
+                                            <use href="images/svg/symbol/svg/sprite.symbol.svg#telegram"></use>
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="col-12 col-md-3 lg-4">
+            <div class="d-none d-sm-flex col-sm-6 col-md-3 lg-4 footer-nav">
                 <div class="row">
                     <div class="col-12 col-md-6">
-                        <ul class="footer__list">
-                            <li class="footer__item">
-                                <a
-                                        class="footer__link"
-                                        href="#"
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                >О нас</a
-                                >
+                        <ul>
+                            <li class="footer-nav__item">
+                                <a href="#">О нас</a>
                             </li>
-                            <li class="footer__item">
-                                <a
-                                        class="footer__link"
-                                        href="#"
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                >Имена</a
-                                >
+                            <li class="footer-nav__item">
+                                <a href="#">Имена</a>
                             </li>
-                            <li class="footer__item">
-                                <a
-                                        class="footer__link"
-                                        href="#"
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                >Галерея</a
-                                >
+                            <li class="footer-nav__item">
+                                <a href="#">Галерея</a>
                             </li>
                         </ul>
                     </div>
                     <div class="col-12 col-md-6">
                         <ul>
-                            <li class="footer__item">
-                                <a
-                                        class="footer__link"
-                                        href="#"
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                >Новости</a
-                                >
+                            <li class="footer-nav__item">
+                                <a href="#">Новости</a>
                             </li>
-                            <li class="footer__item">
-                                <a
-                                        class="footer__link"
-                                        href="#"
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                >Контакты</a
-                                >
+                            <li class="footer-nav__item">
+                                <a class="footer__link" href="#">Контакты</a>
                             </li>
                         </ul>
                     </div>
@@ -471,17 +443,5 @@
         </div>
     </div>
 </footer>
-<!-- <template id="card-template">
-<article class="card news__columns-one" aria-label="Карточка">
-        <div class="article-card-one">
-            <img src="/src/image/news-one.png" alt="news" class=" article-card__image">
-            <h6 class="article-card__date">${item.date}</h6>
-            <h3 class="article-card__title">${item.subtitle}</h3>
-            <p class="  article-card__text">${item.text}<a
-                        class="article-card__link" href="#" target="_blank" rel="noopener noreferrer">Читать
-                    далее</a></p>
-        </div>
-</article>
-</template> -->
 </body>
 </html>
