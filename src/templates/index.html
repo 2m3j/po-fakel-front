@@ -12,68 +12,60 @@
 
 <body>
 <header class="header">
-    <div class="site-branding">
+    <div class="header-branding">
         <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <div class="site-branding__wrapper">
-                        <img src="images/logo.png" alt="logo" class="header__logo"/>
-                        <ul class="top-nav">
-                            <li class="top-nav__item"><a href="about.html">О нас</a></li>
-                            <li class="top-nav__item"><a href="names.html">Имена</a></li>
-                            <li class="top-nav__item">
-                                <a href="gallery.html">
-                                    Галерея
-                                    <svg class="top-nav__icon">
-                                        <use href="images/svg/symbol/svg/sprite.symbol.svg#arrow-down_corner"></use>
-                                    </svg>
-                                </a>
-                                <ul class="top-nav-sub">
-                                    <li class="top-nav-sub__item">
-                                        <a href="#">Фото</a>
-                                    </li>
-                                    <li class="top-nav-sub__item">
-                                        <a href="#">Видео</a>
-                                    </li>
-                                    <li class="top-nav-sub__item">
-                                        <a href="#">Аудио</a>
-                                    </li>
-                                </ul>
+            <div class="header-branding__wrapper">
+                <a href="/"><img src="images/logo.png" alt="logo" class="header-branding__logo"/></a>
+                <ul class="top-nav">
+                    <li class="top-nav__item"><a href="about.html">О нас</a></li>
+                    <li class="top-nav__item"><a href="names.html">Имена</a></li>
+                    <li class="top-nav__item">
+                        <a href="gallery.html">
+                            Галерея
+                            <svg class="top-nav__icon">
+                                <use href="images/svg/symbol/svg/sprite.symbol.svg#arrow-down_corner"></use>
+                            </svg>
+                        </a>
+                        <ul class="top-nav-sub">
+                            <li class="top-nav-sub__item">
+                                <a href="#">Фото</a>
                             </li>
-                            <li class="top-nav__item"><a href="news.html">Новости</a></li>
-                            <li class="top-nav__item"><a href="contacts.html">Контакты</a></li>
+                            <li class="top-nav-sub__item">
+                                <a href="#">Видео</a>
+                            </li>
+                            <li class="top-nav-sub__item">
+                                <a href="#">Аудио</a>
+                            </li>
                         </ul>
-                        <form class="search-form" name="search" method="get" action="/search.html">
-                            <input
-                                    class="search-form__input"
-                                    name="search"
-                                    type="text"
-                                    placeholder="Поиск по сайту..."
-                            />
-                            <button class="search-form__submit" type="submit" name="search" title="найти">
-                                <svg class="search-form__submit-svg">
-                                    <use href="images/svg/symbol/svg/sprite.symbol.svg#search"></use>
-                                </svg>
-                            </button>
-                        </form>
-                    </div>
-                </div>
+                    </li>
+                    <li class="top-nav__item"><a href="news.html">Новости</a></li>
+                    <li class="top-nav__item"><a href="contacts.html">Контакты</a></li>
+                </ul>
+                <form class="search-form" name="search" method="get" action="/search.html">
+                    <input
+                            class="search-form__input"
+                            name="search"
+                            type="text"
+                            placeholder="Поиск по сайту..."
+                    />
+                    <button class="search-form__submit" type="submit" name="search" title="найти">
+                        <svg class="search-form__submit-svg">
+                            <use href="images/svg/symbol/svg/sprite.symbol.svg#search"></use>
+                        </svg>
+                    </button>
+                </form>
             </div>
         </div>
     </div>
+    <div class="header-entity">
+        <h1 class="header-entity__title">Поисковый отряд "Факел"</h1>
+        <h3 class="header-entity__subtitle">Возвращаем имена героев</h3>
+        <button class="header-entity__btn btn">Присоедениться</button>
+    </div>
 </header>
 <main class="main">
-    <section class="promo">
-        <div class="promo-container">
-            <div class="promo__text">
-                <h1 class="promo__title">Поисковый отряд "Факел"</h1>
-                <h3 class="promo__subtitle">Возвращаем имена героев</h3>
-                <button class="promo__btn btn">Присоедениться</button>
-            </div>
-        </div>
-    </section>
     <section class="about">
-        <div class="container-main container">
+        <div class="container">
             <div class="about__title-btn">
                 <div class="about__title">О нас</div>
                 <button class="about__btn btn">Подробнее</button>

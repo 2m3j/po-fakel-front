@@ -1,9 +1,10 @@
-.site-branding {
+.header-branding {
   position: relative;
   display: flex;
   align-items: center;
   height: 70px;
   padding: 0;
+  width: 100%;
 
   &::before {
     content: '';
@@ -89,10 +90,12 @@
   border: 1px solid #f3f3f3;
   background: rgba(105, 104, 104, 0.2);
   border-radius: 5px;
+
   &:hover {
     transition: 0.1s all;
     border: 1px solid #da8a3a;
   }
+
   &__input {
     width: 100%;
     margin: 10px 0 10px 15px;
@@ -100,18 +103,22 @@
     background: none;
     border: 0;
     color: white;
+
     &::placeholder {
       color: rgba(243, 243, 243, 0.7);
     }
   }
+
   &__submit {
     margin: 5px 10px 5px 5px;
     background: none;
+
     &-svg {
       width: 30px;
       height: 30px;
       fill: white;
     }
+
     &:hover {
       .search-form__submit-svg {
         transition: 0.1s all;
@@ -125,6 +132,8 @@
   min-height: 100vh;
   background: linear-gradient(180deg, rgba(10, 10, 10, 0.8) 0%, rgba(10, 10, 10, 0.1) 100%), url("../images/bgrd.png") no-repeat;
   background-size: cover;
+  display: flex;
+  flex-direction: column;
 
   &__img-box {
     position: relative;
@@ -132,3 +141,54 @@
 }
 
 /* header end*/
+
+
+/* promo start*/
+.header-entity {
+  margin: auto 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  &__title {
+    text-align: center;
+    font-size: 55px;
+    line-height: 73px;
+  }
+  &__subtitle {
+    text-align: center;
+    font-size: 30px;
+    line-height: 47px;
+  }
+  &__btn {
+    font-size: 18px;
+  }
+
+  &__title {
+    font-weight: 700;
+    font-size: 65px;
+    line-height: 86px;
+    color: #f5f5f5;
+    padding-bottom: 15px;
+  }
+
+  &__subtitle {
+    font-weight: 400;
+    font-size: 35px;
+    line-height: 47px;
+    color: #f5f5f5;
+    padding-bottom: 65px;
+  }
+
+  &__btn {
+    width: 238px;
+    height: 57px;
+    background: #da8a3a;
+    border-radius: 10px;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 27px;
+    color: #ffffff;
+  }
+}
+
+/* promo end*/
