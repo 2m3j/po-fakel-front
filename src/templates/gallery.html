@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ru" xmlns="http://www.w3.org/1999/html">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="keywords" content="html, css" />
+  <meta name="description" content="Gallery page" />
+  <title>Галерея</title>
+  <link rel="stylesheet" href="./gallery/gallery.css">
+</head>
+<body class="page">
+  <header class="header" style="border: 1px solid black; height: 87px;">
+    HEADER
+  </header>
+  <main class="gallery">
+    <nav class="gallery__navigation">
+      <p class="gallery__navigation-text" role="button">Главная</p>
+      <p class="gallery__navigation-text">></p>
+      <p class="gallery__navigation-text gallery__navigation-text_active" role="button">Галерея</p>
+    </nav>
+    <h1 class="gallery__title">Галерея</h1>
+    <div class="gallery__content">
+      <section class="foto">
+        <p class="foto__title">Фотоальбомы</p>
+        <div class="foto__images">
+          <div class="foto__image foto__image_first" role="button">
+            <p class="foto__description">Вахта Памяти Осень 2022</p>
+          </div>
+          <div class="foto__image foto__image_second" role="button">
+            <p class="foto__description" >Вахта Памяти Весна 2022</p>
+          </div>
+          <div class="foto__image foto__image_third" role="button">
+            <p class="foto__description">Вахта Памяти Осень 2021</p>
+          </div>
+        </div>
+        <button type="button" class="foto__button">Перейти к разделу</button>
+      </section>
+      <section class="audio">Аудиозаписи</section>
+      <section class="video">Видео</section>
+    </div>
+  </main>
+  <footer class="footer">
+    FOOTER
+  </footer>
+</body>
+</html>
