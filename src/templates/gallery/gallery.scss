@@ -1,0 +1,78 @@
+@import url(./gallery-foto.scss);
+
+.page {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+.header {
+  flex-shrink: 0;
+  border: 1px solid black; 
+  height: 87px;
+}
+
+.gallery {
+  flex: 1;
+  width: 1100px;
+  align-self: center;
+
+  &__navigation {
+    display: flex;
+    padding-top: 64px;
+    gap: 20px;
+  }
+  &__navigatio-text {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 32px;
+    /* identical to box height */
+    display: flex;
+    align-items: center;
+    color: #202020;
+    cursor: pointer;
+    transition: filter 0.3s linear 0s;
+
+    &:hover {
+      filter: brightness(40%)
+    }
+  }
+  &__navigation-text_active {
+    margin: 0;
+    padding: 0;
+    color: #DA8A3A;
+  }
+
+  &__title {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 45px;
+    line-height: 60px;
+    /* identical to box height */
+    color: #202020;
+  
+    margin-top: 74px;
+    margin-bottom: 56px;
+  }
+  &__content {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.footer {
+  flex-shrink: 0;
+  border: 1px solid black; 
+  height: 354px;
+}
