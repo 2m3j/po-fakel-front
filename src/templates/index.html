@@ -358,31 +358,35 @@
 </main>
 <footer class="footer">
     <div class="container">
-        <div class="row justify-content-between">
-            <div class="col-12 col-sm-6 col-md-9 col-lg-8">
+        <div class="row justify-content-between footer__container">
+            <div class="col-7 col-md-9 col-lg-8">
                 <div class="row">
                     <div class="col-12 col-md-5 col-lg-3">
-                        <img src="images/logo.svg" alt="logo" class="footer__logo"/>
+                        <a href="/"><img src="images/logo.svg" alt="logo" class="footer__logo"/></a>
                     </div>
                     <div class="col-12 col-md-7 col-lg-9">
                         <div class="row">
                             <div class="col-sm-12 col-lg-6">
-                                <div class="footer__icon_text">
-                                    <svg class="svg-icon">
-                                        <use href="images/svg/symbol/svg/sprite.symbol.svg#phone"></use>
-                                    </svg>
-                                    +79536952867
+                                <div class="footer__contact_item">
+                                    <a href="tel:+79536952867">
+                                        <svg class="svg-icon">
+                                            <use href="images/svg/symbol/svg/sprite.symbol.svg#phone"></use>
+                                        </svg>
+                                        +79536952867
+                                    </a>
                                 </div>
-                                <div class="footer__icon_text">
-                                    <svg class="svg-icon">
-                                        <use href="images/svg/symbol/svg/sprite.symbol.svg#envelope"></use>
-                                    </svg>
-                                    mporoshin@yandex.ru
+                                <div class="footer__contact_item">
+                                    <a href="mailto:mporoshin@yandex.ru">
+                                        <svg class="svg-icon">
+                                            <use href="images/svg/symbol/svg/sprite.symbol.svg#envelope"></use>
+                                        </svg>
+                                        mporoshin@yandex.ru
+                                    </a>
                                 </div>
                             </div>
                             <div class="col-sm-12 col-lg-6">
-                                <h4 class="footer__social-text">Мы в социальных сетях</h4>
-                                <div class="footer__social-icons">
+                                <h4 class="footer__social-title">Мы в социальных сетях</h4>
+                                <div class="footer__social-networks">
                                     <a href="#">
                                         <svg class="svg-icon svg-icon_size_xl">
                                             <use href="images/svg/symbol/svg/sprite.symbol.svg#vk"></use>
@@ -409,7 +413,7 @@
                     </div>
                 </div>
             </div>
-            <div class="d-none d-sm-flex col-sm-6 col-md-3 lg-4 footer-nav">
+            <div class="col-5 col-md-3 lg-4 footer-nav">
                 <div class="row">
                     <div class="col-12 col-md-6">
                         <ul>
@@ -437,9 +441,8 @@
                 </div>
             </div>
         </div>
-        <div class="footer__line">
-            <img src="images/line.png" alt="line" class="footer__line-img"/>
-            <h3 class="footer__line-info">@ Fakel 2000-2023</h3>
+        <div class="footer__copyright">
+            @ Fakel 2000-2023
         </div>
     </div>
 </footer>

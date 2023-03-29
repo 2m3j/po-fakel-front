@@ -1,84 +1,28 @@
 .footer {
-  padding-top: 30px;
-  @include media_from('md') {
-    padding-top: 50px;
-  }
-  background: #4f4f4f;
-  font-size: 15px;
-  color: #f3f3f3;
-
-  a {
-    color: #f3f3f3;
-  }
-
-  @include media_from('lg') {
-    font-size: 20px;
-  }
-  @include media_from('md') {
-    font-size: 18px;
-  }
-
-  &__columns {
-    padding-top: 50px;
-    display: flex;
-    justify-content: space-between;
-  }
-
-  &__contacts {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-  }
-
-  &__contacts-phone {
-    margin-bottom: 20px;
-  }
-
-  &__icon_text {
-    font-weight: 400;
-    line-height: 27px;
-    padding-bottom: 20px;
-
-    .svg-icon {
-      fill: white;
+  @mixin item_margin_bottom() {
+    margin-bottom: 15px;
+    @include media_from('sm') {
+      margin-bottom: 20px;
     }
   }
+  font-size: $footer-font-xs;
+  @include media_from('sm') {
+    font-size: $footer-font-sm;
+  }
+  @include media_from('lg') {
+    font-size: $footer-font-lg;
+  }
+  background: $footer-background-color;
+  color: $footer-color;
 
-  &__mail-text {
-    font-weight: 400;
-    line-height: 27px;
+  a {
+    color: $footer-color;
   }
 
-  &__flex-c {
-    display: flex;
-  }
-
-  &__social-text {
-    padding-bottom: 20px;
-    line-height: 27px;
-  }
-
-  &__line {
-    margin-top: 40px;
-  }
-
-  &__line-img {
-    width: 100%;
-  }
-
-  &__line-info {
-    margin-top: 10px;
-    padding-bottom: 20px;
-    text-align: center;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 150%;
-  }
-
-  &__social-icons {
-    .svg-icon {
-      fill: white;
-      margin-right: 10px;
+  &__container {
+    padding: 30px 0;
+    @include media_from('md') {
+      padding: 50px 0;
     }
   }
 
@@ -90,20 +34,39 @@
   }
 
   &-nav {
-    margin-top: 10px;
-    @include media_from('sm') {
-      margin-top: 20px;
-    }
+    margin-top: 30px;
     @include media_from('md') {
       margin-top: 0;
     }
 
     &__item {
-      margin-bottom: 15px;
-      line-height: 27px;
-      @include media_from('lg') {
-        margin-bottom: 20px;
-      }
+      @include item_margin_bottom;
     }
+  }
+
+  &__contact_item {
+    @include item_margin_bottom;
+    white-space: nowrap;
+
+    .svg-icon {
+      fill: $footer-color;
+    }
+  }
+
+  &__social-title {
+    @include item_margin_bottom;
+  }
+
+  &__social-networks {
+    .svg-icon {
+      fill: $footer-color;
+      margin-right: 10px;
+    }
+  }
+
+  &__copyright {
+    border-top: 1px solid $footer-color;
+    padding: 20px 0;
+    text-align: center;
   }
 }

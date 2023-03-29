@@ -5,75 +5,66 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap-grid.min.css"/>
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
     <title>Факел</title>
 <script defer src="js/app.bundle.js"></script><link href="css/app.css" rel="stylesheet"></head>
 
 <body>
 <header class="header">
-    <div class="site-branding">
+    <div class="header-branding">
         <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <div class="site-branding__wrapper">
-                        <img src="images/logo.png" alt="logo" class="header__logo"/>
-                        <ul class="top-nav">
-                            <li class="top-nav__item"><a href="about.html">О нас</a></li>
-                            <li class="top-nav__item"><a href="names.html">Имена</a></li>
-                            <li class="top-nav__item">
-                                <a href="gallery.html">
-                                    Галерея
-                                    <svg class="top-nav__icon">
-                                        <use href="images/svg/symbol/svg/sprite.symbol.svg#arrow-down_corner"></use>
-                                    </svg>
-                                </a>
-                                <ul class="top-nav-sub">
-                                    <li class="top-nav-sub__item">
-                                        <a href="#">Фото</a>
-                                    </li>
-                                    <li class="top-nav-sub__item">
-                                        <a href="#">Видео</a>
-                                    </li>
-                                    <li class="top-nav-sub__item">
-                                        <a href="#">Аудио</a>
-                                    </li>
-                                </ul>
+            <div class="header-branding__wrapper">
+                <a href="/"><img src="images/logo.svg" alt="logo" class="header-branding__logo"/></a>
+                <ul class="top-nav">
+                    <li class="top-nav__item"><a href="about.html">О нас</a></li>
+                    <li class="top-nav__item"><a href="names.html">Имена</a></li>
+                    <li class="top-nav__item">
+                        <a href="gallery.html">
+                            Галерея
+                            <svg class="top-nav__icon">
+                                <use href="images/svg/symbol/svg/sprite.symbol.svg#arrow-down_corner"></use>
+                            </svg>
+                        </a>
+                        <ul class="top-nav-sub">
+                            <li class="top-nav-sub__item">
+                                <a href="#">Фото</a>
                             </li>
-                            <li class="top-nav__item"><a href="news.html">Новости</a></li>
-                            <li class="top-nav__item"><a href="contacts.html">Контакты</a></li>
+                            <li class="top-nav-sub__item">
+                                <a href="#">Видео</a>
+                            </li>
+                            <li class="top-nav-sub__item">
+                                <a href="#">Аудио</a>
+                            </li>
                         </ul>
-                        <form class="search-form" name="search" method="get" action="/search.html">
-                            <input
-                                    class="search-form__input"
-                                    name="search"
-                                    type="text"
-                                    placeholder="Поиск по сайту..."
-                            />
-                            <button class="search-form__submit" type="submit" name="search" title="найти">
-                                <svg class="search-form__submit-svg">
-                                    <use href="images/svg/symbol/svg/sprite.symbol.svg#search"></use>
-                                </svg>
-                            </button>
-                        </form>
-                    </div>
-                </div>
+                    </li>
+                    <li class="top-nav__item"><a href="news.html">Новости</a></li>
+                    <li class="top-nav__item"><a href="contacts.html">Контакты</a></li>
+                </ul>
+                <form class="search-form" name="search" method="get" action="/search.html">
+                    <input
+                            class="search-form__input"
+                            name="search"
+                            type="text"
+                            placeholder="Поиск по сайту..."
+                    />
+                    <button class="search-form__submit" type="submit" name="search" title="найти">
+                        <svg class="search-form__submit-svg">
+                            <use href="images/svg/symbol/svg/sprite.symbol.svg#search"></use>
+                        </svg>
+                    </button>
+                </form>
             </div>
         </div>
     </div>
+    <div class="header-entity">
+        <h1 class="header-entity__title">Поисковый отряд "Факел"</h1>
+        <h3 class="header-entity__subtitle">Возвращаем имена героев</h3>
+        <button class="header-entity__btn btn">Присоедениться</button>
+    </div>
 </header>
 <main class="main">
-    <section class="promo">
-        <div class="promo-container">
-            <div class="promo__text">
-                <h1 class="promo__title">Поисковый отряд "Факел"</h1>
-                <h3 class="promo__subtitle">Возвращаем имена героев</h3>
-                <button class="promo__btn btn">Присоедениться</button>
-            </div>
-        </div>
-    </section>
     <section class="about">
-        <div class="container-main container">
+        <div class="container">
             <div class="about__title-btn">
                 <div class="about__title">О нас</div>
                 <button class="about__btn btn">Подробнее</button>
@@ -366,130 +357,94 @@
     </section>
 </main>
 <footer class="footer">
-    <div class="container" style="padding-top: 70px">
-        <div class="row justify-content-between">
-            <div class="col-12 col-md-4 col-lg-2">
-                <img src="images/logo.png" alt="logo" class="footer__logo"/>
-            </div>
-            <div class="col-12 col-md-5 col-lg-6">
+    <div class="container">
+        <div class="row justify-content-between footer__container">
+            <div class="col-7 col-md-9 col-lg-8">
                 <div class="row">
-                    <div class="col-sm-12 col-lg-6">
-                        <img
-                                src="images/phone.png"
-                                alt="icon"
-                                class="footer__phone-img"
-                        />
-                        <p class="footer__phone-num">+79536952867</p>
-                        <br/>
-                        <img
-                                src="images/mail.png"
-                                alt="icon"
-                                class="footer__mail-img"
-                        />
-                        <p class="footer__mail-text">mporoshin@yandex.ru</p>
+                    <div class="col-12 col-md-5 col-lg-3">
+                        <a href="/"><img src="images/logo.svg" alt="logo" class="footer__logo"/></a>
                     </div>
-                    <div class="col-sm-12 col-lg-6">
-                        <h4 class="footer__social-text">Мы в социальных сетях</h4>
-                        <div class="footer__social-icons">
-                            <img
-                                    src="images/vk.png"
-                                    alt="icon"
-                                    class="footer__icons-vk"
-                            />
-                            <img
-                                    src="images/wp.png"
-                                    alt="icon"
-                                    class="footer__icons-wp"
-                            />
-                            <img
-                                    src="images/wb.png"
-                                    alt="icon"
-                                    class="footer__icons-wb"
-                            />
-                            <img
-                                    src="images/tg.png"
-                                    alt="icon"
-                                    class="footer__icons-tg"
-                            />
+                    <div class="col-12 col-md-7 col-lg-9">
+                        <div class="row">
+                            <div class="col-sm-12 col-lg-6">
+                                <div class="footer__contact_item">
+                                    <a href="tel:+79536952867">
+                                        <svg class="svg-icon">
+                                            <use href="images/svg/symbol/svg/sprite.symbol.svg#phone"></use>
+                                        </svg>
+                                        +79536952867
+                                    </a>
+                                </div>
+                                <div class="footer__contact_item">
+                                    <a href="mailto:mporoshin@yandex.ru">
+                                        <svg class="svg-icon">
+                                            <use href="images/svg/symbol/svg/sprite.symbol.svg#envelope"></use>
+                                        </svg>
+                                        mporoshin@yandex.ru
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-sm-12 col-lg-6">
+                                <h4 class="footer__social-title">Мы в социальных сетях</h4>
+                                <div class="footer__social-networks">
+                                    <a href="#">
+                                        <svg class="svg-icon svg-icon_size_xl">
+                                            <use href="images/svg/symbol/svg/sprite.symbol.svg#vk"></use>
+                                        </svg>
+                                    </a>
+                                    <a href="#">
+                                        <svg class="svg-icon svg-icon_size_xl">
+                                            <use href="images/svg/symbol/svg/sprite.symbol.svg#whatsapp"></use>
+                                        </svg>
+                                    </a>
+                                    <a href="#">
+                                        <svg class="svg-icon svg-icon_size_xl">
+                                            <use href="images/svg/symbol/svg/sprite.symbol.svg#viber"></use>
+                                        </svg>
+                                    </a>
+                                    <a href="#">
+                                        <svg class="svg-icon svg-icon_size_xl">
+                                            <use href="images/svg/symbol/svg/sprite.symbol.svg#telegram"></use>
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="col-12 col-md-3 lg-4">
+            <div class="col-5 col-md-3 lg-4 footer-nav">
                 <div class="row">
                     <div class="col-12 col-md-6">
-                        <ul class="footer__list">
-                            <li class="footer__item">
-                                <a
-                                        class="footer__link"
-                                        href="#"
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                >О нас</a
-                                >
+                        <ul>
+                            <li class="footer-nav__item">
+                                <a href="#">О нас</a>
                             </li>
-                            <li class="footer__item">
-                                <a
-                                        class="footer__link"
-                                        href="#"
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                >Имена</a
-                                >
+                            <li class="footer-nav__item">
+                                <a href="#">Имена</a>
                             </li>
-                            <li class="footer__item">
-                                <a
-                                        class="footer__link"
-                                        href="#"
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                >Галерея</a
-                                >
+                            <li class="footer-nav__item">
+                                <a href="#">Галерея</a>
                             </li>
                         </ul>
                     </div>
                     <div class="col-12 col-md-6">
                         <ul>
-                            <li class="footer__item">
-                                <a
-                                        class="footer__link"
-                                        href="#"
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                >Новости</a
-                                >
+                            <li class="footer-nav__item">
+                                <a href="#">Новости</a>
                             </li>
-                            <li class="footer__item">
-                                <a
-                                        class="footer__link"
-                                        href="#"
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                >Контакты</a
-                                >
+                            <li class="footer-nav__item">
+                                <a class="footer__link" href="#">Контакты</a>
                             </li>
                         </ul>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="footer__line">
-            <img src="images/line.png" alt="line" class="footer__line-img"/>
-            <h3 class="footer__line-info">@ Fakel 2000-2023</h3>
+        <div class="footer__copyright">
+            @ Fakel 2000-2023
         </div>
     </div>
 </footer>
-<!-- <template id="card-template">
-<article class="card news__columns-one" aria-label="Карточка">
-        <div class="article-card-one">
-            <img src="/src/image/news-one.png" alt="news" class=" article-card__image">
-            <h6 class="article-card__date">${item.date}</h6>
-            <h3 class="article-card__title">${item.subtitle}</h3>
-            <p class="  article-card__text">${item.text}<a
-                        class="article-card__link" href="#" target="_blank" rel="noopener noreferrer">Читать
-                    далее</a></p>
-        </div>
-</article>
-</template> -->
 </body>
 </html>
