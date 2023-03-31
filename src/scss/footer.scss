@@ -17,6 +17,13 @@
 
   a {
     color: $footer-color;
+    &:hover {
+      color: $footer-a-hover-color;
+
+      .svg-icon {
+        fill: $footer-a-hover-color;
+      }
+    }
   }
 
   &__container {
@@ -68,5 +75,9 @@
     border-top: 1px solid $footer-color;
     padding: 20px 0;
     text-align: center;
+
+    .svg-icon {
+      fill: $footer-color;
+    }
   }
 }
