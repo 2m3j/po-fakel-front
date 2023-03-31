@@ -1,6 +1,7 @@
 .foto{
   display: flex;
   flex-direction: column;
+  padding: 0;
 
   &__title{
     margin: 0;
@@ -77,6 +78,7 @@
     border: none;
     cursor: pointer;
     transition: filter 0.5s linear 0s;
+    margin-top: 32px;
 
     &:hover {
       filter: brightness(80%)

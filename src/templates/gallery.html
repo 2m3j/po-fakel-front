@@ -7,7 +7,13 @@
   <meta name="keywords" content="html, css" />
   <meta name="description" content="Gallery page" />
   <title>Галерея</title>
+  <link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+  />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
   <link rel="stylesheet" href="./gallery/gallery.css">
+  <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
 </head>
 <body class="page">
   <header class="header" style="border: 1px solid black; height: 87px;">
@@ -21,17 +27,25 @@
     </nav>
     <h1 class="gallery__title">Галерея</h1>
     <div class="gallery__content">
-      <section class="foto">
+      <section class="foto container ">
+      <!-- <section class="row"> -->
         <p class="foto__title">Фотоальбомы</p>
-        <div class="foto__images">
-          <div class="foto__image foto__image_first" role="button">
-            <p class="foto__description">Вахта Памяти Осень 2022</p>
+        <!-- <div class="foto__images"> -->
+        <div class="row">
+          <div class="col-12 col-md-6 col-lg-4 mb-4 mb-md-0" role="button">
+            <div class="foto__image foto__image_first">
+              <p class="foto__description">Вахта Памяти Осень 2022</p>
+            </div>
           </div>
-          <div class="foto__image foto__image_second" role="button">
-            <p class="foto__description" >Вахта Памяти Весна 2022</p>
+          <div class="col-12 col-md-6 col-lg-4" role="button">
+            <div class="foto__image foto__image_second">
+              <p class="foto__description" >Вахта Памяти Весна 2022</p>
+            </div>
           </div>
-          <div class="foto__image foto__image_third" role="button">
-            <p class="foto__description">Вахта Памяти Осень 2021</p>
+          <div class="col-12 col-md-6 col-lg-4 d-none d-lg-flex " role="button">
+            <div class="foto__image foto__image_third">
+              <p class="foto__description">Вахта Памяти Осень 2021</p>
+            </div>
           </div>
         </div>
         <button type="button" class="foto__button">Перейти к разделу</button>
