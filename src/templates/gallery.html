@@ -19,7 +19,7 @@
   <header class="header" style="border: 1px solid black; height: 87px;">
     HEADER
   </header>
-  <main class="gallery">
+  <main class="gallery ">
     <nav class="gallery__navigation">
       <p class="gallery__navigation-text" role="button">Главная</p>
       <p class="gallery__navigation-text">></p>
@@ -37,12 +37,12 @@
               <p class="foto__description">Вахта Памяти Осень 2022</p>
             </div>
           </div>
-          <div class="col-12 col-md-6 col-lg-4" role="button">
+          <div class="col-12 col-md-6 col-lg-4 d-none d-md-block" role="button">
             <div class="foto__image foto__image_second">
               <p class="foto__description" >Вахта Памяти Весна 2022</p>
             </div>
           </div>
-          <div class="col-12 col-md-6 col-lg-4 d-none d-lg-flex " role="button">
+          <div class="col-12 col-md-6 col-lg-4 d-none d-lg-flex" role="button">
             <div class="foto__image foto__image_third">
               <p class="foto__description">Вахта Памяти Осень 2021</p>
             </div>
@@ -50,7 +50,40 @@
         </div>
         <button type="button" class="foto__button">Перейти к разделу</button>
       </section>
-      <section class="audio">Аудиозаписи</section>
+      <section class=" container audio">
+        <div class="audio__box">
+          <p class="audio__title">Аудиозаписи</p>
+          <div class="audio__buttons">
+            <div class="audio__button-container">
+              <img role="button" src="./gallery/img/Errow-left.svg" alt="Кнопка налево" class="audio__button">
+            </div>
+            <div class="audio__button-container">
+              <img role="button" src="./gallery/img/Errow-right.svg" alt="Кнопка направо" class="audio__button">
+            </div>
+          </div>
+        </div>
+        <div class="row align-items-center">
+          <div class="col-12 col-md-6 col-lg-4 mb-4 mb-md-0 align-items-center" role="button">
+            <div class="audio__image audio__image_first">
+              <p class="audio__description">Миша Порошин — Гимн Долины (Муз. и сл. И. Щукин)</p>
+            </div>
+            <div class="audio__player">Здесь будет плеер</div>
+          </div>
+          <div class="col-12 col-md-6 col-lg-4 d-none d-md-block" role="button">
+            <div class="audio__image audio__image_second">
+              <p class="audio__description" >Миша Порошин — Рассказ ветерана ( Муз. и сл. Ю. Визбор)</p>
+            </div>
+            <div class="audio__player">Здесь будет плеер</div>
+          </div>
+          <div class="col-12 col-md-6 col-lg-4 d-none d-lg-block" role="button">
+            <div class="audio__image audio__image_third">
+              <p class="audio__description">Миша Порошин — В землянке (Муз. К. Листов, сл. А. Сурков)</p>
+            </div>
+            <div class="audio__player">Здесь будет плеер</div>
+          </div>
+        </div>
+        <button type="button" class="audio__button-next">Перейти к разделу</button>
+      </section>
       <section class="video">Видео</section>
     </div>
   </main>

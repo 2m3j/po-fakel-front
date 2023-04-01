@@ -1,5 +1,5 @@
 @import url(./gallery-foto.scss);
-
+@import url(./gallery-audio.scss);
 .page {
   display: flex;
   flex-direction: column;
@@ -47,6 +47,7 @@
     margin: 0;
     padding: 0;
     color: #DA8A3A;
+    cursor: default;
   }
 
   &__title {

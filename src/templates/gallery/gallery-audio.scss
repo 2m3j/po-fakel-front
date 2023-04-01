@@ -1,0 +1,135 @@
+.audio {
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  background: #E9E9E9;
+
+  &__box{
+    margin-top: 40px;
+    margin-bottom: 27px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__title{
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 36px;
+    line-height: 48px;
+    /* identical to box height */
+    color: #202020;
+  }
+  &__buttons{
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 20px;
+  }
+
+  &__button-container {
+    width: 48px;
+    height: 48px;
+  
+    border: 2px solid #DA8A3A;
+    border-radius: 10px;
+    transform: matrix(-1, 0, 0, 1, 0, 0);
+  
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__button{
+    width: 27.36px;
+    height: 27.36px;
+  }
+
+  &__image{
+    width: 349px;
+    height: 320px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column-reverse;
+    -o-object-fit: cover;
+    object-fit: cover;
+    max-width: 100%;
+    cursor: pointer;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: filter 0.5s linear 0s;
+
+    &:hover {
+      filter: brightness(70%);
+    }
+    
+    &_first{
+      background-image: url(./img/Audio_image_1.png);
+    }
+    &_second{
+      background-image: url(./img/Audio_image_2.png);
+    }
+    &_third{
+      background-image: url(./img/Audio_image_3.png);
+    }
+    &_cover{
+      opacity:30% ;
+      background-image: url(./img/Audio_fon_1.png);
+    
+    }
+  }
+
+  &__description{
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 21px;
+  
+    color: #FFFFFF;
+    padding-left: 16px;
+    padding-bottom: 16px;
+  }
+  &__player {
+    background-color: white;
+    border: 1px solid black;
+    height: 35px;
+    margin-top: 11px;
+    text-align: center;
+  }
+  &__button-next{
+    width: 258px;
+    height: 57px;
+    background: #DA8A3A;
+    border-radius: 10px;
+    font-family: "Segoe UI";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 27px;
+    color: #FFFFFF;
+    align-self: center;
+    margin-top: 32px;
+    margin-bottom: 40px;
+    border: none;
+    cursor: pointer;
+    transition: filter 0.5s linear 0s;
+
+    &:hover {
+      filter: brightness(80%);
+    }
+  }
+
+}
+
+
+
+
+
+
+
+
