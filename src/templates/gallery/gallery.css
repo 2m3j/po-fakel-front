@@ -1,5 +1,7 @@
 @import url(./gallery-foto.css);
 @import url(./gallery-audio.css);
+@import url(./gallery-video.css);
+
 .page {
   display: flex;
   flex-direction: column;

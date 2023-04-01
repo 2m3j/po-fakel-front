@@ -1,9 +1,10 @@
-.foto {
+.video {
+  padding: 0;
   display: flex;
   flex-direction: column;
-  padding: 0;
 }
-.foto__title {
+
+.video__title {
   margin: 0;
   padding: 0;
   font-family: "Segoe UI";
@@ -13,14 +14,11 @@
   line-height: 48px;
   /* identical to box height */
   color: #202020;
+  margin-top: 56px;
   margin-bottom: 32px;
 }
-.foto__images {
-  display: flex;
-  gap: 31px;
-  margin-bottom: 32px;
-}
-.foto__image {
+
+.video__image {
   width: 349px;
   height: 320px;
   border-radius: 10px;
@@ -35,19 +33,22 @@
   background-size: cover;
   transition: filter 0.5s linear 0s;
 }
-.foto__image:hover {
+
+.video__image:hover {
   filter: brightness(70%);
 }
-.foto__image_first {
-  background-image: url(../../images/photo-one.png);
+
+.video__image_first {
+  background-image: url(./img/Video_image_1.png);
 }
-.foto__image_second {
-  background-image: url(../../images/photo-two.png);
+.video__image_second {
+  background-image: url(./img/Video_image_2.png);
 }
-.foto__image_third {
-  background-image: url(../../images/photo-three.png);
+.video__image_third {
+  background-image: url(./img/Video_image_3.png);
 }
-.foto__description {
+
+.video__description {
   margin: 0;
   padding: 0;
   font-family: "Segoe UI";
@@ -60,11 +61,13 @@
   padding-bottom: 16px;
   max-width: 120px;
 }
-.foto__button {
+
+.video__button {
   width: 258px;
   height: 57px;
   background: #DA8A3A;
   border-radius: 10px;
+  
   font-family: "Segoe UI";
   font-style: normal;
   font-weight: 600;
@@ -72,12 +75,12 @@
   line-height: 27px;
   color: #FFFFFF;
   align-self: center;
-  margin-top: 32px;
-  margin-bottom: 56px;
+  margin-top: 48px;
+  margin-bottom: 112px;
   border: none;
   cursor: pointer;
   transition: filter 0.5s linear 0s;
 }
-.foto__button:hover {
+.video__button:hover {
   filter: brightness(80%);
-}/*# sourceMappingURL=gallery-foto.css.map */
+}
