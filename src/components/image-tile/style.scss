@@ -24,17 +24,11 @@
   }
 
   &__btn {
-    color: white;
+    color: $image-tile-btn-font-color;
     position: absolute;
     background: rgba(255, 255, 255, 0.1);
-    border: 2px solid rgb(218, 138, 58);
     backdrop-filter: blur(12.5px);
-    width: 161px;
-    height: 57px;
-    border-radius: 10px;
     font-weight: 600;
-    font-size: 20px;
-    line-height: 27px;
     margin: 24px;
     bottom: 0;
   }
@@ -59,6 +53,15 @@
     }
   }
 
+  &__mobile-link {
+    width: 100%;
+    height: 100%;
+    display: block;
+    @include media_from('md') {
+      display: none;
+    }
+  }
+
   /*   &:before {
     content: "";
     position: absolute;
@@ -67,10 +70,12 @@
     background: rgba(0, 0, 0, 0.1);
   } */
 }
+
 .image-tile__wrapper_type_page-aboutus {
   width: 100%;
   height: 100%;
 }
+
 .image-tile_type_page-aboutus {
   max-height: 279px;
   @media (min-width: 768px) {

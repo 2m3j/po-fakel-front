@@ -1,7 +1,12 @@
 .article-card {
+  a {
+    text-decoration: none;
+  }
+
   &_type_media {
     padding: 20px;
   }
+
   &__image {
     margin-bottom: 10px;
     width: 100%;
@@ -17,11 +22,12 @@
   }
 
   &__title {
+    display: block;
     margin-bottom: 10px;
     font-weight: 600;
     font-size: 18px;
     line-height: 150%;
-    color: #202020;
+
     &_type_media {
       -webkit-line-clamp: 3; /* Число отображаемых строк */
       display: -webkit-box;
@@ -35,14 +41,18 @@
         font-size: 18px;
       }
     }
+
+    &:hover {
+      color: $a-hover-color;
+    }
   }
 
   &__text {
     max-height: 144px;
     font-weight: 400;
-    font-size: 16px;
     line-height: 150%;
-    color: #202020;
+    font-size: 16px;
+
     &_type_media {
       -webkit-line-clamp: 4; /* Число отображаемых строк */
       display: -webkit-box;
@@ -56,11 +66,8 @@
       }
     }
   }
-
-  &__link {
-    color: #da8a3a;
-  }
 }
+
 .cards {
   margin-top: 5px;
 }

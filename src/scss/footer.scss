@@ -1,4 +1,12 @@
 .footer {
+  a {
+    text-decoration: none;
+  }
+
+  li {
+    list-style: none;
+  }
+
   @mixin item_margin_bottom() {
     margin-bottom: 15px;
     @include media_from('sm') {
@@ -17,6 +25,7 @@
 
   a {
     color: $footer-color;
+
     &:hover {
       color: $footer-a-hover-color;
 

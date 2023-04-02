@@ -1,6 +1,18 @@
-$footer-font-xs: 15px;
+$font-color: #202020;
+$theme-color: #da8a3a;
+
+$btn-background-color: $theme-color;
+$btn-border-color: $theme-color;
+$btn-with-background-font-color: white;
+
+$a-hover-color: $theme-color;
+
+
+$image-tile-btn-font-color: white;
+
+$footer-font-xs: 16px;
 $footer-font-sm: 18px;
 $footer-font-lg: 20px;
 $footer-background-color: #4F4F4F;
 $footer-color: #f3f3f3;
-$footer-a-hover-color: #da8a3a;
+$footer-a-hover-color: $a-hover-color;

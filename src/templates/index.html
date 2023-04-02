@@ -59,78 +59,56 @@
     <div class="header-entity">
         <h1 class="header-entity__title">Поисковый отряд "Факел"</h1>
         <h3 class="header-entity__subtitle">Возвращаем имена героев</h3>
-        <button class="header-entity__btn btn">Присоедениться</button>
+        <a href="#" class="btn btn_xl">Присоедениться</a>
     </div>
 </header>
-<main class="main">
-    <section class="about">
+<main>
+    <section class="main-about">
         <div class="container">
-            <div class="about__title-btn">
-                <div class="about__title">О нас</div>
-                <button class="about__btn btn">Подробнее</button>
+            <h2 class="main-about__title">О нас</h2>
+            <a href="#" class="main-about__btn btn btn_xl btn_outline">Подробнее</a>
+            <div class="main-about__row">
+                <img src="images/photo-one.png" alt="photo"/>
+                <p class="main-about__text">
+                    Мы — поисковый отряд «Факел» Вятского государственного
+                    университета. Наш отряд был создан 27 декабря 2000 года приказом
+                    № 169 ректора Кондратова Василия Михайловича. СДОД ДДТ
+                    «Вдохновение».
+                </p>
             </div>
-            <div class="about__grid container">
-                <div class="about__grid-one">
-                    <img
-                            src="images/photo-one.png"
-                            alt="photo"
-                            class="about__img-one img-full"
-                    />
-                    <p class="about__text-one">
-                        Мы — поисковый отряд «Факел» Вятского государственного
-                        университета. Наш отряд был создан 27 декабря 2000 года приказом
-                        № 169 ректора Кондратова Василия Михайловича. СДОД ДДТ
-                        «Вдохновение».
-                    </p>
-                </div>
-                <div class="about__grid-two">
-                    <p class="about__text-two">
-                        География поиска: Гридинская дорога, «Рамушевский коридор»,
-                        заболоченные леса между д. Рамушево и д. Давыдово Старорусского
-                        района Новгородской области. Также в разные годы отряд работал в
-                        Демянском, Парфинском, Поддорском районах Новгородской области.
-                    </p>
-                    <img
-                            src="images/photo-two.png"
-                            alt="photo"
-                            class="about__img-two img-full"
-                    />
-                </div>
-                <div class="about__grid-three">
-                    <img
-                            src="images/photo-three.png"
-                            alt="photo"
-                            class="about__img-three img-full"
-                    />
-                    <p class="about__text-three">
-                        Свыше 200 человек приняли участие в поисковых экспедициях.
-                        Сейчас участники отряда — ребята из г. Кирова и области,
-                        Удмуртии, Москвы, Пермского края, Рязанской области.
-                    </p>
-                </div>
+            <div class="main-about__row">
+                <img src="images/photo-two.png" alt="photo"/>
+                <p class="main-about__text">
+                    География поиска: Гридинская дорога, «Рамушевский коридор»,
+                    заболоченные леса между д. Рамушево и д. Давыдово Старорусского
+                    района Новгородской области. Также в разные годы отряд работал в
+                    Демянском, Парфинском, Поддорском районах Новгородской области.
+                </p>
+            </div>
+            <div class="main-about__row">
+                <img src="images/photo-three.png" alt="photo"/>
+                <p class="main-about__text">
+                    Свыше 200 человек приняли участие в поисковых экспедициях.
+                    Сейчас участники отряда — ребята из г. Кирова и области,
+                    Удмуртии, Москвы, Пермского края, Рязанской области.
+                </p>
             </div>
         </div>
     </section>
-    <section class="numbers">
-        <div class="container-main container">
-            <div class="numbers__color">
-                <div class="numbers__blue">
-                    <h2 class="numbers__num-blue flex-num">22</h2>
-                    <p class="numbers__text-blue flex-txt">года существует отряд</p>
+    <section class="main-numbers">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-lg-3 main-numbers__item main-numbers__item_color_blue">
+                    <span class="main-numbers__num">22</span> года существует отряд
                 </div>
-                <div class="numbers__red">
-                    <h2 class="numbers__num-red flex-num">31</h2>
-                    <p class="numbers__text-red flex-txt">поисковая экспедиция</p>
+                <div class="col-md-6 col-lg-3 main-numbers__item main-numbers__item_color_red">
+                    <span class="main-numbers__num">31</span> поисковая экспедиция
                 </div>
-                <div class="numbers__green">
-                    <h2 class="numbers__num-green flex-num">46</h2>
-                    <p class="numbers__text-green flex-txt">
-                        имен бойцов установлено
-                    </p>
+                <div class="col-md-6 col-lg-3 main-numbers__item main-numbers__item_color_green">
+                    <span class="main-numbers__num">46</span> имен бойцов установлено
                 </div>
-                <div class="numbers__orange">
-                    <h2 class="numbers__num-orange flex-num">688</h2>
-                    <p class="numbers__text-orange flex-txt">бойцов найдены</p>
+                <div class="col-md-6 col-lg-3 main-numbers__item main-numbers__item_color_brown">
+                    <span class="main-numbers__num">688</span> бойцов найдены
                 </div>
             </div>
         </div>
@@ -153,9 +131,9 @@
                                 class="card-slider__item-card"
                                 style="background-image: url(images/man-one.png)"
                         >
-                            <div class="card-slider__title">
+                            <a href="#" class="card-slider__title">
                                 Феноберцев Роман Филиппович
-                            </div>
+                            </a>
                         </div>
                     </div>
                     <div class="swiper-slide card-slider__item">
@@ -163,9 +141,9 @@
                                 class="card-slider__item-card"
                                 style="background-image: url(images/man-two.png)"
                         >
-                            <div class="card-slider__title">
-                                Феноберцев Роман Филиппович
-                            </div>
+                            <a href="#" class="card-slider__title">
+                                Нагорнов Авакум Иванович
+                            </a>
                         </div>
                     </div>
                     <div class="swiper-slide card-slider__item">
@@ -173,9 +151,9 @@
                                 class="card-slider__item-card"
                                 style="background-image: url(images/man-three.png)"
                         >
-                            <div class="card-slider__title">
-                                Феноберцев Роман Филиппович
-                            </div>
+                            <a href="#" class="card-slider__title">
+                                Важенин Яков Захарович
+                            </a>
                         </div>
                     </div>
                     <div class="swiper-slide card-slider__item">
@@ -183,9 +161,9 @@
                                 class="card-slider__item-card"
                                 style="background-image: url(images/man-four.png)"
                         >
-                            <div class="card-slider__title">
+                            <a href="#" class="card-slider__title">
                                 Феноберцев Роман Филиппович
-                            </div>
+                            </a>
                         </div>
                     </div>
                     <div class="swiper-slide card-slider__item">
@@ -193,9 +171,9 @@
                                 class="card-slider__item-card"
                                 style="background-image: url(images/man-five.png)"
                         >
-                            <div class="card-slider__title">
+                            <a href="#" class="card-slider__title">
                                 Феноберцев Роман Филиппович
-                            </div>
+                            </a>
                         </div>
                     </div>
                     <div class="swiper-slide card-slider__item">
@@ -203,9 +181,9 @@
                                 class="card-slider__item-card"
                                 style="background-image: url(images/man-six.png)"
                         >
-                            <div class="card-slider__title">
+                            <a href="#" class="card-slider__title">
                                 Феноберцев Роман Филиппович
-                            </div>
+                            </a>
                         </div>
                     </div>
                     <div class="swiper-slide card-slider__item">
@@ -213,22 +191,16 @@
                                 class="card-slider__item-card"
                                 style="background-image: url(images/man-seven.png)"
                         >
-                            <div class="card-slider__title">
+                            <a href="#" class="card-slider__title">
                                 Феноберцев Роман Филиппович
-                            </div>
+                            </a>
                         </div>
-                    </div>
-                    <div class="swiper-slide card-slider__item">
-                        <div
-                                class="card-slider__item-card"
-                                style="background-image: url(images/man-eight.png)"
-                        ></div>
                     </div>
                 </div>
                 <div class="swiper-pagination"></div>
             </div>
             <div class="main-names__link-wrapper">
-                <a class="main-names__link btn" href="#">Перейти к разделу</a>
+                <a class="main-names__link btn btn_xl" href="#">Перейти к разделу</a>
             </div>
         </div>
     </section>
@@ -243,7 +215,8 @@
                                 style="background-image: url(images/gallery-one.png)"
                         >
                             <div class="image-tile__title">Фото</div>
-                            <button class="image-tile__btn btn">Перейти</button>
+                            <a href="#" class="image-tile__btn btn btn_outline btn_xl d-none d-md-block">Перейти</a>
+                            <a href="#" class="image-tile__mobile-link"></a>
                         </div>
                     </div>
                 </div>
@@ -254,7 +227,8 @@
                                 style="background-image: url(images/gallery-two.png)"
                         >
                             <div class="image-tile__title">Видео</div>
-                            <button class="image-tile__btn btn">Перейти</button>
+                            <a href="#" class="image-tile__btn btn btn_outline btn_xl d-none d-md-block">Перейти</a>
+                            <a href="#" class="image-tile__mobile-link"></a>
                         </div>
                     </div>
                     <div class="image-tile image-tile--half">
@@ -263,7 +237,8 @@
                                 style="background-image: url(images/gallery-three.png)"
                         >
                             <div class="image-tile__title">Аудио</div>
-                            <button class="image-tile__btn btn">Перейти</button>
+                            <a href="#" class="image-tile__btn btn btn_outline btn_xl d-none d-md-block">Перейти</a>
+                            <a href="#" class="image-tile__mobile-link"></a>
                         </div>
                     </div>
                 </div>
@@ -281,15 +256,15 @@
                                 alt="news"
                                 class="article-card__image"
                         />
-                        <h6 class="article-card__date">27.12.2022</h6>
-                        <h3 class="article-card__title">
-                            22Й ДЕНЬ РОЖДЕНИЯ ОТРЯДА «ФАКЕЛ»
-                        </h3>
+                        <div class="article-card__date">27.12.2022</div>
+                        <a href="#" class="article-card__title">
+                            22й день рождения отряда «Факел»
+                        </a>
                         <div class="article-card__text">
                             В этот день исполнилось 22 года нашему замечательному,
                             любимому, боевому и трудовому поисковому отряду «Факел».
                             Поисковый отряд «Факел» был основан студентами Вятского
-                            государственного университета…<a class="article-card__link" href="#">Читать далее</a>
+                            государственного университета…
                         </div>
                     </div>
                 </div>
@@ -300,14 +275,13 @@
                                 alt="news"
                                 class="article-card__image"
                         />
-                        <h6 class="article-card__date">03.12.2022</h6>
-                        <h3 class="article-card__title">ДЕНЬ НЕИЗВЕСТНОГО СОЛДАТА</h3>
+                        <div class="article-card__date">03.12.2022</div>
+                        <a href="#" class="article-card__title">День неизвестного солдата</a>
                         <div class="article-card__text">
                             Этот день можно по праву назвать ещё и «Днём поисковика». Не
                             праздник, конечно, а своеобразный рубежный день, когда десятки
                             и сотни поисковых отрядов подводят итоги своих полевых
                             сезонов. В день…
-                            <a class="article-card__link" href="#">Читать далее</a>
                         </div>
                     </div>
                 </div>
@@ -318,22 +292,21 @@
                                 alt="news"
                                 class="article-card__image"
                         />
-                        <h6 class="article-card__date">19.10.2022</h6>
-                        <h3 class="article-card__title">
-                            НАЙДЕНА СЕМЬЯ ФЕНОБЕРЦЕВА РОМАНА ФИЛИППОВИЧА
-                        </h3>
+                        <div class="article-card__date">19.10.2022</div>
+                        <a href="#" class="article-card__title">
+                            Найдена семья Феноберцева Романа Филипповича
+                        </a>
                         <div class="article-card__text">
                             Поисковики отряда «Факел» г. Киров, работая в ходе осеннего
                             этапа межрегиональной Вахты Памяти «Поисковой экспедиции
                             „Долина“, нашли останки 7 солдат. Личность одного из них
                             удалось установить по записке из смертного...
-                            <a class="article-card__link" href="#">Читать далее</a>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="main-news__link-wrapper">
-                <a href="#" class="main-news__link btn">Больше новостей отряда</a>
+                <a href="#" class="main-news__link btn btn_xl">Больше новостей отряда</a>
             </div>
         </div>
     </section>
@@ -350,7 +323,7 @@
                         <div class="row">
                             <div class="col-sm-12 col-lg-6">
                                 <div class="footer__contact_item">
-                                    <a href="tel:+79536952867">
+                                    <a href="tel:+79536952867" target="_blank">
                                         <svg class="svg-icon">
                                             <use href="images/svg/symbol/svg/sprite.symbol.svg#phone"></use>
                                         </svg>
@@ -358,7 +331,7 @@
                                     </a>
                                 </div>
                                 <div class="footer__contact_item">
-                                    <a href="mailto:mporoshin@yandex.ru">
+                                    <a href="mailto:mporoshin@yandex.ru" target="_blank">
                                         <svg class="svg-icon">
                                             <use href="images/svg/symbol/svg/sprite.symbol.svg#envelope"></use>
                                         </svg>
@@ -369,22 +342,22 @@
                             <div class="col-sm-12 col-lg-6">
                                 <h4 class="footer__social-title">Мы в социальных сетях</h4>
                                 <div class="footer__social-networks">
-                                    <a href="#">
+                                    <a href="#" target="_blank">
                                         <svg class="svg-icon svg-icon_size_xl">
                                             <use href="images/svg/symbol/svg/sprite.symbol.svg#vk"></use>
                                         </svg>
                                     </a>
-                                    <a href="#">
+                                    <a href="#" target="_blank">
                                         <svg class="svg-icon svg-icon_size_xl">
                                             <use href="images/svg/symbol/svg/sprite.symbol.svg#whatsapp"></use>
                                         </svg>
                                     </a>
-                                    <a href="#">
+                                    <a href="#" target="_blank">
                                         <svg class="svg-icon svg-icon_size_xl">
                                             <use href="images/svg/symbol/svg/sprite.symbol.svg#viber"></use>
                                         </svg>
                                     </a>
-                                    <a href="#">
+                                    <a href="#" target="_blank">
                                         <svg class="svg-icon svg-icon_size_xl">
                                             <use href="images/svg/symbol/svg/sprite.symbol.svg#telegram"></use>
                                         </svg>
