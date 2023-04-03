@@ -4,10 +4,10 @@
   border-radius: 5px;
   display: block;
   height: 240px;
-  @media (min-width: 768px) {
+  @include media_from('md') {
     height: 500px;
   }
-  @media (min-width: 1200px) {
+  @include media_from('xl') {
     height: 700px;
   }
 
@@ -31,6 +31,10 @@
     font-weight: 600;
     margin: 24px;
     bottom: 0;
+
+    &:hover {
+      color: $image-tile-btn-font-color;
+    }
   }
 
   &__title {
@@ -39,16 +43,16 @@
     left: 30px;
     font-weight: 700;
     font-size: 35px;
-    color: #ffffff;
+    color: $image-tile-font-color;
 
     &:hover {
-      color: white;
+      color: $image-tile-font-color;
     }
   }
 
   &--half {
     height: 240px;
-    @media (min-width: 1200px) {
+    @include media_from('xl') {
       height: 339px;
     }
   }

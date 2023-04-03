@@ -16,7 +16,10 @@
   &__date {
     margin-bottom: 10px;
     font-weight: 400;
-    font-size: 14px;
+    font-size: $article-card-date-font-size-xs;
+    @include media_from('md') {
+      font-size: $article-card-date-font-size-md;
+    }
     line-height: 150%;
     color: #4f4f4f;
   }
@@ -25,21 +28,20 @@
     display: block;
     margin-bottom: 10px;
     font-weight: 600;
-    font-size: 18px;
+    font-size: $article-card-title-font-size-xs;
+    @include media_from('md') {
+      font-size: $article-card-title-font-size-md;
+    }
     line-height: 150%;
 
     &_type_media {
       -webkit-line-clamp: 3; /* Число отображаемых строк */
       display: -webkit-box;
       -webkit-box-orient: vertical;
-      font-size: 20px;
       line-height: 27px;
       height: 81px;
       text-overflow: ellipsis;
       overflow: hidden;
-      @media (min-width: 560px) {
-        font-size: 18px;
-      }
     }
 
     &:hover {
@@ -48,10 +50,12 @@
   }
 
   &__text {
-    max-height: 144px;
     font-weight: 400;
     line-height: 150%;
-    font-size: 16px;
+    font-size: $article-card-text-font-size-xs;
+    @include media_from('md') {
+      font-size: $article-card-text-font-size-md;
+    }
 
     &_type_media {
       -webkit-line-clamp: 4; /* Число отображаемых строк */

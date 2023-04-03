@@ -1,0 +1,43 @@
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+html, body {
+  font-size: 16px;
+  font-family: "Segoe UI", serif;
+  color: $font-color;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+input,
+button,
+textarea {
+  font-family: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+a {
+  color: $font-color;
+
+  &:hover {
+    color: $a-hover-color;
+  }
+}

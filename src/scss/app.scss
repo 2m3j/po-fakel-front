@@ -1,59 +1,14 @@
-@import "var";
 @import "/src/css/fonts.css";
 @import "/src/css/bootstrap-grid.min.css";
 
+@import "var";
 @import "media";
+@import "main";
 @import "/src/components/btn/style";
 @import "/src/templates/index/style";
 @import "/src/templates/about/about-section.scss";
 @import "/src/templates/about/about-main.scss";
 @import "src/components/flip/style.scss";
 @import "src/components/svg-icon/style";
-
-* {
-  padding: 0;
-  margin: 0;
-  border: 0;
-}
-
-html, body {
-  font-size: 16px;
-  font-family: "Segoe UI", serif;
-  color: $font-color;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-size: inherit;
-  font-weight: inherit;
-}
-
-input,
-button,
-textarea {
-  font-family: inherit;
-}
-
-input::-ms-clear {
-  display: none;
-}
-
-button {
-  cursor: pointer;
-}
-
-a {
-  color: $font-color;
-
-  &:hover {
-    color: $a-hover-color;
-  }
-}
-
-
 @import "header";
 @import "footer";

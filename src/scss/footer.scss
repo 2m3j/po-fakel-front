@@ -13,12 +13,12 @@
       margin-bottom: 20px;
     }
   }
-  font-size: $footer-font-xs;
+  font-size: $footer-font-size-xs;
   @include media_from('sm') {
-    font-size: $footer-font-sm;
+    font-size: $footer-font-size-sm;
   }
   @include media_from('lg') {
-    font-size: $footer-font-lg;
+    font-size: $footer-font-size-lg;
   }
   background: $footer-background-color;
   color: $footer-color;
