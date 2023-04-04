@@ -40,15 +40,15 @@
                     <li class="top-nav__item"><a href="news.html">Новости</a></li>
                     <li class="top-nav__item"><a href="contacts.html">Контакты</a></li>
                 </ul>
-                <form class="search-form" name="search" method="get" action="/search.html">
+                <form class="top-search" name="search" method="get" action="/search.html">
                     <input
-                            class="search-form__input"
+                            class="top-search__input"
                             name="search"
                             type="text"
                             placeholder="Поиск по сайту..."
                     />
-                    <button class="search-form__submit" type="submit" name="search" title="найти">
-                        <svg class="search-form__submit-svg">
+                    <button class="top-search__submit" type="submit" name="search" title="найти">
+                        <svg>
                             <use href="images/svg/symbol/svg/sprite.symbol.svg#search"></use>
                         </svg>
                     </button>
@@ -306,7 +306,7 @@
                 </div>
             </div>
             <div class="main-news__link-wrapper">
-                <a href="#" class="main-news__link btn btn_xl">Больше новостей отряда</a>
+                <a href="#" class="main-news__link btn btn_xl">Больше новостей <span class="d-none d-md-inline-block">отряда</span></a>
             </div>
         </div>
     </section>
