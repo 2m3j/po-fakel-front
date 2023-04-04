@@ -21,16 +21,16 @@
     font-size: $footer-font-size-display-lg;
   }
   background: $footer-background-color;
-  color: $footer-color;
+  color: $footer-font-color;
 
   a {
-    color: $footer-color;
+    color: $footer-font-color;
 
     &:hover {
-      color: $footer-a-hover-color;
+      color: $theme-color;
 
       .svg-icon {
-        fill: $footer-a-hover-color;
+        fill: $theme-color;
       }
     }
   }
@@ -65,7 +65,7 @@
     white-space: nowrap;
 
     .svg-icon {
-      fill: $footer-color;
+      fill: $footer-font-color;
     }
   }
 
@@ -75,18 +75,18 @@
 
   &__social-networks {
     .svg-icon {
-      fill: $footer-color;
+      fill: $footer-font-color;
       margin-right: 10px;
     }
   }
 
   &__copyright {
-    border-top: 1px solid $footer-color;
+    border-top: 1px solid $footer-font-color;
     padding: 20px 0;
     text-align: center;
 
     .svg-icon {
-      fill: $footer-color;
+      fill: $footer-font-color;
     }
   }
 }
