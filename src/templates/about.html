@@ -7,40 +7,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
-    <title>О нас</title>
+<!--     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script> -->
+    <!--  <script src="https://unpkg.com/gijgo@1.9.14/js/gijgo.min.js" type="text/javascript"></script> -->
+    <!--   <link href="https://unpkg.com/gijgo@1.9.14/css/gijgo.min.css" rel="stylesheet" type="text/css" />
+        <script src="https://unpkg.com/gijgo@1.9.14/js/messages/messages.ru-ru.js" type="text/javascript"></script>
+    -->    <title>О нас</title>
 </head>
 
 <body>
-    <!--     <header class="header">
-        <div class="container-header">
-            <div class="header__wrapper">
-                <img src="/src/images/logo.png" alt="logo" class="header__logo">
-                <ul class="header__nav">
-                    <li class="header__item">О нас</li>
-                    <li class="header__item">Имена</li>
-                    <button class="dropbtn" onclick='myFunction()'>
-                        <li class="header__item">Галерея</li>
-                    </button>
-                    <div class="vector">
-                        <img src="/src/images/vector-down.png" alt="vector" class="header__img-vector-down"
-                             id="vectorId-down">
-                        <img src="/src/images/vector-up.png" alt="vector" class="header__img-vector-up" id="vectorId-up">
-                    </div>
-                    <div class="dropdown-content" id="myDropdown">
-                        <a class="header__sel" href="#">Фото</a>
-                        <a class="header__sel" href="#">Видео</a>
-                        <a class="header__sel" href="#">Аудио</a>
-                    </div>
-                    <li class="header__item">Новости</li>
-                    <li class="header__item">Контакты</li>
-                </ul>
-                <div class="header__img-box">
-                    <input type="text" placeholder="Поиск по сайту..." class="header__search">
-                    <img src="/src/images/magnifier.png" alt="magnifier" class="header__magnifier">
-                </div>
-            </div>
-        </div>
-    </header> -->
+
     <main class="main">
         <section class="section">
             <div class="container">
@@ -80,15 +55,11 @@
                 <div class="row mt-4">
                     <div class="col-12 col-md-4 mb-4 mr-4 d-none d-lg-block">
                         <div class="image-tile image-tile_type_page-aboutus">
-                            <!--  <div class="image-tile__wrapper" style="background-image: url(../images/aboutus1.png)">
-                </div> -->
                             <img src="/src/images/aboutus1.png" alt="Люди в полевых условиях">
                         </div>
                     </div>
                     <div class="col-12 col-md-8  d-none d-lg-block">
                         <div class="image-tile image-tile_type_page-aboutus">
-                            <!--    <div class="image-tile__wrapper" style="background-image: url(../images/aboutus2.png)">
-                </div> -->
                             <img src="/src/images/aboutus2.png" alt="Люди в полевых условиях">
                         </div>
                     </div>
@@ -96,15 +67,11 @@
                 <div class="row">
                     <div class="col-12 col-md-8 mr-4 mb-4  d-none d-lg-block">
                         <div class="image-tile image-tile_type_page-aboutus ">
-                            <!--   <div class="image-tile__wrapper" style="background-image: url(../images/aboutus3.png)">
-                </div> -->
                             <img src="/src/images/aboutus3.png" alt="Люди в полевых условиях">
                         </div>
                     </div>
                     <div class="col-12 col-md-4  d-none d-lg-block">
                         <div class="image-tile image-tile_type_page-aboutus">
-                            <!-- <div class="image-tile__wrapper" style="background-image: url(../images/aboutus4.png)">
-                </div> -->
                             <img src="/src/images/aboutus4.png" alt="Люди в полевых условиях">
                         </div>
                     </div>
@@ -129,9 +96,7 @@
                             <div class="card-slider__item-card" style="background-image:url(../images/aboutus4.png)">
                             </div>
                         </div>
-
                     </div>
-
                     <div class="swiper-pagination card-slider__pagination"></div>
                 </div>
             </div>
@@ -327,14 +292,13 @@
             </div>
             </div>
             </div>
-
             </div>
         </section>
-        <section class=" section media">
+        <section class="section media">
             <div class="container">
                 <h1 class="section__title">СМИ о нас</h1>
-                <form>
-                    <div class="row g-10 ">
+                <div  class="media-form" id="media-form">
+                    <!-- <div class="row g-10 ">
                         <div class="col-12 col-md-5 col-lg-4 mb-4 mb-md-0">
                             <mwc-select outlined label="Имя бойца" id="outlined" class="section__input">
                                 <mwc-list-item selected></mwc-list-item>
@@ -344,8 +308,7 @@
                             </mwc-select>
                         </div>
                         <div class="col-12 col-md-5 col-lg-4 mb-4 mb-md-0">
-                            <!--  <div>Value: <span id="outlinedValue"></span></div> -->
-                            <input data-provide="datepicker" type="text" name="date" placeholder="Период публикации" onfocus="(this.type='date')"
+                            <input id="datepicker" data-provide="datepicker" type="text" name="date" placeholder="Период публикации" onfocus="(this.type='date')"
                                 onblur="(this.type='text')"
                                 class="section__input section__input_type_date form-control">
                         </div>
@@ -354,8 +317,8 @@
                                 <button type="submit" class="section__btn section__input">Искать</button>
                             </div>
                         </div>
-                    </div>
-                </form>
+                    </div> -->
+                </div>
                 <div class="cards row g-5"></div>
             </div>
         </section>
