@@ -16,9 +16,9 @@
   &__date {
     margin-bottom: 10px;
     font-weight: 400;
-    font-size: $article-card-date-font-size-xs;
+    font-size: $article-card-date-font-size-display-xs;
     @include media_from('md') {
-      font-size: $article-card-date-font-size-md;
+      font-size: $article-card-date-font-size-display-md;
     }
     line-height: 150%;
     color: #4f4f4f;
@@ -28,9 +28,9 @@
     display: block;
     margin-bottom: 10px;
     font-weight: 600;
-    font-size: $article-card-title-font-size-xs;
+    font-size: $article-card-title-font-size-display-xs;
     @include media_from('md') {
-      font-size: $article-card-title-font-size-md;
+      font-size: $article-card-title-font-size-display-md;
     }
     line-height: 150%;
 
@@ -52,9 +52,9 @@
   &__text {
     font-weight: 400;
     line-height: 150%;
-    font-size: $article-card-text-font-size-xs;
+    font-size: $article-card-text-font-size-display-xs;
     @include media_from('md') {
-      font-size: $article-card-text-font-size-md;
+      font-size: $article-card-text-font-size-display-md;
     }
 
     &_type_media {
