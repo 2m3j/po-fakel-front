@@ -1,11 +1,39 @@
 .top-nav {
+  @mixin active {
+    color: $theme-color;
+
+    > a, span {
+      color: $theme-color;
+
+      svg {
+        fill: $theme-color;
+      }
+    }
+  }
   display: flex;
   height: 100%;
 
-  &__icon {
+  a {
+    color: $top-nav-font-color;
+    text-decoration: none;
+  }
+
+  svg {
     width: 12px;
     height: 8px;
     fill: $top-nav-font-color;
+  }
+
+  a:hover, span:hover {
+    color: $theme-color;
+
+    svg {
+      fill: $theme-color;
+    }
+  }
+
+  li {
+    list-style: none;
   }
 
   &__item {
@@ -23,6 +51,10 @@
       .top-nav-sub {
         display: block;
       }
+    }
+
+    &_active {
+      @include active;
     }
   }
 
@@ -42,23 +74,10 @@
       font-size: $top-nav-font-size;
       color: $top-nav-font-color;
       display: block;
+
+      &_active {
+        @include active;
+      }
     }
-  }
-
-  a {
-    color: $top-nav-font-color;
-    text-decoration: none;
-  }
-
-  a:hover {
-    color: $theme-color;
-  }
-
-  a:hover &__icon {
-    fill: $theme-color;
-  }
-
-  li {
-    list-style: none;
   }
 }

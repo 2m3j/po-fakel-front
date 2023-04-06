@@ -5,10 +5,12 @@
 @import "media";
 @import "main";
 @import "/src/components/btn/style";
+@import "src/components/svg-icon/style";
+
+@import "header";
+@import "footer";
+
 @import "/src/templates/index/style";
 @import "/src/templates/about/about-section.scss";
 @import "/src/templates/about/about-main.scss";
 @import "src/components/flip/style.scss";
-@import "src/components/svg-icon/style";
-@import "header";
-@import "footer";
