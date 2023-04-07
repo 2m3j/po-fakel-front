@@ -6,6 +6,9 @@
   background-color: $mobile-nav-btn-color;
   -webkit-transition: all ease .4s;
   transition: all ease .4s;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  cursor: pointer;
 
   &::before, &::after {
     display: block;

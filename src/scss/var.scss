@@ -10,6 +10,8 @@ $btn-xl-font-size-display-lg: 20px;
 $header-background: linear-gradient(180deg, rgba(10, 10, 10, 0.8) 0%, rgba(10, 10, 10, 0.1) 100%), url("../images/bgrd.png") no-repeat;
 
 $header-branding-before-background: rgba(255, 255, 255, 0.2);
+$header-branding-mobile-buttons-color: #f5f5f5;
+$mobile-nav-btn-color: $header-branding-mobile-buttons-color;
 
 $header-entity-font-color: #f5f5f5;
 $header-entity-title-font-size-display-xs: 36px;
@@ -27,8 +29,6 @@ $top-search-font-color: #f5f5f5;
 $top-search-border-color: #f5f5f5;
 $top-search-background: rgba(105, 104, 104, 0.2);
 $top-search-input-placeholder-color: rgba(243, 243, 243, 0.7);
-
-$mobile-nav-btn-color: #f5f5f5;
 
 $image-tile-font-color: #F3F3F3;
 $image-tile-btn-font-color: #F3F3F3;

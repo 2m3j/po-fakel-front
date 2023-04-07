@@ -37,6 +37,15 @@
     align-items: center;
     height: 70px;
   }
+
+  &__mobile-buttons {
+    display: flex;
+    align-items: center;
+  }
+
+  svg {
+    fill: $header-branding-mobile-buttons-color;
+  }
 }
 
 .header-entity {
