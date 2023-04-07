@@ -277,9 +277,6 @@ a:hover {
   height: 25px;
   fill: #f5f5f5;
 }
-.top-search__submit:hover svg {
-  fill: #da8a3a;
-}
 
 .mobile-nav-btn {
   display: block;
@@ -289,6 +286,9 @@ a:hover {
   background-color: #f5f5f5;
   -webkit-transition: all ease 0.4s;
   transition: all ease 0.4s;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  cursor: pointer;
 }
 .mobile-nav-btn::before, .mobile-nav-btn::after {
   display: block;
@@ -351,6 +351,13 @@ a:hover {
   justify-content: space-between;
   align-items: center;
   height: 70px;
+}
+.header-branding__mobile-buttons {
+  display: flex;
+  align-items: center;
+}
+.header-branding svg {
+  fill: #f5f5f5;
 }
 
 .header-entity {
