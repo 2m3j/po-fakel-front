@@ -4,10 +4,10 @@
   border-radius: 5px;
   display: block;
   height: 240px;
-  @media (min-width: 768px) {
+  @include media_from('md') {
     height: 500px;
   }
-  @media (min-width: 1200px) {
+  @include media_from('xl') {
     height: 700px;
   }
 
@@ -24,19 +24,17 @@
   }
 
   &__btn {
-    color: white;
+    color: $image-tile-btn-font-color;
     position: absolute;
     background: rgba(255, 255, 255, 0.1);
-    border: 2px solid rgb(218, 138, 58);
     backdrop-filter: blur(12.5px);
-    width: 161px;
-    height: 57px;
-    border-radius: 10px;
     font-weight: 600;
-    font-size: 20px;
-    line-height: 27px;
     margin: 24px;
     bottom: 0;
+
+    &:hover {
+      color: $image-tile-btn-font-color;
+    }
   }
 
   &__title {
@@ -45,17 +43,26 @@
     left: 30px;
     font-weight: 700;
     font-size: 35px;
-    color: #ffffff;
+    color: $image-tile-font-color;
 
     &:hover {
-      color: white;
+      color: $image-tile-font-color;
     }
   }
 
   &--half {
     height: 240px;
-    @media (min-width: 1200px) {
+    @include media_from('xl') {
       height: 339px;
+    }
+  }
+
+  &__mobile-link {
+    width: 100%;
+    height: 100%;
+    display: block;
+    @include media_from('md') {
+      display: none;
     }
   }
 
@@ -67,10 +74,12 @@
     background: rgba(0, 0, 0, 0.1);
   } */
 }
+
 .image-tile__wrapper_type_page-aboutus {
   width: 100%;
   height: 100%;
 }
+
 .image-tile_type_page-aboutus {
   max-height: 279px;
   @media (min-width: 768px) {

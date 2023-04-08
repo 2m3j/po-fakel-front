@@ -1,7 +1,12 @@
 .article-card {
+  a {
+    text-decoration: none;
+  }
+
   &_type_media {
     padding: 20px;
   }
+
   &__image {
     margin-bottom: 10px;
     width: 100%;
@@ -11,38 +16,47 @@
   &__date {
     margin-bottom: 10px;
     font-weight: 400;
-    font-size: 14px;
+    font-size: $article-card-date-font-size-display-xs;
+    @include media_from('md') {
+      font-size: $article-card-date-font-size-display-md;
+    }
     line-height: 150%;
     color: #4f4f4f;
   }
 
   &__title {
+    display: block;
     margin-bottom: 10px;
     font-weight: 600;
-    font-size: 18px;
+    font-size: $article-card-title-font-size-display-xs;
+    @include media_from('md') {
+      font-size: $article-card-title-font-size-display-md;
+    }
     line-height: 150%;
-    color: #202020;
+
     &_type_media {
       -webkit-line-clamp: 3; /* Число отображаемых строк */
       display: -webkit-box;
       -webkit-box-orient: vertical;
-      font-size: 20px;
       line-height: 27px;
       height: 81px;
       text-overflow: ellipsis;
       overflow: hidden;
-      @media (min-width: 560px) {
-        font-size: 18px;
-      }
+    }
+
+    &:hover {
+      color: $theme-color;
     }
   }
 
   &__text {
-    max-height: 144px;
     font-weight: 400;
-    font-size: 16px;
     line-height: 150%;
-    color: #202020;
+    font-size: $article-card-text-font-size-display-xs;
+    @include media_from('md') {
+      font-size: $article-card-text-font-size-display-md;
+    }
+
     &_type_media {
       -webkit-line-clamp: 4; /* Число отображаемых строк */
       display: -webkit-box;
@@ -56,11 +70,8 @@
       }
     }
   }
-
-  &__link {
-    color: #da8a3a;
-  }
 }
+
 .cards {
   margin-top: 5px;
 }
