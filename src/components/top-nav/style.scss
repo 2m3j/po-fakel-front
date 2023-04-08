@@ -1,0 +1,83 @@
+.top-nav {
+  @mixin active {
+    color: $theme-color;
+
+    > a, span {
+      color: $theme-color;
+
+      svg {
+        fill: $theme-color;
+      }
+    }
+  }
+  display: flex;
+  height: 100%;
+
+  a {
+    color: $top-nav-font-color;
+    text-decoration: none;
+  }
+
+  svg {
+    width: 12px;
+    height: 8px;
+    fill: $top-nav-font-color;
+  }
+
+  a:hover, span:hover {
+    color: $theme-color;
+
+    svg {
+      fill: $theme-color;
+    }
+  }
+
+  li {
+    list-style: none;
+  }
+
+  &__item {
+    position: relative;
+    margin-left: 30px;
+    font-size: $top-nav-font-size;
+    line-height: 27px;
+    color: $top-nav-font-color;
+    display: flex;
+    height: 100%;
+    align-items: center;
+    white-space: nowrap;
+
+    &:hover {
+      .top-nav-sub {
+        display: block;
+      }
+    }
+
+    &_active {
+      @include active;
+    }
+  }
+
+  &-sub {
+    display: none;
+    position: absolute;
+    top: 100%;
+    border-top: 1px solid $top-nav-font-color;
+    z-index: 100;
+    padding: 8px 0;
+    background: $top-nav-sub-background-color;
+    backdrop-filter: blur(5px);
+
+    &__item {
+      padding: 12px 24px;
+      font-weight: 400;
+      font-size: $top-nav-font-size;
+      color: $top-nav-font-color;
+      display: block;
+
+      &_active {
+        @include active;
+      }
+    }
+  }
+}

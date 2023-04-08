@@ -1,7 +1,7 @@
 @import "/src/components/card-slider/style";
 
 .main-names {
-  background: url('/src/images/bcgr-two.png');
+  background: url('/images/bcgr-two.png');
   margin-bottom: 130px;
   padding: 80px 0;
   display: flex;
@@ -15,13 +15,6 @@
 
   &__link {
     margin-top: 20px;
-    padding: 20px 45px;
-    background: #DA8A3A;
-    border-radius: 10px;
-    font-weight: 600;
-    font-size: 20px;
-    color: #FFFFFF;
-    text-align: center;
   }
 
   &__link-wrapper {

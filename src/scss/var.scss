@@ -1,0 +1,47 @@
+$font-color: #202020;
+$theme-color: #da8a3a;
+
+$btn-background-color: $theme-color;
+$btn-border-color: $theme-color;
+$btn-with-background-font-color: white;
+$btn-xl-font-size-display-xs: 18px;
+$btn-xl-font-size-display-lg: 20px;
+
+$header-background: linear-gradient(180deg, rgba(10, 10, 10, 0.8) 0%, rgba(10, 10, 10, 0.1) 100%), url("../images/bgrd.png") no-repeat;
+
+$header-branding-before-background: rgba(255, 255, 255, 0.2);
+$header-branding-mobile-buttons-color: #f5f5f5;
+$mobile-nav-btn-color: $header-branding-mobile-buttons-color;
+
+$header-entity-font-color: #f5f5f5;
+$header-entity-title-font-size-display-xs: 36px;
+$header-entity-title-font-size-display-sm: 55px;
+$header-entity-title-font-size-display-lg: 65px;
+$header-entity-sub-title-font-size-display-xs: 20px;
+$header-entity-sub-title-font-size-display-sm: 30px;
+$header-entity-sub-title-font-size-display-lg: 35px;
+
+$top-nav-font-size: 20px;
+$top-nav-font-color: #f5f5f5;
+$top-nav-sub-background-color: rgba(255, 255, 255, 0.2);
+
+$top-search-font-color: #f5f5f5;
+$top-search-border-color: #f5f5f5;
+$top-search-background: rgba(105, 104, 104, 0.2);
+$top-search-input-placeholder-color: rgba(243, 243, 243, 0.7);
+
+$image-tile-font-color: #F3F3F3;
+$image-tile-btn-font-color: #F3F3F3;
+
+$article-card-title-font-size-display-xs: 18px;
+$article-card-title-font-size-display-md: 20px;
+$article-card-date-font-size-display-xs: 14px;
+$article-card-date-font-size-display-md: 15px;
+$article-card-text-font-size-display-xs: 15px;
+$article-card-text-font-size-display-md: 16px;
+
+$footer-font-size-display-xs: 16px;
+$footer-font-size-display-sm: 18px;
+$footer-font-size-display-lg: 20px;
+$footer-background-color: #4F4F4F;
+$footer-font-color: #f3f3f3;

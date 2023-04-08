@@ -1,0 +1,11 @@
+$sizes: ("xs":320px, "sm":576px, "md":768px, "lg":992px, "xl":1200px);
+
+@mixin media_from($media) {
+  @each $size, $resolution in $sizes {
+    @if $media == $size {
+      @media only screen and (min-width: $resolution) {
+        @content;
+      }
+    }
+  }
+}
