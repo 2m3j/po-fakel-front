@@ -1,43 +1,52 @@
 .mobile-nav-btn {
-  display: block;
-  position: relative;
   width: 27px;
-  height: 3px;
-  background-color: $mobile-nav-btn-color;
-  -webkit-transition: all ease .4s;
-  transition: all ease .4s;
-  margin-top: 10px;
-  margin-bottom: 10px;
+  height: 23px;
   cursor: pointer;
 
-  &::before, &::after {
+  &:hover {
+    .mobile-nav-btn__line {
+      background-color: transparent;
+
+      &:before {
+        transform: translateY(9px) rotate(45deg);
+      }
+
+      &:after {
+        transform: translateY(-9px) rotate(-45deg);
+      }
+    }
+  }
+
+  &__line {
     display: block;
-    position: absolute;
-    content: "";
+    position: relative;
     width: 27px;
     height: 3px;
     background-color: $mobile-nav-btn-color;
     -webkit-transition: all ease .4s;
     transition: all ease .4s;
-  }
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius: 9px;
 
-  &::before {
-    top: -9px;
-  }
-
-  &::after {
-    top: 9px;
-  }
-
-  &:hover {
-    background-color: transparent;
-
-    &:before {
-      transform: translateY(9px) rotate(45deg);
+    &::before, &::after {
+      display: block;
+      position: absolute;
+      content: "";
+      width: 27px;
+      height: 3px;
+      background-color: $mobile-nav-btn-color;
+      -webkit-transition: all ease .4s;
+      transition: all ease .4s;
+      border-radius: 9px;
     }
 
-    &:after {
-      transform: translateY(-9px) rotate(-45deg);
+    &::before {
+      top: -9px;
+    }
+
+    &::after {
+      top: 9px;
     }
   }
 }
