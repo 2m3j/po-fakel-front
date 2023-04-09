@@ -289,6 +289,20 @@ a:hover {
 }
 
 .mobile-nav-btn {
+  width: 27px;
+  height: 23px;
+  cursor: pointer;
+}
+.mobile-nav-btn:hover .mobile-nav-btn__line {
+  background-color: transparent;
+}
+.mobile-nav-btn:hover .mobile-nav-btn__line:before {
+  transform: translateY(9px) rotate(45deg);
+}
+.mobile-nav-btn:hover .mobile-nav-btn__line:after {
+  transform: translateY(-9px) rotate(-45deg);
+}
+.mobile-nav-btn__line {
   display: block;
   position: relative;
   width: 27px;
@@ -298,9 +312,9 @@ a:hover {
   transition: all ease 0.4s;
   margin-top: 10px;
   margin-bottom: 10px;
-  cursor: pointer;
+  border-radius: 9px;
 }
-.mobile-nav-btn::before, .mobile-nav-btn::after {
+.mobile-nav-btn__line::before, .mobile-nav-btn__line::after {
   display: block;
   position: absolute;
   content: "";
@@ -309,21 +323,13 @@ a:hover {
   background-color: #f5f5f5;
   -webkit-transition: all ease 0.4s;
   transition: all ease 0.4s;
+  border-radius: 9px;
 }
-.mobile-nav-btn::before {
+.mobile-nav-btn__line::before {
   top: -9px;
 }
-.mobile-nav-btn::after {
+.mobile-nav-btn__line::after {
   top: 9px;
-}
-.mobile-nav-btn:hover {
-  background-color: transparent;
-}
-.mobile-nav-btn:hover:before {
-  transform: translateY(9px) rotate(45deg);
-}
-.mobile-nav-btn:hover:after {
-  transform: translateY(-9px) rotate(-45deg);
 }
 
 .header {
@@ -575,15 +581,34 @@ a:hover {
 }
 
 .main-names {
+  padding-top: 40px;
+  padding-bottom: 40px;
   background: url("/images/bcgr-two.png");
-  margin-bottom: 130px;
-  padding: 80px 0;
   display: flex;
+}
+@media only screen and (min-width: 768px) {
+  .main-names {
+    padding-top: 48px;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .main-names {
+    padding-top: 56px;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .main-names {
+    padding-bottom: 48px;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .main-names {
+    padding-bottom: 56px;
+  }
 }
 .main-names__title {
   font-weight: 600;
   font-size: 45px;
-  line-height: 60px;
   color: #202020;
 }
 .main-names__link {
@@ -671,14 +696,33 @@ a:hover {
 }
 
 .main-news {
-  padding: 80px 0;
+  padding-top: 40px;
+  padding-bottom: 40px;
   background-color: #F3F3F3;
-  margin-top: 130px;
+}
+@media only screen and (min-width: 768px) {
+  .main-news {
+    padding-top: 48px;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .main-news {
+    padding-top: 56px;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .main-news {
+    padding-bottom: 48px;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .main-news {
+    padding-bottom: 56px;
+  }
 }
 .main-news__title {
   font-weight: 600;
   font-size: 45px;
-  line-height: 60px;
   color: #202020;
   margin-bottom: 50px;
 }
@@ -785,18 +829,50 @@ a:hover {
   }
 }
 
+.main-gallery {
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+@media only screen and (min-width: 768px) {
+  .main-gallery {
+    padding-top: 48px;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .main-gallery {
+    padding-top: 56px;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .main-gallery {
+    padding-bottom: 48px;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .main-gallery {
+    padding-bottom: 56px;
+  }
+}
 .main-gallery__title {
   font-weight: 600;
   font-size: 45px;
-  line-height: 60px;
-  color: #202020;
   margin-bottom: 50px;
 }
 
 /* about start*/
 .main-about {
-  margin-top: 155px;
+  padding-top: 40px;
   position: relative;
+}
+@media only screen and (min-width: 768px) {
+  .main-about {
+    padding-top: 48px;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .main-about {
+    padding-top: 56px;
+  }
 }
 .main-about img {
   min-width: 100%;
@@ -818,7 +894,6 @@ a:hover {
 @media only screen and (min-width: 768px) {
   .main-about__title {
     font-size: 45px;
-    line-height: 60px;
   }
 }
 .main-about .container {

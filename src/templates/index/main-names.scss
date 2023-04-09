@@ -1,15 +1,13 @@
 @import "/src/components/card-slider/style";
 
 .main-names {
+  @include block-padding;
   background: url('/images/bcgr-two.png');
-  margin-bottom: 130px;
-  padding: 80px 0;
   display: flex;
 
   &__title {
     font-weight: 600;
     font-size: 45px;
-    line-height: 60px;
     color: #202020;
   }
 

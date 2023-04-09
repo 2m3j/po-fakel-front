@@ -1,6 +1,6 @@
 /* about start*/
 .main-about {
-  margin-top: 155px;
+  @include block-padding-top;
   position: relative;
 
   img {
@@ -20,7 +20,6 @@
     font-size: 40px;
     @include media_from('md') {
       font-size: 45px;
-      line-height: 60px;
     }
   }
 
