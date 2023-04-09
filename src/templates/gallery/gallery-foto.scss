@@ -2,86 +2,15 @@
   display: flex;
   flex-direction: column;
   padding: 0;
+  position: relative;
 
-  &__title{
-    margin: 0;
-    padding: 0;
-    font-family: 'Segoe UI';
-    font-style: normal;
-    font-weight: 600;
-    font-size: 36px;
-    line-height: 48px;
-    /* identical to box height */
-    color: #202020;
-    margin-bottom: 32px;
-    
+  .foto_first {
+    background-image: url(../../images/photo-one.png);
   }
-  &__images{
-    display: flex;
-    gap: 31px;
-    margin-bottom: 32px;
+  .foto_second {
+    background-image: url(../../images/photo-two.png);
   }
-  &__image{
-    width: 349px;
-    height: 320px;
-    
-    border-radius: 10px;
-    display: flex;
-    flex-direction: column-reverse;
-    object-fit:cover;
-    max-width: 100%;
-    cursor: pointer;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    transition: filter 0.5s linear 0s;
-    &:hover {
-      filter: brightness(70%)
-    }
-    &_first {
-      background-image: url(../../images/photo-one.png);
-    }
-    &_second {
-      background-image: url(../../images/photo-two.png);
-    }
-    &_third {
-      background-image: url(../../images/photo-three.png);
-    }
-  }
-  &__description{
-    margin: 0;
-    padding: 0;
-    font-family: 'Segoe UI';
-    font-style: normal;
-    font-weight: 600;
-    font-size: 16px;
-    line-height: 21px;
-    color: #FFFFFF;
-    padding-left: 16px;
-    padding-bottom: 16px;
-    max-width: 120px;
-  }
-  &__button {
-    width: 258px;
-    height: 57px;
-    background: #DA8A3A;
-    border-radius: 10px;
-  
-    font-family: 'Segoe UI';
-    font-style: normal;
-    font-weight: 600;
-    font-size: 20px;
-    line-height: 27px;
-    color: #FFFFFF;
-    align-self: center;
-    margin-bottom: 56px;
-    border: none;
-    cursor: pointer;
-    transition: filter 0.5s linear 0s;
-    margin-top: 32px;
-
-    &:hover {
-      filter: brightness(80%)
-    }
+  .foto_third {
+    background-image: url(../../images/photo-three.png);
   }
 }

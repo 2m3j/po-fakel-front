@@ -1,0 +1,88 @@
+.image-tile {
+  overflow: hidden;
+  position: relative;
+  border-radius: 5px;
+  display: block;
+  height: 240px;
+  /*   &:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.1);
+  } */
+}
+@media (min-width: 768px) {
+  .image-tile {
+    height: 500px;
+  }
+}
+@media (min-width: 1200px) {
+  .image-tile {
+    height: 700px;
+  }
+}
+.image-tile__wrapper {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+}
+.image-tile__wrapper:hover {
+  transition: 0.2s ease;
+  transform: scale(1.02);
+}
+.image-tile__btn {
+  color: white;
+  position: absolute;
+  background: rgba(255, 255, 255, 0.1);
+  border: 2px solid rgb(218, 138, 58);
+  -webkit-backdrop-filter: blur(12.5px);
+          backdrop-filter: blur(12.5px);
+  width: 161px;
+  height: 57px;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 27px;
+  margin: 24px;
+  bottom: 0;
+}
+.image-tile__title {
+  position: absolute;
+  top: 30px;
+  left: 30px;
+  font-weight: 700;
+  font-size: 35px;
+  color: #ffffff;
+}
+.image-tile__title:hover {
+  color: white;
+}
+.image-tile--half {
+  height: 240px;
+}
+@media (min-width: 1200px) {
+  .image-tile--half {
+    height: 339px;
+  }
+}
+
+.image-tile__wrapper_type_page-aboutus {
+  width: 100%;
+  height: 100%;
+}
+
+.image-tile_type_page-aboutus {
+  max-height: 279px;
+}
+@media (min-width: 768px) {
+  .image-tile_type_page-aboutus {
+    max-height: 315px;
+  }
+}
+@media (min-width: 1200px) {
+  .image-tile_type_page-aboutus {
+    max-height: 500px;
+  }
+}/*# sourceMappingURL=style.css.map */

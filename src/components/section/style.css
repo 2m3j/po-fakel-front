@@ -1,0 +1,35 @@
+.section {
+  margin-top: 155px;
+}
+.section__title-btn {
+  display: flex;
+  justify-content: space-between;
+  align-self: center;
+}
+.section__title {
+  font-weight: 600;
+  font-size: 45px;
+  line-height: 60px;
+  color: #202020;
+}
+.section__btn {
+  width: 349px;
+  height: 70px;
+  background: #da8a3a;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 27px;
+  color: #ffffff;
+}
+@media (min-width: 768px) {
+  .section__btn {
+    width: 103px;
+  }
+}
+@media (min-width: 500px) {
+  .section__btn {
+    height: 60px;
+    max-width: 280px;
+  }
+}/*# sourceMappingURL=style.css.map */

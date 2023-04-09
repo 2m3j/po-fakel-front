@@ -3,92 +3,57 @@
   flex-direction: column;
   padding: 0;
   background: #E9E9E9;
+  position: relative;
 }
-
-.audio__box{
+@media screen and (max-width: 320px) {
+  .audio {
+    background: none;
+  }
+}
+.audio__box {
   margin-top: 40px;
   margin-bottom: 27px;
   display: flex;
   justify-content: space-between;
 }
-.audio__title{
-  margin: 0;
-  padding: 0;
-  font-family: 'Segoe UI';
-  font-style: normal;
-  font-weight: 600;
-  font-size: 36px;
-  line-height: 48px;
-  /* identical to box height */
-  color: #202020;
+@media screen and (max-width: 320px) {
+  .audio__box {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
 }
-.audio__buttons{
+.audio__buttons {
   display: flex;
   flex-direction: row-reverse;
   gap: 20px;
 }
-
+@media screen and (max-width: 320px) {
+  .audio__buttons {
+    display: none;
+  }
+}
 .audio__button-container {
   width: 48px;
   height: 48px;
-
   border: 2px solid #DA8A3A;
   border-radius: 10px;
   transform: matrix(-1, 0, 0, 1, 0, 0);
-
   display: flex;
   align-items: center;
   justify-content: center;
 }
-.audio__button{
+.audio__button {
   width: 27.36px;
   height: 27.36px;
 }
-
-.audio__image{
-  width: 349px;
-  height: 320px;
-  border-radius: 10px;
-  display: flex;
-  flex-direction: column-reverse;
-  -o-object-fit: cover;
-  object-fit: cover;
-  max-width: 100%;
-  cursor: pointer;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  transition: filter 0.5s linear 0s;
-}
-.audio__image:hover {
-  filter: brightness(70%);
-}
-.audio__image_first{
+.audio .audio_first {
   background-image: url(./img/Audio_image_1.png);
 }
-.audio__image_second{
+.audio .audio_second {
   background-image: url(./img/Audio_image_2.png);
 }
-.audio__image_third{
+.audio .audio_third {
   background-image: url(./img/Audio_image_3.png);
-}
-.audio__image_cover{
-  opacity:30% ;
-  background-image: url(./img/Audio_fon_1.png);
-
-}
-.audio__description{
-  margin: 0;
-  padding: 0;
-  font-family: 'Segoe UI';
-  font-style: normal;
-  font-weight: 600;
-  font-size: 16px;
-  line-height: 21px;
-
-  color: #FFFFFF;
-  padding-left: 16px;
-  padding-bottom: 16px;
 }
 .audio__player {
   background-color: white;
@@ -97,24 +62,8 @@
   margin-top: 11px;
   text-align: center;
 }
-.audio__button-next{
-  width: 258px;
-  height: 57px;
-  background: #DA8A3A;
-  border-radius: 10px;
-  font-family: "Segoe UI";
-  font-style: normal;
-  font-weight: 600;
-  font-size: 20px;
-  line-height: 27px;
-  color: #FFFFFF;
-  align-self: center;
-  margin-top: 32px;
-  margin-bottom: 40px;
-  border: none;
-  cursor: pointer;
-  transition: filter 0.5s linear 0s;
-}
-.audio__button-next:hover {
-  filter: brightness(80%);
-}
+@media screen and (max-width: 320px) {
+  .audio__player {
+    width: 250px;
+  }
+}/*# sourceMappingURL=gallery-audio.css.map */
