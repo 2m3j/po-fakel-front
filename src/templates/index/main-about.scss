@@ -1,0 +1,76 @@
+/* about start*/
+.main-about {
+  @include block-padding-top;
+  position: relative;
+
+  img {
+    min-width: 100%;
+    object-fit: cover;
+    object-position: center;
+    width: 100%;
+    height: 260px;
+    @include media_from('md') {
+      height: auto;
+    }
+  }
+
+  &__title {
+    font-weight: 600;
+    font-size: 40px;
+    @include media_from('md') {
+      font-size: 45px;
+    }
+  }
+
+  .container {
+    position: relative;
+  }
+
+  &__btn {
+    position: absolute;
+    top: 0;
+    right: calc(var(--bs-gutter-x) * .5);
+  }
+
+  &__grid {
+    margin-top: 50px;
+  }
+
+  &__row {
+    display: grid;
+    grid-template-columns: 1fr;
+    @include media_from('md') {
+      grid-template-columns: 1fr 1fr;
+    }
+    background: #f3f3f3;
+    align-items: center;
+
+    @include media_from('md') {
+      &:nth-of-type(2n) {
+        img {
+          order: 2;
+        }
+      }
+    }
+  }
+
+  &__text {
+    display: inline-block;
+    font-size: 16px;
+    line-height: 140%;
+    text-align: center;
+    padding: 45px 30px;
+    @include media_from('md') {
+      padding: 15px 30px;
+    }
+    @include media_from('lg') {
+      font-size: 18px;
+      padding: 10px 30px;
+      line-height: 150%;
+    }
+    @include media_from('xl') {
+      padding: 45px 60px;
+      font-size: 20px;
+    }
+  }
+}

@@ -1,0 +1,46 @@
+.main-numbers {
+  margin-top: 32px;
+  margin-bottom: 32px;
+  white-space: nowrap;
+
+  &__item {
+    text-align: center;
+    font-weight: 600;
+    margin-bottom: 24px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    @include media_from('lg') {
+      margin-bottom: 0;
+    }
+
+    font-size: 18px;
+    @include media_from('md') {
+      font-size: 20px;
+    }
+
+    &_color_blue {
+      color: #121a60;
+    }
+
+    &_color_red {
+      color: #7b0d0d;
+    }
+
+    &_color_green {
+      color: #274d2d;
+    }
+
+    &_color_brown {
+      color: #874d22;
+    }
+  }
+
+  &__num {
+    font-size: 45px;
+    display: block;
+    margin-bottom: 5px;
+  }
+}

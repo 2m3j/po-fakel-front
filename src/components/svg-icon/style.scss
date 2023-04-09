@@ -1,0 +1,46 @@
+.svg-icon {
+  display: inline-block;
+  font-size: inherit;
+  height: 1em;
+  width: 1em;
+  overflow: visible;
+  vertical-align: -0.125em;
+
+  &_size_2xs {
+    height: 0.625em;
+    width: 0.625em;
+    vertical-align: .05357em
+  }
+
+  &_size_xs {
+    height: 0.75em;
+    width: 0.75em;
+    vertical-align: 0;
+  }
+
+  &_size_sm {
+    height: 0.875em;
+    width: 0.875em;
+    vertical-align: -.12em
+  }
+
+  &_size_lg {
+    height: 1.25em;
+    width: 1.25em;
+    line-height: .05em;
+    vertical-align: -.275em
+  }
+
+  &_size_xl {
+    height: 1.5em;
+    width: 1.5em;
+    line-height: .04167em;
+    vertical-align: -.425em
+  }
+
+  &_size_2xl {
+    height: 2em;
+    width: 2em;
+    vertical-align: -0.6706em;
+  }
+}

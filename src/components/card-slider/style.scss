@@ -8,6 +8,7 @@
     background-size: cover;
     width: 225px;
     height: 300px;
+
     &_page_aboutus {
       width: 279px;
       height: 394px;
@@ -18,10 +19,12 @@
     position: absolute;
     color: #f3f3f3;
     bottom: 10px;
-    left: 20px;
+    padding: 0 20px;
     font-style: italic;
     font-weight: 400;
     font-size: 16px;
+    text-decoration: none;
+    line-height: 140%;
   }
 
   &__navigation {
@@ -44,23 +47,25 @@
     justify-content: center;
     display: flex;
   }
+
   &__pagination {
     width: 110px !important;
     position: relative;
     height: 30px;
     padding: 8px 18px;
-    /*  border: 1px solid #F3F3F3; */
     background: rgba(79, 79, 79, 0.7);
     border-radius: 5px;
     margin: 15px auto;
   }
 }
+
 .swiper-pagination-bullet {
   background-color: rgba(79, 79, 79, 0.7) !important;
   width: 10px;
   height: 10px;
   border: 1px solid #f3f3f3;
 }
+
 .swiper-pagination-bullet-active {
-  background-color: #f3f3f3 !important;
+  background-color: $theme-color !important;
 }

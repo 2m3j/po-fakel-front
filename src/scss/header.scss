@@ -1,0 +1,93 @@
+@import "/src/components/top-nav/style";
+@import "/src/components/top-search/style";
+@import "/src/components/mobile-nav/style";
+
+.header {
+  display: flex;
+  flex-direction: column;
+  background: $header-background-color;
+
+  &_entity_show {
+    background: $header-showed-entity-background;
+    background-size: cover;
+    min-height: 90vh;
+    @include media_from('md') {
+      min-height: 100vh;
+    }
+
+    .top-nav-sub {
+      background: $top-nav-sub-showed-entity-background-color;
+    }
+
+    .header-branding {
+      &::before {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: $header-branding-showed-entity-before-background-color;
+        backdrop-filter: blur(5px);
+      }
+    }
+  }
+}
+
+.header-branding {
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: 70px;
+  padding: 0;
+  width: 100%;
+
+  &__wrapper {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
+  }
+
+  &__mobile-buttons {
+    display: flex;
+    align-items: center;
+  }
+
+  svg {
+    fill: $header-branding-mobile-buttons-color;
+  }
+}
+
+.header-entity {
+  margin: auto 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: $header-entity-font-color;
+
+  &__title {
+    font-weight: 700;
+    text-align: center;
+    font-size: $header-entity-title-font-size-display-xs;
+    padding-bottom: 20px;
+    @include media_from('sm') {
+      font-size: $header-entity-title-font-size-display-sm;
+    }
+    @include media_from('lg') {
+      font-size: $header-entity-title-font-size-display-lg;
+    }
+  }
+
+  &__subtitle {
+    font-weight: 400;
+    text-align: center;
+    font-size: $header-entity-sub-title-font-size-display-xs;
+    @include media_from('sm') {
+      font-size: $header-entity-sub-title-font-size-display-sm;
+    }
+    @include media_from('lg') {
+      font-size: $header-entity-sub-title-font-size-display-lg;
+    }
+    padding-bottom: 32px;
+  }
+}
