@@ -317,14 +317,17 @@ a:hover {
 }
 
 .header {
-  min-height: 90vh;
-  background: linear-gradient(180deg, rgba(10, 10, 10, 0.8) 0%, rgba(10, 10, 10, 0.1) 100%), url("../images/bgrd.png") no-repeat;
-  background-size: cover;
   display: flex;
   flex-direction: column;
+  background: #4F4F4F;
+}
+.header_entity_show {
+  background: linear-gradient(180deg, rgba(10, 10, 10, 0.8) 0%, rgba(10, 10, 10, 0.1) 100%), url("../images/bgrd.png") no-repeat;
+  background-size: cover;
+  min-height: 90vh;
 }
 @media only screen and (min-width: 768px) {
-  .header {
+  .header_entity_show {
     min-height: 100vh;
   }
 }

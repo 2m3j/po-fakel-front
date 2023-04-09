@@ -3,14 +3,17 @@
 @import "/src/components/mobile-nav/style";
 
 .header {
-  min-height: 90vh;
-  @include media_from('md') {
-    min-height: 100vh;
-  }
-  background: $header-background;
-  background-size: cover;
   display: flex;
   flex-direction: column;
+  background: $header-background;
+  &_entity_show {
+    background: $header-showed-entity-background;
+    background-size: cover;
+    min-height: 90vh;
+    @include media_from('md') {
+      min-height: 100vh;
+    }
+  }
 }
 
 .header-branding {
