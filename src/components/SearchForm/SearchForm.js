@@ -17,6 +17,10 @@ import {
 } from "../../utils/constants";
 import Section from "../section/Section";
 import "./SearchForm.scss";
+import { DatePicker, LocalizationProvider } from "@mui/x-date-pickers";
+import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
+import "dayjs/locale/ru";
+import CalendarMonthIcon from "@mui/icons-material/CalendarMonth";
 
 const useStyles = makeStyles({
   noOptions: {
@@ -148,45 +152,55 @@ function SearchForm() {
   };
   /* const cards = filteredData ? filteredData : initialCards; */
   return (
-    <form>
-      <div className="row g-10">
-        <div className="section__input col-12 col-md-8 col-lg-8 mb-4 mb-md-0">
-          <StyledAutocomplete
-            disablePortal
-            id="outlined"
-            options={select}
-            /*  value={value} */
-            classes={{
-              noOptions: styles.noOptions,
-            }}
-            className="section__input"
-            onChange={handleInput}
-            /*  isOptionEqualToValue={(option, value) => option.code === value} */
-            isOptionEqualToValue={(option, value) =>
-              value === undefined || value === "" || option.id === value.id
-            }
-            noOptionsText="К сожалению, у нас пока нет данных"
-            renderOption={(props, select) => (
-              <Box component="li" {...props}>
-                {select}
-              </Box>
-            )}
-            sx={{ noOptions: { color: "red" } }}
-            renderInput={(params) => (
-              <TextField
-                {...params}
-                /*     helperText="Введите имя на кириллице" */
-                label="Имя бойца"
-                pattern="[а-я]+/i"
-                className="section__input"
-                inputProps={{ ...params.inputProps }}
-              />
-            )}
-          />
-        </div>
-        {/*       <div className="col-12 col-md-5 col-lg-4 mb-4 mb-md-0"> */}
-        {/*   <div className=" col col-xs-12 "> */}
-        {/*          <input
+    <LocalizationProvider dateAdapter={AdapterDayjs} adapterLocale="ru">
+      <form>
+        <div className="row g-10">
+          <div className="section__input col-12 col-md-5 col-lg-5 mb-4 mb-md-0">
+            <StyledAutocomplete
+              disablePortal
+              id="outlined"
+              options={select}
+              /*  value={value} */
+              classes={{
+                noOptions: styles.noOptions,
+              }}
+              className="section__input"
+              onChange={handleInput}
+              /*  isOptionEqualToValue={(option, value) => option.code === value} */
+              isOptionEqualToValue={(option, value) =>
+                value === undefined || value === "" || option.id === value.id
+              }
+              noOptionsText="К сожалению, у нас пока нет данных"
+              renderOption={(props, select) => (
+                <Box component="li" {...props}>
+                  {select}
+                </Box>
+              )}
+              sx={{ noOptions: { color: "red" } }}
+              renderInput={(params) => (
+                <TextField
+                  {...params}
+                  /*     helperText="Введите имя на кириллице" */
+                  label="Имя бойца"
+                  pattern="[а-я]+/i"
+                  className="section__input"
+                  inputProps={{ ...params.inputProps }}
+                />
+              )}
+            />
+          </div>
+          <div className="col-12 col-md-5 col-lg-5 mb-4 mb-md-0">
+            <DatePicker
+              label={"Период публикации"}
+              onChange={(newValue) => setValue(newValue)}
+              components={{
+                OpenPickerIcon: CalendarMonthIcon,
+              }}
+            />
+          </div>
+          {/*       <div className="col-12 col-md-5 col-lg-4 mb-4 mb-md-0"> */}
+          {/*   <div className=" col col-xs-12 "> */}
+          {/*          <input
         id="datepicker"
         type="date"
         name="date"
@@ -196,29 +210,30 @@ function SearchForm() {
         className="section__input section__input_type_date "
       /> */}
 
-        {/* </div> */}
-        <div className="col-12 col-md-4 col-lg-4 mb-4 mb-md-0">
-          {/*   <div class="col-12 col-md-2 col-lg-4"> */}
-          {/*     <div className="section__btn"> */}
-          <button type="submit" className="section__btn section__input">
-            Искать
-          </button>
-          {/*     </div> */}
+          {/* </div> */}
+          <div className="col-12 col-md-2 col-lg-2 mb-4 mb-md-0">
+            {/*   <div class="col-12 col-md-2 col-lg-4"> */}
+            {/*     <div className="section__btn"> */}
+            <button type="submit" className="section__btn section__input">
+              Искать
+            </button>
+            {/*     </div> */}
+          </div>
         </div>
-      </div>
-      <div className="cards row g-5">
-        <Section items={cards} showned={showned} />
-      </div>
-      <div
-        className={`search-form__container-more ${
-          isMore ? "search-form__container-more_visible" : ""
-        }`}
-      >
-        <button className="button" onClick={handleMoreClick}>
-          <p className="button search-form__more">Больше новостей</p>
-        </button>
-      </div>
-    </form>
+        <div className="cards row g-5">
+          <Section items={cards} showned={showned} />
+        </div>
+        <div
+          className={`search-form__container-more ${
+            isMore ? "search-form__container-more_visible" : ""
+          }`}
+        >
+          <button className="button" onClick={handleMoreClick}>
+            <p className="button search-form__more">Больше новостей</p>
+          </button>
+        </div>
+      </form>
+    </LocalizationProvider>
   );
 }
 
