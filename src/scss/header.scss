@@ -5,13 +5,29 @@
 .header {
   display: flex;
   flex-direction: column;
-  background: $header-background;
+  background: $header-background-color;
+
   &_entity_show {
     background: $header-showed-entity-background;
     background-size: cover;
     min-height: 90vh;
     @include media_from('md') {
       min-height: 100vh;
+    }
+
+    .top-nav-sub {
+      background: $top-nav-sub-showed-entity-background-color;
+    }
+
+    .header-branding {
+      &::before {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: $header-branding-showed-entity-before-background-color;
+        backdrop-filter: blur(5px);
+      }
     }
   }
 }
@@ -23,15 +39,6 @@
   height: 70px;
   padding: 0;
   width: 100%;
-
-  &::before {
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background: $header-branding-before-background;
-    backdrop-filter: blur(5px);
-  }
 
   &__wrapper {
     position: relative;
