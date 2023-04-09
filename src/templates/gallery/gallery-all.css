@@ -7,7 +7,7 @@
 }
 .header {
   flex-shrink: 0;
-  border: 1px solid black; 
+  border: 1px solid black;
   height: 87px;
 }
 .gallery {
@@ -81,7 +81,7 @@
   /* identical to box height */
   color: #202020;
   margin-bottom: 32px;
-  
+
 }
 .foto__images{
   display: flex;
@@ -91,7 +91,7 @@
 .foto__image{
   width: 349px;
   height: 320px;
-  
+
   border-radius: 10px;
   display: flex;
   flex-direction: column-reverse;
@@ -109,14 +109,14 @@
 
 }
 .foto__image_first {
-  background-image: url(../../images/photo-one.png);
+  background-image: url(images/gallery/photo-one.png);
 }
 .foto__image_second {
-  background-image: url(../../images/photo-two.png);
+  background-image: url(images/gallery/photo-two.png);
 }
 
 .foto__image_third {
-  background-image: url(../../images/photo-three.png);
+  background-image: url(images/gallery/photo-three.png);
 }
 .foto__description{
   margin: 0;
@@ -154,6 +154,6 @@
 }
 .footer {
   flex-shrink: 0;
-  border: 1px solid black; 
+  border: 1px solid black;
   height: 354px;
 }

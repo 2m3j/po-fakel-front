@@ -10,11 +10,11 @@
   }
 }
 .video .video_first {
-  background-image: url(./img/Video_image_1.png);
+  background-image: url(/images/gallery/Video_image_1.png);
 }
 .video .video_second {
-  background-image: url(./img/Video_image_2.png);
+  background-image: url(/images/gallery/Video_image_2.png);
 }
 .video .video_third {
-  background-image: url(./img/Video_image_3.png);
+  background-image: url(/images/gallery/Video_image_3.png);
 }/*# sourceMappingURL=gallery-video.css.map */

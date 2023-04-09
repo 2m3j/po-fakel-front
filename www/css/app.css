@@ -66,13 +66,13 @@
   position: relative;
 
   .foto_first {
-    background-image: url(../../images/photo-one.png);
+    background-image: url(/images/photo-one.png);
   }
   .foto_second {
-    background-image: url(../../images/photo-two.png);
+    background-image: url(/images/photo-two.png);
   }
   .foto_third {
-    background-image: url(../../images/photo-three.png);
+    background-image: url(/images/photo-three.png);
   }
 }
 
@@ -132,15 +132,15 @@
 
 
   .audio_first {
-    background-image: url(./img/Audio_image_1.png);
+    background-image: url(images/gallery/Audio_image_1.png);
   }
 
   .audio_second {
-    background-image: url(./img/Audio_image_2.png);
+    background-image: url(images/gallery/Audio_image_2.png);
   }
 
   .audio_third {
-    background-image: url(./img/Audio_image_3.png);
+    background-image: url(images/gallery/Audio_image_3.png);
   }
 
   &__player {
@@ -177,13 +177,13 @@
     margin-bottom: 112px;
   }
   .video_first {
-    background-image: url(./img/Video_image_1.png);
+    background-image: url(/images/gallery/Video_image_1.png);
   }
   .video_second {
-    background-image: url(./img/Video_image_2.png);
+    background-image: url(/images/galleryVideo_image_2.png);
   }
   .video_third {
-    background-image: url(./img/Video_image_3.png);
+    background-image: url(/images/gallery/Video_image_3.png);
   }
 }
 /*!**********************************************************************************************************************!*\
@@ -196,13 +196,13 @@
   position: relative;
 }
 .foto .foto_first {
-  background-image: url(../../images/photo-one.png);
+  background-image: url(/images/photo-one.png);
 }
 .foto .foto_second {
-  background-image: url(../../images/photo-two.png);
+  background-image: url(/images/photo-two.png);
 }
 .foto .foto_third {
-  background-image: url(../../images/photo-three.png);
+  background-image: url(/images/photo-three.png);
 }
 /*!***********************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./src/templates/gallery/gallery-audio.css ***!
@@ -256,13 +256,13 @@
   height: 27.36px;
 }
 .audio .audio_first {
-  background-image: url(./img/Audio_image_1.png);
+  background-image: url(/images/gallery/Audio_image_1.png);
 }
 .audio .audio_second {
-  background-image: url(./img/Audio_image_2.png);
+  background-image: url(/images/gallery/Audio_image_2.png);
 }
 .audio .audio_third {
-  background-image: url(./img/Audio_image_3.png);
+  background-image: url(/images/gallery/Audio_image_3.png);
 }
 .audio__player {
   background-color: white;
@@ -291,13 +291,13 @@
   }
 }
 .video .video_first {
-  background-image: url(./img/Video_image_1.png);
+  background-image: url(/images/gallery/Video_image_1.png);
 }
 .video .video_second {
-  background-image: url(./img/Video_image_2.png);
+  background-image: url(/images/gallery/Video_image_2.png);
 }
 .video .video_third {
-  background-image: url(./img/Video_image_3.png);
+  background-image: url(/images/gallery/Video_image_3.png);
 }
 /*!*****************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./src/templates/gallery/gallery.css ***!
