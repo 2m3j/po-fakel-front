@@ -1,5 +1,4 @@
 import React from "react";
-import { CardList } from "../card-list/CardList";
 import Card from "../card/Card.js";
 /* export default class Section {
   constructor({ items, renderer, filter }, containerSelector) {
@@ -22,9 +21,11 @@ import Card from "../card/Card.js";
     this.filter(searchQuary, solder);
   }
 } */
-function Section({ items }) {
+function Section({ items, showned }) {
+/*   console.log(items);
+  console.log(showned); */
   return items
-    .slice(0, CardList(items, window.innerWidth))
+    .slice(0, showned)
     .map((element, id) => <Card key={id} item={element} />);
 }
 

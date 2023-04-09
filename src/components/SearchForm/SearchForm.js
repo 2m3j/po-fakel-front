@@ -1,11 +1,23 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Stack, Autocomplete, TextField } from "@mui/material";
 import { Box } from "@mui/system";
 import "./SearchForm.scss";
 import { styled } from "@mui/material/styles";
 import { makeStyles } from "@mui/styles";
 import { initialCards } from "../../js/initial_cards.js";
+import {
+  MOBILE_WIDTH,
+  TABLET_WIDTH,
+  LARGE_PAGE_CARDS_COUNT,
+  LARGE_NEXT_PAGE_CARDS_COUNT,
+  SMALL_PAGE_CARDS_COUNT,
+  SMALL_NEXT_PAGE_CARDS_COUNT,
+  ADDING_PAGE_AMOUNT_S,
+  ADDING_PAGE_AMOUNT_L,
+} from "../../utils/constants";
 import Section from "../section/Section";
+import "./SearchForm.scss";
+
 const useStyles = makeStyles({
   noOptions: {
     ".MuiOutlinedInput-notchedOutline": {
@@ -69,8 +81,24 @@ const StyledAutocomplete = styled(Autocomplete)({
 });
 
 function SearchForm() {
+  const [isMore, setMore] = useState(false);
+  const [showned, setNumberOfShowed] = useState(6);
   const [cards, setCards] = useState(initialCards);
-  const [value, setValue] = useState();
+  let screenSize = window.innerWidth;
+  /* console.log("screenSize", screenSize); */
+  useEffect(() => {
+    let numderOfShowned =
+      screenSize < MOBILE_WIDTH
+        ? SMALL_PAGE_CARDS_COUNT
+        : LARGE_PAGE_CARDS_COUNT;
+    setNumberOfShowed(numderOfShowned);
+  }, [screenSize]);
+  useEffect(() => {
+    let isThereMore = cards.length > showned ? true : false;
+    setMore(isThereMore);
+  }, [showned]);
+  /*   const [value, setValue] = useState(); */
+
   /* const filterBySolder = (solder) => {
     return (initialCards.solder = solder);
   };
@@ -106,6 +134,18 @@ function SearchForm() {
   ];
   /* console.log(JSON.stringify(initialCards).includes("Серболин Максим Никитович")); */
   const styles = useStyles();
+  const handleMoreClick = (e) => {
+    e.preventDefault();
+    const moreNumber =
+      screenSize < MOBILE_WIDTH ? ADDING_PAGE_AMOUNT_S : ADDING_PAGE_AMOUNT_L;
+    let newShowned = showned + moreNumber;
+    if (newShowned >= cards.length) {
+      newShowned = cards.length;
+      setMore(false);
+    }
+    setNumberOfShowed(newShowned);
+    return;
+  };
   /* const cards = filteredData ? filteredData : initialCards; */
   return (
     <form>
@@ -167,7 +207,16 @@ function SearchForm() {
         </div>
       </div>
       <div className="cards row g-5">
-        <Section items={cards} />
+        <Section items={cards} showned={showned} />
+      </div>
+      <div
+        className={`search-form__container-more ${
+          isMore ? "search-form__container-more_visible" : ""
+        }`}
+      >
+        <button className="button" onClick={handleMoreClick}>
+          <p className="button search-form__more">Больше новостей</p>
+        </button>
       </div>
     </form>
   );
