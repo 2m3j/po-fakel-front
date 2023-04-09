@@ -1,6 +1,6 @@
 export const initialCards = [
   {
-    solder: "Феноберцев_Роман_Филиппович",
+    solder: "Феноберцев Роман Филиппович",
     date: "18.10.2022",
     subtitle:
       "Красноярские полицейские помогли найти родных погибшего во время Великой Отечественной войны солдата",
@@ -9,7 +9,7 @@ export const initialCards = [
     link: "https://newslab.ru/news/1137666",
   },
   {
-    solder: "Феноберцев_Роман_Филиппович",
+    solder: "Феноберцев Роман Филиппович",
     date: "19.10.2022",
     subtitle:
       "Поисковики нашли родственников советского солдата, который без вести пропал в Старорусском районе в 1942 году",
@@ -18,7 +18,7 @@ export const initialCards = [
     link: "https://53news.ru/novosti/poiskoviki-ustanovili-lichnost-krasnoarmejcza-propavshego-v-1942-godu-v-starorusskom-rajone.html",
   },
   {
-    solder: "Феноберцев_Роман_Филиппович",
+    solder: "Феноберцев Роман Филиппович",
     date: "06.12.2022",
     subtitle:
       "«Отец, наш Ромка вернулся». В Красноярске похоронили останки красноармейца",
@@ -27,7 +27,7 @@ export const initialCards = [
     link: "https://krsk.aif.ru/society/otec_nash_romka_vernulsya_v_krasnoyarske_pohoronili_ostanki_krasnoarmeyca",
   },
   {
-    solder: "Феноберцев_Роман_Филиппович",
+    solder: "Феноберцев Роман Филиппович",
     date: "06.12.2022",
     subtitle: "В Красноярске захоронили останки погибшего во время ВОВ солдата",
     text: "В Красноярске захоронили останки солдата, погибшего во время Великой Отечественной войны, призванного на воинскую службу с территории Красноярского края.",
@@ -35,7 +35,7 @@ export const initialCards = [
     link: "https://zapad24.ru/news/krasnoyarsk/94396-v-krasnojarske-zahoronili-ostanki-pogibshego-vo-vremja-vov-soldata.html ",
   },
   {
-    solder: "Халемин_Степан_Александрович",
+    solder: "Халемин Степан Александрович",
     date: "08.11.2022",
     subtitle:
       "«Дорога домой». Торжественно-траурная церемония в Нижней Синячихе",
@@ -44,7 +44,7 @@ export const initialCards = [
     link: "https://www.xn--b1azcy.xn--p1ai/news/doroga-domoj/",
   },
   {
-    solder: "Серболин_Максим_Никитович",
+    solder: "Серболин Максим Никитович",
     date: "31.05.2022",
     subtitle:
       "Сержант Максим Никитович Серболин вернулся с войны в родную Омскую область",
@@ -53,7 +53,7 @@ export const initialCards = [
     link: "https://rf-poisk.ru/news/12571/",
   },
   {
-    solder: "Серболин_Максим_Никитович",
+    solder: "Серболин Максим Никитович",
     date: "28.05.2022",
     subtitle:
       "В БОЛЬШИХ УКАХ СОСТОЯЛАСЬ ЦЕРЕМОНИЯ ЗАХОРОНЕНИЯ ОСТАНКОВ БОЙЦА КРАСНОЙ АРМИИ",

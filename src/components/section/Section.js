@@ -1,5 +1,6 @@
-import { CardList } from "../card-list/CardList";
-export default class Section {
+import React from "react";
+import Card from "../card/Card.js";
+/* export default class Section {
   constructor({ items, renderer, filter }, containerSelector) {
     this._container = document.querySelector(containerSelector);
     this.renderer = renderer;
@@ -19,4 +20,13 @@ export default class Section {
   filter() {
     this.filter(searchQuary, solder);
   }
+} */
+function Section({ items, showned }) {
+/*   console.log(items);
+  console.log(showned); */
+  return items
+    .slice(0, showned)
+    .map((element, id) => <Card key={id} item={element} />);
 }
+
+export default Section;
