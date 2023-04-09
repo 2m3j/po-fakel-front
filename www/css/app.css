@@ -103,6 +103,15 @@ a:hover {
   color: #da8a3a;
 }
 
+h2 {
+  margin-bottom: 24px;
+}
+@media only screen and (min-width: 768px) {
+  h2 {
+    margin-bottom: 32px;
+  }
+}
+
 .btn {
   padding: 0.375rem 0.75rem;
   background: #da8a3a;
@@ -724,7 +733,6 @@ a:hover {
   font-weight: 600;
   font-size: 45px;
   color: #202020;
-  margin-bottom: 50px;
 }
 .main-news__link {
   margin-top: 20px;
@@ -856,7 +864,6 @@ a:hover {
 .main-gallery__title {
   font-weight: 600;
   font-size: 45px;
-  margin-bottom: 50px;
 }
 
 /* about start*/
@@ -887,7 +894,6 @@ a:hover {
   }
 }
 .main-about__title {
-  margin-bottom: 50px;
   font-weight: 600;
   font-size: 40px;
 }

@@ -41,3 +41,7 @@ a {
     color: $theme-color;
   }
 }
+
+h2 {
+  @include h2-padding-bottom;
+}
