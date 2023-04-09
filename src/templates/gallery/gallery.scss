@@ -1,13 +1,17 @@
 @import url(./gallery-foto.scss);
 @import url(./gallery-audio.scss);
 @import url(./gallery-video.scss);
-
+@import './gallery-foto.css';
+@import './gallery-audio.css';
+@import './gallery-video.css';
 .page {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  max-width: 1440px;
   margin: 0;
   padding: 0;
+  overflow-x: hidden;
 }
 
 .header {
@@ -18,13 +22,25 @@
 
 .gallery {
   flex: 1;
-  max-width: 1100px;
+  max-width: 1440px;
   align-self: center;
-
+    @media screen and (max-width: 320px) {
+      align-self: normal;
+      padding-left: 20px;
+    }
   &__navigation {
     display: flex;
     padding-top: 64px;
     gap: 20px;
+
+    @media screen and (max-width: 760px) {
+      padding-top: 41px;
+    }
+    @media screen and (max-width: 320px) {
+      align-self: normal;
+      padding-top: 24px;
+      gap: 13.62px;
+    }
   }
   &__navigation-text {
     margin: 0;
@@ -40,6 +56,16 @@
     color: #202020;
     cursor: pointer;
     transition: filter 0.3s linear 0s;
+    @media screen and (max-width: 760px) {
+      font-size: 20px;
+      line-height: 150%;
+    }
+
+    @media screen and (max-width: 320px) {
+      font-weight: 400;
+      font-size: 15px;
+      line-height: 150%;
+    }
 
     &:hover {
       filter: brightness(40%)
@@ -62,9 +88,19 @@
     line-height: 60px;
     /* identical to box height */
     color: #202020;
-  
     margin-top: 74px;
     margin-bottom: 56px;
+
+    @media screen and (max-width: 760px)  {
+      margin-top: 57px;
+      margin-bottom: 48px;
+      font-size: 36px;
+      line-height: 48px;
+    }
+    @media screen and (max-width: 320px) {
+      margin-top: 40px;
+      margin-bottom: 32px;
+    }
   }
   &__content {
     margin: 0;
@@ -73,7 +109,128 @@
     flex-direction: column;
   }
 }
+.decorate{
+  cursor: default;
+}
+.title {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 36px;
+  line-height: 48px;
+  /* identical to box height */
+  color: #202020;
+  margin-bottom: 32px;
 
+  @media screen and (max-width: 320px) {
+    font-size: 30px;
+    line-height: 40px;
+    margin-bottom: 20px;
+  }
+}
+.title-arrow{
+  display: none;
+  position: absolute;
+  top: 15px;
+  right: 18px;
+  @media screen and (max-width: 320px) {
+    margin-left: 45.67px;
+    display: inline-block;
+  }
+}
+.card {
+  display: block;
+  border: none;
+  background-color: transparent
+}
+.card__image {
+  width: 349px;
+  height: 320px;
+  
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column-reverse;
+  object-fit:cover;
+  max-width: 100%;
+  cursor: pointer;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  transition: filter 0.5s linear 0s;
+
+  @media screen and (max-width: 760px) {
+    width: 343px;
+    height: 309px;
+  }
+  @media screen and (max-width: 320px) {
+    width: 254px;
+    height: 233px;
+    // margin-bottom: 40px;
+  }
+
+  &:hover {
+    filter: brightness(70%)
+  }
+}
+
+.card__description{
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 21px;
+  color: #FFFFFF;
+  padding-left: 16px;
+  padding-bottom: 16px;
+  max-width: 120px;
+  
+  @media screen and (max-width: 320px) {
+    font-size: 16.3929px;
+    line-height: 22px;
+  }
+
+}
+.special-width{
+  max-width: 239px;
+
+  @media screen and (max-width: 320px) {
+    max-width: 226px;
+  }
+}
+.button {
+  width: 258px;
+  height: 57px;
+  background: #DA8A3A;
+  border-radius: 10px;
+
+  font-family: 'Segoe UI';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 27px;
+  color: #FFFFFF;
+  align-self: center;
+  margin-bottom: 56px;
+  border: none;
+  cursor: pointer;
+  transition: filter 0.5s linear 0s;
+  margin-top: 32px;
+
+  @media screen and (max-width: 760px) {
+    margin-bottom: 48px;
+  }
+
+  @media screen and (max-width: 320px) {
+    display: none;
+  }
+  &:hover {
+    filter: brightness(80%)
+  }
+}
 .footer {
   flex-shrink: 0;
   border: 1px solid black; 
