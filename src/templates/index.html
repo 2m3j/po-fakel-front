@@ -10,7 +10,10 @@
 </head>
 
 <body>
-<%= require('raw-loader!./layout/header.html').default %>
+<header class="header header_entity_show">
+    <%= require('raw-loader!./layout/header/branding.html').default %>
+    <%= require('raw-loader!./layout/header/entity.html').default %>
+</header>
 <main>
     <section class="main-about">
         <div class="container">
