@@ -1,3 +1,11 @@
+/*!****************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/sass-loader/dist/cjs.js!./src/components/SearchForm/SearchForm.scss ***!
+  \****************************************************************************************************************************************************************/
+.Mui-focused {
+  /*   border: 1px solid #9f9f9f; */
+  border-radius: 5px;
+  border-color: #da8a3a !important;
+}
 /*!*************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./src/css/fonts.css ***!
   \*************************************************************************************************/
@@ -543,7 +551,6 @@ a:hover {
 .card-slider__pagination {
   width: 110px !important;
   position: relative;
-  height: 30px;
   padding: 8px 18px;
   background: rgba(79, 79, 79, 0.7);
   border-radius: 5px;
@@ -942,28 +949,26 @@ a:hover {
   /*   font-size: 20px; */
   line-height: 27px;
   color: #ffffff;
-}
-@media (min-width: 768px) {
-  .section__btn {
+  /*     @media (min-width: 768px) {
     width: 103px;
-    /*  font-size: 20px; */
-  }
+    /*  font-size: 20px; 
+  } */
+  width: 100%;
 }
-@media (max-width: 500px) {
+@media (max-width: 768px) {
   .section__btn {
-    height: 60px;
-    width: 100%;
+    /*  height: 60px; */
     /*  font-size: 20px; */
   }
 }
 .section__input {
   height: 56px;
-  width: 100%;
-  /*    font-size: var(--font-size-md); */
+  border-radius: 5px;
+  font-size: var(--font-size-md);
 }
 .section__input_type_date {
   position: relative;
-  /*      font-size: var(--font-size-md); */
+  font-size: var(--font-size-md);
   padding-left: 15px;
   padding-right: 15px;
 }

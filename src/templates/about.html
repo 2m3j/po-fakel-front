@@ -14,6 +14,9 @@
     --> <title>О нас</title>
 </head>
 <body>
+<header class="header">
+    <%= require('raw-loader!./layout/header/branding.html').default %>
+</header>
 <main class="main">
     <section class="section">
         <div class="container">
@@ -332,5 +335,6 @@
         </article>
     </template>
 </main>
+<%= require('raw-loader!./layout/footer.html').default %>
 </body>
 </html>
