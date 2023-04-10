@@ -2,6 +2,11 @@
   margin-top: 32px;
   margin-bottom: 32px;
   white-space: nowrap;
+  @each $childNum, $color in $main-numbers-font-colors {
+    &__item:nth-child(#{$childNum}) {
+      color: $color;
+    }
+  }
 
   &__item {
     text-align: center;
@@ -20,26 +25,10 @@
     @include media_from('md') {
       font-size: 20px;
     }
-
-    &_color_blue {
-      color: #121a60;
-    }
-
-    &_color_red {
-      color: #7b0d0d;
-    }
-
-    &_color_green {
-      color: #274d2d;
-    }
-
-    &_color_brown {
-      color: #874d22;
-    }
   }
 
   &__num {
-    font-size: 45px;
+    @include h2-font-size;
     display: block;
     margin-bottom: 5px;
   }

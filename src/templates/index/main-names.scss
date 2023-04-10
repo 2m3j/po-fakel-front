@@ -2,14 +2,8 @@
 
 .main-names {
   @include block-padding;
-  background: url('/images/bcgr-two.png');
+  background: $main-names-background;
   display: flex;
-
-  &__title {
-    font-weight: 600;
-    font-size: 45px;
-    color: #202020;
-  }
 
   &__link {
     margin-top: 20px;

@@ -32,8 +32,19 @@ $top-search-border-color: #f5f5f5;
 $top-search-background-color: rgba(105, 104, 104, 0.2);
 $top-search-input-placeholder-color: rgba(243, 243, 243, 0.7);
 
+$main-names-background: url('/images/bcgr-two.png');
+
+$main-news-background-color: #F3F3F3;
+
+$main-numbers-font-colors: (1:#121a60, 2:#7b0d0d, 3:#274d2d, 4:#874d22);
+
 $image-tile-font-color: #F3F3F3;
 $image-tile-btn-font-color: #F3F3F3;
+$image-tile-font-size-display-xs: 25px;
+$image-tile-font-size-display-lg: 35px;
+$image-tile-btn-font-size-display-xs: 18px;
+$image-tile-btn-font-size-display-xl: 20px;
+$image-tile-btn-shadow-color: $theme-color;
 
 $article-card-title-font-size-display-xs: 18px;
 $article-card-title-font-size-display-md: 20px;

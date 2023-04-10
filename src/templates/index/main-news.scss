@@ -2,13 +2,7 @@
 
 .main-news {
   @include block-padding;
-  background-color: #F3F3F3;
-
-  &__title {
-    font-weight: 600;
-    font-size: 45px;
-    color: #202020;
-  }
+  background-color: $main-news-background-color;
 
   &__link {
     margin-top: 20px;

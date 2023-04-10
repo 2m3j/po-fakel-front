@@ -43,5 +43,7 @@ a {
 }
 
 h2 {
+  @include h2-font-size;
   @include h2-padding-bottom;
+  font-weight: 600;
 }

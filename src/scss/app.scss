@@ -3,8 +3,9 @@
 @import "/src/css/fonts.css";
 
 @import "var";
-@import "positioning-mixins";
-@import "media";
+@import "mixins/media";
+@import "mixins/positioning";
+@import "mixins/fonts";
 @import "main";
 @import "/src/components/btn/style";
 @import "src/components/svg-icon/style";
