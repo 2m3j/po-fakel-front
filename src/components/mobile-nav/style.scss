@@ -50,3 +50,51 @@
     }
   }
 }
+
+.mobile-nav {
+  background: #f7f7f7;
+  height: 100vh;
+  position: absolute;
+  right: 0;
+  top: 70px;
+  width: 100%;
+  z-index: 500;
+  font-size: 16px;
+
+  &__item {
+    a {
+      text-decoration: none;
+    }
+
+    svg {
+      width: 0.7rem;
+      height: 0.7rem;
+      margin-right: 5px;
+      margin-bottom: 0.3rem;
+      fill: #b31f1f;
+    }
+
+    background: #fff;
+    border-bottom: 1px solid #eee;
+
+    display: block;
+    font-weight: 600;
+    letter-spacing: 0;
+    line-height: 50px;
+    padding: 10px 20px;
+    position: relative;
+    text-transform: uppercase;
+
+    & a:hover {
+      color: $theme-color;
+    }
+  }
+
+  li {
+    list-style: none;
+  }
+
+  ul {
+    padding-left: 1rem;
+  }
+}

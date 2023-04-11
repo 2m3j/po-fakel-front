@@ -47,3 +47,7 @@ h2 {
   @include h2-padding-bottom;
   font-weight: 600;
 }
+
+body.noscroll {
+  overflow: hidden;
+}
