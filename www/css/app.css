@@ -143,7 +143,7 @@
     background-image: url(images/gallery/Audio_image_3.png);
   }
 
-  &__player {
+    &__player {
     background-color: white;
     border: 1px solid black;
     height: 35px;

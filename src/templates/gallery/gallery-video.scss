@@ -1,4 +1,6 @@
 .video{
+  @include block-padding-top;
+  
   display: flex;
   flex-direction: column;
   padding: 0;
@@ -11,7 +13,7 @@
     background-image: url(/images/gallery/Video_image_1.png);
   }
   .video_second {
-    background-image: url(/images/galleryVideo_image_2.png);
+    background-image: url(/images/gallery/Video_image_2.png);
   }
   .video_third {
     background-image: url(/images/gallery/Video_image_3.png);

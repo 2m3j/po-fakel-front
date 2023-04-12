@@ -1,14 +1,11 @@
-@import url(./gallery-foto.scss);
-@import url(./gallery-audio.scss);
-@import url(./gallery-video.scss);
-@import './gallery-foto.css';
-@import './gallery-audio.css';
-@import './gallery-video.css';
+@import 'gallery-foto';
+@import 'gallery-audio';
+@import 'gallery-video';
+
 .page {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  max-width: 1440px;
   margin: 0;
   padding: 0;
   overflow-x: hidden;
@@ -16,8 +13,6 @@
 
 .header {
   flex-shrink: 0;
-  border: 1px solid black; 
-  height: 87px;
 }
 
 .gallery {
@@ -30,7 +25,8 @@
     }
   &__navigation {
     display: flex;
-    padding-top: 64px;
+    // padding-top: 64px;
+    @include block-padding-top;
     gap: 20px;
 
     @media screen and (max-width: 760px) {
@@ -88,18 +84,20 @@
     line-height: 60px;
     /* identical to box height */
     color: #202020;
-    margin-top: 74px;
-    margin-bottom: 56px;
+    // margin-top: 74px;
+    // margin-bottom: 56px;
+    @include block-padding;
 
     @media screen and (max-width: 760px)  {
-      margin-top: 57px;
-      margin-bottom: 48px;
+      // margin-top: 57px;
+      // margin-bottom: 48px;
+      // @include block-padding-top;
       font-size: 36px;
       line-height: 48px;
     }
     @media screen and (max-width: 320px) {
-      margin-top: 40px;
-      margin-bottom: 32px;
+      // margin-top: 40px;
+      // margin-bottom: 32px;
     }
   }
   &__content {
@@ -120,14 +118,15 @@
   font-weight: 600;
   font-size: 36px;
   line-height: 48px;
-  /* identical to box height */
+
   color: #202020;
-  margin-bottom: 32px;
+  // margin-bottom: 32px;
+  @include block-padding-bottom;
 
   @media screen and (max-width: 320px) {
     font-size: 30px;
     line-height: 40px;
-    margin-bottom: 20px;
+    // margin-bottom: 20px;
   }
 }
 .title-arrow{
@@ -233,6 +232,4 @@
 }
 .footer {
   flex-shrink: 0;
-  border: 1px solid black; 
-  height: 354px;
 }
