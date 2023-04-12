@@ -58,10 +58,8 @@
     border-radius: 5px;
     font-size: var(--font-size-md);
     &_type_date {
-      position: relative;
       font-size: var(--font-size-md);
-      padding-left: 15px;
-      padding-right: 15px;
+      box-sizing: border-box;
     }
   }
   &__icon {

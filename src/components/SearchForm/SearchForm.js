@@ -1,7 +1,10 @@
 import React, { useState, useEffect } from "react";
 import { Stack, Autocomplete, TextField } from "@mui/material";
 import { Box } from "@mui/system";
-import "./SearchForm.scss";
+import { DatePicker, LocalizationProvider } from "@mui/x-date-pickers";
+import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
+import "dayjs/locale/ru";
+import CalendarMonthIcon from "@mui/icons-material/CalendarMonth";
 import { styled } from "@mui/material/styles";
 import { makeStyles } from "@mui/styles";
 import { initialCards } from "../../js/initial_cards.js";
@@ -17,22 +20,50 @@ import {
 } from "../../utils/constants";
 import Section from "../section/Section";
 import "./SearchForm.scss";
-import { DatePicker, LocalizationProvider } from "@mui/x-date-pickers";
-import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
-import "dayjs/locale/ru";
-import CalendarMonthIcon from "@mui/icons-material/CalendarMonth";
 
-const useStyles = makeStyles({
-  noOptions: {
-    ".MuiOutlinedInput-notchedOutline": {
-      borderColor: "red !important",
+const StyledDatepicker = styled(DatePicker)({
+  root: {
+    // - The TextField-root
+    border: "solid 3px #0ff", // - For demonstration: set the TextField-root border
+    padding: "3px", // - Make the border more distinguishable
+
+    // (Note: space or no space after `&` matters. See SASS "parent selector".)
+    "& .MuiTextField-root": {
+      "&.Mui-focused .MuiOutlinedInput-notchedOutline": {
+        borderColor: "#da8a3a",
+      },
     },
-    color: "red",
-    borderColor: "red !importnant",
-    /*   backgroundColor: "pink", */
+    "& .MuiOutlinedInput-root": {
+      // - The Input-root, inside the TextField-root
+      "& fieldset": {
+        // - The <fieldset> inside the Input-root
+        borderColor: "pink", // - Set the Input border
+      },
+      "&:hover fieldset": {
+        borderColor: "yellow", // - Set the Input border when parent has :hover
+      },
+      "&.Mui-focused fieldset": {
+        // - Set the Input border when parent is focused
+        borderColor: "green",
+      },
+    },
+  },
+  "&.Mui-focused .MuiInputLabel-outlined": {
+    color: "#da8a3a",
+    /*    height: "70px",
+    alignContent: "center", */
+  },
+  "&.Mui-focused .MuiOutlinedInput-notchedOutline": {
+    borderColor: "#da8a3a",
+  },
+  "& .MuiTextField-inputRoot": {
+    color: "#da8a3a",
+    borderColor: "#da8a3a",
+    "&.Mui-focused .MuiOutlinedInput-notchedOutline": {
+      borderColor: "#da8a3a",
+    },
   },
 });
-
 const StyledAutocomplete = styled(Autocomplete)({
   /*   "&.MuiAutocomplete-noOptions": {
     borderColor: "pink",
@@ -47,27 +78,6 @@ const StyledAutocomplete = styled(Autocomplete)({
     color: "red",
   },
   "& .MuiAutocomplete-inputRoot": {
-    /*   height: "70px",
-    alignContent: "center",
-    justifyContent: "center", */
-    /*   color: "#da8a3a", */
-    /*     // This matches the specificity of the default styles at https://github.com/mui-org/material-ui/blob/v4.11.3/packages/material-ui-lab/src/Autocomplete/Autocomplete.js#L90
-    '&[class*="MuiOutlinedInput-root"] .MuiAutocomplete-input:first-of-type': {
-      // Default left padding is 6px
-      paddingLeft: 26,
-    },
-    "& .MuiOutlinedInput-notchedOutline": {
-      borderColor: "green",
-    },
-    "&:hover .MuiOutlinedInput-notchedOutline": {
-      borderColor: "red",
-    }, 
-    "&.Mui-focused .MuiAutocomplete-noOptions": {
-      borderColor: "blue",
-    },
-    "&.Mui-error .MuiOutlinedInput-notchedOutline": {
-      borderColor: "blue",
-    },*/
     "&.Mui-focused .MuiOutlinedInput-notchedOutline": {
       borderColor: "#da8a3a",
     },
@@ -88,6 +98,7 @@ function SearchForm() {
   const [isMore, setMore] = useState(false);
   const [showned, setNumberOfShowed] = useState(6);
   const [cards, setCards] = useState(initialCards);
+  const [date, setDate] = useState("");
   let screenSize = window.innerWidth;
   /* console.log("screenSize", screenSize); */
   useEffect(() => {
@@ -137,7 +148,6 @@ function SearchForm() {
     "Серболин Максим Никитович",
   ];
   /* console.log(JSON.stringify(initialCards).includes("Серболин Максим Никитович")); */
-  const styles = useStyles();
   const handleMoreClick = (e) => {
     e.preventDefault();
     const moreNumber =
@@ -161,9 +171,7 @@ function SearchForm() {
               id="outlined"
               options={select}
               /*  value={value} */
-              classes={{
-                noOptions: styles.noOptions,
-              }}
+
               className="section__input"
               onChange={handleInput}
               /*  isOptionEqualToValue={(option, value) => option.code === value} */
@@ -191,33 +199,45 @@ function SearchForm() {
           </div>
           <div className="col-12 col-md-5 col-lg-5 mb-4 mb-md-0">
             <DatePicker
+              className="section__input_type_date"
+              /*   value={date}
+              onChange={(newValue) => setDate(newValue)} */
               label={"Период публикации"}
-              onChange={(newValue) => setValue(newValue)}
+              sx={{
+                width: 1,
+                "&.Mui-focused .MuiInputLabel-outlined": {
+                  color: "#da8a3a",
+                  /*    height: "70px",
+                  alignContent: "center", */
+                },
+                "& .MuiOutlinedInput-root": {
+                  /*    "& fieldset": {
+                    borderColor: "red",
+                  },
+                  "&:hover fieldset": {
+                    borderColor: "green",
+                  }, */
+                  "&.Mui-focused fieldset": {
+                    borderColor: "#da8a3a",
+                  },
+                },
+              }}
+              renderInput={(params) => (
+                <TextField
+                  {...params}
+                  inputProps={{ ...params.inputProps }}
+                  /*          className="section__input" */
+                />
+              )}
               components={{
                 OpenPickerIcon: CalendarMonthIcon,
               }}
             />
           </div>
-          {/*       <div className="col-12 col-md-5 col-lg-4 mb-4 mb-md-0"> */}
-          {/*   <div className=" col col-xs-12 "> */}
-          {/*          <input
-        id="datepicker"
-        type="date"
-        name="date"
-        placeholder="Период публикации"
-        /*         onFocus="(this.type='date')"
-        onBlur="(this.type='text')"
-        className="section__input section__input_type_date "
-      /> */}
-
-          {/* </div> */}
           <div className="col-12 col-md-2 col-lg-2 mb-4 mb-md-0">
-            {/*   <div class="col-12 col-md-2 col-lg-4"> */}
-            {/*     <div className="section__btn"> */}
             <button type="submit" className="section__btn section__input">
               Искать
             </button>
-            {/*     </div> */}
           </div>
         </div>
         <div className="cards row g-5">
