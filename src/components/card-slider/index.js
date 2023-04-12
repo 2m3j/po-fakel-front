@@ -58,3 +58,31 @@ new Swiper(".swiper-volonteer", {
     clickable: true,
   },
 });
+
+new Swiper('.audio__slider', {
+  loop: true,
+  slidesPerView: 1,
+  breakpoints: {
+    576: {
+      slidesPerView: 1,
+      spaceBetween: 20,
+    },
+    768: {
+      slidesPerView: 2,
+      spaceBetween: 20,
+    },
+    1200: {
+      slidesPerView: 3,
+      spaceBetween: 40,
+    },
+  },
+  grabCursor: true,
+  navigation: {
+    nextEl: ".swiper-button-right",
+    prevEl: ".swiper-button-left",
+  },
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+})
