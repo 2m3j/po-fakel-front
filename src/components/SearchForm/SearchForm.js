@@ -2,12 +2,11 @@ import React, { useState, useEffect } from "react";
 import { Stack, Autocomplete, TextField } from "@mui/material";
 import { Box } from "@mui/system";
 import "./SearchForm.scss";
-import { styled, createTheme, ThemeProvider } from "@mui/material/styles";
+import { createTheme, ThemeProvider } from "@mui/material/styles";
 import { DatePicker, LocalizationProvider } from "@mui/x-date-pickers";
 import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
 import "dayjs/locale/ru";
 import CalendarMonthIcon from "@mui/icons-material/CalendarMonth";
-import { makeStyles } from "@mui/styles";
 import { initialCards } from "../../js/initial_cards.js";
 import {
   MOBILE_WIDTH,
@@ -25,52 +24,10 @@ import "./SearchForm.scss";
 const theme = createTheme({
   palette: {
     primary: {
-      // Purple and green play nicely together.
       main: '#da8a3a',
-      dark:  '#da8a3a'
+      dark: '#da8a3a',
     },
   },
-});
-
-
-const useStyles = makeStyles({
-  noOptions: {
-    ".MuiOutlinedInput-notchedOutline": {
-      borderColor: "red !important",
-    },
-    color: "red",
-    borderColor: "red !importnant",
-    /*   backgroundColor: "pink", */
-  },
-});
-const StyledAutocomplete = styled(Autocomplete)({
-  /*   "&.MuiAutocomplete-noOptions": {
-    borderColor: "pink",
-    color: "red",
-  }, */
-  "&.Mui-focused .MuiInputLabel-outlined": {
-    color: "#da8a3a",
-    /*    height: "70px",
-    alignContent: "center", */
-  },
-  "&.MuiAutocomplete-popper .MuiAutocomplete-option": {
-    color: "red",
-  },
-  "& .MuiAutocomplete-inputRoot": {
-    "&.Mui-focused .MuiOutlinedInput-notchedOutline": {
-      borderColor: "#da8a3a",
-    },
-  },
-  /*   "& input:invalid + fieldset": {
-    borderColor: "red",
-    borderWidth: 2,
-  },
-  noOptions: {
-    "&.Mui-focused .MuiInputLabel-outlined": {
-      color: "red",
-      borderColor: "red",
-    },
-  }, */
 });
 
 function SearchForm() {
@@ -146,25 +103,15 @@ function SearchForm() {
       <form>
         <div className="row g-10">
           <div className="section__input col-12 col-md-5 col-lg-5 mb-4 mb-md-0">
-            <StyledAutocomplete
+            <Autocomplete
               disablePortal
-              id="outlined"
               options={select}
               /*  value={value} */
 
               className="section__input"
               onChange={handleInput}
-              /*  isOptionEqualToValue={(option, value) => option.code === value} */
-              isOptionEqualToValue={(option, value) =>
-                value === undefined || value === "" || option.id === value.id
-              }
+
               noOptionsText="К сожалению, у нас пока нет данных"
-              renderOption={(props, select) => (
-                <Box component="li" {...props}>
-                  {select}
-                </Box>
-              )}
-              sx={{ noOptions: { color: "red" } }}
               renderInput={(params) => (
                 <TextField
                   {...params}
@@ -184,8 +131,8 @@ function SearchForm() {
               onChange={(newValue) => setDate(newValue)} */
               label={"Период публикации"}
               onChange={(newValue) => setValue(newValue)}
-              components={{
-                OpenPickerIcon: CalendarMonthIcon,
+              slots={{
+                openPickerIcon:CalendarMonthIcon
               }}
             />
           </div>
