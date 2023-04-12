@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Stack, Autocomplete, TextField } from "@mui/material";
 import { Box } from "@mui/system";
 import "./SearchForm.scss";
-import { styled } from "@mui/material/styles";
+import { styled,createTheme, ThemeProvider } from "@mui/material/styles";
 import { makeStyles } from "@mui/styles";
 import { initialCards } from "../../js/initial_cards.js";
 import {
@@ -21,6 +21,17 @@ import { DatePicker, LocalizationProvider } from "@mui/x-date-pickers";
 import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
 import "dayjs/locale/ru";
 import CalendarMonthIcon from "@mui/icons-material/CalendarMonth";
+
+const theme = createTheme({
+  palette: {
+    primary: {
+      // Purple and green play nicely together.
+      main: '#da8a3a',
+      dark:  '#da8a3a'
+    },
+  },
+});
+
 
 const useStyles = makeStyles({
   noOptions: {
@@ -152,6 +163,7 @@ function SearchForm() {
   };
   /* const cards = filteredData ? filteredData : initialCards; */
   return (
+      <ThemeProvider theme={theme}>
     <LocalizationProvider dateAdapter={AdapterDayjs} adapterLocale="ru">
       <form>
         <div className="row g-10">
@@ -234,6 +246,7 @@ function SearchForm() {
         </div>
       </form>
     </LocalizationProvider>
+      </ThemeProvider>
   );
 }
 
