@@ -1,6 +1,5 @@
 import "/src/components/card-slider/index";
-import "/src/components/mobile-nav/index";
-
+import MobileNav from "../components/mobile-nav/MobileNav";
 import Section from "../components/section/Section";
 import Card from "../components/card/Card";
 import { initialCards } from "./initial_cards";
@@ -10,6 +9,7 @@ import "@material/mwc-button";
 /* $(". date").datepicker({
   format: "dd-mm-yyyy",
 }); */
+window.mobileNav = new MobileNav();
 const button = document.querySelector(".section__button_type_unfold");
 const text = document.querySelectorAll(".section__text");
 export const cardsTemplate = document
