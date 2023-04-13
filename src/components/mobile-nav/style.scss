@@ -3,7 +3,7 @@
   height: 23px;
   cursor: pointer;
 
-  &:hover {
+  &_opened {
     .mobile-nav-btn__line {
       background-color: transparent;
 
@@ -52,6 +52,7 @@
 }
 
 .mobile-nav {
+  display: none;
   background: #f7f7f7;
   height: 100vh;
   position: absolute;
@@ -60,6 +61,10 @@
   width: 100%;
   z-index: 500;
   font-size: 16px;
+
+  &_opened {
+    display: block;
+  }
 
   &__item {
     a {
@@ -87,6 +92,10 @@
 
     & a:hover {
       color: $theme-color;
+    }
+
+    &:last-child {
+      border-radius: 0 0 5px 5px;
     }
   }
 

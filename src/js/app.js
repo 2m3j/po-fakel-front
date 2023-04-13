@@ -1,4 +1,5 @@
 import "/src/components/card-slider/index";
+import "/src/components/mobile-nav/index";
 
 import Section from "../components/section/Section";
 import Card from "../components/card/Card";
