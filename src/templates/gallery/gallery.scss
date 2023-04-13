@@ -161,6 +161,14 @@
   border: none;
   background-color: transparent;
   max-width: 350px;
+
+
+  &__fone {
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    border-radius: 10px;
+  }
 }
 .card__image {
   width: 349px;
@@ -175,7 +183,8 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  transition: filter 0.5s linear 0s;
+  transition: filter 0.5s linear 0s;  
+  position: relative;
 
   @media screen and (max-width: 760px) {
     width: 343px;
@@ -204,6 +213,7 @@
   padding-left: 16px;
   padding-bottom: 16px;
   max-width: 120px;
+  z-index: 2;
   
   @media screen and (max-width: 320px) {
     font-size: 16.3929px;
