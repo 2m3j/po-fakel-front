@@ -64,6 +64,10 @@ new Swiper('.audio__slider', {
   slidesPerView: 1,
   breakpoints: {
     320: {
+      slidesPerView: 1.15,
+      spaceBetween: 20,
+    },
+    321: {
       slidesPerView: 1,
       spaceBetween: 20,
     },
@@ -71,7 +75,7 @@ new Swiper('.audio__slider', {
       slidesPerView: 2,
       spaceBetween: 20,
     },
-    1200: {
+    992: {
       slidesPerView: 3,
       spaceBetween: 20,
     },

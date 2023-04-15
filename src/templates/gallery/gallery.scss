@@ -278,6 +278,11 @@
   display: flex;
   flex-direction: column;
 }
-.swiper-slide_width{
-  max-width: 349px;
+.swiper-slide_direction{
+  flex-direction: column;
+  align-items: center;
+
+  @media screen and (max-width: 320px) {
+    align-items: baseline;
+  }
 }
