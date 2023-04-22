@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="ru" xmlns="http://www.w3.org/1999/html">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="keywords" content="html, css" />
+  <meta name="description" content="Gallery page" />
+  <title>Галерея</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+</head>
+<body class="page">
+<header class="header">
+  <%= require('raw-loader!./layout/header/branding.html').default %>
+</header>
+  <main class="gallery ">
+    <div class="container container__main">
+    <nav class="gallery__navigation">
+      <p class="gallery__navigation-text" role="button">Главная</p>
+      <p class="gallery__navigation-text decorate">></p>
+      <p class="gallery__navigation-text gallery__navigation-text_active" role="button">Галерея</p>
+    </nav>
+    <h1 class="gallery__title">Галерея</h1>
+  </div>
+    <div class="gallery__content">
+      <section class="foto">
+        <div class="container container__main">
+      <!-- <section class="row"> -->
+        <p class="title">Фотоальбомы</p>
+        <img class="title-arrow" src="images/gallery/Errov_mini_title.svg" alt="Стрелка >">
+        <!-- <div class="foto__images"> -->
+        <div class="row">
+          <div class="card col-12 col-md-6 col-lg-4 mb-4 mb-md-0" role="button">
+            <div class="card__image foto_first">
+              <img src="images/gallery/Audio_fon_1.png" alt="background" class="card__fone">
+              <p class="card__description">Вахта Памяти Осень 2022</p>
+            </div>
+          </div>
+          <div class="card col-12 col-md-6 col-lg-4 d-none d-md-block" role="button">
+            <div class="card__image foto_second">
+              <img src="images/gallery/Audio_fon_1.png" alt="background" class="card__fone">
+              <p class="card__description" >Вахта Памяти Весна 2022</p>
+            </div>
+          </div>
+          <div class="card col-12 col-md-6 col-lg-4 d-none d-lg-flex" role="button">
+            <div class="card__image foto_third">
+              <img src="images/gallery/Audio_fon_1.png" alt="background" class="card__fone">
+              <p class="card__description">Вахта Памяти Осень 2021</p>
+            </div>
+          </div>
+        </div>
+        <button type="button" class="button">Перейти к разделу</button>
+      </div>
+      </section>
+      <section class="audio">
+        <div class="container container__main"> 
+           <div class="swiper audio__slider">
+            <div class="audio__box">
+              <p class="title">Аудиозаписи</p>
+              <img class="title-arrow" src="images/gallery/Errov_mini_title.svg" alt="Стрелка >">
+              <div class="audio__buttons">
+                <div class="audio__button-container">
+                  <img role="button" src="images/gallery/Errow-left.svg" alt="Кнопка налево" class="audio__button swiper-button-right">
+                </div>
+                <div class="audio__button-container">
+                  <img role="button" src="images/gallery/Errow-right.svg" alt="Кнопка направо" class="audio__button swiper-button-left">
+                </div>
+              </div>
+            </div>
+            <div class="swiper-wrapper">
+              <div class="swiper-slide card-slider__item swiper-slide_direction " role="button">
+                <div class="card__image audio_first">
+                  <img src="images/gallery/Audio_fon_1.png" alt="background" class="card__fone">
+                  <p class="card__description special-width">Миша Порошин — Гимн Долины (Муз. и сл. И. Щукин)</p>
+                </div>
+                <div class="audio__player">Здесь будет плеер</div>
+              </div>
+              <div class="swiper-slide card-slider__item swiper-slide_direction " role="button">
+                <div class="card__image audio_second">
+                  <img src="images/gallery/Audio_fon_1.png" alt="background" class="card__fone">
+                  <p class="card__description special-width" >Миша Порошин — Рассказ ветерана ( Муз. и сл. Ю. Визбор)</p>
+                </div>
+                <div class="audio__player">Здесь будет плеер</div>
+              </div>
+              <div class="swiper-slide card-slider__item swiper-slide_direction " role="button">
+                <div class="card__image audio_third">
+                  <img src="images/gallery/Audio_fon_1.png" alt="background" class="card__fone">
+                  <p class="card__description special-width">Миша Порошин — В землянке (Муз. К. Листов, сл. А. Сурков)</p>
+                </div>
+                <div class="audio__player">Здесь будет плеер</div>
+             </div>
+             <!-- <div class="swiper-pagination"></div> -->
+          </div>
+          <button type="button" class="button">Перейти к разделу</button>
+      </section> 
+      <section class="video">
+        <div class="container container__main">
+        <p class="title">Видео</p>
+        <img class="title-arrow" src="images/gallery/Errov_mini_title.svg" alt="Стрелка >">
+        <div class="row">
+          <div class="card col-12 col-md-6 col-lg-4 mb-md-0" role="button">
+            <div class="card__image video_first">
+              <img src="images/gallery/Audio_fon_1.png" alt="background" class="card__fone">
+              <p class="card__description">Вахта Памяти Осень 2022</p>
+            </div>
+          </div>
+          <div class="card col-12 col-md-6 col-lg-4 d-none d-md-block" role="button">
+            <div class="card__image video_second">
+              <img src="images/gallery/Audio_fon_1.png" alt="background" class="card__fone">
+              <p class="card__description" >Вахта Памяти Весна 2022</p>
+            </div>
+          </div>
+          <div class="card col-12 col-md-6 col-lg-4 d-none d-lg-flex" role="button">
+            <div class="card__image video_third">
+              <img src="images/gallery/Audio_fon_1.png" alt="background" class="card__fone">
+              <p class="card__description">Вахта Памяти Осень 2021</p>
+            </div>
+          </div>
+        </div>
+        <button type="button" class="button">Перейти к разделу</button>
+      </div>
+      </section>
+    </div>
+    
+    <!-- -->
+
+    <!--  -->
+  </main>
+
+<%= require('raw-loader!./layout/footer.html').default %>
+</body>
+</html>
+
+
+
+<!--
+        <section class="audio"> 
+        <div class="container container__main">
+          <div class="audio__box">
+            <p class="title">Аудиозаписи</p>
+            <img class="title-arrow" src="images/gallery/Errov_mini_title.svg" alt="Стрелка >">
+            <div class="audio__buttons">
+              <div class="audio__button-container">
+                <img role="button" src="images/gallery/Errow-left.svg" alt="Кнопка налево" class="swiper-button-left audio__button ">
+              </div>
+              <div class="audio__button-container">
+                <img role="button" src="images/gallery/Errow-right.svg" alt="Кнопка направо" class="audio__button swiper-button-right">
+              </div>
+            </div>
+          </div>
+          <div class="row align-items-center">
+            <div class="card col-12 col-md-6 col-lg-4 mb-4 mb-md-0 align-items-center" role="button">
+              <div class="card__image audio_first">
+                <img src="images/gallery/Audio_fon_1.png" alt="background" class="card__fone">
+                <p class="card__description special-width">Миша Порошин — Гимн Долины (Муз. и сл. И. Щукин)</p>
+              </div>
+              <div class="audio__player">Здесь будет плеер</div>
+            </div>
+            <div class=" card col-12 col-md-6 col-lg-4 d-none d-md-block" role="button">
+              <div class="card__image audio_second">
+                <img src="images/gallery/Audio_fon_1.png" alt="background" class="card__fone">
+                <p class="card__description special-width" >Миша Порошин — Рассказ ветерана ( Муз. и сл. Ю. Визбор)</p>
+              </div>
+              <div class="audio__player">Здесь будет плеер</div>
+            </div>
+            <div class="card col-12 col-md-6 col-lg-4 d-none d-lg-block" role="button">
+              <div class="card__image audio_third">
+                <img src="images/gallery/Audio_fon_1.png" alt="background" class="card__fone">
+                <p class="card__description special-width">Миша Порошин — В землянке (Муз. К. Листов, сл. А. Сурков)</p>
+              </div>
+              <div class="audio__player">Здесь будет плеер</div>
+            </div>
+          </div>
+          <button type="button" class="button">Перейти к разделу</button>
+        </div>
+      </section>
+-->

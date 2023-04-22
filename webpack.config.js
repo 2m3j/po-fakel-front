@@ -63,6 +63,11 @@ module.exports = {
             template: path.src.templates + "about.html",
             inject: true
         }),
+        new HtmlWebpackPlugin({
+            filename: __dirname + "/www/gallery.html",
+            template: "./src/templates/gallery.html",
+            inject: true,
+        }),
     ],
     devServer: {
         static: path.production.base,

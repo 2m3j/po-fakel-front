@@ -56,6 +56,507 @@
 }
 
 
+/*!***********************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./src/templates/gallery/gallery-foto.scss ***!
+  \***********************************************************************************************************************/
+.foto{
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  position: relative;
+
+  .foto_first {
+    background-image: url(/images/photo-one.png);
+  }
+  .foto_second {
+    background-image: url(/images/photo-two.png);
+  }
+  .foto_third {
+    background-image: url(/images/photo-three.png);
+  }
+}
+
+/*!************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./src/templates/gallery/gallery-audio.scss ***!
+  \************************************************************************************************************************/
+.audio {
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  background: #E9E9E9;
+  position: relative;
+
+  @media screen and (max-width: 320px) {
+    background: none;
+  }
+
+  &__box {
+    margin-top: 40px;
+    margin-bottom: 27px;
+    display: flex;
+    justify-content: space-between;
+
+    @media screen and (max-width: 320px) {
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+  }
+
+  &__buttons {
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 20px;
+
+    @media screen and (max-width: 320px) {
+      display: none;
+    }
+  }
+
+  &__button-container {
+    width: 48px;
+    height: 48px;
+
+    border: 2px solid #DA8A3A;
+    border-radius: 10px;
+    transform: matrix(-1, 0, 0, 1, 0, 0);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__button {
+    width: 27.36px;
+    height: 27.36px;
+  }
+
+
+  .audio_first {
+    background-image: url(images/gallery/Audio_image_1.png);
+  }
+
+  .audio_second {
+    background-image: url(images/gallery/Audio_image_2.png);
+  }
+
+  .audio_third {
+    background-image: url(images/gallery/Audio_image_3.png);
+  }
+
+    &__player {
+    background-color: white;
+    border: 1px solid black;
+    height: 35px;
+    margin-top: 11px;
+    text-align: center;
+
+    @media screen and (max-width: 320px) {
+      width: 250px;
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+/*!************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./src/templates/gallery/gallery-video.scss ***!
+  \************************************************************************************************************************/
+.video{
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  position: relative;
+
+  @media screen and (max-width: 320px) {
+    margin-bottom: 112px;
+  }
+  .video_first {
+    background-image: url(/images/gallery/Video_image_1.png);
+  }
+  .video_second {
+    background-image: url(/images/galleryVideo_image_2.png);
+  }
+  .video_third {
+    background-image: url(/images/gallery/Video_image_3.png);
+  }
+}
+/*!**********************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./src/templates/gallery/gallery-foto.css ***!
+  \**********************************************************************************************************************/
+.foto {
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  position: relative;
+}
+.foto .foto_first {
+  background-image: url(/images/photo-one.png);
+}
+.foto .foto_second {
+  background-image: url(/images/photo-two.png);
+}
+.foto .foto_third {
+  background-image: url(/images/photo-three.png);
+}
+/*!***********************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./src/templates/gallery/gallery-audio.css ***!
+  \***********************************************************************************************************************/
+.audio {
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  background: #E9E9E9;
+  position: relative;
+}
+@media screen and (max-width: 320px) {
+  .audio {
+    background: none;
+  }
+}
+.audio__box {
+  margin-top: 40px;
+  margin-bottom: 27px;
+  display: flex;
+  justify-content: space-between;
+}
+@media screen and (max-width: 320px) {
+  .audio__box {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+}
+.audio__buttons {
+  display: flex;
+  flex-direction: row-reverse;
+  gap: 20px;
+}
+@media screen and (max-width: 320px) {
+  .audio__buttons {
+    display: none;
+  }
+}
+.audio__button-container {
+  width: 48px;
+  height: 48px;
+  border: 2px solid #DA8A3A;
+  border-radius: 10px;
+  transform: matrix(-1, 0, 0, 1, 0, 0);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.audio__button {
+  width: 27.36px;
+  height: 27.36px;
+}
+.audio .audio_first {
+  background-image: url(/images/gallery/Audio_image_1.png);
+}
+.audio .audio_second {
+  background-image: url(/images/gallery/Audio_image_2.png);
+}
+.audio .audio_third {
+  background-image: url(/images/gallery/Audio_image_3.png);
+}
+.audio__player {
+  background-color: white;
+  border: 1px solid black;
+  height: 35px;
+  margin-top: 11px;
+  text-align: center;
+}
+@media screen and (max-width: 320px) {
+  .audio__player {
+    width: 250px;
+  }
+}
+/*!***********************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./src/templates/gallery/gallery-video.css ***!
+  \***********************************************************************************************************************/
+.video {
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  position: relative;
+}
+@media screen and (max-width: 320px) {
+  .video {
+    margin-bottom: 112px;
+  }
+}
+.video .video_first {
+  background-image: url(/images/gallery/Video_image_1.png);
+}
+.video .video_second {
+  background-image: url(/images/gallery/Video_image_2.png);
+}
+.video .video_third {
+  background-image: url(/images/gallery/Video_image_3.png);
+}
+/*!*****************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./src/templates/gallery/gallery.css ***!
+  \*****************************************************************************************************************/
+.page {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  max-width: 1440px;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+.header {
+  flex-shrink: 0;
+  border: 1px solid black;
+  height: 87px;
+}
+
+.gallery {
+  flex: 1;
+  max-width: 1440px;
+  align-self: center;
+}
+@media screen and (max-width: 320px) {
+  .gallery {
+    align-self: normal;
+    padding-left: 20px;
+  }
+}
+.gallery__navigation {
+  display: flex;
+  padding-top: 64px;
+  gap: 20px;
+}
+@media screen and (max-width: 760px) {
+  .gallery__navigation {
+    padding-top: 41px;
+  }
+}
+@media screen and (max-width: 320px) {
+  .gallery__navigation {
+    align-self: normal;
+    padding-top: 24px;
+    gap: 13.62px;
+  }
+}
+.gallery__navigation-text {
+  margin: 0;
+  padding: 0;
+  font-family: "Segoe UI";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 32px;
+  /* identical to box height */
+  display: flex;
+  align-items: center;
+  color: #202020;
+  cursor: pointer;
+  transition: filter 0.3s linear 0s;
+}
+@media screen and (max-width: 760px) {
+  .gallery__navigation-text {
+    font-size: 20px;
+    line-height: 150%;
+  }
+}
+@media screen and (max-width: 320px) {
+  .gallery__navigation-text {
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 150%;
+  }
+}
+.gallery__navigation-text:hover {
+  filter: brightness(40%);
+}
+.gallery__navigation-text_active {
+  margin: 0;
+  padding: 0;
+  color: #DA8A3A;
+  cursor: default;
+}
+.gallery__title {
+  margin: 0;
+  padding: 0;
+  font-family: "Segoe UI";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 45px;
+  line-height: 60px;
+  /* identical to box height */
+  color: #202020;
+  margin-top: 74px;
+  margin-bottom: 56px;
+}
+@media screen and (max-width: 760px) {
+  .gallery__title {
+    margin-top: 57px;
+    margin-bottom: 48px;
+    font-size: 36px;
+    line-height: 48px;
+  }
+}
+@media screen and (max-width: 320px) {
+  .gallery__title {
+    margin-top: 40px;
+    margin-bottom: 32px;
+  }
+}
+.gallery__content {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.decorate {
+  cursor: default;
+}
+
+.title {
+  margin: 0;
+  padding: 0;
+  font-family: "Segoe UI";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 36px;
+  line-height: 48px;
+  /* identical to box height */
+  color: #202020;
+  margin-bottom: 32px;
+}
+@media screen and (max-width: 320px) {
+  .title {
+    font-size: 30px;
+    line-height: 40px;
+    margin-bottom: 20px;
+  }
+}
+
+.title-arrow {
+  display: none;
+  position: absolute;
+  top: 15px;
+  right: 18px;
+}
+@media screen and (max-width: 320px) {
+  .title-arrow {
+    margin-left: 45.67px;
+    display: inline-block;
+  }
+}
+
+.card {
+  display: block;
+  border: none;
+  background-color: transparent;
+}
+
+.card__image {
+  width: 349px;
+  height: 320px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column-reverse;
+  -o-object-fit: cover;
+     object-fit: cover;
+  max-width: 100%;
+  cursor: pointer;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  transition: filter 0.5s linear 0s;
+}
+@media screen and (max-width: 760px) {
+  .card__image {
+    width: 343px;
+    height: 309px;
+  }
+}
+@media screen and (max-width: 320px) {
+  .card__image {
+    width: 254px;
+    height: 233px;
+  }
+}
+.card__image:hover {
+  filter: brightness(70%);
+}
+
+.card__description {
+  margin: 0;
+  padding: 0;
+  font-family: "Segoe UI";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 21px;
+  color: #FFFFFF;
+  padding-left: 16px;
+  padding-bottom: 16px;
+  max-width: 120px;
+}
+@media screen and (max-width: 320px) {
+  .card__description {
+    font-size: 16.3929px;
+    line-height: 22px;
+  }
+}
+
+.special-width {
+  max-width: 239px;
+}
+@media screen and (max-width: 320px) {
+  .special-width {
+    max-width: 226px;
+  }
+}
+
+.button {
+  width: 258px;
+  height: 57px;
+  background: #DA8A3A;
+  border-radius: 10px;
+  font-family: "Segoe UI";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 27px;
+  color: #FFFFFF;
+  align-self: center;
+  margin-bottom: 56px;
+  border: none;
+  cursor: pointer;
+  transition: filter 0.5s linear 0s;
+  margin-top: 32px;
+}
+@media screen and (max-width: 760px) {
+  .button {
+    margin-bottom: 48px;
+  }
+}
+@media screen and (max-width: 320px) {
+  .button {
+    display: none;
+  }
+}
+.button:hover {
+  filter: brightness(80%);
+}
+
+.footer {
+  flex-shrink: 0;
+  border: 1px solid black;
+  height: 354px;
+}
 /*!****************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/sass-loader/dist/cjs.js!./src/scss/app.scss ***!
   \****************************************************************************************************************************************/

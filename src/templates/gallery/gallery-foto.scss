@@ -1,0 +1,16 @@
+.foto{
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  position: relative;
+
+  .foto_first {
+    background-image: url(/images/photo-one.png);
+  }
+  .foto_second {
+    background-image: url(/images/photo-two.png);
+  }
+  .foto_third {
+    background-image: url(/images/photo-three.png);
+  }
+}

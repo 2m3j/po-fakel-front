@@ -1,0 +1,15 @@
+.foto {
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  position: relative;
+}
+.foto .foto_first {
+  background-image: url(/images/photo-one.png);
+}
+.foto .foto_second {
+  background-image: url(/images/photo-two.png);
+}
+.foto .foto_third {
+  background-image: url(/images/photo-three.png);
+}/*# sourceMappingURL=gallery-foto.css.map */

@@ -1,0 +1,20 @@
+.video {
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  position: relative;
+}
+@media screen and (max-width: 320px) {
+  .video {
+    margin-bottom: 112px;
+  }
+}
+.video .video_first {
+  background-image: url(/images/gallery/Video_image_1.png);
+}
+.video .video_second {
+  background-image: url(/images/gallery/Video_image_2.png);
+}
+.video .video_third {
+  background-image: url(/images/gallery/Video_image_3.png);
+}/*# sourceMappingURL=gallery-video.css.map */
