@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from "react";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 import { Autocomplete, TextField } from "@mui/material";
-import { Box } from "@mui/system";
 import { DatePicker, LocalizationProvider } from "@mui/x-date-pickers";
 import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
 import "dayjs/locale/ru";
+import moment from "moment";
 import CalendarMonthIcon from "@mui/icons-material/CalendarMonth";
 import { initialCards } from "../../js/initial_cards.js";
 import {
@@ -26,34 +26,13 @@ const theme = createTheme({
       main: "#da8a3a",
     },
   },
-  components: {
-    MuiButton: {
-      styleOverrides: {
-        startIcon: {
-          fontSize: "30",
-          size: 30,
-        },
-      },
-    },
-  },
-  overrides: {
-    MuiButton: {
-      iconSizeLarge: {
-        "& > *:first-child": {
-          fontSize: 30,
-        },
-      },
-    },
-  },
 });
 
 function SearchForm() {
   const [isMore, setMore] = useState(false);
   const [showned, setNumberOfShowed] = useState(6);
   const [cards, setCards] = useState(initialCards);
-  const [date, setDate] = useState(new Date());
   let screenSize = window.innerWidth;
-  /* console.log("screenSize", screenSize); */
   useEffect(() => {
     let numderOfShowned =
       screenSize < MOBILE_WIDTH
@@ -65,45 +44,15 @@ function SearchForm() {
     let isThereMore = cards.length > showned ? true : false;
     setMore(isThereMore);
   }, [showned]);
-  const { control, handleSubmit, watch, setValue } = useForm({
+  const { control, handleSubmit } = useForm({
     defaultValues: { solder: "", date: "" },
   });
-  /*   const [value, setValue] = useState(); */
 
-  /* const filterBySolder = (solder) => {
-    return (initialCards.solder = solder);
-  };
-  const filter = (searchQuery, solder) => {
-    const filterByKeyword = (card) => {
-      return JSON.stringify(card)
-        .toLowerCase()
-        .includes(searchQuery.toLowerCase());
-    };
-    const filteredData = solder
-      ? initialCards.filter(solder)
-      : initialCards.filter(filterByKeyword);
-    return filteredData;
-  }; */
-  const handleInput = (keyWord) => {
-    const searchQuery = keyWord.target.innerText;
-    if (searchQuery) {
-      const filterByKeyword = (card) => {
-        return JSON.stringify(card)
-          .toLowerCase()
-          .includes(searchQuery.toLowerCase());
-      };
-      setCards(initialCards.filter(filterByKeyword));
-    } else setCards(initialCards);
-  };
-  /*   const handleSubmit = (e) => {
-    e.preventDefault();
-  }; */
   const select = [
     "Феноберцев Роман Филиппович",
     "Халемин Степан Александрович",
     "Серболин Максим Никитович",
   ];
-  /* console.log(JSON.stringify(initialCards).includes("Серболин Максим Никитович")); */
   const handleMoreClick = (e) => {
     e.preventDefault();
     const moreNumber =
@@ -116,9 +65,24 @@ function SearchForm() {
     setNumberOfShowed(newShowned);
     return;
   };
-  console.log(watch());
-  const onSubmit = (data) => console.log(data);
-  /* const cards = filteredData ? filteredData : initialCards; */
+  const onSubmit = (data) => {
+    const solder = data.solder;
+    const date = data.date.format("L");
+    const filterByKeyword = (card) => {
+      return card.solder.toLowerCase().includes(solder.toLowerCase());
+    };
+    const filterByDate = (card) => {
+      return card.date.toLowerCase().includes(date);
+    };
+    const cards = !!(solder && date)
+      ? initialCards.filter(filterByKeyword).filter(filterByDate)
+      : !!solder
+      ? initialCards.filter(filterByKeyword)
+      : !!date
+      ? initialCards.filter(filterByDate)
+      : initialCards;
+    setCards(cards);
+  };
   return (
     <ThemeProvider theme={theme}>
       <LocalizationProvider dateAdapter={AdapterDayjs} adapterLocale="ru">
@@ -128,38 +92,35 @@ function SearchForm() {
               <Controller
                 name="solder"
                 control={control}
-                render={({ params }) => (
+                render={({
+                  field: { onChange, name, value },
+                  fieldState: { invalid, isDirty }, //optional
+                  formState: { errors }, //optional, but necessary if you want to show an error message
+                }) => (
                   <Autocomplete
-                    {...params}
-                    disablePortal
                     id="outlined"
                     options={select}
-                    /*       value={value} */
                     className="section__input"
-                    /*  onChange={handleInput} */
-                    /*  isOptionEqualToValue={(option, value) => option.code === value} */
                     isOptionEqualToValue={(option, value) =>
                       value === undefined ||
                       value === "" ||
                       option.id === value.id
                     }
                     noOptionsText="К сожалению, у нас пока нет данных"
-                    renderOption={(props, select) => (
-                      <Box component="li" {...props}>
-                        {select}
-                      </Box>
-                    )}
-                    sx={{ noOptions: { color: "red" } }}
                     renderInput={(params) => (
                       <TextField
                         {...params}
-                        /*     helperText="Введите имя на кириллице" */
+                        errors={errors}
+                        onChange={onChange}
+                        /*   helperText="Введите имя на кириллице" */
                         label="Имя бойца"
                         pattern="[а-я]+/i"
                         className="section__input"
-                        inputProps={{ ...params.inputProps }}
+                        inputProps={{ ...params.inputProps, type: "search" }}
                       />
                     )}
+                    onChange={(event, values, reason) => onChange(values)}
+                    value={value}
                   />
                 )}
               />
@@ -168,33 +129,23 @@ function SearchForm() {
               <Controller
                 name="date"
                 control={control}
-                defaultValue=""
-                render={(params) => (
+                render={({
+                  field: { onChange, name, value },
+                  fieldState: { invalid, isDirty }, //optional
+                  formState: { errors }, //optional, but necessary if you want to show an error message
+                }) => (
                   <DatePicker
-                    {...params}
-                    /*   selected={value} 
-                    value={params.value}
-                    onChange={(e, data) => {
-                         console.log(params); 
-                      params.setValue(data);
-                      params.field.onChange(data);
-                    }}
-                    className="section__input_type_date"
-                    /*      value={date} */
-                    /*    onChange={(newValue) => setValue(newValue)} */
-                    /*  onChange={(event) => {  onChange(event); setDate(event); }} */
+                    type="text"
+                    disableFuture
+                    dateFormat="dd.MM.yyyy"
+                    locale="ru"
+                    selected={value}
+                    onChange={onChange}
                     label={"Период публикации"}
                     sx={{
                       width: 1,
                     }}
-                    renderInput={(params) => (
-                      <TextField
-                        {...params}
-                        /*        inputProps={{ ...params.inputProps }}
-                        onChange={console.log(params)}
-                        className="section__input" */
-                      />
-                    )}
+                    slotsProps={{ textField: { variant: "outlined" } }}
                     components={{
                       OpenPickerIcon: CalendarMonthIcon,
                     }}
@@ -203,10 +154,7 @@ function SearchForm() {
               />
             </div>
             <div className="col-12 col-md-2 col-lg-2 mb-4 mb-md-0 d-md-none d-lg-block">
-              <button
-                type="submit"
-                className="section__btn section__input"
-              >
+              <button type="submit" className="section__btn section__input">
                 Искать
               </button>
             </div>
