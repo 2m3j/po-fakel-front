@@ -44,7 +44,7 @@ function SearchForm() {
     let isThereMore = cards.length > showned ? true : false;
     setMore(isThereMore);
   }, [showned]);
-  const { control, handleSubmit } = useForm({
+  const { control, handleSubmit, reset } = useForm({
     defaultValues: { solder: "", date: "" },
   });
 
@@ -67,12 +67,12 @@ function SearchForm() {
   };
   const onSubmit = (data) => {
     const solder = data.solder;
-    const date = data.date.format("L");
+    const date = data.date;
     const filterByKeyword = (card) => {
       return card.solder.toLowerCase().includes(solder.toLowerCase());
     };
     const filterByDate = (card) => {
-      return card.date.toLowerCase().includes(date);
+      return card.date.toLowerCase().includes(date.format("L"));
     };
     const cards = !!(solder && date)
       ? initialCards.filter(filterByKeyword).filter(filterByDate)
@@ -82,6 +82,7 @@ function SearchForm() {
       ? initialCards.filter(filterByDate)
       : initialCards;
     setCards(cards);
+    reset();
   };
   return (
     <ThemeProvider theme={theme}>
@@ -92,9 +93,15 @@ function SearchForm() {
               <Controller
                 name="solder"
                 control={control}
+                rules={{
+                  pattern: {
+                    value: /[а-я]+/i,
+                    message: "Введите имя на кириллице",
+                  },
+                }}
                 render={({
                   field: { onChange, name, value },
-                  fieldState: { invalid, isDirty }, //optional
+                  fieldState: { invalid, isDirty, error }, //optional
                   formState: { errors }, //optional, but necessary if you want to show an error message
                 }) => (
                   <Autocomplete
@@ -110,12 +117,13 @@ function SearchForm() {
                     renderInput={(params) => (
                       <TextField
                         {...params}
-                        errors={errors}
                         onChange={onChange}
                         /*   helperText="Введите имя на кириллице" */
                         label="Имя бойца"
                         pattern="[а-я]+/i"
                         className="section__input"
+                        error={invalid}
+                        helperText={error?.message}
                         inputProps={{ ...params.inputProps, type: "search" }}
                       />
                     )}
