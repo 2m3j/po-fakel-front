@@ -2,24 +2,23 @@ import React, { useState, useEffect } from "react";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 import { Autocomplete, TextField } from "@mui/material";
 import { DatePicker, LocalizationProvider } from "@mui/x-date-pickers";
+import { PickersDay } from "@mui/x-date-pickers/PickersDay";
 import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
 import "dayjs/locale/ru";
-import moment from "moment";
 import CalendarMonthIcon from "@mui/icons-material/CalendarMonth";
+import GradeIcon from "@mui/icons-material/Grade";
 import { initialCards } from "../../js/initial_cards.js";
 import {
   MOBILE_WIDTH,
-  TABLET_WIDTH,
   LARGE_PAGE_CARDS_COUNT,
-  LARGE_NEXT_PAGE_CARDS_COUNT,
   SMALL_PAGE_CARDS_COUNT,
-  SMALL_NEXT_PAGE_CARDS_COUNT,
   ADDING_PAGE_AMOUNT_S,
   ADDING_PAGE_AMOUNT_L,
 } from "../../utils/constants";
 import Section from "../section/Section";
 import "./SearchForm.scss";
 import { useForm, Controller } from "react-hook-form";
+import Badge from "@mui/material/Badge";
 const theme = createTheme({
   palette: {
     primary: {
@@ -32,27 +31,39 @@ function SearchForm() {
   const [isMore, setMore] = useState(false);
   const [showned, setNumberOfShowed] = useState(6);
   const [cards, setCards] = useState(initialCards);
+  const [highlightedDays, setHighlightedDays] = useState([1, 2, 13]);
   let screenSize = window.innerWidth;
+  const {
+    control,
+    handleSubmit,
+    reset,
+    formState: { isSubmitSuccessful },
+  } = useForm({ mode: "onChange", defaultValues: { solder: "", date: "" } });
+  const select = [
+    "Феноберцев Роман Филиппович",
+    "Халемин Степан Александрович",
+    "Серболин Максим Никитович",
+  ];
+  // useEffects
   useEffect(() => {
     let numderOfShowned =
       screenSize < MOBILE_WIDTH
         ? SMALL_PAGE_CARDS_COUNT
         : LARGE_PAGE_CARDS_COUNT;
     setNumberOfShowed(numderOfShowned);
-  }, [screenSize]);
+  }, [screenSize, cards]);
+
   useEffect(() => {
     let isThereMore = cards.length > showned ? true : false;
     setMore(isThereMore);
   }, [showned]);
-  const { control, handleSubmit, reset } = useForm({
-    defaultValues: { solder: "", date: "" },
-  });
 
-  const select = [
-    "Феноберцев Роман Филиппович",
-    "Халемин Степан Александрович",
-    "Серболин Максим Никитович",
-  ];
+  useEffect(() => {
+    if (isSubmitSuccessful) {
+      reset();
+    }
+  }, [isSubmitSuccessful]);
+
   const handleMoreClick = (e) => {
     e.preventDefault();
     const moreNumber =
@@ -66,6 +77,7 @@ function SearchForm() {
     return;
   };
   const onSubmit = (data) => {
+    console.log(data);
     const solder = data.solder;
     const date = data.date;
     const filterByKeyword = (card) => {
@@ -82,8 +94,10 @@ function SearchForm() {
       ? initialCards.filter(filterByDate)
       : initialCards;
     setCards(cards);
-    reset();
+    setNumberOfShowed(cards.length);
   };
+  let dates = [];
+  initialCards.map((card) => dates.push(card.date));
   return (
     <ThemeProvider theme={theme}>
       <LocalizationProvider dateAdapter={AdapterDayjs} adapterLocale="ru">
@@ -100,9 +114,8 @@ function SearchForm() {
                   },
                 }}
                 render={({
-                  field: { onChange, name, value },
-                  fieldState: { invalid, isDirty, error }, //optional
-                  formState: { errors }, //optional, but necessary if you want to show an error message
+                  field: { onChange, value },
+                  fieldState: { invalid, isDirty, error },
                 }) => (
                   <Autocomplete
                     id="outlined"
@@ -118,7 +131,6 @@ function SearchForm() {
                       <TextField
                         {...params}
                         onChange={onChange}
-                        /*   helperText="Введите имя на кириллице" */
                         label="Имя бойца"
                         pattern="[а-я]+/i"
                         className="section__input"
@@ -138,13 +150,13 @@ function SearchForm() {
                 name="date"
                 control={control}
                 render={({
-                  field: { onChange, name, value },
+                  field: { onChange, name, value, setValue, resetField },
                   fieldState: { invalid, isDirty }, //optional
                   formState: { errors }, //optional, but necessary if you want to show an error message
                 }) => (
                   <DatePicker
-                    type="text"
                     disableFuture
+                    clearable
                     dateFormat="dd.MM.yyyy"
                     locale="ru"
                     selected={value}
@@ -153,8 +165,31 @@ function SearchForm() {
                     sx={{
                       width: 1,
                     }}
-                    slotsProps={{ textField: { variant: "outlined" } }}
+                    slotsProps={{
+                      textField: {
+                        variant: "outlined",
+                      },
+                    }}
                     components={{
+                      Day: (props) => {
+                        const isSelected =
+                          !props.outsideCurrentMonth &&
+                          dates.includes(props.day.$d.toLocaleDateString());
+
+                        return (
+                          <Badge
+                            key={props.day.toString()}
+                            overlap="circular"
+                            badgeContent={
+                              isSelected ? (
+                                <GradeIcon htmlColor="red" fontSize="small" />
+                              ) : undefined
+                            }
+                          >
+                            <PickersDay {...props} />
+                          </Badge>
+                        );
+                      },
                       OpenPickerIcon: CalendarMonthIcon,
                     }}
                   />

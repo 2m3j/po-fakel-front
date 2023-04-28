@@ -104,14 +104,7 @@
     height: fit-content;
   }
 }
-:root {
-  --mdc-theme-primary: #da8a3a;
-  --mdc-button-outline-color: rgba(20, 20, 200, 0.2);
-  --mdc-typography-font-family: "Segoe UI";
-}
-.mdc-select {
-  height: 70px;
-}
+
 input {
   border: 1px solid #9f9f9f;
   border-radius: 5px;
