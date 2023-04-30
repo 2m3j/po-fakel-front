@@ -77,7 +77,6 @@ function SearchForm() {
     return;
   };
   const onSubmit = (data) => {
-    console.log(data);
     const solder = data.solder;
     const date = data.date;
     const filterByKeyword = (card) => {
@@ -95,6 +94,7 @@ function SearchForm() {
       : initialCards;
     setCards(cards);
     setNumberOfShowed(cards.length);
+    reset({ date: "", solder: "" });
   };
   let dates = [];
   initialCards.map((card) => dates.push(card.date));
@@ -150,32 +150,26 @@ function SearchForm() {
                 name="date"
                 control={control}
                 render={({
-                  field: { onChange, name, value, setValue, resetField },
+                  field: { onChange, value },
                   fieldState: { invalid, isDirty }, //optional
                   formState: { errors }, //optional, but necessary if you want to show an error message
                 }) => (
                   <DatePicker
                     disableFuture
-                    clearable
+                    clearable={true}
                     dateFormat="dd.MM.yyyy"
                     locale="ru"
-                    selected={value}
+                    value={value || null}
                     onChange={onChange}
                     label={"Период публикации"}
                     sx={{
                       width: 1,
-                    }}
-                    slotsProps={{
-                      textField: {
-                        variant: "outlined",
-                      },
                     }}
                     components={{
                       Day: (props) => {
                         const isSelected =
                           !props.outsideCurrentMonth &&
                           dates.includes(props.day.$d.toLocaleDateString());
-
                         return (
                           <Badge
                             key={props.day.toString()}
