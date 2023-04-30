@@ -12,8 +12,9 @@ const unfold = () => {
   const buttonActive = document.querySelector(
     ".section__button_type_unfold_active"
   );
-  buttonActive.textContent = "СВЕРНУТЬ";
-  if (!buttonActive) {
+  if (buttonActive) {
+    buttonActive.textContent = "СВЕРНУТЬ";
+  } else {
     button.textContent = "РАЗВЕРНУТЬ";
   }
 };
