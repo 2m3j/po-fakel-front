@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+</head>
+<body>
+    <div class="wrapper wrapper-contacts">
+        <header class="wrapper-contacts__header"></header>
+        <main class="wrapper-contacts__main">
+            <section class="main-contacts">
+                <div class="main-contacts__container">
+                    <div class="main-contacts__breadcrumbs breadcrumbs">
+                        <ul class="breadcrumbs__list">
+                            <li class="breadcrumbs__item">
+                                <a href="" class="breadcrumbs__link">Главная</a>
+                                <svg width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M6 7.4L0 1.4L1.4 0L6 4.6L10.6 0L12 1.4L6 7.4Z" fill="#F3F3F3"/>
+                                </svg>
+                            </li>
+                            <li class="breadcrumbs__item">
+                                <span class="breadcrumbs__current">
+                                    Контакты
+                                </span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="main-contacts__content">
+                        <h1 class="main-contacts__title">Контакты</h1>
+                        <p class="main-contacts__descr">
+                            Поисковый отряд &laquo;Факел&raquo; Вятского государственного университета (Кировская областная общественная молодёжная поисковая организация &laquo;ДОЛГ&raquo;)
+                        </p>
+                        <div class="main-contacts__info info-contacts">
+                            <div class="info-contacts__img">
+                                <img src="images/contacts_photo.jpg" alt="Михаил Юрьевич">
+                            </div>
+                            <div class="info-contacts__content">
+                                <div class="info-contacts__more more-info-contacts">
+                                    <p class="info-contacts__text more-info-contacts__text">
+                                        Михаил Юрьевич Порошин&nbsp;&mdash; командир поискового отряда &laquo;Факел&raquo; с&nbsp;2005&nbsp;года, который считает своей миссией сохранить память о&nbsp;героических поступках наших предков. <span id="dots">...</span><span id="more">Под его началом отряд из&nbsp;добровольцев, объединённых общей идеей, превратился в&nbsp;жизнеспособный коллектив со&nbsp;своими традициями, правилами и&nbsp;преемственностью. 
+                                        Михаил Юрьевич поддерживает связь с&nbsp;большинством родственников, найденных отрядом бойцов, ведёт с&nbsp;ними переписку, помогает другим в&nbsp;поиске информации о&nbsp;пропавших без вести во&nbsp;время войны.
+                                        Историк по&nbsp;профессии, он&nbsp;ориентируется в&nbsp;архивных материалах, картах, военной литературе. Михаил Юрьевич вошёл в&nbsp;число организаторов проведения уроков мужества для учащихся школ, ссузов и&nbsp;вузов&nbsp;г. Кирова.</span>
+                                    </p>
+                                    <button onclick="myFunction()" class="more-info-contacts__btn" id="myBtn">Читать далее</button>
+                                </div>
+                                <ul class="info-contacts__list">
+                                    <li class="info-contacts__item">
+                                        <a href="tel:79536952867" class="info-contacts__link">
+                                            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M3.62 7.79C5.06 10.62 7.38 12.93 10.21 14.38L12.41 12.18C12.68 11.91 13.08 11.82 13.43 11.94C14.55 12.31 15.76 12.51 17 12.51C17.55 12.51 18 12.96 18 13.51V17C18 17.55 17.55 18 17 18C7.61 18 0 10.39 0 1C0 0.45 0.45 0 1 0H4.5C5.05 0 5.5 0.45 5.5 1C5.5 2.25 5.7 3.45 6.07 4.57C6.18 4.92 6.1 5.31 5.82 5.59L3.62 7.79Z" fill="#000"/>
+                                            </svg>                                            
+                                            <span>
+                                                +7 953 695-28-67 (WhatsApp, Viber, Telegram)
+                                            </span>
+                                        </a>
+                                    </li>
+                                    <li class="info-contacts__item">
+                                        <a href="email:mporoshin@yandex.ru" class="info-contacts__link">
+                                            <svg width="20" height="16" viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M18 0H2C0.9 0 0.00999999 0.9 0.00999999 2L0 14C0 15.1 0.9 16 2 16H18C19.1 16 20 15.1 20 14V2C20 0.9 19.1 0 18 0ZM18 4L10 9L2 4V2L10 7L18 2V4Z" fill="#000"/>
+                                            </svg>                                            
+                                            <span>
+                                                mporoshin@yandex.ru
+                                            </span>
+                                        </a>
+                                    </li>
+                                    <li class="info-contacts__item">
+                                        <a href="https://vk.com/fakel.kirov" class="info-contacts__link">
+                                            <svg width="24" height="24" viewBox="0 0 31 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M19.9813 0.916504H11.033C2.86046 0.916504 0.916504 2.86046 0.916504 11.0184V19.9667C0.916504 28.1378 2.84588 30.0832 11.0184 30.0832H19.9667C28.1378 30.0832 30.0832 28.1538 30.0832 19.9813V11.033C30.0832 2.86046 28.1538 0.916504 19.9813 0.916504ZM24.4628 21.7269H22.335C21.53 21.7269 21.288 21.075 19.8442 19.6313C18.5842 18.4165 18.0519 18.2648 17.7325 18.2648C17.2921 18.2648 17.1711 18.3859 17.1711 18.994V20.9073C17.1711 21.425 17.0034 21.7284 15.6515 21.7284C14.3395 21.6402 13.0672 21.2416 11.9395 20.5654C10.8117 19.8892 9.86071 18.9547 9.16484 17.839C7.51279 15.7828 6.36329 13.3694 5.80775 10.7909C5.80775 10.4715 5.9288 10.1828 6.53692 10.1828H8.66317C9.21004 10.1828 9.40692 10.4263 9.62129 10.9878C10.6538 14.0269 12.4155 16.6694 13.13 16.6694C13.4042 16.6694 13.5238 16.5484 13.5238 15.8644V12.7348C13.4334 11.3071 12.675 11.1861 12.675 10.6698C12.6848 10.5337 12.7472 10.4067 12.849 10.3157C12.9508 10.2248 13.0841 10.1771 13.2205 10.1828H16.563C17.0194 10.1828 17.1711 10.4103 17.1711 10.9571V15.1805C17.1711 15.6369 17.368 15.7886 17.505 15.7886C17.7792 15.7886 17.9907 15.6369 18.4923 15.1353C19.5698 13.8212 20.4502 12.3572 21.1057 10.7894C21.1727 10.6011 21.2994 10.4399 21.4666 10.3303C21.6339 10.2208 21.8323 10.169 22.0317 10.1828H24.1594C24.7967 10.1828 24.9323 10.5021 24.7967 10.9571C24.0231 12.6903 23.0658 14.3354 21.9413 15.8644C21.7123 16.2144 21.6205 16.3967 21.9413 16.8065C22.1528 17.1259 22.898 17.7486 23.3996 18.3407C24.1287 19.0679 24.734 19.9092 25.1919 20.8315C25.3742 21.4236 25.0694 21.7269 24.4628 21.7269Z" fill="#000"/>
+                                            </svg>                                            
+                                            <span>
+                                                vk.com/fakel.kirov
+                                            </span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="main-contacts__feedback feedback-contacts">
+                <div class="feedback-contacts__container">
+                    <h2 class="feedback-contacts__title">Обратная связь</h2>
+                    <form action="#" method="POST" class="feedback-contacts__form form-contacts">
+                        <div class="form-contacts__fields">
+                            <div class="form-contacts__field">
+                                <input id="userName" class="form-contacts__input" name="name" type="text" required>
+                                <label class="form-contacts__placeholder">Введите ваше имя*</label>
+                            </div>
+                            <div class="form-contacts__inner">
+                                <div class="form-contacts__field">
+                                    <input id="userPhone" class="form-contacts__input" name="phone" type="text" required>
+                                    <label class="form-contacts__placeholder">Введите ваш телефон</label>
+                                </div>
+                                <div class="form-contacts__field">
+                                    <input id="userMail" class="form-contacts__input" name="email" type="mail" required>
+                                    <label class="form-contacts__placeholder">Введите ваш email*</label>
+                                </div>
+                            </div>
+                            <div class="form-contacts__field">
+                                <textarea id="userComment" value="" class="form-contacts__textarea"></textarea>
+                                <label id="labelComment" class="form-contacts__placeholder">Введите ваше сообщение*</label>
+                            </div>
+                        </div>
+                        <div class="form-contacts__btns btns-form-contacts">
+                            <div class="btns-form-contacts__col btns-form-contacts__col_capcha">
+                                <div class="btns-form-contacts__reminder">*Поля обязательны для заполнения</div>
+                                <div class="btns-form-contacts__captcha">
+                                    <div class="g-recapcha" data-sitekey="6Ldl988lAAAAAHTj3JGJRz5zbXVP_Ewfi2nDsydq">
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="btns-form-contacts__col btns-form-contacts__col_sec">
+                                <div class="btns-form-contacts__checkbox checkbox-contacts">
+                                    <input id="contactsFormCheckbox" class="checkbox-contacts__input" type="checkbox" value="1" name="form[]">
+                                    <label for="contactsFormCheckbox" class="checkbox-contacts__label"><div class="checkbox-contacts__text">Я согласен(а) на обработку <a href="#">персональных данных</a></div></label>
+                                </div>
+                                <button type="submit" class="btns-form-contacts__btn">Отправить</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </section>
+        </main>
+        <footer class="wrapper-contacts__footer"></footer>
+    </div>
+
+
+    <script>
+        window.addEventListener('DOMContentLoaded', () => {
+            const textarea = document.getElementById('userComment'),
+                  textareaPlaceholder = document.getElementById('labelComment');
+
+            textarea.addEventListener('input', () => {
+                if (textarea.value !== '') {
+                    textareaPlaceholder.classList.add('_active');
+                    textarea.classList.add('_active');
+                } else {
+                    textareaPlaceholder.classList.remove('_active');
+                    textarea.classList.remove('_active');
+                }
+            });
+        });
+
+        function myFunction() {
+            const dots = document.getElementById("dots");
+            const moreText = document.getElementById("more");
+            const btnText = document.getElementById("myBtn");
+
+            if (dots.style.display === "none") {
+                dots.style.display = "inline";
+                btnText.innerHTML = "Читать далее";
+                moreText.style.display = "none";
+            } else {
+                dots.style.display = "none";
+                btnText.innerHTML = "Свернуть";
+                moreText.style.display = "inline";
+            }
+        }
+    </script>
+
+    
+</body>
+</html>
