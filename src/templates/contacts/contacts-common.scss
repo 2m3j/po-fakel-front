@@ -8,6 +8,7 @@
 
     /* .wrapper-contacts__header */
     &__header {
+        background: url('../images/bg-header.jpg') center center / cover no-repeat;
     }
     /* .wrapper-contacts__main */
     &__main {
@@ -16,7 +17,7 @@
             padding-bottom: 121px;
         }
         @media (max-width: 480px){
-            padding-top: 85px;
+            padding-bottom: 85px;
         }
     }
     /* .wrapper-contacts__footer */

@@ -9,10 +9,12 @@
 </head>
 <body>
     <div class="wrapper wrapper-contacts">
-        <header class="wrapper-contacts__header"></header>
+        <header class="wrapper-contacts__header">
+            <%= require('raw-loader!./layout/header/branding.html').default %>
+        </header>
         <main class="wrapper-contacts__main">
             <section class="main-contacts">
-                <div class="main-contacts__container">
+                <div class="main-contacts__container container">
                     <div class="main-contacts__breadcrumbs breadcrumbs">
                         <ul class="breadcrumbs__list">
                             <li class="breadcrumbs__item">
@@ -84,7 +86,7 @@
                 </div>
             </section>
             <section class="main-contacts__feedback feedback-contacts">
-                <div class="feedback-contacts__container">
+                <div class="feedback-contacts__container container">
                     <h2 class="feedback-contacts__title">Обратная связь</h2>
                     <form action="#" method="POST" class="feedback-contacts__form form-contacts">
                         <div class="form-contacts__fields">
@@ -128,10 +130,10 @@
                 </div>
             </section>
         </main>
-        <footer class="wrapper-contacts__footer"></footer>
+        <footer class="wrapper-contacts__footer">
+            <%= require('raw-loader!./layout/footer.html').default %>
+        </footer>
     </div>
-
-
     <script>
         window.addEventListener('DOMContentLoaded', () => {
             const textarea = document.getElementById('userComment'),
@@ -164,7 +166,5 @@
             }
         }
     </script>
-
-    
 </body>
 </html>
