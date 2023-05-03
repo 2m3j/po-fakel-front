@@ -1,0 +1,24 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: #fcfcfc;
+}
+
+h1,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 1440px;
+  padding-left: 165px;
+  padding-right: 165px;
+  margin: 0 auto;
+}
+
+img {
+  max-width: 100%;
+}/*# sourceMappingURL=common.css.map */

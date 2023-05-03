@@ -32,7 +32,7 @@ module.exports = {
                 test: /\.scss$/,
                 use: [
                     MiniCssExtractPlugin.loader,
-                    {loader: "css-loader", options: {url: false}},
+                    { loader: "css-loader", options: { url: false } },
                     'sass-loader'
                 ]
             },
@@ -50,12 +50,12 @@ module.exports = {
         filename: 'js/[name].bundle.js'
     },
     plugins: [
-        new MiniCssExtractPlugin({
+        new HtmlWebpackPlugin({
             filename: "css/[name].css"
         }),
         new HtmlWebpackPlugin({
-            filename: path.production.base + 'index.html',
-            template: path.src.templates + "index.html",
+            filename: path.production.base + "404.html",
+            template: path.src.templates + "404.html",
             inject: true
         }),
         new HtmlWebpackPlugin({

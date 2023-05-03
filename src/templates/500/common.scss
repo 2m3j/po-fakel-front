@@ -1,0 +1,28 @@
+@import 'variables.scss';
+
+
+* {
+        box-sizing: border-box;
+}
+
+body {
+        background: #fcfcfc;
+}
+
+h1,
+p {
+        margin: 0;
+        padding: 0;
+}
+
+.container {
+        max-width: $containerMaxWidth;
+        padding-left: $containerLeftPadding;
+        padding-right: $containerRightPadding;
+        margin: 0 auto;
+
+}
+
+img {
+        max-width: 100%;
+}
