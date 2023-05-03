@@ -31,7 +31,6 @@ function SearchForm() {
   const [isMore, setMore] = useState(false);
   const [showned, setNumberOfShowed] = useState(6);
   const [cards, setCards] = useState(initialCards);
-  const [highlightedDays, setHighlightedDays] = useState([1, 2, 13]);
   let screenSize = window.innerWidth;
   const {
     control,
@@ -94,7 +93,6 @@ function SearchForm() {
       : initialCards;
     setCards(cards);
     setNumberOfShowed(cards.length);
-    reset({ date: "", solder: "" });
   };
   let dates = [];
   initialCards.map((card) => dates.push(card.date));
@@ -115,7 +113,7 @@ function SearchForm() {
                 }}
                 render={({
                   field: { onChange, value },
-                  fieldState: { invalid, isDirty, error },
+                  fieldState: { invalid, error },
                 }) => (
                   <Autocomplete
                     id="outlined"
@@ -149,14 +147,9 @@ function SearchForm() {
               <Controller
                 name="date"
                 control={control}
-                render={({
-                  field: { onChange, value },
-                  fieldState: { invalid, isDirty }, //optional
-                  formState: { errors }, //optional, but necessary if you want to show an error message
-                }) => (
+                render={({ field: { onChange, value } }) => (
                   <DatePicker
                     disableFuture
-                    clearable={true}
                     dateFormat="dd.MM.yyyy"
                     locale="ru"
                     value={value || null}

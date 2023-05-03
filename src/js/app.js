@@ -1,6 +1,4 @@
 import "/src/components/card-slider/index";
-import Section from "../components/section/Section";
-import Card from "../components/card/Card";
 import { aboutSearch } from "./about-search";
 
 const button = document.querySelector(".section__button_type_unfold");
