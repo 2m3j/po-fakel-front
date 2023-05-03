@@ -179,13 +179,10 @@
                   mailPlaceholder = document.getElementById('placeholderMail'),
                   textareaPlaceholder = document.getElementById('labelComment'),
                   textareaCurrent = document.querySelector('.form-contacts__current'),
-                  inputFIO = document.getElementById('userName'),
-                  inputPhone = document.getElementById('userPhone'),
-                  inputMail = document.getElementById('userMail'),
                   formInputs = document.querySelectorAll('.form-contacts__input'),
                   deleteInputsValue = document.querySelectorAll('.form-contacts__delete'),
-                  errorMessage = document.querySelectorAll('.form-contacts__message'),
-                  successInputsValue = document.querySelectorAll('.form-contacts__success');
+                  successInputsValue = document.querySelectorAll('.form-contacts__success'),
+                  errorMessage = document.querySelectorAll('.form-contacts__message');
 
             textarea.addEventListener('input', () => {
                 if (textarea.value !== '') {
@@ -268,7 +265,7 @@
                             phonePlaceholder.classList.remove('_error');
                             item.classList.remove('_error');
                         }
-                        // console.log(regDigit.test(inputPhone.value))
+                        
                         if (regDigit.test(item.value)) {
                             phonePlaceholder.classList.add('_success');
                             item.classList.add('_success');
@@ -299,7 +296,7 @@
                             successInputsValue[i].classList.remove('_active');
                         }
                     }
-                    
+
                     deleteInputsValue.forEach((btn, x) => {
                         if (i === x) {
                             btn.addEventListener('click', () => {
@@ -345,80 +342,6 @@
             function valid(inp, elem, message) {
                 elem.textContent = message;
             }
-
-            // inputFIO.addEventListener('input', () => {
-            //     // let regFio = /^\w+\s\w+\s\w+$/iu;
-            //     // let regFio = /^([а-яё]+|[a-z]+)$/i;
-            //     let regFio = /^[a-zа-яё\s]+$/iu;
-                    
-            //     if (!validate(regFio, inputFIO.value) && inputFIO.value !== '') {
-            //         notValidate(inputFIO, errorMessage[0], 'Используйте кириллицу или латиницу')
-            //     } else {
-            //         valid(inputFIO, errorMessage[0], '')
-            //     }
-
-            //     if (regFio.test(inputFIO.value.trim())) {
-            //         namePlaceholder.classList.add('_success');
-            //         inputFIO.classList.add('_success');
-            //         successInputsValue[0].classList.add('_active');
-            //         deleteInputsValue[0].classList.add('_active');
-            //     } else {
-            //         namePlaceholder.classList.remove('_success');
-            //         inputFIO.classList.remove('_success');
-            //         successInputsValue[0].classList.remove('_active');
-            //     }
-            // });
-
-            // inputPhone.addEventListener('input', e => {
-                // let regDigit = /^[0-9]+$/gm,
-                //     regNotDigit = /\D+/g;
-
-                // if (!validate(regDigit, inputPhone.value) && inputPhone.value !== '') {
-                //     notValidate(inputPhone, errorMessage[1], 'Используйте только цифры')
-                // } else {
-                //     valid(inputPhone, errorMessage[1], '')
-                // }
-                
-                // if (regNotDigit.test(inputPhone.value)) {
-                //     phonePlaceholder.classList.add('_error');
-                //     inputPhone.classList.add('_error');
-                // } else {
-                //     phonePlaceholder.classList.remove('_error');
-                //     inputPhone.classList.remove('_error');
-                // }
-                // // console.log(regDigit.test(inputPhone.value))
-                // if (regDigit.test(inputPhone.value)) {
-                //     phonePlaceholder.classList.add('_success');
-                //     inputPhone.classList.add('_success');
-                //     successInputsValue[1].classList.add('_active');
-                //     deleteInputsValue[1].classList.add('_active');
-                // } else {
-                //     phonePlaceholder.classList.remove('_success');
-                //     inputPhone.classList.remove('_success');
-                //     successInputsValue[1].classList.remove('_active');
-                // }
-            // });
-
-            // inputMail.addEventListener('input', () => {
-                // let regMail = /\w+@\w+\.\w+/;
-
-                // if (!validate(regMail, inputMail.value) && inputMail.value !== '') {
-                //     notValidate(inputMail, errorMessage[2], 'Используйте знаки «@» и точку')
-                // } else {
-                //     valid(inputMail, errorMessage[2], '')
-                // }
-
-                // if (regMail.test(inputMail.value)) {
-                //     mailPlaceholder.classList.add('_success');
-                //     inputMail.classList.add('_success');
-                //     successInputsValue[2].classList.add('_active');
-                //     deleteInputsValue[2].classList.add('_active');
-                // } else {
-                //     mailPlaceholder.classList.remove('_success');
-                //     inputMail.classList.remove('_success');
-                //     successInputsValue[2].classList.remove('_active');
-                // }
-            // });
 
             function showMore() {
                 const dots = document.getElementById("dots"),
