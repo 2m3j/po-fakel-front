@@ -1,0 +1,124 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: #fcfcfc;
+}
+
+h1,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 1440px;
+  padding-left: 165px;
+  padding-right: 165px;
+  margin: 0 auto;
+}
+
+img {
+  max-width: 100%;
+}
+
+.errors {
+  padding-top: 100px;
+}
+
+.content {
+  display: flex;
+}
+.content__left {
+  max-width: 50%;
+  margin-right: 30px;
+}
+.content__left-text h1 {
+  margin-bottom: 20px;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 45px;
+  line-height: 60px;
+  color: #202020;
+}
+.content__left-text p {
+  margin-bottom: 48px;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 150%;
+  color: #9F9F9F;
+}
+.content__left button {
+  padding: 15px 40px;
+  width: 350px;
+  height: 57px;
+  background: #DA8A3A;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 27px;
+  color: #FAFAFA;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+.content__right-image1 img {
+  background-image: url("/images/error_404_bg.png");
+}
+
+.errors {
+  padding-top: 100px;
+}
+
+.content {
+  display: flex;
+}
+.content__left {
+  max-width: 50%;
+  margin-right: 30px;
+}
+.content__left-text h1 {
+  margin-bottom: 20px;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 45px;
+  line-height: 60px;
+  color: #202020;
+}
+.content__left-text p {
+  margin-bottom: 48px;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 150%;
+  color: #9F9F9F;
+}
+.content__left button {
+  padding: 15px 40px;
+  width: 350px;
+  height: 57px;
+  background: #DA8A3A;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 27px;
+  color: #FAFAFA;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+.content__right-image2 {
+  background-image: url("/images/error_500_bg.png");
+}/*# sourceMappingURL=error-style.css.map */

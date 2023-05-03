@@ -1,269 +1,230 @@
 <!DOCTYPE html>
 <html lang="en" xmlns="http://www.w3.org/1999/html">
+
 <head>
-    <meta charset="UTF-8"/>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
     <title>Факел</title>
 </head>
 
 <body>
-<header class="header header_entity_show">
-    <%= require('raw-loader!./layout/header/branding.html').default %>
-    <%= require('raw-loader!./layout/header/entity.html').default %>
-</header>
-<main>
-    <section class="main-about">
-        <div class="container">
-            <h2>О нас</h2>
-            <a href="#" class="main-about__btn btn btn_xl btn_outline">Подробнее</a>
-            <div class="main-about__row">
-                <img src="images/photo-one.png" alt="photo"/>
-                <p class="main-about__text">
-                    Мы — поисковый отряд «Факел» Вятского государственного
-                    университета. Наш отряд был создан 27 декабря 2000 года приказом
-                    № 169 ректора Кондратова Василия Михайловича. СДОД ДДТ
-                    «Вдохновение».
-                </p>
-            </div>
-            <div class="main-about__row">
-                <img src="images/photo-two.png" alt="photo"/>
-                <p class="main-about__text">
-                    География поиска: Гридинская дорога, «Рамушевский коридор»,
-                    заболоченные леса между д. Рамушево и д. Давыдово Старорусского
-                    района Новгородской области. Также в разные годы отряд работал в
-                    Демянском, Парфинском, Поддорском районах Новгородской области.
-                </p>
-            </div>
-            <div class="main-about__row">
-                <img src="images/photo-three.png" alt="photo"/>
-                <p class="main-about__text">
-                    Свыше 200 человек приняли участие в поисковых экспедициях.
-                    Сейчас участники отряда — ребята из г. Кирова и области,
-                    Удмуртии, Москвы, Пермского края, Рязанской области.
-                </p>
-            </div>
-        </div>
-    </section>
-    <section class="main-numbers">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-6 col-lg-3 main-numbers__item main-numbers__item_color_blue">
-                    <span class="main-numbers__num">22</span> года существует отряд
+    <header class="header header_entity_show">
+        <%= require('raw-loader!./layout/header/branding.html').default %>
+            <%= require('raw-loader!./layout/header/entity.html').default %>
+    </header>
+    <main>
+        <section class="main-about">
+            <div class="container">
+                <h2>О нас</h2>
+                <a href="#" class="main-about__btn btn btn_xl btn_outline">Подробнее</a>
+                <div class="main-about__row">
+                    <img src="images/photo-one.png" alt="photo" />
+                    <p class="main-about__text">
+                        Мы — поисковый отряд «Факел» Вятского государственного
+                        университета. Наш отряд был создан 27 декабря 2000 года приказом
+                        № 169 ректора Кондратова Василия Михайловича. СДОД ДДТ
+                        «Вдохновение».
+                    </p>
                 </div>
-                <div class="col-md-6 col-lg-3 main-numbers__item main-numbers__item_color_red">
-                    <span class="main-numbers__num">31</span> поисковая экспедиция
+                <div class="main-about__row">
+                    <img src="images/photo-two.png" alt="photo" />
+                    <p class="main-about__text">
+                        География поиска: Гридинская дорога, «Рамушевский коридор»,
+                        заболоченные леса между д. Рамушево и д. Давыдово Старорусского
+                        района Новгородской области. Также в разные годы отряд работал в
+                        Демянском, Парфинском, Поддорском районах Новгородской области.
+                    </p>
                 </div>
-                <div class="col-md-6 col-lg-3 main-numbers__item main-numbers__item_color_green">
-                    <span class="main-numbers__num">46</span> имен бойцов установлено
-                </div>
-                <div class="col-md-6 col-lg-3 main-numbers__item main-numbers__item_color_brown">
-                    <span class="main-numbers__num">688</span> бойцов найдены
+                <div class="main-about__row">
+                    <img src="images/photo-three.png" alt="photo" />
+                    <p class="main-about__text">
+                        Свыше 200 человек приняли участие в поисковых экспедициях.
+                        Сейчас участники отряда — ребята из г. Кирова и области,
+                        Удмуртии, Москвы, Пермского края, Рязанской области.
+                    </p>
                 </div>
             </div>
-        </div>
-    </section>
-    <section class="main-names">
-        <div class="container">
-            <h2>Имена</h2>
-            <div class="swiper card-slider">
-                <div class="card-slider__navigation d-none d-md-block">
-              <span class="card-slider__navigation-left swiper-button-left">
-                <img src="images/ar-left.png" alt="arrow"/>
-              </span>
-                    <span class="card-slider__navigation-right swiper-button-right">
-                <img src="images/ar-right.png" alt="arrow"/>
-              </span>
+        </section>
+        <section class="main-numbers">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 col-lg-3 main-numbers__item main-numbers__item_color_blue">
+                        <span class="main-numbers__num">22</span> года существует отряд
+                    </div>
+                    <div class="col-md-6 col-lg-3 main-numbers__item main-numbers__item_color_red">
+                        <span class="main-numbers__num">31</span> поисковая экспедиция
+                    </div>
+                    <div class="col-md-6 col-lg-3 main-numbers__item main-numbers__item_color_green">
+                        <span class="main-numbers__num">46</span> имен бойцов установлено
+                    </div>
+                    <div class="col-md-6 col-lg-3 main-numbers__item main-numbers__item_color_brown">
+                        <span class="main-numbers__num">688</span> бойцов найдены
+                    </div>
                 </div>
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide card-slider__item">
-                        <div
-                                class="card-slider__item-card"
-                                style="background-image: url(images/man-one.png)"
-                        >
-                            <a href="#" class="card-slider__title">
-                                Феноберцев Роман Филиппович
+            </div>
+        </section>
+        <section class="main-names">
+            <div class="container">
+                <h2>Имена</h2>
+                <div class="swiper card-slider">
+                    <div class="card-slider__navigation d-none d-md-block">
+                        <span class="card-slider__navigation-left swiper-button-left">
+                            <img src="images/ar-left.png" alt="arrow" />
+                        </span>
+                        <span class="card-slider__navigation-right swiper-button-right">
+                            <img src="images/ar-right.png" alt="arrow" />
+                        </span>
+                    </div>
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide card-slider__item">
+                            <div class="card-slider__item-card" style="background-image: url(images/man-one.png)">
+                                <a href="#" class="card-slider__title">
+                                    Феноберцев Роман Филиппович
+                                </a>
+                            </div>
+                        </div>
+                        <div class="swiper-slide card-slider__item">
+                            <div class="card-slider__item-card" style="background-image: url(images/man-two.png)">
+                                <a href="#" class="card-slider__title">
+                                    Нагорнов Авакум Иванович
+                                </a>
+                            </div>
+                        </div>
+                        <div class="swiper-slide card-slider__item">
+                            <div class="card-slider__item-card" style="background-image: url(images/man-three.png)">
+                                <a href="#" class="card-slider__title">
+                                    Важенин Яков Захарович
+                                </a>
+                            </div>
+                        </div>
+                        <div class="swiper-slide card-slider__item">
+                            <div class="card-slider__item-card" style="background-image: url(images/man-four.png)">
+                                <a href="#" class="card-slider__title">
+                                    Феноберцев Роман Филиппович
+                                </a>
+                            </div>
+                        </div>
+                        <div class="swiper-slide card-slider__item">
+                            <div class="card-slider__item-card" style="background-image: url(images/man-five.png)">
+                                <a href="#" class="card-slider__title">
+                                    Феноберцев Роман Филиппович
+                                </a>
+                            </div>
+                        </div>
+                        <div class="swiper-slide card-slider__item">
+                            <div class="card-slider__item-card" style="background-image: url(images/man-six.png)">
+                                <a href="#" class="card-slider__title">
+                                    Феноберцев Роман Филиппович
+                                </a>
+                            </div>
+                        </div>
+                        <div class="swiper-slide card-slider__item">
+                            <div class="card-slider__item-card" style="background-image: url(images/man-seven.png)">
+                                <a href="#" class="card-slider__title">
+                                    Феноберцев Роман Филиппович
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                </div>
+                <div class="main-names__link-wrapper">
+                    <a class="main-names__link btn btn_xl" href="#">Перейти к разделу</a>
+                </div>
+            </div>
+        </section>
+        <section class="main-gallery">
+            <div class="container">
+                <h2>Галерея</h2>
+                <div class="row">
+                    <div class="col-12 col-md-5 mb-4 mb-md-0">
+                        <div class="image-tile">
+                            <div class="image-tile__wrapper" style="background-image: url(images/gallery-one.png)">
+                                <div class="image-tile__title">Фото</div>
+                                <a href="#" class="image-tile__btn btn btn_outline d-none d-md-block">Перейти</a>
+                                <a href="#" class="image-tile__mobile-link"></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-7">
+                        <div class="image-tile image-tile--half mb-4">
+                            <div class="image-tile__wrapper" style="background-image: url(images/gallery-two.png)">
+                                <div class="image-tile__title">Видео</div>
+                                <a href="#" class="image-tile__btn btn btn_outline d-none d-md-block">Перейти</a>
+                                <a href="#" class="image-tile__mobile-link"></a>
+                            </div>
+                        </div>
+                        <div class="image-tile image-tile--half">
+                            <div class="image-tile__wrapper" style="background-image: url(images/gallery-three.png)">
+                                <div class="image-tile__title">Аудио</div>
+                                <a href="#" class="image-tile__btn btn btn_outline d-none d-md-block">Перейти</a>
+                                <a href="#" class="image-tile__mobile-link"></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="main-news">
+            <div class="container">
+                <h2>Новости</h2>
+                <div class="row">
+                    <div class="col-12 col-md-6 col-lg-4 mb-4 mb-md-0">
+                        <div class="article-card">
+                            <img src="images/news-one.png" alt="news" class="article-card__image" />
+                            <div class="article-card__date">27.12.2022</div>
+                            <a href="#" class="article-card__title">
+                                22й день рождения отряда «Факел»
                             </a>
+                            <div class="article-card__text">
+                                В этот день исполнилось 22 года нашему замечательному,
+                                любимому, боевому и трудовому поисковому отряду «Факел».
+                                Поисковый отряд «Факел» был основан студентами Вятского
+                                государственного университета…
+                            </div>
                         </div>
                     </div>
-                    <div class="swiper-slide card-slider__item">
-                        <div
-                                class="card-slider__item-card"
-                                style="background-image: url(images/man-two.png)"
-                        >
-                            <a href="#" class="card-slider__title">
-                                Нагорнов Авакум Иванович
-                            </a>
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="article-card">
+                            <img src="images/news-two.png" alt="news" class="article-card__image" />
+                            <div class="article-card__date">03.12.2022</div>
+                            <a href="#" class="article-card__title">День неизвестного солдата</a>
+                            <div class="article-card__text">
+                                Этот день можно по праву назвать ещё и «Днём поисковика». Не
+                                праздник, конечно, а своеобразный рубежный день, когда десятки
+                                и сотни поисковых отрядов подводят итоги своих полевых
+                                сезонов. В день…
+                            </div>
                         </div>
                     </div>
-                    <div class="swiper-slide card-slider__item">
-                        <div
-                                class="card-slider__item-card"
-                                style="background-image: url(images/man-three.png)"
-                        >
-                            <a href="#" class="card-slider__title">
-                                Важенин Яков Захарович
+                    <div class="col-12 col-md-6 col-lg-4 d-none d-lg-flex">
+                        <div class="article-card">
+                            <img src="images/news-three.png" alt="news" class="article-card__image" />
+                            <div class="article-card__date">19.10.2022</div>
+                            <a href="#" class="article-card__title">
+                                Найдена семья Феноберцева Романа Филипповича
                             </a>
-                        </div>
-                    </div>
-                    <div class="swiper-slide card-slider__item">
-                        <div
-                                class="card-slider__item-card"
-                                style="background-image: url(images/man-four.png)"
-                        >
-                            <a href="#" class="card-slider__title">
-                                Феноберцев Роман Филиппович
-                            </a>
-                        </div>
-                    </div>
-                    <div class="swiper-slide card-slider__item">
-                        <div
-                                class="card-slider__item-card"
-                                style="background-image: url(images/man-five.png)"
-                        >
-                            <a href="#" class="card-slider__title">
-                                Феноберцев Роман Филиппович
-                            </a>
-                        </div>
-                    </div>
-                    <div class="swiper-slide card-slider__item">
-                        <div
-                                class="card-slider__item-card"
-                                style="background-image: url(images/man-six.png)"
-                        >
-                            <a href="#" class="card-slider__title">
-                                Феноберцев Роман Филиппович
-                            </a>
-                        </div>
-                    </div>
-                    <div class="swiper-slide card-slider__item">
-                        <div
-                                class="card-slider__item-card"
-                                style="background-image: url(images/man-seven.png)"
-                        >
-                            <a href="#" class="card-slider__title">
-                                Феноберцев Роман Филиппович
-                            </a>
+                            <div class="article-card__text">
+                                Поисковики отряда «Факел» г. Киров, работая в ходе осеннего
+                                этапа межрегиональной Вахты Памяти «Поисковой экспедиции
+                                „Долина“, нашли останки 7 солдат. Личность одного из них
+                                удалось установить по записке из смертного...
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="swiper-pagination"></div>
-            </div>
-            <div class="main-names__link-wrapper">
-                <a class="main-names__link btn btn_xl" href="#">Перейти к разделу</a>
-            </div>
-        </div>
-    </section>
-    <section class="main-gallery">
-        <div class="container">
-            <h2>Галерея</h2>
-            <div class="row">
-                <div class="col-12 col-md-5 mb-4 mb-md-0">
-                    <div class="image-tile">
-                        <div
-                                class="image-tile__wrapper"
-                                style="background-image: url(images/gallery-one.png)"
-                        >
-                            <div class="image-tile__title">Фото</div>
-                            <a href="#" class="image-tile__btn btn btn_outline d-none d-md-block">Перейти</a>
-                            <a href="#" class="image-tile__mobile-link"></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-12 col-md-7">
-                    <div class="image-tile image-tile--half mb-4">
-                        <div
-                                class="image-tile__wrapper"
-                                style="background-image: url(images/gallery-two.png)"
-                        >
-                            <div class="image-tile__title">Видео</div>
-                            <a href="#" class="image-tile__btn btn btn_outline d-none d-md-block">Перейти</a>
-                            <a href="#" class="image-tile__mobile-link"></a>
-                        </div>
-                    </div>
-                    <div class="image-tile image-tile--half">
-                        <div
-                                class="image-tile__wrapper"
-                                style="background-image: url(images/gallery-three.png)"
-                        >
-                            <div class="image-tile__title">Аудио</div>
-                            <a href="#" class="image-tile__btn btn btn_outline d-none d-md-block">Перейти</a>
-                            <a href="#" class="image-tile__mobile-link"></a>
-                        </div>
-                    </div>
+                <div class="main-news__link-wrapper">
+                    <a href="#" class="main-news__link btn btn_xl">Больше новостей <span
+                            class="d-none d-md-inline-block">отряда</span></a>
                 </div>
             </div>
-        </div>
-    </section>
-    <section class="main-news">
-        <div class="container">
-            <h2>Новости</h2>
-            <div class="row">
-                <div class="col-12 col-md-6 col-lg-4 mb-4 mb-md-0">
-                    <div class="article-card">
-                        <img
-                                src="images/news-one.png"
-                                alt="news"
-                                class="article-card__image"
-                        />
-                        <div class="article-card__date">27.12.2022</div>
-                        <a href="#" class="article-card__title">
-                            22й день рождения отряда «Факел»
-                        </a>
-                        <div class="article-card__text">
-                            В этот день исполнилось 22 года нашему замечательному,
-                            любимому, боевому и трудовому поисковому отряду «Факел».
-                            Поисковый отряд «Факел» был основан студентами Вятского
-                            государственного университета…
-                        </div>
-                    </div>
-                </div>
-                <div class="col-12 col-md-6 col-lg-4">
-                    <div class="article-card">
-                        <img
-                                src="images/news-two.png"
-                                alt="news"
-                                class="article-card__image"
-                        />
-                        <div class="article-card__date">03.12.2022</div>
-                        <a href="#" class="article-card__title">День неизвестного солдата</a>
-                        <div class="article-card__text">
-                            Этот день можно по праву назвать ещё и «Днём поисковика». Не
-                            праздник, конечно, а своеобразный рубежный день, когда десятки
-                            и сотни поисковых отрядов подводят итоги своих полевых
-                            сезонов. В день…
-                        </div>
-                    </div>
-                </div>
-                <div class="col-12 col-md-6 col-lg-4 d-none d-lg-flex">
-                    <div class="article-card">
-                        <img
-                                src="images/news-three.png"
-                                alt="news"
-                                class="article-card__image"
-                        />
-                        <div class="article-card__date">19.10.2022</div>
-                        <a href="#" class="article-card__title">
-                            Найдена семья Феноберцева Романа Филипповича
-                        </a>
-                        <div class="article-card__text">
-                            Поисковики отряда «Факел» г. Киров, работая в ходе осеннего
-                            этапа межрегиональной Вахты Памяти «Поисковой экспедиции
-                            „Долина“, нашли останки 7 солдат. Личность одного из них
-                            удалось установить по записке из смертного...
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="main-news__link-wrapper">
-                <a href="#" class="main-news__link btn btn_xl">Больше новостей <span class="d-none d-md-inline-block">отряда</span></a>
-            </div>
-        </div>
-    </section>
-</main>
-<%= require('raw-loader!./layout/footer.html').default %>
+        </section>
+    </main>
+    <%= require('raw-loader!./layout/footer.html').default %>
 </body>
 <%= require('raw-loader!./layout/bottom-scripts.html').default %>
+
 </html>

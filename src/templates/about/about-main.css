@@ -1,0 +1,64 @@
+.about-section-volonteer-stories {
+  background-clip: border-box;
+}
+
+.card-volonteer {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+.card-volonteer__text {
+  font-size: 20px;
+  line-height: 150%;
+  align-self: stretch;
+}
+@media (max-width: 1200px) {
+  .card-volonteer__text {
+    font-size: 15px;
+  }
+}
+.card-volonteer__author {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 150%;
+  text-align: end;
+  padding-right: 20px;
+}
+.card-volonteer__img {
+  background-position: center;
+  background-size: cover;
+  width: 350px;
+  height: 467px;
+  background-size: cover;
+  margin-right: 30px;
+}
+@media (min-width: 768px) {
+  .card-volonteer__img {
+    width: 280px;
+    height: 460px;
+  }
+}
+@media (min-width: 1200px) {
+  .card-volonteer__img {
+    width: 222px;
+    height: 296px;
+  }
+}
+.card-volonteer__item-card {
+  display: flex;
+  --bs-gutter-x: 0;
+  justify-content: center;
+}
+.card-volonteer__navigation {
+  position: absolute;
+  text-align: right;
+  top: 0;
+  right: 0;
+}
+.card-volonteer__navigation-left {
+  margin-right: 10px;
+}
+.card-volonteer__navigation-left, .card-volonteer__navigation-right {
+  cursor: pointer;
+}/*# sourceMappingURL=about-main.css.map */
