@@ -18,7 +18,7 @@
                     <div class="main-contacts__breadcrumbs breadcrumbs">
                         <ul class="breadcrumbs__list">
                             <li class="breadcrumbs__item">
-                                <a href="" class="breadcrumbs__link">Главная</a>
+                                <a href="/" class="breadcrumbs__link">Главная</a>
                                 <svg width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M6 7.4L0 1.4L1.4 0L6 4.6L10.6 0L12 1.4L6 7.4Z" fill="#F3F3F3"/>
                                 </svg>
@@ -46,7 +46,7 @@
                                         Михаил Юрьевич поддерживает связь с&nbsp;большинством родственников, найденных отрядом бойцов, ведёт с&nbsp;ними переписку, помогает другим в&nbsp;поиске информации о&nbsp;пропавших без вести во&nbsp;время войны.
                                         Историк по&nbsp;профессии, он&nbsp;ориентируется в&nbsp;архивных материалах, картах, военной литературе. Михаил Юрьевич вошёл в&nbsp;число организаторов проведения уроков мужества для учащихся школ, ссузов и&nbsp;вузов&nbsp;г. Кирова.</span>
                                     </p>
-                                    <button onclick="myFunction()" class="more-info-contacts__btn" id="myBtn">Читать далее</button>
+                                    <button onclick="showMore()" class="more-info-contacts__btn" id="myBtn">Читать далее</button>
                                 </div>
                                 <ul class="info-contacts__list">
                                     <li class="info-contacts__item">
@@ -70,7 +70,7 @@
                                         </a>
                                     </li>
                                     <li class="info-contacts__item">
-                                        <a href="https://vk.com/fakel.kirov" class="info-contacts__link">
+                                        <a target="_blank" href="https://vk.com/fakel.kirov" class="info-contacts__link">
                                             <svg width="24" height="24" viewBox="0 0 31 31" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <path d="M19.9813 0.916504H11.033C2.86046 0.916504 0.916504 2.86046 0.916504 11.0184V19.9667C0.916504 28.1378 2.84588 30.0832 11.0184 30.0832H19.9667C28.1378 30.0832 30.0832 28.1538 30.0832 19.9813V11.033C30.0832 2.86046 28.1538 0.916504 19.9813 0.916504ZM24.4628 21.7269H22.335C21.53 21.7269 21.288 21.075 19.8442 19.6313C18.5842 18.4165 18.0519 18.2648 17.7325 18.2648C17.2921 18.2648 17.1711 18.3859 17.1711 18.994V20.9073C17.1711 21.425 17.0034 21.7284 15.6515 21.7284C14.3395 21.6402 13.0672 21.2416 11.9395 20.5654C10.8117 19.8892 9.86071 18.9547 9.16484 17.839C7.51279 15.7828 6.36329 13.3694 5.80775 10.7909C5.80775 10.4715 5.9288 10.1828 6.53692 10.1828H8.66317C9.21004 10.1828 9.40692 10.4263 9.62129 10.9878C10.6538 14.0269 12.4155 16.6694 13.13 16.6694C13.4042 16.6694 13.5238 16.5484 13.5238 15.8644V12.7348C13.4334 11.3071 12.675 11.1861 12.675 10.6698C12.6848 10.5337 12.7472 10.4067 12.849 10.3157C12.9508 10.2248 13.0841 10.1771 13.2205 10.1828H16.563C17.0194 10.1828 17.1711 10.4103 17.1711 10.9571V15.1805C17.1711 15.6369 17.368 15.7886 17.505 15.7886C17.7792 15.7886 17.9907 15.6369 18.4923 15.1353C19.5698 13.8212 20.4502 12.3572 21.1057 10.7894C21.1727 10.6011 21.2994 10.4399 21.4666 10.3303C21.6339 10.2208 21.8323 10.169 22.0317 10.1828H24.1594C24.7967 10.1828 24.9323 10.5021 24.7967 10.9571C24.0231 12.6903 23.0658 14.3354 21.9413 15.8644C21.7123 16.2144 21.6205 16.3967 21.9413 16.8065C22.1528 17.1259 22.898 17.7486 23.3996 18.3407C24.1287 19.0679 24.734 19.9092 25.1919 20.8315C25.3742 21.4236 25.0694 21.7269 24.4628 21.7269Z" fill="#000"/>
                                             </svg>                                            
@@ -91,22 +91,59 @@
                     <form action="#" method="POST" class="feedback-contacts__form form-contacts">
                         <div class="form-contacts__fields">
                             <div class="form-contacts__field">
-                                <input id="userName" class="form-contacts__input" name="name" type="text" required>
-                                <label class="form-contacts__placeholder">Введите ваше имя*</label>
+                                <input data-path="userName" id="userName" class="form-contacts__input" name="name" type="text">
+                                <label id="placeholderName" class="form-contacts__placeholder">Введите ваше имя*</label>
+                                <button class="form-contacts__delete _active" type="button">
+                                    <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M15 16.75L8.875 22.875C8.64583 23.1042 8.35417 23.2188 8 23.2188C7.64583 23.2188 7.35417 23.1042 7.125 22.875C6.89583 22.6458 6.78125 22.3542 6.78125 22C6.78125 21.6458 6.89583 21.3542 7.125 21.125L13.25 15L7.125 8.875C6.89583 8.64583 6.78125 8.35417 6.78125 8C6.78125 7.64583 6.89583 7.35417 7.125 7.125C7.35417 6.89583 7.64583 6.78125 8 6.78125C8.35417 6.78125 8.64583 6.89583 8.875 7.125L15 13.25L21.125 7.125C21.3542 6.89583 21.6458 6.78125 22 6.78125C22.3542 6.78125 22.6458 6.89583 22.875 7.125C23.1042 7.35417 23.2188 7.64583 23.2188 8C23.2188 8.35417 23.1042 8.64583 22.875 8.875L16.75 15L22.875 21.125C23.1042 21.3542 23.2188 21.6458 23.2188 22C23.2188 22.3542 23.1042 22.6458 22.875 22.875C22.6458 23.1042 22.3542 23.2188 22 23.2188C21.6458 23.2188 21.3542 23.1042 21.125 22.875L15 16.75Z" fill="#4F4F4F"/>
+                                    </svg>                                        
+                                </button>
+                                <div class="form-contacts__success">
+                                    <svg width="20" height="14" viewBox="0 0 20 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M6.93729 13.9688C6.77062 13.9688 6.61437 13.9425 6.46854 13.89C6.3227 13.8375 6.18729 13.7492 6.06229 13.625L0.687287 8.25C0.458121 8.02083 0.348537 7.72375 0.358537 7.35875C0.368537 6.99375 0.488537 6.69708 0.718537 6.46875C0.947704 6.23958 1.23937 6.125 1.59354 6.125C1.9477 6.125 2.23937 6.23958 2.46854 6.46875L6.93729 10.9375L17.531 0.34375C17.7602 0.114583 18.0573 0 18.4223 0C18.7873 0 19.084 0.114583 19.3123 0.34375C19.5415 0.572917 19.656 0.87 19.656 1.235C19.656 1.6 19.5415 1.89667 19.3123 2.125L7.81229 13.625C7.68729 13.75 7.55187 13.8388 7.40604 13.8913C7.2602 13.9438 7.10395 13.9696 6.93729 13.9688Z" fill="#4F4F4F"/>
+                                    </svg>                                        
+                                </div>
+                                <span data-error="userName" class="form-contacts__message"></span>
                             </div>
                             <div class="form-contacts__inner">
                                 <div class="form-contacts__field">
-                                    <input id="userPhone" class="form-contacts__input" name="phone" type="text" required>
-                                    <label class="form-contacts__placeholder">Введите ваш телефон</label>
+                                    <input data-path="userTel" id="userPhone" class="form-contacts__input" name="phone" type="text">
+                                    <label id="placeholderPhone" class="form-contacts__placeholder">Введите ваш телефон</label>
+                                    <button class="form-contacts__delete _active" type="button">
+                                        <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M15 16.75L8.875 22.875C8.64583 23.1042 8.35417 23.2188 8 23.2188C7.64583 23.2188 7.35417 23.1042 7.125 22.875C6.89583 22.6458 6.78125 22.3542 6.78125 22C6.78125 21.6458 6.89583 21.3542 7.125 21.125L13.25 15L7.125 8.875C6.89583 8.64583 6.78125 8.35417 6.78125 8C6.78125 7.64583 6.89583 7.35417 7.125 7.125C7.35417 6.89583 7.64583 6.78125 8 6.78125C8.35417 6.78125 8.64583 6.89583 8.875 7.125L15 13.25L21.125 7.125C21.3542 6.89583 21.6458 6.78125 22 6.78125C22.3542 6.78125 22.6458 6.89583 22.875 7.125C23.1042 7.35417 23.2188 7.64583 23.2188 8C23.2188 8.35417 23.1042 8.64583 22.875 8.875L16.75 15L22.875 21.125C23.1042 21.3542 23.2188 21.6458 23.2188 22C23.2188 22.3542 23.1042 22.6458 22.875 22.875C22.6458 23.1042 22.3542 23.2188 22 23.2188C21.6458 23.2188 21.3542 23.1042 21.125 22.875L15 16.75Z" fill="#4F4F4F"/>
+                                        </svg>                                        
+                                    </button>
+                                    <div class="form-contacts__success">
+                                        <svg width="20" height="14" viewBox="0 0 20 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M6.93729 13.9688C6.77062 13.9688 6.61437 13.9425 6.46854 13.89C6.3227 13.8375 6.18729 13.7492 6.06229 13.625L0.687287 8.25C0.458121 8.02083 0.348537 7.72375 0.358537 7.35875C0.368537 6.99375 0.488537 6.69708 0.718537 6.46875C0.947704 6.23958 1.23937 6.125 1.59354 6.125C1.9477 6.125 2.23937 6.23958 2.46854 6.46875L6.93729 10.9375L17.531 0.34375C17.7602 0.114583 18.0573 0 18.4223 0C18.7873 0 19.084 0.114583 19.3123 0.34375C19.5415 0.572917 19.656 0.87 19.656 1.235C19.656 1.6 19.5415 1.89667 19.3123 2.125L7.81229 13.625C7.68729 13.75 7.55187 13.8388 7.40604 13.8913C7.2602 13.9438 7.10395 13.9696 6.93729 13.9688Z" fill="#4F4F4F"/>
+                                        </svg>                                        
+                                    </div>
+                                    <span data-error="userTel" class="form-contacts__message"></span>
                                 </div>
                                 <div class="form-contacts__field">
-                                    <input id="userMail" class="form-contacts__input" name="email" type="mail" required>
-                                    <label class="form-contacts__placeholder">Введите ваш email*</label>
+                                    <input data-path="userEmail" id="userMail" class="form-contacts__input" name="email" type="mail">
+                                    <label id="placeholderMail" class="form-contacts__placeholder">Введите ваш email*</label>
+                                    <button class="form-contacts__delete _active" type="button">
+                                        <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M15 16.75L8.875 22.875C8.64583 23.1042 8.35417 23.2188 8 23.2188C7.64583 23.2188 7.35417 23.1042 7.125 22.875C6.89583 22.6458 6.78125 22.3542 6.78125 22C6.78125 21.6458 6.89583 21.3542 7.125 21.125L13.25 15L7.125 8.875C6.89583 8.64583 6.78125 8.35417 6.78125 8C6.78125 7.64583 6.89583 7.35417 7.125 7.125C7.35417 6.89583 7.64583 6.78125 8 6.78125C8.35417 6.78125 8.64583 6.89583 8.875 7.125L15 13.25L21.125 7.125C21.3542 6.89583 21.6458 6.78125 22 6.78125C22.3542 6.78125 22.6458 6.89583 22.875 7.125C23.1042 7.35417 23.2188 7.64583 23.2188 8C23.2188 8.35417 23.1042 8.64583 22.875 8.875L16.75 15L22.875 21.125C23.1042 21.3542 23.2188 21.6458 23.2188 22C23.2188 22.3542 23.1042 22.6458 22.875 22.875C22.6458 23.1042 22.3542 23.2188 22 23.2188C21.6458 23.2188 21.3542 23.1042 21.125 22.875L15 16.75Z" fill="#4F4F4F"/>
+                                        </svg>                                        
+                                    </button>
+                                    <div class="form-contacts__success">
+                                        <svg width="20" height="14" viewBox="0 0 20 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M6.93729 13.9688C6.77062 13.9688 6.61437 13.9425 6.46854 13.89C6.3227 13.8375 6.18729 13.7492 6.06229 13.625L0.687287 8.25C0.458121 8.02083 0.348537 7.72375 0.358537 7.35875C0.368537 6.99375 0.488537 6.69708 0.718537 6.46875C0.947704 6.23958 1.23937 6.125 1.59354 6.125C1.9477 6.125 2.23937 6.23958 2.46854 6.46875L6.93729 10.9375L17.531 0.34375C17.7602 0.114583 18.0573 0 18.4223 0C18.7873 0 19.084 0.114583 19.3123 0.34375C19.5415 0.572917 19.656 0.87 19.656 1.235C19.656 1.6 19.5415 1.89667 19.3123 2.125L7.81229 13.625C7.68729 13.75 7.55187 13.8388 7.40604 13.8913C7.2602 13.9438 7.10395 13.9696 6.93729 13.9688Z" fill="#4F4F4F"/>
+                                        </svg>                                        
+                                    </div>
+                                    <span data-error="userEmail" class="form-contacts__message"></span>
                                 </div>
                             </div>
                             <div class="form-contacts__field">
-                                <textarea id="userComment" value="" class="form-contacts__textarea"></textarea>
+                                <textarea id="userComment" maxlength="500" class="form-contacts__textarea"></textarea>
                                 <label id="labelComment" class="form-contacts__placeholder">Введите ваше сообщение*</label>
+                                <div class="form-contacts__counter">
+                                    <span class="form-contacts__current">0</span>
+                                    <span class="form-contacts__total">/ 500</span>
+                                </div>
                             </div>
                         </div>
                         <div class="form-contacts__btns btns-form-contacts">
@@ -137,7 +174,18 @@
     <script>
         window.addEventListener('DOMContentLoaded', () => {
             const textarea = document.getElementById('userComment'),
-                  textareaPlaceholder = document.getElementById('labelComment');
+                  namePlaceholder = document.getElementById('placeholderName'),
+                  phonePlaceholder = document.getElementById('placeholderPhone'),
+                  mailPlaceholder = document.getElementById('placeholderMail'),
+                  textareaPlaceholder = document.getElementById('labelComment'),
+                  textareaCurrent = document.querySelector('.form-contacts__current'),
+                  inputFIO = document.getElementById('userName'),
+                  inputPhone = document.getElementById('userPhone'),
+                  inputMail = document.getElementById('userMail'),
+                  formInputs = document.querySelectorAll('.form-contacts__input'),
+                  deleteInputsValue = document.querySelectorAll('.form-contacts__delete'),
+                  errorMessage = document.querySelectorAll('.form-contacts__message'),
+                  successInputsValue = document.querySelectorAll('.form-contacts__success');
 
             textarea.addEventListener('input', () => {
                 if (textarea.value !== '') {
@@ -147,24 +195,247 @@
                     textareaPlaceholder.classList.remove('_active');
                     textarea.classList.remove('_active');
                 }
+
+                textareaCurrent.textContent = textarea.value.length;
+
             });
-        });
+            
+            formInputs.forEach((item, i) => {
+                item.addEventListener('input', e => {
+                    if (item.value !== '') {
+                        item.classList.add('_active');
+                        deleteInputsValue.forEach((btn, x) => {
+                            if(i === x) {
+                                btn.classList.remove('_active');
+                            }
+                        });
+                        switch(i) {
+                            case 0: 
+                                namePlaceholder.classList.add('_active');
+                                break;
+                            case 1: 
+                                phonePlaceholder.classList.add('_active');
+                                break;
+                            case 2:
+                                mailPlaceholder.classList.add('_active');
+                                break;
+                        }
+                    } else {
+                        item.classList.remove('_active');
+                        deleteInputsValue.forEach((btn, x) => {
+                            if(i === x) {
+                                btn.classList.add('_active');
+                            }
+                        });
+                        removeClassPlaceholders();
+                    }
 
-        function myFunction() {
-            const dots = document.getElementById("dots");
-            const moreText = document.getElementById("more");
-            const btnText = document.getElementById("myBtn");
+                    if (i === 0) {
+                        // let regFio = /^\w+\s\w+\s\w+$/iu;
+                        // let regFio = /^([а-яё]+|[a-z]+)$/i;
+                        let regFio = /^[a-zа-яё\s]+$/iu;
+                            
+                        if (!validate(regFio, item.value) && item.value !== '') {
+                            notValidate(item, errorMessage[i], 'Используйте кириллицу или латиницу')
+                        } else {
+                            valid(item, errorMessage[i], '')
+                        }
+        
+                        if (regFio.test(item.value.trim())) {
+                            namePlaceholder.classList.add('_success');
+                            item.classList.add('_success');
+                            successInputsValue[0].classList.add('_active');
+                            deleteInputsValue[0].classList.add('_active');
+                        } else {
+                            namePlaceholder.classList.remove('_success');
+                            item.classList.remove('_success');
+                            successInputsValue[0].classList.remove('_active');
+                        }
+                    } else if(i === 1) {
+                        let regDigit = /^[0-9]+$/gm,
+                            regNotDigit = /\D+/g;
 
-            if (dots.style.display === "none") {
-                dots.style.display = "inline";
-                btnText.innerHTML = "Читать далее";
-                moreText.style.display = "none";
-            } else {
-                dots.style.display = "none";
-                btnText.innerHTML = "Свернуть";
-                moreText.style.display = "inline";
+                        if (!validate(regDigit, item.value) && item.value !== '') {
+                            notValidate(item, errorMessage[i], 'Используйте только цифры')
+                        } else {
+                            valid(item, errorMessage[i], '')
+                        }
+                        
+                        if (regNotDigit.test(item.value)) {
+                            phonePlaceholder.classList.add('_error');
+                            item.classList.add('_error');
+                        } else {
+                            phonePlaceholder.classList.remove('_error');
+                            item.classList.remove('_error');
+                        }
+                        // console.log(regDigit.test(inputPhone.value))
+                        if (regDigit.test(item.value)) {
+                            phonePlaceholder.classList.add('_success');
+                            item.classList.add('_success');
+                            successInputsValue[i].classList.add('_active');
+                            deleteInputsValue[i].classList.add('_active');
+                        } else {
+                            phonePlaceholder.classList.remove('_success');
+                            item.classList.remove('_success');
+                            successInputsValue[i].classList.remove('_active');
+                        }
+                    } else if (i === 2) {
+                        let regMail = /\w+@\w+\.\w+/;
+
+                        if (!validate(regMail, item.value) && item.value !== '') {
+                            notValidate(item, errorMessage[i], 'Используйте знаки «@» и точку')
+                        } else {
+                            valid(item, errorMessage[i], '')
+                        }
+
+                        if (regMail.test(item.value)) {
+                            mailPlaceholder.classList.add('_success');
+                            item.classList.add('_success');
+                            successInputsValue[i].classList.add('_active');
+                            deleteInputsValue[i].classList.add('_active');
+                        } else {
+                            mailPlaceholder.classList.remove('_success');
+                            item.classList.remove('_success');
+                            successInputsValue[i].classList.remove('_active');
+                        }
+                    }
+                    
+                    deleteInputsValue.forEach((btn, x) => {
+                        if (i === x) {
+                            btn.addEventListener('click', () => {
+                                item.value = '';
+                                btn.classList.add('_active');
+                                item.classList.remove('_active');
+                                item.classList.remove('_error');
+                                phonePlaceholder.classList.remove('_error');
+                                item.classList.remove('_success');
+                                phonePlaceholder.classList.remove('_success');
+                                removeClassPlaceholders();
+                                errorMessage[i].textContent = '';
+                            });
+                        }
+                    });
+                    
+                });
+                
+                function removeClassPlaceholders() {
+                    switch(i) {
+                        case 0: 
+                            namePlaceholder.classList.remove('_active');
+                            break;
+                        case 1: 
+                            phonePlaceholder.classList.remove('_active');
+                            break;
+                        case 2:
+                            mailPlaceholder.classList.remove('_active');
+                            break;
+                    }
+                }
+            });
+
+            function validate(regex, inp) {
+                // return regex.test(inp)
+                return inp.match(regex)
             }
-        }
+
+            function notValidate(inp, elem, message) {
+                elem.textContent = message;
+            }
+            
+            function valid(inp, elem, message) {
+                elem.textContent = message;
+            }
+
+            // inputFIO.addEventListener('input', () => {
+            //     // let regFio = /^\w+\s\w+\s\w+$/iu;
+            //     // let regFio = /^([а-яё]+|[a-z]+)$/i;
+            //     let regFio = /^[a-zа-яё\s]+$/iu;
+                    
+            //     if (!validate(regFio, inputFIO.value) && inputFIO.value !== '') {
+            //         notValidate(inputFIO, errorMessage[0], 'Используйте кириллицу или латиницу')
+            //     } else {
+            //         valid(inputFIO, errorMessage[0], '')
+            //     }
+
+            //     if (regFio.test(inputFIO.value.trim())) {
+            //         namePlaceholder.classList.add('_success');
+            //         inputFIO.classList.add('_success');
+            //         successInputsValue[0].classList.add('_active');
+            //         deleteInputsValue[0].classList.add('_active');
+            //     } else {
+            //         namePlaceholder.classList.remove('_success');
+            //         inputFIO.classList.remove('_success');
+            //         successInputsValue[0].classList.remove('_active');
+            //     }
+            // });
+
+            // inputPhone.addEventListener('input', e => {
+                // let regDigit = /^[0-9]+$/gm,
+                //     regNotDigit = /\D+/g;
+
+                // if (!validate(regDigit, inputPhone.value) && inputPhone.value !== '') {
+                //     notValidate(inputPhone, errorMessage[1], 'Используйте только цифры')
+                // } else {
+                //     valid(inputPhone, errorMessage[1], '')
+                // }
+                
+                // if (regNotDigit.test(inputPhone.value)) {
+                //     phonePlaceholder.classList.add('_error');
+                //     inputPhone.classList.add('_error');
+                // } else {
+                //     phonePlaceholder.classList.remove('_error');
+                //     inputPhone.classList.remove('_error');
+                // }
+                // // console.log(regDigit.test(inputPhone.value))
+                // if (regDigit.test(inputPhone.value)) {
+                //     phonePlaceholder.classList.add('_success');
+                //     inputPhone.classList.add('_success');
+                //     successInputsValue[1].classList.add('_active');
+                //     deleteInputsValue[1].classList.add('_active');
+                // } else {
+                //     phonePlaceholder.classList.remove('_success');
+                //     inputPhone.classList.remove('_success');
+                //     successInputsValue[1].classList.remove('_active');
+                // }
+            // });
+
+            // inputMail.addEventListener('input', () => {
+                // let regMail = /\w+@\w+\.\w+/;
+
+                // if (!validate(regMail, inputMail.value) && inputMail.value !== '') {
+                //     notValidate(inputMail, errorMessage[2], 'Используйте знаки «@» и точку')
+                // } else {
+                //     valid(inputMail, errorMessage[2], '')
+                // }
+
+                // if (regMail.test(inputMail.value)) {
+                //     mailPlaceholder.classList.add('_success');
+                //     inputMail.classList.add('_success');
+                //     successInputsValue[2].classList.add('_active');
+                //     deleteInputsValue[2].classList.add('_active');
+                // } else {
+                //     mailPlaceholder.classList.remove('_success');
+                //     inputMail.classList.remove('_success');
+                //     successInputsValue[2].classList.remove('_active');
+                // }
+            // });
+
+            function showMore() {
+                const dots = document.getElementById("dots"),
+                    moreText = document.getElementById("more"),
+                    btnText = document.getElementById("myBtn");
+
+                if (dots.style.display === "none") {
+                    dots.style.display = "inline";
+                    btnText.innerHTML = "Читать далее";
+                    moreText.style.display = "none";
+                } else {
+                    dots.style.display = "none";
+                    btnText.innerHTML = "Свернуть";
+                    moreText.style.display = "inline";
+                }
+            }
+        });
     </script>
 </body>
 </html>
