@@ -37,7 +37,10 @@ function SearchForm() {
     handleSubmit,
     reset,
     formState: { isSubmitSuccessful },
-  } = useForm({ mode: "onChange", defaultValues: { solder: "", date: "" } });
+  } = useForm({
+    mode: "onChange",
+    defaultValues: { solder: "", datefrom: "", datetill: "" },
+  });
   const select = [
     "Феноберцев Роман Филиппович",
     "Халемин Степан Александрович",
@@ -78,17 +81,26 @@ function SearchForm() {
   const onSubmit = (data) => {
     const solder = data.solder;
     const date = data.date;
+    const datefrom = data.datefrom;
+    const datetill = data.datetill;
     const filterByKeyword = (card) => {
       return card.solder.toLowerCase().includes(solder.toLowerCase());
     };
+    /*     const filterByDate = (card) => {
+  return card.date.toLowerCase().includes(date.format("L"));
+}; */
     const filterByDate = (card) => {
-      return card.date.toLowerCase().includes(date.format("L"));
+      let uno = new Date(datefrom);
+      let dos = new Date(datetill);
+      let [day, month, year] = card.date.split(".");
+      const tres = new Date(+year, +month - 1, +day);
+      return tres > uno && tres < dos;
     };
     const cards = !!(solder && date)
       ? initialCards.filter(filterByKeyword).filter(filterByDate)
       : !!solder
       ? initialCards.filter(filterByKeyword)
-      : !!date
+      : !!datefrom && !!datetill
       ? initialCards.filter(filterByDate)
       : initialCards;
     setCards(cards);
@@ -101,7 +113,7 @@ function SearchForm() {
       <LocalizationProvider dateAdapter={AdapterDayjs} adapterLocale="ru">
         <form onSubmit={handleSubmit(onSubmit)}>
           <div className="row g-10">
-            <div className="section__input col-12 col-md-5 col-lg-5 mb-4 mb-md-0">
+            <div className="section__input col-12 col-md-6 col-lg-6 mb-4 mb-md-0">
               <Controller
                 name="solder"
                 control={control}
@@ -143,9 +155,9 @@ function SearchForm() {
                 )}
               />
             </div>
-            <div className="col-12 col-md-5 col-lg-5 mb-4 mb-md-0">
+            <div className="col-12 col-md-2 col-lg-2 mb-4 mb-md-0">
               <Controller
-                name="date"
+                name="datefrom"
                 control={control}
                 render={({ field: { onChange, value } }) => (
                   <DatePicker
@@ -154,7 +166,48 @@ function SearchForm() {
                     locale="ru"
                     value={value || null}
                     onChange={onChange}
-                    label={"Период публикации"}
+                    label={"От"}
+                    sx={{
+                      width: 1,
+                    }}
+                    components={{
+                      Day: (props) => {
+                        const isSelected =
+                          !props.outsideCurrentMonth &&
+                          dates.includes(props.day.$d.toLocaleDateString());
+                        return (
+                          <Badge
+                            key={props.day.toString()}
+                            overlap="circular"
+                            badgeContent={
+                              isSelected ? (
+                                <GradeIcon htmlColor="red" fontSize="small" />
+                              ) : undefined
+                            }
+                          >
+                            <PickersDay {...props} />
+                          </Badge>
+                        );
+                      },
+                      OpenPickerIcon: CalendarMonthIcon,
+                    }}
+                  />
+                )}
+              />
+            </div>
+            <div className="col-12 col-md-2 col-lg-2 mb-4 mb-md-0">
+              <Controller
+                name="datetill"
+                control={control}
+                render={({ field: { onChange, value } }) => (
+                  <DatePicker
+                    disableFuture
+                    dateFormat="dd.MM.yyyy"
+                    locale="ru"
+                    value={value || null}
+                    onChange={onChange}
+                    label={"До"}
+                    helperText={"Период публикации"}
                     sx={{
                       width: 1,
                     }}
