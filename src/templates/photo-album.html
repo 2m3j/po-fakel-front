@@ -10,7 +10,47 @@
     <header class="header">
       <%= require('raw-loader!./layout/header/branding.html').default %>
     </header>
-    <main></main>
+    <main class="photo-album">
+      <div class="container">
+        <section class="photo-album__bread-crumb">
+          <ul class="bread-crumb">
+            <li><a href="#">Главная</a></li>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="32"
+              height="32"
+              viewBox="0 0 32 32"
+              fill="none"
+            >
+              <path
+                d="M12 24L20 16L12 8"
+                stroke="#202020"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+            <li><a href="#">Галерея</a></li>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="32"
+              height="32"
+              viewBox="0 0 32 32"
+              fill="none"
+            >
+              <path
+                d="M12 24L20 16L12 8"
+                stroke="#202020"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+            <li class="active-crumb">Фотоальбомы</li>
+          </ul>
+        </section>
+      </div>
+    </main>
     <footer><%= require('raw-loader!./layout/footer.html').default %></footer>
   </body>
   <%= require('raw-loader!./layout/bottom-scripts.html').default %>

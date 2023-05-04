@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;1,400&display=swap');
+@import "./__bread-crumb.scss";
+
+ul {
+    margin: 0;
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.photo-album {
+    font-family: 'Montserrat', sans-serif;
+    background: #FCFCFC;
+}
+
+.container {
+    max-width: 1170px;
+    padding-left: 30px;
+    padding-right: 30px;
+    margin: 0 auto;
+}
