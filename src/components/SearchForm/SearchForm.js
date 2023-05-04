@@ -136,6 +136,7 @@ function SearchForm() {
                       value === "" ||
                       option.id === value.id
                     }
+                    open={value.length >= "3"}
                     noOptionsText="К сожалению, у нас пока нет данных"
                     renderInput={(params) => (
                       <TextField
