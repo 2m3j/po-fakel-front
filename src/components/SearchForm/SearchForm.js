@@ -36,7 +36,10 @@ function SearchForm() {
     control,
     handleSubmit,
     reset,
-    formState: { isSubmitSuccessful },
+    formState: { isSubmitSuccessful, errors },
+    getValues,
+    clearErrors,
+    setError,
   } = useForm({
     mode: "onChange",
     defaultValues: { solder: "", datefrom: "", datetill: "" },
@@ -80,15 +83,11 @@ function SearchForm() {
   };
   const onSubmit = (data) => {
     const solder = data.solder;
-    const date = data.date;
     const datefrom = data.datefrom;
     const datetill = data.datetill;
     const filterByKeyword = (card) => {
       return card.solder.toLowerCase().includes(solder.toLowerCase());
     };
-    /*     const filterByDate = (card) => {
-  return card.date.toLowerCase().includes(date.format("L"));
-}; */
     const filterByDate = (card) => {
       let uno = new Date(datefrom);
       let dos = new Date(datetill);
@@ -96,7 +95,7 @@ function SearchForm() {
       const tres = new Date(+year, +month - 1, +day);
       return tres > uno && tres < dos;
     };
-    const cards = !!(solder && date)
+    const cards = !!(solder && datefrom && datetill)
       ? initialCards.filter(filterByKeyword).filter(filterByDate)
       : !!solder
       ? initialCards.filter(filterByKeyword)
@@ -160,14 +159,31 @@ function SearchForm() {
               <Controller
                 name="datefrom"
                 control={control}
-                render={({ field: { onChange, value } }) => (
+                render={({
+                  field: { onChange, value },
+                  formState: { errors },
+                }) => (
                   <DatePicker
                     disableFuture
                     dateFormat="dd.MM.yyyy"
                     locale="ru"
                     value={value || null}
                     onChange={onChange}
+                    onClose={() => clearErrors()}
                     label={"От"}
+                    maxDate={getValues("datetill")}
+                    onError={() =>
+                      setError("datefrom", {
+                        type: "custom",
+                        message:
+                          "Дата начала должна быть позже даты окончания периода",
+                      })
+                    }
+                    componentsProps={{
+                      textField: {
+                        helperText: errors?.datefrom?.message,
+                      },
+                    }}
                     sx={{
                       width: 1,
                     }}
@@ -200,15 +216,31 @@ function SearchForm() {
               <Controller
                 name="datetill"
                 control={control}
-                render={({ field: { onChange, value } }) => (
+                render={({
+                  field: { onChange, value },
+                  formState: { errors },
+                }) => (
                   <DatePicker
                     disableFuture
                     dateFormat="dd.MM.yyyy"
                     locale="ru"
                     value={value || null}
                     onChange={onChange}
+                    onClose={() => clearErrors()}
                     label={"До"}
-                    helperText={"Период публикации"}
+                    minDate={getValues("datefrom")}
+                    onError={() =>
+                      setError("datetill", {
+                        type: "custom",
+                        message:
+                          "Дата окончания должна быть позже даты начала периода",
+                      })
+                    }
+                    componentsProps={{
+                      textField: {
+                        helperText: errors?.datetill?.message,
+                      },
+                    }}
                     sx={{
                       width: 1,
                     }}
