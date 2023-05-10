@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;1,400&display=swap');
 @import "./__bread-crumb.scss";
+@import "./__main";
 
 ul {
     margin: 0;
@@ -23,7 +24,11 @@ a {
 
 .container {
     max-width: 1170px;
-    padding-left: 30px;
-    padding-right: 30px;
+    padding-left: 20px;
+    padding-right: 20px;
     margin: 0 auto;
+    @include media_from('md') {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
 }
