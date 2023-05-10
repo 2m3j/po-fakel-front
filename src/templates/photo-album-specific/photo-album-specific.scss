@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;1,400&display=swap');
+@import "./__bread-crumb.scss";
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.photo-album-specific {
+    font-family: 'Montserrat', sans-serif;
+    background: #FCFCFC;
+    color: $font-color;
+    padding-bottom: 112px;
+    @include media_from('sm') {
+        padding-bottom: 128px;
+    }
+}
+
+.container {
+    max-width: 1170px;
+    padding-left: 30px;
+    padding-right: 30px;
+    margin: 0 auto;
+}
