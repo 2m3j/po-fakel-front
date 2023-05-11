@@ -20,41 +20,76 @@
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./src/css/fonts.css ***!
   \*************************************************************************************************/
 @font-face {
-    font-family: 'Segoe UI';
-    src: url('/fonts/SegoeUI-Bold.woff2') format('woff2'),
-        url('/fonts/SegoeUI-Bold.woff') format('woff');
+    font-family: 'Montserrat';
+    src: url('/fonts/Montserrat-Regular.woff2') format('woff2'),
+    url('/fonts/Montserrat-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('/fonts/Montserrat-SemiBold.woff2') format('woff2'),
+    url('/fonts/Montserrat-SemiBold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('/fonts/Montserrat-BoldItalic.woff2') format('woff2'),
+    url('/fonts/Montserrat-BoldItalic.woff') format('woff');
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('/fonts/Montserrat-SemiBoldItalic.woff2') format('woff2'),
+    url('/fonts/Montserrat-SemiBoldItalic.woff') format('woff');
+    font-weight: 600;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('/fonts/Montserrat-Bold.woff2') format('woff2'),
+    url('/fonts/Montserrat-Bold.woff') format('woff');
     font-weight: bold;
     font-style: normal;
     font-display: swap;
 }
 
 @font-face {
-    font-family: 'Segoe UI';
-    src: url('/fonts/SegoeUI-Italic.woff2') format('woff2'),
-        url('/fonts/SegoeUI-Italic.woff') format('woff');
+    font-family: 'Montserrat';
+    src: url('/fonts/Montserrat-Italic.woff2') format('woff2'),
+    url('/fonts/Montserrat-Italic.woff') format('woff');
     font-weight: normal;
     font-style: italic;
     font-display: swap;
 }
 
 @font-face {
-    font-family: 'Segoe UI';
-    src: url('/fonts/SegoeUI-BoldItalic.woff2') format('woff2'),
-        url('/fonts/SegoeUI-BoldItalic.woff') format('woff');
-    font-weight: bold;
-    font-style: italic;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'Segoe UI';
-    src: url('/fonts/SegoeUI.woff2') format('woff2'),
-        url('/fonts/SegoeUI.woff') format('woff');
-    font-weight: normal;
+    font-family: 'Montserrat';
+    src: url('/fonts/Montserrat-Light.woff2') format('woff2'),
+    url('/fonts/Montserrat-Light.woff') format('woff');
+    font-weight: 300;
     font-style: normal;
     font-display: swap;
 }
 
+@font-face {
+    font-family: 'Montserrat';
+    src: url('/fonts/Montserrat-LightItalic.woff2') format('woff2'),
+    url('/fonts/Montserrat-LightItalic.woff') format('woff');
+    font-weight: 300;
+    font-style: italic;
+    font-display: swap;
+}
 
 /*!****************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/sass-loader/dist/cjs.js!./src/scss/app.scss ***!
@@ -68,7 +103,7 @@
 
 html, body {
   font-size: 16px;
-  font-family: "Segoe UI", serif;
+  font-family: "Montserrat", sans-serif;
   color: #202020;
 }
 
@@ -122,6 +157,10 @@ h2 {
   h2 {
     margin-bottom: 32px;
   }
+}
+
+body.noscroll {
+  overflow: hidden;
 }
 
 .btn {
@@ -314,13 +353,13 @@ h2 {
   height: 23px;
   cursor: pointer;
 }
-.mobile-nav-btn:hover .mobile-nav-btn__line {
+.mobile-nav-btn_opened .mobile-nav-btn__line {
   background-color: transparent;
 }
-.mobile-nav-btn:hover .mobile-nav-btn__line:before {
+.mobile-nav-btn_opened .mobile-nav-btn__line:before {
   transform: translateY(9px) rotate(45deg);
 }
-.mobile-nav-btn:hover .mobile-nav-btn__line:after {
+.mobile-nav-btn_opened .mobile-nav-btn__line:after {
   transform: translateY(-9px) rotate(-45deg);
 }
 .mobile-nav-btn__line {
@@ -351,6 +390,54 @@ h2 {
 }
 .mobile-nav-btn__line::after {
   top: 9px;
+}
+
+.mobile-nav {
+  display: none;
+  background: #f7f7f7;
+  height: 100vh;
+  position: absolute;
+  right: 0;
+  top: 70px;
+  width: 100%;
+  z-index: 500;
+  font-size: 16px;
+}
+.mobile-nav_opened {
+  display: block;
+}
+.mobile-nav__item {
+  background: #fff;
+  border-bottom: 1px solid #eee;
+  display: block;
+  font-weight: 600;
+  letter-spacing: 0;
+  line-height: 50px;
+  padding: 10px 20px;
+  position: relative;
+  text-transform: uppercase;
+}
+.mobile-nav__item a {
+  text-decoration: none;
+}
+.mobile-nav__item svg {
+  width: 0.7rem;
+  height: 0.7rem;
+  margin-right: 5px;
+  margin-bottom: 0.3rem;
+  fill: #b31f1f;
+}
+.mobile-nav__item a:hover {
+  color: #da8a3a;
+}
+.mobile-nav__item:last-child {
+  border-radius: 0 0 5px 5px;
+}
+.mobile-nav li {
+  list-style: none;
+}
+.mobile-nav ul {
+  padding-left: 1rem;
 }
 
 .header {
