@@ -1,12 +1,14 @@
 import React, { useState, useEffect } from "react";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 import { Autocomplete, TextField } from "@mui/material";
-import { DatePicker, LocalizationProvider } from "@mui/x-date-pickers";
+/* import { DatePicker, LocalizationProvider } from "@mui/x-date-pickers";
 import { PickersDay } from "@mui/x-date-pickers/PickersDay";
 import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
 import "dayjs/locale/ru";
 import CalendarMonthIcon from "@mui/icons-material/CalendarMonth";
-import GradeIcon from "@mui/icons-material/Grade";
+import Badge from "@mui/material/Badge";
+import GradeIcon from "@mui/icons-material/Grade"; */
+import RangeCalendar from "../RangeCalendar/RangeCalendar.js";
 import { initialCards } from "../../js/initial_cards.js";
 import {
   MOBILE_WIDTH,
@@ -17,8 +19,7 @@ import {
 } from "../../utils/constants";
 import Section from "../section/Section";
 import "./SearchForm.scss";
-import { useForm, Controller } from "react-hook-form";
-import Badge from "@mui/material/Badge";
+import { useForm, Controller, FormProvider } from "react-hook-form";
 const theme = createTheme({
   palette: {
     primary: {
@@ -44,6 +45,10 @@ function SearchForm() {
     mode: "onChange",
     defaultValues: { solder: "", datefrom: "", datetill: "" },
   });
+  const methods = useForm({
+    mode: "onChange",
+    defaultValues: { solder: "", datefrom: "", datetill: "" },
+  });
   const select = [
     "Феноберцев Роман Филиппович",
     "Халемин Степан Александрович",
@@ -64,10 +69,10 @@ function SearchForm() {
   }, [showned]);
 
   useEffect(() => {
-    if (isSubmitSuccessful) {
+    if (methods.isSubmitSuccessful) {
       reset();
     }
-  }, [isSubmitSuccessful]);
+  }, [methods.isSubmitSuccessful]);
 
   const handleMoreClick = (e) => {
     e.preventDefault();
@@ -105,17 +110,17 @@ function SearchForm() {
     setCards(cards);
     setNumberOfShowed(cards.length);
   };
-  let dates = [];
-  initialCards.map((card) => dates.push(card.date));
+
   return (
     <ThemeProvider theme={theme}>
-      <LocalizationProvider dateAdapter={AdapterDayjs} adapterLocale="ru">
-        <form onSubmit={handleSubmit(onSubmit)}>
+      <FormProvider {...methods}>
+        {/*         <LocalizationProvider dateAdapter={AdapterDayjs} adapterLocale="ru"> */}
+        <form onSubmit={methods.handleSubmit(onSubmit)}>
           <div className="row g-10">
             <div className="section__input col-12 col-md-6 col-lg-6 mb-4 mb-md-0">
               <Controller
                 name="solder"
-                control={control}
+                control={methods.control}
                 rules={{
                   pattern: {
                     value: /[а-я]+/i,
@@ -135,7 +140,7 @@ function SearchForm() {
                       value === "" ||
                       option.id === value.id
                     }
-                    open={value?.length >= "3"}
+                    /*   open={value?.length >= "3"} */
                     noOptionsText="К сожалению, у нас пока нет данных"
                     renderInput={(params) => (
                       <TextField
@@ -155,120 +160,126 @@ function SearchForm() {
                 )}
               />
             </div>
-            <div className="col-12 col-md-2 col-lg-2 mb-4 mb-md-0">
-              <Controller
-                name="datefrom"
-                control={control}
-                render={({
-                  field: { onChange, value },
-                  formState: { errors },
-                }) => (
-                  <DatePicker
-                    disableFuture
-                    dateFormat="dd.MM.yyyy"
-                    locale="ru"
-                    value={value || null}
-                    onChange={onChange}
-                    onClose={() => clearErrors()}
-                    label={"От"}
-                    maxDate={getValues("datetill")}
-                    onError={() =>
-                      setError("datefrom", {
-                        type: "custom",
-                        message:
-                          "Дата начала должна быть позже даты окончания периода",
-                      })
-                    }
-                    componentsProps={{
-                      textField: {
-                        helperText: errors?.datefrom?.message,
-                      },
-                    }}
-                    sx={{
-                      width: 1,
-                    }}
-                    components={{
-                      Day: (props) => {
-                        const isSelected =
-                          !props.outsideCurrentMonth &&
-                          dates.includes(props.day.$d.toLocaleDateString());
-                        return (
-                          <Badge
-                            key={props.day.toString()}
-                            overlap="circular"
-                            badgeContent={
-                              isSelected ? (
-                                <GradeIcon htmlColor="red" fontSize="small" />
-                              ) : undefined
-                            }
-                          >
-                            <PickersDay {...props} />
-                          </Badge>
-                        );
-                      },
-                      OpenPickerIcon: CalendarMonthIcon,
-                    }}
-                  />
-                )}
-              />
-            </div>
-            <div className="col-12 col-md-2 col-lg-2 mb-4 mb-md-0">
-              <Controller
-                name="datetill"
-                control={control}
-                render={({
-                  field: { onChange, value },
-                  formState: { errors },
-                }) => (
-                  <DatePicker
-                    disableFuture
-                    dateFormat="dd.MM.yyyy"
-                    locale="ru"
-                    value={value || null}
-                    onChange={onChange}
-                    onClose={() => clearErrors()}
-                    label={"До"}
-                    minDate={getValues("datefrom")}
-                    onError={() =>
-                      setError("datetill", {
-                        type: "custom",
-                        message:
-                          "Дата окончания должна быть позже даты начала периода",
-                      })
-                    }
-                    componentsProps={{
-                      textField: {
-                        helperText: errors?.datetill?.message,
-                      },
-                    }}
-                    sx={{
-                      width: 1,
-                    }}
-                    components={{
-                      Day: (props) => {
-                        const isSelected =
-                          !props.outsideCurrentMonth &&
-                          dates.includes(props.day.$d.toLocaleDateString());
-                        return (
-                          <Badge
-                            key={props.day.toString()}
-                            overlap="circular"
-                            badgeContent={
-                              isSelected ? (
-                                <GradeIcon htmlColor="red" fontSize="small" />
-                              ) : undefined
-                            }
-                          >
-                            <PickersDay {...props} />
-                          </Badge>
-                        );
-                      },
-                      OpenPickerIcon: CalendarMonthIcon,
-                    }}
-                  />
-                )}
-              />
-            </div>
+            <RangeCalendar {...methods} size="2" />
+            {/*  <div className="col-12 col-md-2 col-lg-2 mb-4 mb-md-0">
+                <Controller
+                  name="datefrom"
+                  control={control}
+                  render={({
+                    methods: {
+                      field: { onChange, value },
+                      formState: { errors },
+                    },
+                  }) => (
+                    <DatePicker
+                      disableFuture
+                      dateFormat="dd.MM.yyyy"
+                      locale="ru"
+                      value={value || null}
+                      onChange={onChange}
+                      onClose={() => clearErrors()}
+                      label={"От"}
+                      maxDate={getValues("datetill")}
+                      onError={() =>
+                        setError("datefrom", {
+                          type: "custom",
+                          message:
+                            "Дата начала должна быть позже даты окончания периода",
+                        })
+                      }
+                      componentsProps={{
+                        textField: {
+                          helperText: errors?.datefrom?.message,
+                        },
+                      }}
+                      sx={{
+                        width: 1,
+                      }}
+                      components={{
+                        Day: (props) => {
+                          const isSelected =
+                            !props.outsideCurrentMonth &&
+                            dates.includes(props.day.$d.toLocaleDateString());
+                          return (
+                            <Badge
+                              key={props.day.toString()}
+                              overlap="circular"
+                              badgeContent={
+                                isSelected ? (
+                                  <GradeIcon htmlColor="red" fontSize="small" />
+                                ) : undefined
+                              }
+                            >
+                              <PickersDay {...props} />
+                            </Badge>
+                          );
+                        },
+                        OpenPickerIcon: CalendarMonthIcon,
+                      }}
+                    />
+                  )}
+                />
+              </div>
+              <div className="col-12 col-md-2 col-lg-2 mb-4 mb-md-0">
+                <Controller
+                  name="datetill"
+                  control={control}
+                  render={({
+                    methods: {
+                      field: { onChange, value },
+                      formState: { errors },
+                    },
+                  }) => (
+                    <DatePicker
+                      disableFuture
+                      dateFormat="dd.MM.yyyy"
+                      locale="ru"
+                      value={value || null}
+                      onChange={onChange}
+                      onClose={() => clearErrors()}
+                      label={"До"}
+                      minDate={getValues("datefrom")}
+                      onError={() =>
+                        setError("datetill", {
+                          type: "custom",
+                          message:
+                            "Дата окончания должна быть позже даты начала периода",
+                        })
+                      }
+                      componentsProps={{
+                        textField: {
+                          helperText: errors?.datetill?.message,
+                        },
+                      }}
+                      sx={{
+                        width: 1,
+                      }}
+                      components={{
+                        Day: (props) => {
+                          const isSelected =
+                            !props.outsideCurrentMonth &&
+                            dates.includes(props.day.$d.toLocaleDateString());
+                          return (
+                            <Badge
+                              key={props.day.toString()}
+                              overlap="circular"
+                              badgeContent={
+                                isSelected ? (
+                                  <GradeIcon htmlColor="red" fontSize="small" />
+                                ) : undefined
+                              }
+                            >
+                              <PickersDay {...props} />
+                            </Badge>
+                          );
+                        },
+                        OpenPickerIcon: CalendarMonthIcon,
+                      }}
+                    />
+                  )}
+                />
+              </div>
+              */}{" "}
             <div className="col-12 col-md-2 col-lg-2 mb-4 mb-md-0 d-md-none d-lg-block">
               <button type="submit" className="section__btn section__input">
                 Искать
@@ -298,7 +309,8 @@ function SearchForm() {
             </button>
           </div>
         </form>
-      </LocalizationProvider>
+        {/*      </LocalizationProvider> */}
+      </FormProvider>
     </ThemeProvider>
   );
 }
