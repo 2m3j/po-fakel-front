@@ -49,11 +49,14 @@ function SearchForm() {
     mode: "onChange",
     defaultValues: { solder: "", datefrom: "", datetill: "" },
   });
-  const select = [
+  let solders = [];
+  initialCards.forEach((item) => solders.push(item.solder));
+  const select = [...new Set(solders)];
+  /*   const select = [
     "Феноберцев Роман Филиппович",
     "Халемин Степан Александрович",
     "Серболин Максим Никитович",
-  ];
+  ]; */
   // useEffects
   useEffect(() => {
     let numderOfShowned =
