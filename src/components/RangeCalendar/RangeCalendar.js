@@ -4,7 +4,9 @@ import { PickersDay } from "@mui/x-date-pickers/PickersDay";
 import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
 import "dayjs/locale/ru";
 import CalendarMonthIcon from "@mui/icons-material/CalendarMonth";
-import GradeIcon from "@mui/icons-material/Grade";
+/* import GradeIcon from "@mui/icons-material/Grade"; */
+/* import GradeIcon from "@mui/icons-material/StarRateTwoTone"; */
+import GradeIcon from "@mui/icons-material/StarBorderPurple500TwoTone";
 import { Controller, useFormContext } from "react-hook-form";
 import Badge from "@mui/material/Badge";
 import { initialCards } from "../../js/initial_cards.js";
