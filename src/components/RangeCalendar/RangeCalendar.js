@@ -10,7 +10,16 @@ import Badge from "@mui/material/Badge";
 import { initialCards } from "../../js/initial_cards.js";
 
 function RangeCalendar({ size }) {
-  const methods = useFormContext();
+  const {
+    control,
+    formState: { isSubmitSuccessful, errors },
+    getValues,
+    clearErrors,
+    setError,
+  } = useFormContext({
+    mode: "onChange",
+    defaultValues: { solder: "", datefrom: "", datetill: "" },
+  });
   let dates = [];
   const partOf12 = size;
   initialCards.map((card) => dates.push(card.date));
@@ -19,7 +28,7 @@ function RangeCalendar({ size }) {
       <div className={`col-12 col-md-${partOf12}  mb-4 mb-md-0`}>
         <Controller
           name="datefrom"
-          control={methods.control}
+          control={control}
           render={({ field: { onChange, value }, formState: { errors } }) => (
             <DatePicker
               disableFuture
@@ -27,11 +36,11 @@ function RangeCalendar({ size }) {
               locale="ru"
               value={value || null}
               onChange={onChange}
-              onClose={() => methods.clearErrors()}
+              onClose={() => clearErrors()}
               label={"От"}
-              maxDate={methods.getValues("datetill")}
+              maxDate={getValues("datetill")}
               onError={() =>
-                methods.setError("datefrom", {
+                setError("datefrom", {
                   type: "custom",
                   message:
                     "Дата начала должна быть позже даты окончания периода",
@@ -73,7 +82,7 @@ function RangeCalendar({ size }) {
       <div className={`col-12 col-md-${partOf12}  mb-4 mb-md-0`}>
         <Controller
           name="datetill"
-          control={methods.control}
+          control={control}
           render={({ field: { onChange, value }, formState: { errors } }) => (
             <DatePicker
               disableFuture
@@ -81,9 +90,9 @@ function RangeCalendar({ size }) {
               locale="ru"
               value={value || null}
               onChange={onChange}
-              onClose={() => methods.clearErrors()}
+              onClose={() => clearErrors()}
               label={"До"}
-              minDate={methods.getValues("datefrom")}
+              minDate={getValues("datefrom")}
               onError={() =>
                 setError("datetill", {
                   type: "custom",

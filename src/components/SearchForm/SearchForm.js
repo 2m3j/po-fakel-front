@@ -1,13 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 import { Autocomplete, TextField } from "@mui/material";
-/* import { DatePicker, LocalizationProvider } from "@mui/x-date-pickers";
-import { PickersDay } from "@mui/x-date-pickers/PickersDay";
-import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
-import "dayjs/locale/ru";
-import CalendarMonthIcon from "@mui/icons-material/CalendarMonth";
-import Badge from "@mui/material/Badge";
-import GradeIcon from "@mui/icons-material/Grade"; */
 import RangeCalendar from "../RangeCalendar/RangeCalendar.js";
 import { initialCards } from "../../js/initial_cards.js";
 import {
@@ -33,18 +26,6 @@ function SearchForm() {
   const [showned, setNumberOfShowed] = useState(6);
   const [cards, setCards] = useState(initialCards);
   let screenSize = window.innerWidth;
-  const {
-    control,
-    handleSubmit,
-    reset,
-    formState: { isSubmitSuccessful, errors },
-    getValues,
-    clearErrors,
-    setError,
-  } = useForm({
-    mode: "onChange",
-    defaultValues: { solder: "", datefrom: "", datetill: "" },
-  });
   const methods = useForm({
     mode: "onChange",
     defaultValues: { solder: "", datefrom: "", datetill: "" },
@@ -72,11 +53,12 @@ function SearchForm() {
   }, [showned]);
 
   useEffect(() => {
-    if (methods.isSubmitSuccessful) {
-      reset();
+    if (methods.formState.isSubmitSuccessful) {
+      methods.reset();
     }
-  }, [methods.isSubmitSuccessful]);
+  }, [methods.formState.isSubmitted]);
 
+  //Handlers
   const handleMoreClick = (e) => {
     e.preventDefault();
     const moreNumber =
@@ -117,8 +99,7 @@ function SearchForm() {
   return (
     <ThemeProvider theme={theme}>
       <FormProvider {...methods}>
-        {/*         <LocalizationProvider dateAdapter={AdapterDayjs} adapterLocale="ru"> */}
-        <form onSubmit={methods.handleSubmit(onSubmit)}>
+        <form onSubmit={methods.handleSubmit(onSubmit)} id="mediaform">
           <div className="row g-10">
             <div className="section__input col-12 col-md-6 col-lg-6 mb-4 mb-md-0">
               <Controller
@@ -135,7 +116,6 @@ function SearchForm() {
                   fieldState: { invalid, error },
                 }) => (
                   <Autocomplete
-                    id="outlined"
                     options={select}
                     className="section__input"
                     isOptionEqualToValue={(option, value) =>
@@ -154,7 +134,6 @@ function SearchForm() {
                         className="section__input"
                         error={invalid}
                         helperText={error?.message}
-                        /* inputProps={{ ...params.inputProps, type: "search" }} */
                       />
                     )}
                     onChange={(event, values, reason) => onChange(values)}
@@ -164,134 +143,18 @@ function SearchForm() {
               />
             </div>
             <RangeCalendar {...methods} size="2" />
-            {/*  <div className="col-12 col-md-2 col-lg-2 mb-4 mb-md-0">
-                <Controller
-                  name="datefrom"
-                  control={control}
-                  render={({
-                    methods: {
-                      field: { onChange, value },
-                      formState: { errors },
-                    },
-                  }) => (
-                    <DatePicker
-                      disableFuture
-                      dateFormat="dd.MM.yyyy"
-                      locale="ru"
-                      value={value || null}
-                      onChange={onChange}
-                      onClose={() => clearErrors()}
-                      label={"От"}
-                      maxDate={getValues("datetill")}
-                      onError={() =>
-                        setError("datefrom", {
-                          type: "custom",
-                          message:
-                            "Дата начала должна быть позже даты окончания периода",
-                        })
-                      }
-                      componentsProps={{
-                        textField: {
-                          helperText: errors?.datefrom?.message,
-                        },
-                      }}
-                      sx={{
-                        width: 1,
-                      }}
-                      components={{
-                        Day: (props) => {
-                          const isSelected =
-                            !props.outsideCurrentMonth &&
-                            dates.includes(props.day.$d.toLocaleDateString());
-                          return (
-                            <Badge
-                              key={props.day.toString()}
-                              overlap="circular"
-                              badgeContent={
-                                isSelected ? (
-                                  <GradeIcon htmlColor="red" fontSize="small" />
-                                ) : undefined
-                              }
-                            >
-                              <PickersDay {...props} />
-                            </Badge>
-                          );
-                        },
-                        OpenPickerIcon: CalendarMonthIcon,
-                      }}
-                    />
-                  )}
-                />
-              </div>
-              <div className="col-12 col-md-2 col-lg-2 mb-4 mb-md-0">
-                <Controller
-                  name="datetill"
-                  control={control}
-                  render={({
-                    methods: {
-                      field: { onChange, value },
-                      formState: { errors },
-                    },
-                  }) => (
-                    <DatePicker
-                      disableFuture
-                      dateFormat="dd.MM.yyyy"
-                      locale="ru"
-                      value={value || null}
-                      onChange={onChange}
-                      onClose={() => clearErrors()}
-                      label={"До"}
-                      minDate={getValues("datefrom")}
-                      onError={() =>
-                        setError("datetill", {
-                          type: "custom",
-                          message:
-                            "Дата окончания должна быть позже даты начала периода",
-                        })
-                      }
-                      componentsProps={{
-                        textField: {
-                          helperText: errors?.datetill?.message,
-                        },
-                      }}
-                      sx={{
-                        width: 1,
-                      }}
-                      components={{
-                        Day: (props) => {
-                          const isSelected =
-                            !props.outsideCurrentMonth &&
-                            dates.includes(props.day.$d.toLocaleDateString());
-                          return (
-                            <Badge
-                              key={props.day.toString()}
-                              overlap="circular"
-                              badgeContent={
-                                isSelected ? (
-                                  <GradeIcon htmlColor="red" fontSize="small" />
-                                ) : undefined
-                              }
-                            >
-                              <PickersDay {...props} />
-                            </Badge>
-                          );
-                        },
-                        OpenPickerIcon: CalendarMonthIcon,
-                      }}
-                    />
-                  )}
-                />
-              </div>
-              */}{" "}
-            <div className="col-12 col-md-2 col-lg-2 mb-4 mb-md-0 d-md-none d-lg-block">
-              <button type="submit" className="section__btn section__input">
+            <div
+              className="col-12 col-md-2 col-lg-2 mb-4 mb-md-0 d-md-none d-lg-block"
+              form="mediaform"
+            >
+              <button type="submit" className="btn section__btn section__input">
                 Искать
               </button>
             </div>
             <div className="col-12 col-md-2 col-lg-2 mb-4 mb-md-0 d-none d-md-block d-lg-none">
               <button
                 type="submit"
-                className="top-search__submit section__btn section__input m-0"
+                className="btn top-search__submit section__btn section__input m-0"
               >
                 <svg>
                   <use href="images/svg/symbol/svg/sprite.symbol.svg#search"></use>
@@ -312,7 +175,6 @@ function SearchForm() {
             </button>
           </div>
         </form>
-        {/*      </LocalizationProvider> */}
       </FormProvider>
     </ThemeProvider>
   );
