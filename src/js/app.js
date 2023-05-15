@@ -3,6 +3,7 @@ import { aboutSearch } from "./about-search";
 
 const button = document.querySelector(".section__button_type_unfold");
 const text = document.querySelectorAll(".section__text");
+const mediaForm = document.querySelector(".media-form");
 
 const unfold = () => {
   [...text].map((i) => i.classList.toggle("section__text_type_unfold"));
@@ -19,8 +20,9 @@ const unfold = () => {
 if (button) {
   button.addEventListener("click", () => unfold());
 }
-
-aboutSearch();
+if (mediaForm) {
+  aboutSearch();
+}
 
 ///////////////////////////////////////////////////////////////////////////
 const hamb = document.querySelector("#hamb-tabl");
