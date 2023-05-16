@@ -6,6 +6,7 @@ import { initialCards } from './initial_cards';
 import '@material/mwc-select';
 import '@material/mwc-list/mwc-list-item';
 import '@material/mwc-button';
+import './popup-script';
 /* $(". date").datepicker({
   format: "dd-mm-yyyy",
 }); */

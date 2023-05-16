@@ -99,41 +99,40 @@
             display: flex;
             align-items: center;
             button {
-                width: 40px;
-                height: 40px;
+                width: 30px;
+                height: 30px;
                 background-color: transparent;
                 margin-right: 6px;
                 @include media_from('sm') {
-                    width: 57px;
-                    height: 57px;
+                    width: 40px;
+                    height: 40px;
                 }
 
                 &:last-of-type {
                     margin-right: 0;
                 }
                 svg {
-                    width: 40px;
-                    height: 40px;
+                    width: 30px;
+                    height: 30px;
                     @include media_from('sm') {
-                        width: 57px;
-                        height: 57px;
+                        width: 40px;
+                        height: 40px;
                     }
                 }
             }
             .btn_first-page {
-                position: relative;
-                display: none;
-                @include media_from('sm') {
-                    display: block;
+                &:hover:not(:disabled) {
+                    background-color: $theme-color;
+                    border-radius: 10px;
+
+                    svg {
+                        path {
+                            stroke: #FFFFFF;
+                        }
+                    }
                 }
                 svg {
-                    position: absolute;
-                    top: 0;
-                    left: 0;
-
-                    &:first-of-type {
-                        left: -25px;
-                    }
+                    transform: rotate(180deg);
                 }
                 &:disabled {
                     cursor: default;
@@ -143,6 +142,16 @@
                 }
             }
             .btn_back {
+                &:hover:not(:disabled) {
+                    background-color: $theme-color;
+                    border-radius: 10px;
+
+                    svg {
+                        path {
+                            stroke: #FFFFFF;
+                        }
+                    }
+                }
                 &:disabled {
                     cursor: default;
                     svg {
@@ -177,8 +186,15 @@
                 border: none;
             }
             .btn_forward {
-                svg {
-                    transform: rotate(180deg);
+                &:hover:not(:disabled) {
+                    background-color: $theme-color;
+                    border-radius: 10px;
+
+                    svg {
+                        path {
+                            stroke: #FFFFFF;
+                        }
+                    }
                 }
                 &:disabled {
                     cursor: default;
@@ -188,19 +204,14 @@
                 }
             }
             .btn_last-page {
-                position: relative;
-                display: none;
-                @include media_from('sm') {
-                    display: block;
-                }
-                svg {
-                    position: absolute;
-                    top: 0;
-                    left: 0;
-                    transform: rotate(180deg);
+                &:hover:not(:disabled) {
+                    background-color: $theme-color;
+                    border-radius: 10px;
 
-                    &:first-of-type {
-                        left: 25px;
+                    svg {
+                        path {
+                            stroke: #FFFFFF;
+                        }
                     }
                 }
                 &:disabled {
