@@ -22,19 +22,25 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        padding: 30px 10px;
+        padding: 30px 0;
+        @include media_from('sm') {
+            padding: 30px 30px;
+        }
 
         .popup__content {
             background-color: #FFFFFF;
             color: #000000;
             max-width: 1180px;
-            padding: 60px 30px;
             position: relative;
+            @include media_from('sm') {
+                padding: 50px 20px 20px 20px;
+            }
+            @include media_from('lg') {
+                padding: 60px 30px;
+            }
 
             .popup__close {
                 position: absolute;
-                width: 40px;
-                height: 37px;
                 right: 10px;
                 top: 10px;
                 border: 2px solid $theme-color;
@@ -43,6 +49,24 @@
                 display: flex;
                 justify-content: center;
                 align-items: center;
+                @include media_from('sm') {
+                    width: 30px;
+                    height: 30px;
+
+                    svg {
+                        width: 15px;
+                        height: 15px;
+                    }
+                }
+                @include media_from('lg') {
+                    width: 40px;
+                    height: 37px;
+
+                    svg {
+                        width: 25px;
+                        height: 24px;
+                    }
+                }
 
                 &:hover {
                     background-color: $theme-color;
@@ -59,8 +83,8 @@
 
                 .popup__prev {
                     position: absolute;
-                    width: 40px;
-                    height: 37px;
+                    width: 30px;
+                    height: 30px;
                     top: 45%;
                     left: 2%;
                     border: 2px solid #FFFFFF;
@@ -68,6 +92,24 @@
                     display: flex;
                     justify-content: center;
                     align-items: center;
+                    @include media_from('sm') {
+                        width: 30px;
+                        height: 30px;
+    
+                        svg {
+                            width: 20px;
+                            height: 20px;
+                        }
+                    }
+                    @include media_from('lg') {
+                        width: 40px;
+                        height: 37px;
+    
+                        svg {
+                            width: 25px;
+                            height: 24px;
+                        }
+                    }
 
                     &:hover {
                         background-color: #FFFFFF;
@@ -82,8 +124,8 @@
                 }
                 .popup__next {
                     position: absolute;
-                    width: 40px;
-                    height: 37px;
+                    width: 30px;
+                    height: 30px;
                     top: 45%;
                     right: 2%;
                     border: 2px solid #FFFFFF;
@@ -91,6 +133,24 @@
                     display: flex;
                     justify-content: center;
                     align-items: center;
+                    @include media_from('sm') {
+                        width: 30px;
+                        height: 30px;
+    
+                        svg {
+                            width: 20px;
+                            height: 20px;
+                        }
+                    }
+                    @include media_from('lg') {
+                        width: 40px;
+                        height: 37px;
+    
+                        svg {
+                            width: 25px;
+                            height: 24px;
+                        }
+                    }
 
                     &:hover {
                         background-color: #FFFFFF;
@@ -107,17 +167,38 @@
             .popup__title {
                 margin-top: 20px;
                 margin-bottom: 20px;
+                display: none;
+                @include media_from('sm') {
+                    display: block;
+                }
                 h3 {
-                    font-weight: 700;
-                    font-size: 35px;
-                    line-height: 43px;
+                    @include media_from('sm') {
+                        font-weight: 600;
+                        font-size: 20px;
+                        line-height: 150%;
+                    }
+                    @include media_from('lg') {
+                        font-weight: 700;
+                        font-size: 35px;
+                        line-height: 43px;
+                    }
                 }
             }
             .popup__text {
+                display: none;
+                @include media_from('sm') {
+                    display: block;
+                }
                 p {
-                    font-weight: 400;
-                    font-size: 24px;
-                    line-height: 29px;
+                    @include media_from('sm') {
+                        font-weight: 400;
+                        font-size: 16px;
+                        line-height: 150%;
+                    }
+                    @include media_from('lg') {
+                        font-size: 24px;
+                        line-height: 29px;
+                    }
                 }
             }
         }
