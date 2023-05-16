@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
-import { Autocomplete, TextField } from "@mui/material";
+import Autocomplete from "@mui/material/Autocomplete";
+import TextField from "@mui/material/TextField";
 import RangeCalendar from "../RangeCalendar/RangeCalendar.js";
 import { initialCards } from "../../js/initial_cards.js";
 import {
@@ -33,11 +34,7 @@ function SearchForm() {
   let solders = [];
   initialCards.forEach((item) => solders.push(item.solder));
   const select = [...new Set(solders)];
-  /*   const select = [
-    "Феноберцев Роман Филиппович",
-    "Халемин Степан Александрович",
-    "Серболин Максим Никитович",
-  ]; */
+
   // useEffects
   useEffect(() => {
     let numderOfShowned =
@@ -100,7 +97,7 @@ function SearchForm() {
     <ThemeProvider theme={theme}>
       <FormProvider {...methods}>
         <form onSubmit={methods.handleSubmit(onSubmit)} id="mediaform">
-          <div className="row g-10">
+          <div className="row">
             <div className="section__input col-12 col-md-6 col-lg-6 mb-4 mb-md-0">
               <Controller
                 name="solder"
@@ -162,7 +159,7 @@ function SearchForm() {
               </button>
             </div>
           </div>
-          <div className="cards row g-5">
+          <div className="cards row g-5 m-0">
             <Section items={cards} showned={showned} />
           </div>
           <div
