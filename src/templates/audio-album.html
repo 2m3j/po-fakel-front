@@ -10,7 +10,49 @@
     <header class="header">
       <%= require('raw-loader!./layout/header/branding.html').default %>
     </header>
-    <main></main>
+    <main>
+      <div class="audio-album">
+        <div class="container">
+          <section class="audio-album__bread-crumb">
+            <ul class="bread-crumb">
+              <li><a href="#">Главная</a></li>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+              >
+                <path
+                  d="M9 18L15 12L9 6"
+                  stroke="#202020"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+              <li><a href="#">Галерея</a></li>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+              >
+                <path
+                  d="M9 18L15 12L9 6"
+                  stroke="#202020"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+              <li class="active-crumb">Аудиозаписи</li>
+            </ul>
+          </section>
+        </div>
+      </div>
+    </main>
     <footer><%= require('raw-loader!./layout/footer.html').default %></footer>
   </body>
   <%= require('raw-loader!./layout/bottom-scripts.html').default %>

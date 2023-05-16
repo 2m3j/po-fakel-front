@@ -1,0 +1,47 @@
+.audio-album__bread-crumb {
+    margin-top: 24px;
+    margin-bottom: 30px;
+    @include media_from('sm') {
+        margin-top: 40px;
+        margin-bottom: 46px;
+    }
+    @include media_from('lg') {
+        margin-top: 64px;
+        margin-bottom: 62px;
+    }
+
+    .bread-crumb {
+        display: flex;
+        align-items: center;
+        overflow-x: auto;
+        padding-bottom: 10px;
+
+        li {
+            font-weight: 400;
+            font-size: 12px;
+            line-height: 150%;
+            @include media_from('sm') {
+                font-size: 14px;
+                line-height: 150%;
+            }
+            @include media_from('lg') {
+                font-size: 16px;
+                line-height: 150%;
+            }
+            a {
+                &:hover {
+                    color: $theme-color;
+                }
+            }
+        }
+
+        svg {
+            min-width: 20px;
+            margin-left: 8px;
+            margin-right: 8px;
+        }
+    }
+    .active-crumb {
+        color: $theme-color;
+    }
+}
