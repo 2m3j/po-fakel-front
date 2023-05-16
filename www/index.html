@@ -66,6 +66,43 @@
         </div>
     </div>
 </div>
+<div class="mobile-nav d-lg-none">
+    <ul class="container">
+        <li class="mobile-nav__item"><a href="about.html">О нас</a></li>
+        <li class="mobile-nav__item"><a href="names.html">Имена</a></li>
+        <li class="mobile-nav__item">
+            <a href="#">
+                Галерея
+            </a>
+            <ul>
+                <li>
+                    <a href="#">
+                        <svg>
+                            <use href="images/svg/symbol/svg/sprite.symbol.svg#star"></use>
+                        </svg>
+                        Фото
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <svg>
+                            <use href="images/svg/symbol/svg/sprite.symbol.svg#star"></use>
+                        </svg>
+                        Видео</a>
+                </li>
+                <li>
+                    <a href="#">
+                        <svg>
+                            <use href="images/svg/symbol/svg/sprite.symbol.svg#star"></use>
+                        </svg>
+                        Аудио</a>
+                </li>
+            </ul>
+        </li>
+        <li class="mobile-nav__item"><a href="news.html">Новости</a></li>
+        <li class="mobile-nav__item"><a href="contacts.html">Контакты</a></li>
+    </ul>
+</div>
     <div class="header-entity">
     <h1 class="header-entity__title">Поисковый отряд "Факел"</h1>
     <h3 class="header-entity__subtitle">Возвращаем имена героев</h3>
@@ -415,4 +452,10 @@
     </div>
 </footer>
 </body>
+<script type="text/javascript">
+    window.addEventListener('load', function () {
+        window.mobileNav.start();
+    });
+</script>
+
 </html>

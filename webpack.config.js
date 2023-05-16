@@ -1,5 +1,6 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin'),
-  MiniCssExtractPlugin = require('mini-css-extract-plugin');
+  MiniCssExtractPlugin = require('mini-css-extract-plugin'),
+  CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
 
 const path = {
   src: {
@@ -43,6 +44,9 @@ module.exports = {
         },
       },
     ],
+  },
+  optimization: {
+    minimizer: [new CssMinimizerPlugin()],
   },
   output: {
     path: path.production.base,
