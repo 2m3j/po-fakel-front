@@ -445,9 +445,10 @@ body.noscroll {
   display: flex;
   flex-direction: column;
   background: #595959;
+  position: relative;
 }
 .header_entity_show {
-  background: linear-gradient(180deg, rgba(10, 10, 10, 0.8) 0%, rgba(10, 10, 10, 0.1) 100%);
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.8) 33%, rgba(0, 0, 0, 0.5) 100%);
   background-size: cover;
   min-height: 90vh;
 }
