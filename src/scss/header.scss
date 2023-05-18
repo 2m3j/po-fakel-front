@@ -58,6 +58,23 @@
   }
 }
 
+.header-post-thumbnail {
+  img {
+    min-height: 90vh;
+    @include media_from('md') {
+      min-height: 100vh;
+    }
+    left: 0;
+    object-fit: cover;
+    top: 0;
+    transform: none;
+    width: 100%;
+    max-width: 1000%;
+    position: absolute;
+    z-index: -1;
+  }
+}
+
 .header-entity {
   margin: auto 0;
   display: flex;
