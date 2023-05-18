@@ -46,6 +46,7 @@
         @include media_from('sm') {
             max-width: 350px;
             height: 310px;
+            margin-bottom: 0;
         }
 
         a {

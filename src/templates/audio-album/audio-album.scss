@@ -1,4 +1,5 @@
 @import "./__bread-crumb.scss";
+@import "./__main";
 
 ul {
     margin: 0;
@@ -8,6 +9,11 @@ ul {
 
 a {
     text-decoration: none;
+}
+
+p {
+    margin: 0;
+    padding: 0;
 }
 
 .audio-album {

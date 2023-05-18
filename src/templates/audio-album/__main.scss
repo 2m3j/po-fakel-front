@@ -1,44 +1,15 @@
-.photo-album-specific__main {
-    .photo-album-specific__main__title {
-        font-weight: 700;
-        font-size: 36px;
-        line-height: 48px;
-        margin-bottom: 16px;
-        @include media_from('md') {
-            font-weight: 600;
+.audio-album__main {
+    .audio-album__main__title {
+        font-weight: 600;
+        @include media_from('sm') {
             font-size: 40px;
             line-height: 49px;
-            margin-bottom: 20px;
+            margin-bottom: 52px;
         }
-        @include media_from('xl') {
-            font-weight: 600;
+        @include media_from('lg') {
             font-size: 45px;
-            line-height: 55px;
-            margin-bottom: 21px;
-        }
-    }
-
-    .photo-album-specific__main__text {
-        max-width: 760px;
-        margin-bottom: 24px;
-        @include media_from('md') {
-            margin-bottom: 32px;
-        }
-        @include media_from('xl') {
-            margin-bottom: 56px;
-        }
-        p {
-            font-size: 15px;
-            line-height: 150%;
-            font-weight: 400;
-            @include media_from('md') {
-                font-size: 20px;
-                line-height: 150%;
-            }
-            @include media_from('xl') {
-                font-size: 20px;
-                line-height: 27px;
-            }
+            line-height: 60px;
+            margin-bottom: 45px;
         }
     }
 
@@ -62,10 +33,8 @@
     }
 
     .preview-list__item {
-        position: relative;
         width: 100%;
         min-width: 200px;
-        height: 320px;
         border-radius: 10px;
         margin-bottom: 7px;
 
@@ -74,35 +43,78 @@
         }
         @include media_from('sm') {
             max-width: 350px;
-            height: 310px;
             margin-bottom: 0;
         }
-
-        a {
-            position: absolute;
-            top: 0;
-            left: 0;
-            border-radius: 10px;
-            display: block;
+        .preview-list__item__image {
+            position: relative;
             width: 100%;
-            height: 100%;
-            background: linear-gradient(179.82deg, rgba(0, 0, 0, 0) 64.58%, rgba(0, 0, 0, 0.6) 79.64%);
-            z-index: 3;
+            height: 320px;
+            margin-bottom: 10px;
+            @include media_from('sm') {
+                height: 310px;
+            }
+            @include media_from('md') {
+                margin-bottom: 15px;
+            }
+            @include media_from('lg') {
+                margin-bottom: 20px;
+            }
+    
+            .preview-list__item__gradient {
+                position: absolute;
+                top: 0;
+                left: 0;
+                border-radius: 10px;
+                display: block;
+                width: 100%;
+                height: 100%;
+                background: linear-gradient(179.82deg, rgba(0, 0, 0, 0) 64.58%, rgba(0, 0, 0, 0.6) 79.64%);
+                z-index: 3;
+            }
+    
+            img {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                border-radius: 10px;
+            }
+    
+            .preview-list__item__name {
+                position: absolute;
+                left: 16px;
+                bottom: 16px;
+                font-weight: 600;
+                font-size: 16px;
+                line-height: 20px;
+                color: #FFFFFF;
+                z-index: 5;
+                @include media_from('sm') {
+                    font-size: 20px;
+                    line-height: 150%;
+                }
+                @include media_from('lg') {
+                    font-size: 16px;
+                    line-height: 21px;
+                }
+                span {
+                    font-size: 12px;
+                    line-height: 15px;
+                }
+            }
         }
 
-        img {
-            position: absolute;
-            top: 0;
-            left: 0;
+        .preview-list__item__audio {
             width: 100%;
-            height: 100%;
-            object-fit: cover;
-            border-radius: 10px;
-            cursor: pointer;
+            height: 35px;
+            background: #F1F3F4;
+            border-radius: 5px;
         }
     }
 
-    .photo-album-specific__main__pagination {
+    .photo-album__main__pagination {
         display: flex;
         justify-content: center;
         margin-top: 32px;
