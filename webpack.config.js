@@ -81,6 +81,11 @@ module.exports = {
       template: path.src.templates + 'audio-album.html',
       inject: true,
     }),
+    new HtmlWebpackPlugin({
+      filename: path.production.base + 'video-album.html',
+      template: path.src.templates + 'video-album.html',
+      inject: true,
+    }),
   ],
   devServer: {
     static: path.production.base,
