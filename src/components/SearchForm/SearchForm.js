@@ -3,7 +3,8 @@ import { createTheme, ThemeProvider } from "@mui/material/styles";
 import Autocomplete from "@mui/material/Autocomplete";
 import TextField from "@mui/material/TextField";
 import RangeCalendar from "../RangeCalendar/RangeCalendar.js";
-import { initialCards } from "../../js/initial_cards.js";
+/* import { initialCards } from "../../js/initial_cards.js"; */
+import axios from "axios";
 import {
   MOBILE_WIDTH,
   LARGE_PAGE_CARDS_COUNT,
@@ -25,17 +26,44 @@ const theme = createTheme({
 function SearchForm() {
   const [isMore, setMore] = useState(false);
   const [showned, setNumberOfShowed] = useState(6);
+  const [initialCards, setInitialCards] = useState(
+    JSON.parse(localStorage.getItem("cards"))
+  );
   const [cards, setCards] = useState(initialCards);
+  const [select, setSelect] = useState([
+    "Феноберцев Роман Филиппович",
+    "Халемин Степан Александрович",
+  ]);
+  const [dates, setDates] = useState([]);
   let screenSize = window.innerWidth;
   const methods = useForm({
     mode: "onChange",
     defaultValues: { solder: "", datefrom: "", datetill: "" },
   });
   let solders = [];
-  initialCards.forEach((item) => solders.push(item.solder));
-  const select = [...new Set(solders)];
 
   // useEffects
+  useEffect(() => {
+    if (!initialCards) {
+      axios
+        .get("./cards.json")
+        .then((res) => {
+          setInitialCards(res.data);
+          localStorage.setItem("cards", JSON.stringify(res.data));
+        })
+        .catch((err) => console.log(err));
+    } else {
+      setInitialCards(JSON.parse(localStorage.getItem("cards")));
+    }
+  }, []);
+  useEffect(() => {
+    if (initialCards) {
+      initialCards.forEach((item) => solders.push(item.solder));
+      setSelect([...new Set(solders)]);
+      initialCards.map((card) => dates.push(card.date));
+      setDates([...new Set(dates)]);
+    }
+  }, []);
   useEffect(() => {
     let numderOfShowned =
       screenSize < MOBILE_WIDTH
@@ -45,7 +73,7 @@ function SearchForm() {
   }, [screenSize, cards]);
 
   useEffect(() => {
-    let isThereMore = cards.length > showned ? true : false;
+    let isThereMore = cards?.length > showned ? true : false;
     setMore(isThereMore);
   }, [showned]);
 
@@ -120,7 +148,6 @@ function SearchForm() {
                       value === "" ||
                       option.id === value.id
                     }
-                    /*   open={value?.length >= "3"} */
                     noOptionsText="К сожалению, у нас пока нет данных"
                     renderInput={(params) => (
                       <TextField
@@ -139,7 +166,7 @@ function SearchForm() {
                 )}
               />
             </div>
-            <RangeCalendar {...methods} size="2" />
+            <RangeCalendar {...methods} size="2" dates={dates} />
             <div
               className="col-12 col-md-2 col-lg-2 mb-4 mb-md-0 d-md-none d-lg-block"
               form="mediaform"

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { DatePicker, LocalizationProvider } from "@mui/x-date-pickers";
 import { PickersDay } from "@mui/x-date-pickers/PickersDay";
 import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
@@ -9,9 +9,8 @@ import CalendarMonthIcon from "@mui/icons-material/CalendarMonth";
 import GradeIcon from "@mui/icons-material/StarBorderPurple500TwoTone";
 import { Controller, useFormContext } from "react-hook-form";
 import Badge from "@mui/material/Badge";
-import { initialCards } from "../../js/initial_cards.js";
 
-function RangeCalendar({ size }) {
+function RangeCalendar({ size, dates }) {
   const {
     control,
     formState: { isSubmitSuccessful, errors },
@@ -22,9 +21,8 @@ function RangeCalendar({ size }) {
     mode: "onChange",
     defaultValues: { solder: "", datefrom: "", datetill: "" },
   });
-  let dates = [];
   const partOf12 = size;
-  initialCards.map((card) => dates.push(card.date));
+
   return (
     <LocalizationProvider dateAdapter={AdapterDayjs} adapterLocale="ru">
       <div className={`col-12 col-md-${partOf12}  mb-4 mb-md-0`}>
