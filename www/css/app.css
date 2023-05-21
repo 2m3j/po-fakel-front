@@ -493,7 +493,7 @@ body.noscroll {
 }
 
 .header-post-thumbnail img {
-  min-height: 90vh;
+  height: 90vh;
   left: 0;
   object-fit: cover;
   top: 0;
@@ -505,7 +505,7 @@ body.noscroll {
 }
 @media only screen and (min-width: 768px) {
   .header-post-thumbnail img {
-    min-height: 100vh;
+    height: 100vh;
   }
 }
 
@@ -611,6 +611,10 @@ body.noscroll {
     margin-bottom: 20px;
   }
 }
+.footer-nav ul {
+  margin: 0;
+  padding: 0;
+}
 .footer__contact_item {
   margin-bottom: 15px;
   white-space: nowrap;
@@ -645,7 +649,7 @@ body.noscroll {
 }
 
 .card-slider {
-  padding: 50px 0;
+  padding-bottom: 50px;
 }
 .card-slider__item-card {
   position: relative;
@@ -1039,7 +1043,7 @@ body.noscroll {
 }
 .main-about__text {
   display: inline-block;
-  font-size: 16px;
+  font-size: 15px;
   line-height: 140%;
   text-align: center;
   padding: 45px 30px;

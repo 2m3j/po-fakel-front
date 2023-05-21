@@ -61,9 +61,9 @@
 
 .header-post-thumbnail {
   img {
-    min-height: 90vh;
+    height: 90vh;
     @include media_from('md') {
-      min-height: 100vh;
+      height: 100vh;
     }
     left: 0;
     object-fit: cover;
