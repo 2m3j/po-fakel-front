@@ -1,4 +1,4 @@
-if (document.querySelector('.main-names .card-slider')) {
+if ( document.querySelector('.main-names .card-slider') ) {
   new Swiper(".main-names .card-slider", {
     loop: true,
     slidesPerView: 1,
@@ -61,6 +61,35 @@ if (document.querySelector('.swiper-volonteer')) {
     pagination: {
       el: ".swiper-pagination",
       clickable: true,
+    },
+  });
+}
+if (document.querySelector('.search-names__slider')) {
+  new Swiper(".search-names__slider", {
+    // loop: true,
+    navigation: {
+      nextEl: ".search-btn-swiper__next",
+      prevEl: ".search-btn-swiper__prev",
+    },
+    pagination: {
+      el: ".search-names__pagination",
+      clickable: true,
+    },
+    /*   slidesPerView: auto, */
+    slidesPerView: 1,
+    spaceBetween: 20,
+    breakpoints: {
+      560: {
+        slidesPerView: 2,
+      },
+      768: {
+        slidesPerView: 3,
+        spaceBetween: 20,
+      },
+      992: {
+        slidesPerView: 4,
+        spaceBetween: 30,
+      },
     },
   });
 }

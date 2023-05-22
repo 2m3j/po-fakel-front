@@ -68,6 +68,11 @@ module.exports = {
             template: path.src.templates + "contacts.html",
             inject: true
         }),
+        new HtmlWebpackPlugin({
+            filename: path.production.base + 'names.html',
+            template: path.src.templates + "names.html",
+            inject: true
+        }),
     ],
     devServer: {
         static: path.production.base,

@@ -1,0 +1,382 @@
+.wrapper-names {
+    // .wrapper-names__header
+    &__header {
+        background: url("../images/bg-header.jpg") center center/cover no-repeat;
+
+    }
+    /* .wrapper-names__main */
+    &__main {
+        @include media_from('xs') {
+            margin-top: 24px;
+        }
+        @include media_from('md') {
+            margin-top: 40px;
+        }
+        @include media_from('lg') {
+            margin-top: 64px;
+        }
+    }
+}
+.names-main {
+    /* .names-main__breadcrumbs */
+    &__breadcrumbs {
+        // margin-top: 40px;
+        @include media_from('xs') {
+            margin-bottom: 56px;
+        }
+        @include media_from('lg') {
+            margin-bottom: 74px;
+        }
+    }
+    /* .names-main__search */
+    &__search {
+        padding-top: 40px;
+        background: url("/images/bcgr-two.png") center center / cover no-repeat;
+        @include media_from('xs') {
+            padding-bottom: 40px;
+        }
+        @include media_from('md') {
+            padding-bottom: 50px;
+        }
+        @include media_from('lg') {
+            padding-bottom: 45px;
+        }
+    }
+    /* .names-main__found */
+    &__found {
+    }
+}
+.search-names {
+    @include media_from('xs') {
+        margin-bottom: 40px;
+    }
+    @include media_from('md') {
+        margin-bottom: 56px;
+    }
+    /* .search-names__container */
+    &__container {
+    }
+    /* .search-names__top */
+    &__top {
+        @include media_from('lg') {
+            display: flex;
+            gap: 20px;
+            justify-content: space-between;
+            align-items: center;
+        }
+        margin-bottom: 17px;
+    }
+    /* .search-names__title */
+    &__title {
+        margin: 0;
+        font-weight: 600;
+        line-height: 133%;
+        @include media_from('xs') {
+            font-size: 30px;
+        }
+        @include media_from('sm') {
+            font-size: 40px;
+        }
+        @include media_from('lg') {
+            font-size: 45px;
+        }
+    }
+    /* .search-names__btns */
+    &__btns {
+    }
+    /* .search-names__slider */
+    &__slider {
+        padding: 15px 20px;
+        @include media_from('xs') {
+            margin: 0 -10px;
+        }
+        @include media_from('sm') {
+            margin: 0 -20px;
+        }
+    }
+    /* .search-names__wrapper */
+    &__wrapper {
+        @include media_from('xs') {
+            margin-bottom: 32px;
+        }
+        @include media_from('lg') {
+            margin: 0;
+        }
+    }
+    /* .search-names__slide */
+    &__slide {
+        position: relative;
+        border-radius: 10px;
+        background: url("/images/карточка-поиск-родственников.jpg") center center / cover no-repeat;
+        @include media_from('xs') {
+            height: 390px;
+        }
+        @include media_from('sm') {
+            height: 300px;
+        }
+        @include media_from('lg') {
+            height: 350px;
+        }
+    }
+    /* .search-names__image */
+    &__image {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        z-index: 1;
+    }
+    /* .search-names__info */
+    &__info {
+        z-index: 10;
+    }
+    /* .search-names__link */
+    &__link {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        padding: 20px;
+        outline: none;
+        &:hover {
+            box-shadow: 0 4px 25px rgba(0, 0, 0, .3);
+            border-radius: 10px;
+        }
+        &:focus-visible {
+            box-shadow: 0 4px 25px rgba(0, 0, 0, .3);
+            border-radius: 10px;
+        }
+    }
+    /* .swiper-slide__name */
+    &__name {
+        margin: 0;
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 140%;
+        color: #fff;
+    }
+    /* .swiper-slide__year */
+    &__year {
+        font-size: 12px;
+        line-height: 140%;
+        color: #fff;
+    }
+    /* .swiper-slide__pagination */
+    &__pagination {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        @include media_from('lg') {
+            display: none;
+        }
+        & .swiper-pagination-bullet {
+            
+        }
+    }
+    /* .swiper-slide__text */
+    &__text {
+        font-size: 12px;
+        line-height: 140%;
+        color: #fff;
+    }
+}
+.search-btn-swiper {
+    @media (max-width: 990px){
+        display: none;
+    }
+    /* .search-btn-swiper__prev */
+    &__prev, &__next {
+        width: 48px;
+        height: 48px;
+        border: 2px solid var(--mdc-theme-primary);
+        border-radius: 10px;
+        transition: filter .5s ease 0s;
+        outline: none;
+        &:hover{
+            filter: drop-shadow(0px 0px 10px var(--mdc-theme-primary));
+        }
+        &:focus-visible {
+            filter: drop-shadow(0px 0px 10px var(--mdc-theme-primary))
+        }
+    }
+    /* .search-btn-swiper__next */
+    &__next {
+        margin-left: 30px;
+    }
+}
+//========================================================================================================================================================
+
+.found-names {
+    margin-bottom: 94px;
+    /* .found-names__container */
+    &__container {
+    }
+    /* .found-names__title */
+    &__title {
+        margin: 0;
+        font-weight: 600;
+        line-height: 133%;
+        margin-bottom: 32px;
+        @include media_from('xs') {
+            font-size: 30px;
+        }
+        @include media_from('sm') {
+            font-size: 40px;
+        }
+        @include media_from('lg') {
+            font-size: 45px;
+        }
+    }
+    /* .found-names__content */
+    &__content {
+    }
+    /* .found-names__articles */
+    &__articles {
+        margin-bottom: 30px;
+    }
+    /* .found-names__pagging */
+    &__pagging {
+    }
+}
+.articles-found {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    
+    /* .articles-found__card */
+    &__card {
+        position: relative;
+        flex: 1 1 250px;
+        height: 350px;
+        border-radius: 10px;
+        background: url("/images/карточка-поиск-родственников.jpg") center center / cover no-repeat;
+        @media (min-width: 481px) and (max-width: 990px) {
+            &:nth-last-child(-n+2) {
+                display: none;
+            }
+        }
+    }
+    /* .articles-found__card */
+    &__link {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        padding: 20px;
+        transition: all 0.5s ease 0s;
+        outline: none;
+        &:hover {
+            box-shadow: 0 4px 25px rgba(0, 0, 0, .3);
+            border-radius: 10px;
+        }
+        &:focus-visible {
+            box-shadow: 0 4px 25px rgba(0, 0, 0, .3);
+            border-radius: 10px;
+        }
+    }
+    /* .articles-found__image */
+    &__image {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        z-index: 1;
+    }
+    /* .articles-found__info */
+    &__info {
+        z-index: 10;
+    }
+    /* .articles-found__name */
+    &__name {
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 140%;
+        color: #fff;
+    }
+    /* .articles-found__year */
+    &__year {
+        font-size: 12px;
+        line-height: 140%;
+        color: #fff;
+    }
+    /* .articles-found__text */
+    &__text {
+        font-size: 12px;
+        line-height: 140%;
+        color: #fff;
+    }
+}
+.pagging-names {
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    @include media_from('xs') {
+        display: none;
+    }
+    @include media_from('sm') {
+        display: flex;
+    }
+    /* .pagging-names__btn */
+    &__btn {
+        width: 40px;
+        height: 40px;
+        background-color: #fff;
+        outline: none;
+        svg path {
+            transition: all .5s ease 0s;
+        }
+        &:hover{
+            svg path {
+                stroke: var(--mdc-theme-primary);
+            }
+        }
+        &:focus-visible {
+            svg path {
+                stroke: var(--mdc-theme-primary);
+            }    
+        }
+            
+        /* .pagging-names__btn_prev */
+        &_prev {
+        }
+        /* .pagging-names__btn_next */
+        &_next {
+        }
+        /* .pagging-names__btn_all */
+        &_all {
+        }
+    }
+    /* .pagging-names__digits */
+    &__digits {
+    }
+    /* .pagging-names__digit */
+    &__digit { 
+        width: 40px;
+        height: 40px;
+        border: 2px solid var(--mdc-theme-primary);
+        border-radius: 10px;
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 27px;
+        color: #202020;
+        background-color: #fff;
+        outline: none;
+        transition: all 0.5s ease 0s;
+        // transition: filter .5s ease 0s;
+        &._active {
+            color: #fff;
+            background-color: var(--mdc-theme-primary);
+        }
+        &:hover {
+            filter: drop-shadow(0px 0px 10px var(--mdc-theme-primary))
+        }
+        &:focus-visible {
+            filter: drop-shadow(0px 0px 10px var(--mdc-theme-primary))
+        }
+        &:not(:last-child) {
+            margin-right: 8px;
+        }
+    }
+}
