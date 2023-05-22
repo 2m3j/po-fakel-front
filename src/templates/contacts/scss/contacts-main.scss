@@ -1,32 +1,30 @@
 .main-contacts {
-    padding-top: 68px;
     padding-bottom: 58px;
-    @media (max-width: 991px){
+    @include media_from('xs') {
+        padding-top: 32px;
+    }
+    @include media_from('sm') {
         padding-top: 58px;
     }
-    @media (max-width: 480px){
-        padding-top: 32px;
+    @include media_from('lg') {
+        padding-top: 68px;
     }
     /* .main-contacts__container */
     &__container {
-        // max-width: 1110px;
-        // margin: 0 auto;
-        // padding: 0 30px;
-        // @media (max-width: 480px){
-        //     padding: 0 20px;
-        // }
     }
     /* .main-contacts__feedback */
     &__feedback {
     }
     /* .main-contacts__breadcrumbs */
     &__breadcrumbs {
-        margin-bottom: 68px;
-        @media (max-width: 991px){
+        @include media_from('xs') {
+            margin-bottom: 32px;
+        }
+        @include media_from('sm') {
             margin-bottom: 56px;
         }
-        @media (max-width: 480px){
-            margin-bottom: 32px;
+        @include media_from('lg') {
+            margin-bottom: 68px;
         }
     }
     /* .main-contacts__content */
@@ -36,17 +34,19 @@
     &__title {
         font-family: var(--mdc-typography-font-family), Verdana, Geneva, Tahoma, sans-serif;
         font-weight: 600;
-        font-size: 45px;
         line-height: 130%;
         color: var(--blackTextColor);
         &:not(:last-child) {
             margin-bottom: 32px;
         }
-        @media (max-width: 991px){
+        @include media_from('xs') {
+            font-size: 36px;
+        }
+        @include media_from('sm') {
             font-size: 40px;
         }
-        @media (max-width: 480px){
-            font-size: 36px;
+        @include media_from('lg') {
+            font-size: 45px;
         }
         
     }
@@ -418,7 +418,7 @@
                 background-color: #303030;
             }
             &:focus-visible{
-                background-color: #202020;
+                background-color: #303030;
             }
         }
     }
@@ -435,6 +435,9 @@
             content: '';
             background: url('../images/checkboxArr.png') center center / 20px no-repeat;
             background-color: #DA8A3A;
+        }
+        &:focus-visible + .checkbox-contacts__label::before {
+            box-shadow: 0 0 5px #DA8A3A;
         }
     }
     /* .checkbox-contacts__label */
@@ -522,3 +525,4 @@
         }
     }
 }
+

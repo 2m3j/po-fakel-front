@@ -3,6 +3,7 @@ import MobileNav from "../components/mobile-nav/MobileNav";
 import Section from "../components/section/Section";
 import Card from "../components/card/Card";
 import { initialCards } from "./initial_cards";
+import Contacts from "../templates/contacts/js/contacts"
 import "@material/mwc-select";
 import "@material/mwc-list/mwc-list-item";
 import "@material/mwc-button";
