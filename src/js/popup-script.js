@@ -57,8 +57,7 @@ window.addEventListener('load', function () {
   }
 
   function bodyLock() {
-    const lockPaddingValue =
-      window.innerWidth - document.querySelector('.photo-album-specific').offsetWidth + 'px';
+    const lockPaddingValue = window.innerWidth - document.querySelector('main').offsetWidth + 'px';
 
     if (lockPadding.length > 0) {
       for (let index = 0; index < lockPadding.length; index++) {

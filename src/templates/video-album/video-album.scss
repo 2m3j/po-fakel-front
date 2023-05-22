@@ -1,5 +1,6 @@
 @import "./__bread-crumb.scss";
 @import "./__main";
+@import "./popup.scss";
 
 ul {
     margin: 0;
@@ -14,6 +15,10 @@ a {
 p {
     margin: 0;
     padding: 0;
+}
+
+body.lock {
+    overflow: hidden;
 }
 
 .video-album {
