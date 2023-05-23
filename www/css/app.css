@@ -424,7 +424,7 @@ body.noscroll {
 .mobile-nav__item svg {
   width: 0.7rem;
   height: 0.7rem;
-  margin-right: 5px;
+  margin-right: 0.5rem;
   margin-bottom: 0.3rem;
   fill: #b31f1f;
 }
