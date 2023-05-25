@@ -1,0 +1,39 @@
+@import "./__bread-crumb.scss";
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+p {
+    margin: 0;
+    padding: 0;
+}
+
+body.lock {
+    overflow: hidden;
+}
+
+.gallery {
+    background: #FCFCFC;
+    color: $font-color;
+    padding-bottom: 102px;
+    @include media_from('sm') {
+        padding-bottom: 112px;
+    }
+}
+
+.container {
+    max-width: 1170px;
+    padding-left: 20px;
+    margin: 0 auto;
+    @include media_from('md') {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+}
