@@ -86,6 +86,11 @@ module.exports = {
       template: path.src.templates + 'video-album.html',
       inject: true,
     }),
+    new HtmlWebpackPlugin({
+      filename: path.production.base + 'gallery.html',
+      template: path.src.templates + 'gallery.html',
+      inject: true,
+    }),
   ],
   devServer: {
     static: path.production.base,
