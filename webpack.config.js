@@ -33,7 +33,7 @@ module.exports = {
                 test: /\.scss$/,
                 use: [
                     MiniCssExtractPlugin.loader,
-                    {loader: "css-loader", options: {url: false}},
+                    { loader: "css-loader", options: { url: false } },
                     'sass-loader'
                 ]
             },
@@ -67,6 +67,11 @@ module.exports = {
         new HtmlWebpackPlugin({
             filename: path.production.base + 'about.html',
             template: path.src.templates + "about.html",
+            inject: true
+        }),
+        new HtmlWebpackPlugin({
+            filename: path.production.base + '404.html',
+            template: path.src.templates + "404.html",
             inject: true
         }),
     ],
