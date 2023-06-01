@@ -1,4 +1,7 @@
 @import "./__bread-crumb.scss";
+@import "./__main";
+@import "../video-album/popup.scss";
+@import "./swiper-gallery.scss";
 
 ul {
     margin: 0;
@@ -31,6 +34,7 @@ body.lock {
 .container {
     max-width: 1170px;
     padding-left: 20px;
+    padding-right: 20px;
     margin: 0 auto;
     @include media_from('md') {
         padding-left: 30px;
