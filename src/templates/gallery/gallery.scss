@@ -41,3 +41,18 @@ body.lock {
         padding-right: 30px;
     }
 }
+
+.container-block {
+    max-width: 1170px;
+    padding-left: 20px;
+    padding-right: 0;
+    margin: 0 auto;
+    position: relative;
+    @include media_from('md') {
+        padding-left: 30px;
+        padding-right: 10px;
+    }
+    @include media_from('xl') {
+        padding-right: 30px;
+    }
+}

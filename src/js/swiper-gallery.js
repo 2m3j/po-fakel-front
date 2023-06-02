@@ -1,5 +1,6 @@
 export const swiper = new Swiper('.swiper-gallery', {
   direction: 'horizontal',
+  loop: 'true',
   breakpoints: {
     320: {
       slidesPerView: 1,

@@ -36,9 +36,20 @@
         min-width: 200px;
         height: 320px;
         border-radius: 10px;
+        overflow: hidden;
 
         @include media_from('sm') {
             height: 310px;
+        }
+
+        &:hover {
+            img {
+                transform: scale(1.1);
+            }
+
+            .preview-list__item__name {
+                transform: scale(1.1);
+            }
         }
 
         a {
@@ -71,6 +82,7 @@
             height: 100%;
             object-fit: cover;
             border-radius: 10px;
+            transition: all 0.3s ease-in-out;
         }
 
         .preview-list__item__name {
@@ -82,6 +94,7 @@
             line-height: 21px;
             color: #FFFFFF;
             z-index: 4;
+            transition: all 0.3s ease-in-out;
             @include media_from('sm') {
                 font-size: 20px;
                 line-height: 150%;
