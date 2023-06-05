@@ -2,7 +2,9 @@
   a {
     text-decoration: none;
   }
-
+  &__link {
+    text-decoration: none;
+  }
   &_type_media {
     padding: 20px;
   }
@@ -17,7 +19,7 @@
     margin-bottom: 10px;
     font-weight: 400;
     font-size: $article-card-date-font-size-display-xs;
-    @include media_from('md') {
+    @include media_from("md") {
       font-size: $article-card-date-font-size-display-md;
     }
     line-height: 150%;
@@ -29,7 +31,7 @@
     margin-bottom: 10px;
     font-weight: 600;
     font-size: $article-card-title-font-size-display-xs;
-    @include media_from('md') {
+    @include media_from("md") {
       font-size: $article-card-title-font-size-display-md;
     }
     line-height: 150%;
@@ -53,7 +55,7 @@
     font-weight: 400;
     line-height: 150%;
     font-size: $article-card-text-font-size-display-xs;
-    @include media_from('md') {
+    @include media_from("md") {
       font-size: $article-card-text-font-size-display-md;
     }
 

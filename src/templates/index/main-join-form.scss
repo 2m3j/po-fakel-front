@@ -1,0 +1,32 @@
+.main-join-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: $header-main-join-form-font-color;
+
+  &__title {
+    font-weight: 700;
+    text-align: center;
+    font-size: $header-main-join-form-title-font-size-display-xs;
+    padding-bottom: 20px;
+    @include media_from('sm') {
+      font-size: $header-main-join-form-title-font-size-display-sm;
+    }
+    @include media_from('lg') {
+      font-size: $header-main-join-form-title-font-size-display-lg;
+    }
+  }
+
+  &__subtitle {
+    font-weight: 400;
+    text-align: center;
+    font-size: $header-main-join-form-sub-title-font-size-display-xs;
+    @include media_from('sm') {
+      font-size: $header-main-join-form-sub-title-font-size-display-sm;
+    }
+    @include media_from('lg') {
+      font-size: $header-main-join-form-sub-title-font-size-display-lg;
+    }
+    padding-bottom: 32px;
+  }
+}

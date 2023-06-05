@@ -1,6 +1,7 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin'),
     MiniCssExtractPlugin = require('mini-css-extract-plugin'),
-    CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
+    CssMinimizerPlugin = require("css-minimizer-webpack-plugin"),
+    webpack = require("webpack");
 
 const path = {
     src: {
@@ -33,7 +34,7 @@ module.exports = {
                 test: /\.scss$/,
                 use: [
                     MiniCssExtractPlugin.loader,
-                    { loader: "css-loader", options: { url: false } },
+                    {loader: "css-loader", options: {url: false}},
                     'sass-loader'
                 ]
             },
@@ -74,6 +75,7 @@ module.exports = {
             template: path.src.templates + "404.html",
             inject: true
         }),
+        new webpack.ContextReplacementPlugin(/moment[/\\]locale$/, /ru/),
     ],
     devServer: {
         static: path.production.base,
