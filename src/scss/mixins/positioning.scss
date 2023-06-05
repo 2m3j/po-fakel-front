@@ -1,0 +1,58 @@
+@mixin block-padding-top {
+  padding-top: 40px;
+  @include media_from('md') {
+    padding-top: 48px;
+  }
+  @include media_from('xl') {
+    padding-top: 56px;
+  }
+}
+
+@mixin block-padding-bottom {
+  padding-bottom: 40px;
+  @include media_from('md') {
+    padding-bottom: 48px;
+  }
+  @include media_from('xl') {
+    padding-bottom: 56px;
+  }
+}
+
+@mixin block-padding {
+  @include block-padding-top;
+  @include block-padding-bottom;
+}
+
+@mixin block-minus-margin-bottom {
+  margin-bottom: -40px;
+  @include media_from('md') {
+    margin-bottom: -48px;
+  }
+  @include media_from('xl') {
+    margin-bottom: -56px;
+  }
+}
+
+@mixin block-minus-margin-top {
+  margin-top: -40px;
+  @include media_from('md') {
+    margin-top: -48px;
+  }
+  @include media_from('xl') {
+    margin-top: -56px;
+  }
+}
+
+@mixin h1-padding-bottom {
+  margin-bottom: 24px;
+  @include media_from('md') {
+    margin-bottom: 32px;
+  }
+}
+
+@mixin h2-padding-bottom {
+  margin-bottom: 24px;
+  @include media_from('md') {
+    margin-bottom: 32px;
+  }
+}

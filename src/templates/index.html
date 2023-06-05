@@ -4,21 +4,21 @@
     <meta charset="UTF-8"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" href="/libs/swiper/swiper-bundle.min.css"/>
+    <script src="/libs/swiper/swiper-bundle.min.js"></script>
     <title>Факел</title>
 </head>
 
 <body>
 <header class="header header_entity_show">
     <%= require('raw-loader!./layout/header/branding.html').default %>
-    <%= require('raw-loader!./layout/header/entity.html').default %>
+    <%= require('raw-loader!./layout/header/main-form.html').default %>
 </header>
 <main>
     <section class="main-about">
         <div class="container">
-            <h2 class="main-about__title">О нас</h2>
-            <a href="#" class="main-about__btn btn btn_xl btn_outline">Подробнее</a>
+            <h2>О нас</h2>
+            <a href="#" class="main-about__btn btn btn_xl btn_outline d-none d-md-block">Подробнее</a>
             <div class="main-about__row">
                 <img src="images/photo-one.png" alt="photo"/>
                 <p class="main-about__text">
@@ -67,7 +67,7 @@
     </section>
     <section class="main-names">
         <div class="container">
-            <h2 class="main-names__title">Имена</h2>
+            <h2>Имена</h2>
             <div class="swiper card-slider">
                 <div class="card-slider__navigation d-none d-md-block">
               <span class="card-slider__navigation-left swiper-button-left">
@@ -158,7 +158,7 @@
     </section>
     <section class="main-gallery">
         <div class="container">
-            <h2 class="main-gallery__title">Галерея</h2>
+            <h2>Галерея</h2>
             <div class="row">
                 <div class="col-12 col-md-5 mb-4 mb-md-0">
                     <div class="image-tile">
@@ -167,7 +167,7 @@
                                 style="background-image: url(images/gallery-one.png)"
                         >
                             <div class="image-tile__title">Фото</div>
-                            <a href="#" class="image-tile__btn btn btn_outline btn_xl d-none d-md-block">Перейти</a>
+                            <a href="#" class="image-tile__btn btn btn_outline d-none d-md-block">Перейти</a>
                             <a href="#" class="image-tile__mobile-link"></a>
                         </div>
                     </div>
@@ -179,7 +179,7 @@
                                 style="background-image: url(images/gallery-two.png)"
                         >
                             <div class="image-tile__title">Видео</div>
-                            <a href="#" class="image-tile__btn btn btn_outline btn_xl d-none d-md-block">Перейти</a>
+                            <a href="#" class="image-tile__btn btn btn_outline d-none d-md-block">Перейти</a>
                             <a href="#" class="image-tile__mobile-link"></a>
                         </div>
                     </div>
@@ -189,7 +189,7 @@
                                 style="background-image: url(images/gallery-three.png)"
                         >
                             <div class="image-tile__title">Аудио</div>
-                            <a href="#" class="image-tile__btn btn btn_outline btn_xl d-none d-md-block">Перейти</a>
+                            <a href="#" class="image-tile__btn btn btn_outline d-none d-md-block">Перейти</a>
                             <a href="#" class="image-tile__mobile-link"></a>
                         </div>
                     </div>
@@ -199,7 +199,7 @@
     </section>
     <section class="main-news">
         <div class="container">
-            <h2 class="main-news__title">Новости</h2>
+            <h2>Новости</h2>
             <div class="row">
                 <div class="col-12 col-md-6 col-lg-4 mb-4 mb-md-0">
                     <div class="article-card">
@@ -265,4 +265,5 @@
 </main>
 <%= require('raw-loader!./layout/footer.html').default %>
 </body>
+<%= require('raw-loader!./layout/bottom-scripts.html').default %>
 </html>

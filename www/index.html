@@ -4,77 +4,116 @@
     <meta charset="UTF-8"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" href="/libs/swiper/swiper-bundle.min.css"/>
+    <script src="/libs/swiper/swiper-bundle.min.js"></script>
     <title>Факел</title>
 <script defer src="js/app.bundle.js"></script><link href="css/app.css" rel="stylesheet"></head>
 
 <body>
 <header class="header header_entity_show">
     <div class="header-branding">
-  <div class="container">
-    <div class="header-branding__wrapper">
-      <a href="/"><img src="images/logo.svg" alt="logo" class="header-branding__logo"/></a>
-      <ul class="top-nav d-none d-lg-flex">
-        <li class="top-nav__item"><a href="about.html">О нас</a></li>
-        <li class="top-nav__item"><a href="names.html">Имена</a></li>
-        <li class="top-nav__item">
-          <a href="#">
-            Галерея
-            <svg>
-              <use href="images/svg/symbol/svg/sprite.symbol.svg#arrow-down_corner"></use>
-            </svg>
-          </a>
-          <ul class="top-nav-sub">
-            <li class="top-nav-sub__item">
-              <a href="#">Фото</a>
-            </li>
-            <li class="top-nav-sub__item">
-              <a href="#">Видео</a>
-            </li>
-            <li class="top-nav-sub__item">
-              <a href="#">Аудио</a>
-            </li>
-          </ul>
-        </li>
-        <li class="top-nav__item"><a href="news.html">Новости</a></li>
-        <li class="top-nav__item"><a href="contacts.html">Контакты</a></li>
-      </ul>
-      <form class="top-search d-none d-lg-flex" name="search" method="get" action="/search.html">
-        <input
-                class="top-search__input"
-                name="search"
-                type="text"
-                placeholder="Поиск по сайту..."
-        />
-        <button class="top-search__submit" type="submit" name="search" title="найти">
-          <svg>
-            <use href="images/svg/symbol/svg/sprite.symbol.svg#search"></use>
-          </svg>
-        </button>
-      </form>
-      <div class="header-branding__mobile-buttons d-flex d-lg-none">
-        <a href="/search.html">
-          <svg class="svg-icon svg-icon_size_xl me-3">
-            <use href="images/svg/symbol/svg/sprite.symbol.svg#search"></use>
-          </svg>
-        </a>
-        <div class="mobile-nav-btn"></div>
-      </div>
+    <div class="container">
+        <div class="header-branding__wrapper">
+            <a href="/"><img src="images/logo.svg" alt="logo" class="header-branding__logo"/></a>
+            <ul class="top-nav d-none d-lg-flex">
+                <li class="top-nav__item"><a href="about.html">О нас</a></li>
+                <li class="top-nav__item"><a href="names.html">Имена</a></li>
+                <li class="top-nav__item">
+                    <a href="#">
+                        Галерея
+                        <svg>
+                            <use href="images/svg/symbol/svg/sprite.symbol.svg#arrow-down_corner"></use>
+                        </svg>
+                    </a>
+                    <ul class="top-nav-sub">
+                        <li class="top-nav-sub__item">
+                            <a href="#">Фото</a>
+                        </li>
+                        <li class="top-nav-sub__item">
+                            <a href="#">Видео</a>
+                        </li>
+                        <li class="top-nav-sub__item">
+                            <a href="#">Аудио</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="top-nav__item"><a href="news.html">Новости</a></li>
+                <li class="top-nav__item"><a href="contacts.html">Контакты</a></li>
+            </ul>
+            <form class="top-search d-none d-lg-flex" name="search" method="get" action="/search.html">
+                <input
+                        class="top-search__input"
+                        name="search"
+                        type="text"
+                        placeholder="Поиск по сайту..."
+                />
+                <button class="top-search__submit" type="submit" name="search" title="найти">
+                    <svg>
+                        <use href="images/svg/symbol/svg/sprite.symbol.svg#search"></use>
+                    </svg>
+                </button>
+            </form>
+            <div class="header-branding__mobile-buttons d-flex d-lg-none">
+                <a href="/search.html">
+                    <svg class="svg-icon svg-icon_size_xl me-3">
+                        <use href="images/svg/symbol/svg/sprite.symbol.svg#search"></use>
+                    </svg>
+                </a>
+                <div class="mobile-nav-btn">
+                    <span class="mobile-nav-btn__line"></span>
+                </div>
+            </div>
+        </div>
     </div>
-  </div>
+</div>
+<div class="mobile-nav d-lg-none">
+    <ul class="container">
+        <li class="mobile-nav__item"><a href="about.html">О нас</a></li>
+        <li class="mobile-nav__item"><a href="names.html">Имена</a></li>
+        <li class="mobile-nav__item">
+            <a href="#">
+                Галерея
+            </a>
+            <ul>
+                <li>
+                    <a href="#">
+                        <svg>
+                            <use href="images/svg/symbol/svg/sprite.symbol.svg#star"></use>
+                        </svg>Фото
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <svg>
+                            <use href="images/svg/symbol/svg/sprite.symbol.svg#star"></use>
+                        </svg>Видео</a>
+                </li>
+                <li>
+                    <a href="#">
+                        <svg>
+                            <use href="images/svg/symbol/svg/sprite.symbol.svg#star"></use>
+                        </svg>Аудио</a>
+                </li>
+            </ul>
+        </li>
+        <li class="mobile-nav__item"><a href="news.html">Новости</a></li>
+        <li class="mobile-nav__item"><a href="contacts.html">Контакты</a></li>
+    </ul>
 </div>
     <div class="header-entity">
     <h1 class="header-entity__title">Поисковый отряд "Факел"</h1>
     <h3 class="header-entity__subtitle">Возвращаем имена героев</h3>
     <a href="#" class="btn btn_xl">Присоединиться</a>
 </div>
+<div class="header-post-thumbnail">
+    <img src="../images/bgrd.png">
+</div>
 </header>
 <main>
     <section class="main-about">
         <div class="container">
-            <h2 class="main-about__title">О нас</h2>
-            <a href="#" class="main-about__btn btn btn_xl btn_outline">Подробнее</a>
+            <h2>О нас</h2>
+            <a href="#" class="main-about__btn btn btn_xl btn_outline d-none d-md-block">Подробнее</a>
             <div class="main-about__row">
                 <img src="images/photo-one.png" alt="photo"/>
                 <p class="main-about__text">
@@ -123,7 +162,7 @@
     </section>
     <section class="main-names">
         <div class="container">
-            <h2 class="main-names__title">Имена</h2>
+            <h2>Имена</h2>
             <div class="swiper card-slider">
                 <div class="card-slider__navigation d-none d-md-block">
               <span class="card-slider__navigation-left swiper-button-left">
@@ -214,7 +253,7 @@
     </section>
     <section class="main-gallery">
         <div class="container">
-            <h2 class="main-gallery__title">Галерея</h2>
+            <h2>Галерея</h2>
             <div class="row">
                 <div class="col-12 col-md-5 mb-4 mb-md-0">
                     <div class="image-tile">
@@ -223,7 +262,7 @@
                                 style="background-image: url(images/gallery-one.png)"
                         >
                             <div class="image-tile__title">Фото</div>
-                            <a href="#" class="image-tile__btn btn btn_outline btn_xl d-none d-md-block">Перейти</a>
+                            <a href="#" class="image-tile__btn btn btn_outline d-none d-md-block">Перейти</a>
                             <a href="#" class="image-tile__mobile-link"></a>
                         </div>
                     </div>
@@ -235,7 +274,7 @@
                                 style="background-image: url(images/gallery-two.png)"
                         >
                             <div class="image-tile__title">Видео</div>
-                            <a href="#" class="image-tile__btn btn btn_outline btn_xl d-none d-md-block">Перейти</a>
+                            <a href="#" class="image-tile__btn btn btn_outline d-none d-md-block">Перейти</a>
                             <a href="#" class="image-tile__mobile-link"></a>
                         </div>
                     </div>
@@ -245,7 +284,7 @@
                                 style="background-image: url(images/gallery-three.png)"
                         >
                             <div class="image-tile__title">Аудио</div>
-                            <a href="#" class="image-tile__btn btn btn_outline btn_xl d-none d-md-block">Перейти</a>
+                            <a href="#" class="image-tile__btn btn btn_outline d-none d-md-block">Перейти</a>
                             <a href="#" class="image-tile__mobile-link"></a>
                         </div>
                     </div>
@@ -255,7 +294,7 @@
     </section>
     <section class="main-news">
         <div class="container">
-            <h2 class="main-news__title">Новости</h2>
+            <h2>Новости</h2>
             <div class="row">
                 <div class="col-12 col-md-6 col-lg-4 mb-4 mb-md-0">
                     <div class="article-card">
@@ -322,7 +361,7 @@
 <footer class="footer">
     <div class="container">
         <div class="row justify-content-between footer__container">
-            <div class="col-7 col-md-9 col-lg-8">
+            <div class="col-8 col-sm-7 col-md-9 col-xl-8">
                 <div class="row">
                     <div class="col-12 col-md-5 col-lg-3">
                         <a href="/"><img src="images/logo.svg" alt="logo" class="footer__logo"/></a>
@@ -376,32 +415,24 @@
                     </div>
                 </div>
             </div>
-            <div class="col-5 col-md-3 lg-4 footer-nav">
-                <div class="row">
-                    <div class="col-12 col-md-6">
-                        <ul>
-                            <li class="footer-nav__item">
-                                <a href="#">О нас</a>
-                            </li>
-                            <li class="footer-nav__item">
-                                <a href="#">Имена</a>
-                            </li>
-                            <li class="footer-nav__item">
-                                <a href="#">Галерея</a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="col-12 col-md-6">
-                        <ul>
-                            <li class="footer-nav__item">
-                                <a href="#">Новости</a>
-                            </li>
-                            <li class="footer-nav__item">
-                                <a class="footer__link" href="#">Контакты</a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
+            <div class="col-4 col-sm-5 col-md-3 col-xl-4">
+                <ul class="footer-nav">
+                    <li class="footer-nav__item">
+                        <a href="#">О нас</a>
+                    </li>
+                    <li class="footer-nav__item">
+                        <a href="#">Имена</a>
+                    </li>
+                    <li class="footer-nav__item">
+                        <a href="#">Галерея</a>
+                    </li>
+                    <li class="footer-nav__item">
+                        <a href="#">Новости</a>
+                    </li>
+                    <li class="footer-nav__item">
+                        <a class="footer__link" href="#">Контакты</a>
+                    </li>
+                </ul>
             </div>
         </div>
         <div class="footer__copyright">
@@ -413,4 +444,10 @@
     </div>
 </footer>
 </body>
+<script type="text/javascript">
+    window.addEventListener('load', function () {
+        window.mobileNav.start();
+    });
+</script>
+
 </html>

@@ -20,41 +20,76 @@
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./src/css/fonts.css ***!
   \*************************************************************************************************/
 @font-face {
-    font-family: 'Segoe UI';
-    src: url('/fonts/SegoeUI-Bold.woff2') format('woff2'),
-        url('/fonts/SegoeUI-Bold.woff') format('woff');
+    font-family: 'Montserrat';
+    src: url('/fonts/Montserrat-Regular.woff2') format('woff2'),
+    url('/fonts/Montserrat-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('/fonts/Montserrat-SemiBold.woff2') format('woff2'),
+    url('/fonts/Montserrat-SemiBold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('/fonts/Montserrat-BoldItalic.woff2') format('woff2'),
+    url('/fonts/Montserrat-BoldItalic.woff') format('woff');
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('/fonts/Montserrat-SemiBoldItalic.woff2') format('woff2'),
+    url('/fonts/Montserrat-SemiBoldItalic.woff') format('woff');
+    font-weight: 600;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('/fonts/Montserrat-Bold.woff2') format('woff2'),
+    url('/fonts/Montserrat-Bold.woff') format('woff');
     font-weight: bold;
     font-style: normal;
     font-display: swap;
 }
 
 @font-face {
-    font-family: 'Segoe UI';
-    src: url('/fonts/SegoeUI-Italic.woff2') format('woff2'),
-        url('/fonts/SegoeUI-Italic.woff') format('woff');
+    font-family: 'Montserrat';
+    src: url('/fonts/Montserrat-Italic.woff2') format('woff2'),
+    url('/fonts/Montserrat-Italic.woff') format('woff');
     font-weight: normal;
     font-style: italic;
     font-display: swap;
 }
 
 @font-face {
-    font-family: 'Segoe UI';
-    src: url('/fonts/SegoeUI-BoldItalic.woff2') format('woff2'),
-        url('/fonts/SegoeUI-BoldItalic.woff') format('woff');
-    font-weight: bold;
-    font-style: italic;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'Segoe UI';
-    src: url('/fonts/SegoeUI.woff2') format('woff2'),
-        url('/fonts/SegoeUI.woff') format('woff');
-    font-weight: normal;
+    font-family: 'Montserrat';
+    src: url('/fonts/Montserrat-Light.woff2') format('woff2'),
+    url('/fonts/Montserrat-Light.woff') format('woff');
+    font-weight: 300;
     font-style: normal;
     font-display: swap;
 }
 
+@font-face {
+    font-family: 'Montserrat';
+    src: url('/fonts/Montserrat-LightItalic.woff2') format('woff2'),
+    url('/fonts/Montserrat-LightItalic.woff') format('woff');
+    font-weight: 300;
+    font-style: italic;
+    font-display: swap;
+}
 
 /*!****************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/sass-loader/dist/cjs.js!./src/scss/app.scss ***!
@@ -68,7 +103,7 @@
 
 html, body {
   font-size: 16px;
-  font-family: "Segoe UI", serif;
+  font-family: "Montserrat", sans-serif;
   color: #202020;
 }
 
@@ -101,6 +136,31 @@ a {
 }
 a:hover {
   color: #da8a3a;
+}
+
+h2 {
+  font-size: 30px;
+  margin-bottom: 24px;
+  font-weight: 600;
+}
+@media only screen and (min-width: 768px) {
+  h2 {
+    font-size: 40px;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  h2 {
+    font-size: 45px;
+  }
+}
+@media only screen and (min-width: 768px) {
+  h2 {
+    margin-bottom: 32px;
+  }
+}
+
+body.noscroll {
+  overflow: hidden;
 }
 
 .btn {
@@ -195,6 +255,7 @@ a:hover {
   width: 12px;
   height: 8px;
   fill: #f5f5f5;
+  margin-left: 5px;
 }
 .top-nav a:hover, .top-nav span:hover {
   color: #da8a3a;
@@ -289,6 +350,20 @@ a:hover {
 }
 
 .mobile-nav-btn {
+  width: 27px;
+  height: 23px;
+  cursor: pointer;
+}
+.mobile-nav-btn_opened .mobile-nav-btn__line {
+  background-color: transparent;
+}
+.mobile-nav-btn_opened .mobile-nav-btn__line:before {
+  transform: translateY(9px) rotate(45deg);
+}
+.mobile-nav-btn_opened .mobile-nav-btn__line:after {
+  transform: translateY(-9px) rotate(-45deg);
+}
+.mobile-nav-btn__line {
   display: block;
   position: relative;
   width: 27px;
@@ -298,9 +373,9 @@ a:hover {
   transition: all ease 0.4s;
   margin-top: 10px;
   margin-bottom: 10px;
-  cursor: pointer;
+  border-radius: 9px;
 }
-.mobile-nav-btn::before, .mobile-nav-btn::after {
+.mobile-nav-btn__line::before, .mobile-nav-btn__line::after {
   display: block;
   position: absolute;
   content: "";
@@ -309,30 +384,71 @@ a:hover {
   background-color: #f5f5f5;
   -webkit-transition: all ease 0.4s;
   transition: all ease 0.4s;
+  border-radius: 9px;
 }
-.mobile-nav-btn::before {
+.mobile-nav-btn__line::before {
   top: -9px;
 }
-.mobile-nav-btn::after {
+.mobile-nav-btn__line::after {
   top: 9px;
 }
-.mobile-nav-btn:hover {
-  background-color: transparent;
+
+.mobile-nav {
+  display: none;
+  background: #f7f7f7;
+  height: 100vh;
+  position: absolute;
+  right: 0;
+  top: 70px;
+  width: 100%;
+  z-index: 500;
+  font-size: 16px;
 }
-.mobile-nav-btn:hover:before {
-  transform: translateY(9px) rotate(45deg);
+.mobile-nav_opened {
+  display: block;
 }
-.mobile-nav-btn:hover:after {
-  transform: translateY(-9px) rotate(-45deg);
+.mobile-nav__item {
+  background: #fff;
+  border-bottom: 1px solid #eee;
+  display: block;
+  font-weight: 600;
+  letter-spacing: 0;
+  line-height: 50px;
+  padding: 10px 20px;
+  position: relative;
+  text-transform: uppercase;
+}
+.mobile-nav__item a {
+  text-decoration: none;
+}
+.mobile-nav__item svg {
+  width: 0.7rem;
+  height: 0.7rem;
+  margin-right: 0.5rem;
+  margin-bottom: 0.3rem;
+  fill: #b31f1f;
+}
+.mobile-nav__item a:hover {
+  color: #da8a3a;
+}
+.mobile-nav__item:last-child {
+  border-radius: 0 0 5px 5px;
+}
+.mobile-nav li {
+  list-style: none;
+}
+.mobile-nav ul {
+  padding-left: 1rem;
 }
 
 .header {
   display: flex;
   flex-direction: column;
   background: #595959;
+  position: relative;
 }
 .header_entity_show {
-  background: linear-gradient(180deg, rgba(10, 10, 10, 0.8) 0%, rgba(10, 10, 10, 0.1) 100%), url("../images/bgrd.png") no-repeat;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.8) 33%, rgba(0, 0, 0, 0.5) 100%);
   background-size: cover;
   min-height: 90vh;
 }
@@ -374,6 +490,23 @@ a:hover {
 }
 .header-branding svg {
   fill: #f5f5f5;
+}
+
+.header-post-thumbnail img {
+  height: 90vh;
+  left: 0;
+  object-fit: cover;
+  top: 0;
+  transform: none;
+  width: 100%;
+  max-width: 1000%;
+  position: absolute;
+  z-index: -1;
+}
+@media only screen and (min-width: 768px) {
+  .header-post-thumbnail img {
+    height: 100vh;
+  }
 }
 
 .header-entity {
@@ -463,7 +596,13 @@ a:hover {
   }
 }
 .footer-nav {
-  margin-top: 30px;
+  padding: 0;
+  margin: 30px 0 0;
+}
+@media only screen and (min-width: 576px) {
+  .footer-nav {
+    columns: 2;
+  }
 }
 @media only screen and (min-width: 768px) {
   .footer-nav {
@@ -512,7 +651,7 @@ a:hover {
 }
 
 .card-slider {
-  padding: 50px 0;
+  padding-bottom: 50px;
 }
 .card-slider__item-card {
   position: relative;
@@ -575,16 +714,30 @@ a:hover {
 }
 
 .main-names {
+  padding-top: 40px;
+  padding-bottom: 40px;
   background: url("/images/bcgr-two.png");
-  margin-bottom: 130px;
-  padding: 80px 0;
   display: flex;
 }
-.main-names__title {
-  font-weight: 600;
-  font-size: 45px;
-  line-height: 60px;
-  color: #202020;
+@media only screen and (min-width: 768px) {
+  .main-names {
+    padding-top: 48px;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .main-names {
+    padding-top: 56px;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .main-names {
+    padding-bottom: 48px;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .main-names {
+    padding-bottom: 56px;
+  }
 }
 .main-names__link {
   margin-top: 20px;
@@ -671,16 +824,29 @@ a:hover {
 }
 
 .main-news {
-  padding: 80px 0;
+  padding-top: 40px;
+  padding-bottom: 40px;
   background-color: #F3F3F3;
-  margin-top: 130px;
 }
-.main-news__title {
-  font-weight: 600;
-  font-size: 45px;
-  line-height: 60px;
-  color: #202020;
-  margin-bottom: 50px;
+@media only screen and (min-width: 768px) {
+  .main-news {
+    padding-top: 48px;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .main-news {
+    padding-top: 56px;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .main-news {
+    padding-bottom: 48px;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .main-news {
+    padding-bottom: 56px;
+  }
 }
 .main-news__link {
   margin-top: 20px;
@@ -696,13 +862,6 @@ a:hover {
   border-radius: 5px;
   display: block;
   height: 240px;
-  /*   &:before {
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.1);
-  } */
 }
 @media only screen and (min-width: 768px) {
   .image-tile {
@@ -728,21 +887,42 @@ a:hover {
   color: #F3F3F3;
   position: absolute;
   background: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(12.5px);
+  backdrop-filter: blur(5px);
   font-weight: 600;
   margin: 24px;
   bottom: 0;
+  padding: 7px 20px;
+  border-radius: 5px;
+  font-size: 18px;
 }
 .image-tile__btn:hover {
   color: #F3F3F3;
+  transition: 0.1s all;
+  box-shadow: 0 0 10px #da8a3a;
+}
+@media only screen and (min-width: 1200px) {
+  .image-tile__btn {
+    padding: 10px 30px;
+    border-radius: 10px;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .image-tile__btn {
+    font-size: 20px;
+  }
 }
 .image-tile__title {
   position: absolute;
   top: 30px;
   left: 30px;
   font-weight: 700;
-  font-size: 35px;
+  font-size: 25px;
   color: #F3F3F3;
+}
+@media only screen and (min-width: 992px) {
+  .image-tile__title {
+    font-size: 35px;
+  }
 }
 .image-tile__title:hover {
   color: #F3F3F3;
@@ -785,18 +965,44 @@ a:hover {
   }
 }
 
-.main-gallery__title {
-  font-weight: 600;
-  font-size: 45px;
-  line-height: 60px;
-  color: #202020;
-  margin-bottom: 50px;
+.main-gallery {
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+@media only screen and (min-width: 768px) {
+  .main-gallery {
+    padding-top: 48px;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .main-gallery {
+    padding-top: 56px;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .main-gallery {
+    padding-bottom: 48px;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .main-gallery {
+    padding-bottom: 56px;
+  }
 }
 
-/* about start*/
 .main-about {
-  margin-top: 155px;
+  padding-top: 40px;
   position: relative;
+}
+@media only screen and (min-width: 768px) {
+  .main-about {
+    padding-top: 48px;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .main-about {
+    padding-top: 56px;
+  }
 }
 .main-about img {
   min-width: 100%;
@@ -808,17 +1014,6 @@ a:hover {
 @media only screen and (min-width: 768px) {
   .main-about img {
     height: auto;
-  }
-}
-.main-about__title {
-  margin-bottom: 50px;
-  font-weight: 600;
-  font-size: 40px;
-}
-@media only screen and (min-width: 768px) {
-  .main-about__title {
-    font-size: 45px;
-    line-height: 60px;
   }
 }
 .main-about .container {
@@ -850,7 +1045,7 @@ a:hover {
 }
 .main-about__text {
   display: inline-block;
-  font-size: 16px;
+  font-size: 15px;
   line-height: 140%;
   text-align: center;
   padding: 45px 30px;
@@ -879,6 +1074,18 @@ a:hover {
   margin-bottom: 32px;
   white-space: nowrap;
 }
+.main-numbers__item:nth-child(1) {
+  color: #121a60;
+}
+.main-numbers__item:nth-child(2) {
+  color: #7b0d0d;
+}
+.main-numbers__item:nth-child(3) {
+  color: #274d2d;
+}
+.main-numbers__item:nth-child(4) {
+  color: #874d22;
+}
 .main-numbers__item {
   text-align: center;
   font-weight: 600;
@@ -898,22 +1105,20 @@ a:hover {
     font-size: 20px;
   }
 }
-.main-numbers__item_color_blue {
-  color: #121a60;
-}
-.main-numbers__item_color_red {
-  color: #7b0d0d;
-}
-.main-numbers__item_color_green {
-  color: #274d2d;
-}
-.main-numbers__item_color_brown {
-  color: #874d22;
-}
 .main-numbers__num {
-  font-size: 45px;
+  font-size: 30px;
   display: block;
   margin-bottom: 5px;
+}
+@media only screen and (min-width: 768px) {
+  .main-numbers__num {
+    font-size: 40px;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .main-numbers__num {
+    font-size: 45px;
+  }
 }
 
 .section {

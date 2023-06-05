@@ -1,6 +1,8 @@
 import "/src/components/card-slider/index";
 import { aboutSearch } from "./about-search";
+import MobileNav from "../components/mobile-nav/MobileNav";
 
+window.mobileNav = new MobileNav();
 const button = document.querySelector(".section__button_type_unfold");
 const text = document.querySelectorAll(".section__text");
 const mediaForm = document.querySelector(".media-form");
