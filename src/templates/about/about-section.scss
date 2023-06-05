@@ -1,3 +1,6 @@
+.media {
+  margin-bottom: 112px;
+}
 .section {
   margin-top: 100px;
   color: #202020;
@@ -40,31 +43,32 @@
     /*   font-size: 20px; */
     line-height: 27px;
     color: #ffffff;
-    @media (min-width: 768px) {
+    /*     @media (min-width: 768px) {
       width: 103px;
-      /*  font-size: 20px; */
-    }
-    @media (max-width: 500px) {
-      height: 60px;
-      width: 100%;
+      /*  font-size: 20px; 
+    } */
+    width: 100%;
+    @media (max-width: 768px) {
+      /*  height: 60px; */
       /*  font-size: 20px; */
     }
   }
   &__input {
     height: 56px;
-    width: 100%;
-    /*    font-size: var(--font-size-md); */
+    border-radius: 5px;
+    font-size: var(--font-size-md);
     &_type_date {
-      position: relative;
-      /*      font-size: var(--font-size-md); */
-      padding-left: 15px;
-      padding-right: 15px;
+      font-size: var(--font-size-md);
+      box-sizing: border-box;
     }
   }
   &__icon {
     position: absolute;
     top: 10px;
     right: 215px;
+  }
+  &_type_gallery {
+    max-width: 1160px;
   }
 }
 
@@ -83,7 +87,7 @@
     margin-bottom: 38px;
   }
 }
-@media (max-width: 500px) {
+@media (max-width: 576px) {
   .section__text {
     font-size: 15px;
     height: 119px;
@@ -100,14 +104,7 @@
     height: fit-content;
   }
 }
-:root {
-  --mdc-theme-primary: #da8a3a;
-  --mdc-button-outline-color: rgba(20, 20, 200, 0.2);
-  --mdc-typography-font-family: "Segoe UI";
-}
-.mdc-select {
-  height: 70px;
-}
+
 input {
   border: 1px solid #9f9f9f;
   border-radius: 5px;
