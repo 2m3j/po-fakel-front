@@ -1,17 +1,17 @@
 @mixin h1-font-size {
-  font-size: 40px;
+  font-size: 35px;
   @include media_from('md') {
-    font-size: 48px;
+    font-size: 43px;
   }
   @include media_from('xl') {
-    font-size: 55px;
+    font-size: 50px;
   }
 }
 
 @mixin h2-font-size {
   font-size: 30px;
   @include media_from('md') {
-    font-size: 40px;
+    font-size: 38px;
   }
   @include media_from('xl') {
     font-size: 45px;
