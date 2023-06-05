@@ -10,6 +10,18 @@ html, body {
   color: $font-color;
 }
 
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  display: flex;
+  flex: 1 auto;
+  flex-direction: column;
+}
+
 h1,
 h2,
 h3,
@@ -45,7 +57,7 @@ a {
 h1 {
   @include h1-font-size;
   @include h1-padding-bottom;
-  font-weight: 700;
+  font-weight: 600;
 }
 
 h2 {
