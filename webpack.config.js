@@ -1,5 +1,7 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin'),
-    MiniCssExtractPlugin = require('mini-css-extract-plugin');
+    MiniCssExtractPlugin = require('mini-css-extract-plugin'),
+    CssMinimizerPlugin = require("css-minimizer-webpack-plugin"),
+    webpack = require("webpack");
 
 const path = {
     src: {
@@ -45,6 +47,11 @@ module.exports = {
             },
         ],
     },
+    optimization: {
+        minimizer: [
+            new CssMinimizerPlugin(),
+        ],
+    },
     output: {
         path: path.production.base,
         filename: 'js/[name].bundle.js'
@@ -64,6 +71,11 @@ module.exports = {
             inject: true
         }),
         new HtmlWebpackPlugin({
+            filename: path.production.base + '404.html',
+            template: path.src.templates + "404.html",
+            inject: true
+        }),
+        new HtmlWebpackPlugin({
             filename: path.production.base + 'contacts.html',
             template: path.src.templates + "contacts.html",
             inject: true
@@ -73,6 +85,7 @@ module.exports = {
             template: path.src.templates + "names.html",
             inject: true
         }),
+        new webpack.ContextReplacementPlugin(/moment[/\\]locale$/, /ru/),
     ],
     devServer: {
         static: path.production.base,

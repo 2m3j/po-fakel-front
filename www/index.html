@@ -4,8 +4,8 @@
     <meta charset="UTF-8"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" href="/libs/swiper/swiper-bundle.min.css"/>
+    <script src="/libs/swiper/swiper-bundle.min.js"></script>
     <title>Факел</title>
 <script defer src="js/app.bundle.js"></script><link href="css/app.css" rel="stylesheet"></head>
 
@@ -66,17 +66,52 @@
         </div>
     </div>
 </div>
-    <div class="header-entity">
-    <h1 class="header-entity__title">Поисковый отряд "Факел"</h1>
-    <h3 class="header-entity__subtitle">Возвращаем имена героев</h3>
+<div class="mobile-nav d-lg-none">
+    <ul class="container">
+        <li class="mobile-nav__item"><a href="about.html">О нас</a></li>
+        <li class="mobile-nav__item"><a href="names.html">Имена</a></li>
+        <li class="mobile-nav__item">
+            <a href="#">
+                Галерея
+            </a>
+            <ul>
+                <li>
+                    <a href="#">
+                        <svg>
+                            <use href="images/svg/symbol/svg/sprite.symbol.svg#star"></use>
+                        </svg>Фото
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <svg>
+                            <use href="images/svg/symbol/svg/sprite.symbol.svg#star"></use>
+                        </svg>Видео</a>
+                </li>
+                <li>
+                    <a href="#">
+                        <svg>
+                            <use href="images/svg/symbol/svg/sprite.symbol.svg#star"></use>
+                        </svg>Аудио</a>
+                </li>
+            </ul>
+        </li>
+        <li class="mobile-nav__item"><a href="news.html">Новости</a></li>
+        <li class="mobile-nav__item"><a href="contacts.html">Контакты</a></li>
+    </ul>
+</div>
+    <div class="header__main-join-form main-join-form">
+    <h1 class="main-join-form__title">Поисковый отряд "Факел"</h1>
+    <h3 class="main-join-form__subtitle">Возвращаем имена героев</h3>
     <a href="#" class="btn btn_xl">Присоединиться</a>
 </div>
+<img class="header__cover" src="../images/bgrd.png">
 </header>
 <main>
     <section class="main-about">
         <div class="container">
             <h2>О нас</h2>
-            <a href="#" class="main-about__btn btn btn_xl btn_outline">Подробнее</a>
+            <a href="#" class="main-about__btn btn btn_xl btn_outline d-none d-md-block">Подробнее</a>
             <div class="main-about__row">
                 <img src="images/photo-one.png" alt="photo"/>
                 <p class="main-about__text">
@@ -324,7 +359,7 @@
 <footer class="footer">
     <div class="container">
         <div class="row justify-content-between footer__container">
-            <div class="col-7 col-lg-9 col-xl-8">
+            <div class="col-8 col-sm-7 col-md-9 col-xl-8">
                 <div class="row">
                     <div class="col-12 col-md-5 col-lg-3">
                         <a href="/"><img src="images/logo.svg" alt="logo" class="footer__logo"/></a>
@@ -378,32 +413,24 @@
                     </div>
                 </div>
             </div>
-            <div class="col-5 col-lg-3 col-xl-4 footer-nav">
-                <div class="row">
-                    <div class="col-12 col-md-6">
-                        <ul>
-                            <li class="footer-nav__item">
-                                <a href="#">О нас</a>
-                            </li>
-                            <li class="footer-nav__item">
-                                <a href="#">Имена</a>
-                            </li>
-                            <li class="footer-nav__item">
-                                <a href="#">Галерея</a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="col-12 col-md-6">
-                        <ul>
-                            <li class="footer-nav__item">
-                                <a href="#">Новости</a>
-                            </li>
-                            <li class="footer-nav__item">
-                                <a class="footer__link" href="#">Контакты</a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
+            <div class="col-4 col-sm-5 col-md-3 col-xl-4">
+                <ul class="footer-nav">
+                    <li class="footer-nav__item">
+                        <a href="#">О нас</a>
+                    </li>
+                    <li class="footer-nav__item">
+                        <a href="#">Имена</a>
+                    </li>
+                    <li class="footer-nav__item">
+                        <a href="#">Галерея</a>
+                    </li>
+                    <li class="footer-nav__item">
+                        <a href="#">Новости</a>
+                    </li>
+                    <li class="footer-nav__item">
+                        <a class="footer__link" href="#">Контакты</a>
+                    </li>
+                </ul>
             </div>
         </div>
         <div class="footer__copyright">
@@ -415,4 +442,10 @@
     </div>
 </footer>
 </body>
+<script type="text/javascript">
+    window.addEventListener('load', function () {
+        window.mobileNav.start();
+    });
+</script>
+
 </html>
