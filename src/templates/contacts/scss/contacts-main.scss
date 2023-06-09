@@ -134,11 +134,11 @@
         @media (any-hover: hover){
             &:hover{
                 span {
-                    color: var(--mdc-theme-primary);
+                    color: $theme-color;
                 }
                 svg {
                     path {
-                        fill: var(--mdc-theme-primary);
+                        fill: $theme-color;
                     }
                 }
             }
@@ -242,25 +242,25 @@
         }        
         // &:focus,
         // &:not(:focus):valid {
-        //     border: 1px solid var(--mdc-theme-primary);
+        //     border: 1px solid $theme-color;
         // }
         // &:focus + .form-contacts__placeholder,
         // &:not(:focus):valid + .form-contacts__placeholder {
         //     top: -10px;
         //     transform: scale(.85);
         //     font-weight: 500;
-        //     color: var(--mdc-theme-primary);
+        //     color: $theme-color;
         //     padding: 0 10px;
         //     background-color: #fff;
         // }
         &._active {
-            border: 1px solid var(--mdc-theme-primary);
+            border: 1px solid $theme-color;
         }
         &._error {
             border: 1px solid red;
         }
         &._success {
-            border: 1px solid var(--successColor);
+            border: 1px solid $successColor;
         }
             
     }
@@ -285,7 +285,7 @@
             top: -10px;
             transform: scale(.85);
             font-weight: 500;
-            color: var(--mdc-theme-primary);
+            color: $theme-color;
             padding: 0 10px;
             background-color: #fff;
         }
@@ -357,7 +357,7 @@
             font-size: 15px;
         }
         &._active {
-            border: 1px solid var(--mdc-theme-primary);
+            border: 1px solid $theme-color;
         }
     }
     /* .form-contacts__btns */
@@ -469,7 +469,7 @@
             font-size: 15px;
         }        
         a {
-            color: var(--mdc-theme-primary);
+            color: $theme-color;
             text-decoration: none;
             outline: none;
             @media (any-hover: hover) {
@@ -514,7 +514,7 @@
         font-family: var(--mdc-typography-font-family), Verdana, Geneva, Tahoma, sans-serif;
         font-size: 20px;
         line-height: 127%;
-        color: var(--mdc-theme-primary);
+        color: $theme-color;
         background-color: inherit;
         @media (max-width: 1110px){
             line-height: 180%;

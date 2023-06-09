@@ -17,14 +17,10 @@ function modal(triggerSelector, modalSelector) {
           modalTrigger = document.querySelectorAll(triggerSelector);
 
     modalTrigger.forEach(item => {
-        // item.addEventListener('click', () => openModal(modalSelector));
-        item.addEventListener('submit', () => openModal(modalSelector));
+        item.addEventListener('submit', openModal(modalSelector));
     });
 
     modal.addEventListener('click', (e) => {
-        // console.log(e.target)
-        // console.log(modal)
-        // console.log(e.target === modal)
         if (e.target === modal || e.target.getAttribute('data-close') == '') {
             closeModal(modalSelector);
         }

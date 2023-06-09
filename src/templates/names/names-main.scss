@@ -189,15 +189,15 @@
     &__prev, &__next {
         width: 48px;
         height: 48px;
-        border: 2px solid var(--mdc-theme-primary);
+        border: 2px solid $theme-color;
         border-radius: 10px;
         transition: filter .5s ease 0s;
         outline: none;
         &:hover{
-            filter: drop-shadow(0px 0px 10px var(--mdc-theme-primary));
+            filter: drop-shadow(0px 0px 10px $theme-color);
         }
         &:focus-visible {
-            filter: drop-shadow(0px 0px 10px var(--mdc-theme-primary))
+            filter: drop-shadow(0px 0px 10px $theme-color)
         }
     }
     /* .search-btn-swiper__next */
@@ -329,12 +329,12 @@
         }
         &:hover{
             svg path {
-                stroke: var(--mdc-theme-primary);
+                stroke: $theme-color;
             }
         }
         &:focus-visible {
             svg path {
-                stroke: var(--mdc-theme-primary);
+                stroke: $theme-color;
             }    
         }
             
@@ -355,7 +355,7 @@
     &__digit { 
         width: 40px;
         height: 40px;
-        border: 2px solid var(--mdc-theme-primary);
+        border: 2px solid $theme-color;
         border-radius: 10px;
         font-weight: 600;
         font-size: 20px;
@@ -367,13 +367,13 @@
         // transition: filter .5s ease 0s;
         &._active {
             color: #fff;
-            background-color: var(--mdc-theme-primary);
+            background-color: $theme-color;
         }
         &:hover {
-            filter: drop-shadow(0px 0px 10px var(--mdc-theme-primary))
+            filter: drop-shadow(0px 0px 10px $theme-color)
         }
         &:focus-visible {
-            filter: drop-shadow(0px 0px 10px var(--mdc-theme-primary))
+            filter: drop-shadow(0px 0px 10px $theme-color)
         }
         &:not(:last-child) {
             margin-right: 8px;

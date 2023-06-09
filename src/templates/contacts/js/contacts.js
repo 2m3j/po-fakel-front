@@ -188,7 +188,6 @@ function showMore() {
 
 document.querySelector('.form-contacts').addEventListener('submit', e => {
     e.preventDefault();
-
     modal('[data-modal]', '.modal');
 
     formInputs.forEach(item => {
