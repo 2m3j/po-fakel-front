@@ -43,6 +43,13 @@
   }
 }
 
+@mixin h1-padding-bottom {
+  margin-bottom: 24px;
+  @include media_from('md') {
+    margin-bottom: 32px;
+  }
+}
+
 @mixin h2-padding-bottom {
   margin-bottom: 24px;
   @include media_from('md') {

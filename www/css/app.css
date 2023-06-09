@@ -1,3 +1,20 @@
+/*!****************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/sass-loader/dist/cjs.js!./src/components/SearchForm/SearchForm.scss ***!
+  \****************************************************************************************************************************************************************/
+.smi-search-form__container-more {
+  width: 100%;
+  display: none;
+  align-items: center;
+  justify-content: center;
+}
+.smi-search-form__more {
+  margin-top: 32px;
+  font-size: 16px;
+  background: none;
+}
+.smi-search-form__container-more_visible {
+  display: flex;
+}
 /*!****************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./src/css/bootstrap-reboot.min.css ***!
   \****************************************************************************************************************/
@@ -20,41 +37,76 @@
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./src/css/fonts.css ***!
   \*************************************************************************************************/
 @font-face {
-    font-family: 'Segoe UI';
-    src: url('/fonts/SegoeUI-Bold.woff2') format('woff2'),
-        url('/fonts/SegoeUI-Bold.woff') format('woff');
+    font-family: 'Montserrat';
+    src: url('/fonts/Montserrat-Regular.woff2') format('woff2'),
+    url('/fonts/Montserrat-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('/fonts/Montserrat-SemiBold.woff2') format('woff2'),
+    url('/fonts/Montserrat-SemiBold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('/fonts/Montserrat-BoldItalic.woff2') format('woff2'),
+    url('/fonts/Montserrat-BoldItalic.woff') format('woff');
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('/fonts/Montserrat-SemiBoldItalic.woff2') format('woff2'),
+    url('/fonts/Montserrat-SemiBoldItalic.woff') format('woff');
+    font-weight: 600;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('/fonts/Montserrat-Bold.woff2') format('woff2'),
+    url('/fonts/Montserrat-Bold.woff') format('woff');
     font-weight: bold;
     font-style: normal;
     font-display: swap;
 }
 
 @font-face {
-    font-family: 'Segoe UI';
-    src: url('/fonts/SegoeUI-Italic.woff2') format('woff2'),
-        url('/fonts/SegoeUI-Italic.woff') format('woff');
+    font-family: 'Montserrat';
+    src: url('/fonts/Montserrat-Italic.woff2') format('woff2'),
+    url('/fonts/Montserrat-Italic.woff') format('woff');
     font-weight: normal;
     font-style: italic;
     font-display: swap;
 }
 
 @font-face {
-    font-family: 'Segoe UI';
-    src: url('/fonts/SegoeUI-BoldItalic.woff2') format('woff2'),
-        url('/fonts/SegoeUI-BoldItalic.woff') format('woff');
-    font-weight: bold;
-    font-style: italic;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'Segoe UI';
-    src: url('/fonts/SegoeUI.woff2') format('woff2'),
-        url('/fonts/SegoeUI.woff') format('woff');
-    font-weight: normal;
+    font-family: 'Montserrat';
+    src: url('/fonts/Montserrat-Light.woff2') format('woff2'),
+    url('/fonts/Montserrat-Light.woff') format('woff');
+    font-weight: 300;
     font-style: normal;
     font-display: swap;
 }
 
+@font-face {
+    font-family: 'Montserrat';
+    src: url('/fonts/Montserrat-LightItalic.woff2') format('woff2'),
+    url('/fonts/Montserrat-LightItalic.woff') format('woff');
+    font-weight: 300;
+    font-style: italic;
+    font-display: swap;
+}
 
 /*!****************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/sass-loader/dist/cjs.js!./src/scss/app.scss ***!
@@ -68,8 +120,20 @@
 
 html, body {
   font-size: 16px;
-  font-family: "Segoe UI", serif;
+  font-family: "Montserrat", sans-serif;
   color: #202020;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  display: flex;
+  flex: 1 auto;
+  flex-direction: column;
 }
 
 h1,
@@ -103,6 +167,27 @@ a:hover {
   color: #da8a3a;
 }
 
+h1 {
+  font-size: 35px;
+  margin-bottom: 24px;
+  font-weight: 600;
+}
+@media only screen and (min-width: 768px) {
+  h1 {
+    font-size: 43px;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  h1 {
+    font-size: 50px;
+  }
+}
+@media only screen and (min-width: 768px) {
+  h1 {
+    margin-bottom: 32px;
+  }
+}
+
 h2 {
   font-size: 30px;
   margin-bottom: 24px;
@@ -110,7 +195,7 @@ h2 {
 }
 @media only screen and (min-width: 768px) {
   h2 {
-    font-size: 40px;
+    font-size: 38px;
   }
 }
 @media only screen and (min-width: 1200px) {
@@ -122,6 +207,10 @@ h2 {
   h2 {
     margin-bottom: 32px;
   }
+}
+
+body.noscroll {
+  overflow: hidden;
 }
 
 .btn {
@@ -216,6 +305,7 @@ h2 {
   width: 12px;
   height: 8px;
   fill: #f5f5f5;
+  margin-left: 5px;
 }
 .top-nav a:hover, .top-nav span:hover {
   color: #da8a3a;
@@ -314,13 +404,13 @@ h2 {
   height: 23px;
   cursor: pointer;
 }
-.mobile-nav-btn:hover .mobile-nav-btn__line {
+.mobile-nav-btn_opened .mobile-nav-btn__line {
   background-color: transparent;
 }
-.mobile-nav-btn:hover .mobile-nav-btn__line:before {
+.mobile-nav-btn_opened .mobile-nav-btn__line:before {
   transform: translateY(9px) rotate(45deg);
 }
-.mobile-nav-btn:hover .mobile-nav-btn__line:after {
+.mobile-nav-btn_opened .mobile-nav-btn__line:after {
   transform: translateY(-9px) rotate(-45deg);
 }
 .mobile-nav-btn__line {
@@ -353,13 +443,62 @@ h2 {
   top: 9px;
 }
 
+.mobile-nav {
+  display: none;
+  background: #f7f7f7;
+  height: 100vh;
+  position: absolute;
+  right: 0;
+  top: 70px;
+  width: 100%;
+  z-index: 500;
+  font-size: 16px;
+}
+.mobile-nav_opened {
+  display: block;
+}
+.mobile-nav__item {
+  background: #fff;
+  border-bottom: 1px solid #eee;
+  display: block;
+  font-weight: 600;
+  letter-spacing: 0;
+  line-height: 50px;
+  padding: 10px 20px;
+  position: relative;
+  text-transform: uppercase;
+}
+.mobile-nav__item a {
+  text-decoration: none;
+}
+.mobile-nav__item svg {
+  width: 0.7rem;
+  height: 0.7rem;
+  margin-right: 0.5rem;
+  margin-bottom: 0.3rem;
+  fill: #b31f1f;
+}
+.mobile-nav__item a:hover {
+  color: #da8a3a;
+}
+.mobile-nav__item:last-child {
+  border-radius: 0 0 5px 5px;
+}
+.mobile-nav li {
+  list-style: none;
+}
+.mobile-nav ul {
+  padding-left: 1rem;
+}
+
 .header {
   display: flex;
   flex-direction: column;
   background: #595959;
+  position: relative;
 }
 .header_entity_show {
-  background: linear-gradient(180deg, rgba(10, 10, 10, 0.8) 0%, rgba(10, 10, 10, 0.1) 100%), url("../images/bgrd.png") no-repeat;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.8) 33%, rgba(0, 0, 0, 0.5) 100%);
   background-size: cover;
   min-height: 90vh;
 }
@@ -378,6 +517,9 @@ h2 {
   height: 100%;
   background: rgba(255, 255, 255, 0.2);
   backdrop-filter: blur(5px);
+}
+.header__main-join-form {
+  margin: auto 0;
 }
 
 .header-branding {
@@ -403,43 +545,30 @@ h2 {
   fill: #f5f5f5;
 }
 
+.header__cover {
+  height: 90vh;
+  left: 0;
+  object-fit: cover;
+  top: 0;
+  transform: none;
+  width: 100%;
+  max-width: 1000%;
+  position: absolute;
+  z-index: -1;
+}
+@media only screen and (min-width: 768px) {
+  .header__cover {
+    height: 100vh;
+  }
+}
+
 .header-entity {
-  margin: auto 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   color: #f5f5f5;
+  padding-bottom: 10px;
 }
-.header-entity__title {
-  font-weight: 700;
-  text-align: center;
-  font-size: 36px;
-  padding-bottom: 20px;
-}
-@media only screen and (min-width: 576px) {
-  .header-entity__title {
-    font-size: 55px;
-  }
-}
-@media only screen and (min-width: 992px) {
-  .header-entity__title {
-    font-size: 65px;
-  }
-}
-.header-entity__subtitle {
-  font-weight: 400;
-  text-align: center;
-  font-size: 20px;
-  padding-bottom: 32px;
-}
-@media only screen and (min-width: 576px) {
-  .header-entity__subtitle {
-    font-size: 30px;
-  }
-}
-@media only screen and (min-width: 992px) {
-  .header-entity__subtitle {
-    font-size: 35px;
+@media only screen and (min-width: 768px) {
+  .header-entity {
+    padding-bottom: 30px;
   }
 }
 
@@ -490,7 +619,13 @@ h2 {
   }
 }
 .footer-nav {
-  margin-top: 30px;
+  padding: 0;
+  margin: 30px 0 0;
+}
+@media only screen and (min-width: 576px) {
+  .footer-nav {
+    columns: 2;
+  }
 }
 @media only screen and (min-width: 768px) {
   .footer-nav {
@@ -538,8 +673,47 @@ h2 {
   fill: #f3f3f3;
 }
 
+.main-join-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #f5f5f5;
+}
+.main-join-form__title {
+  font-weight: 700;
+  text-align: center;
+  font-size: 36px;
+  padding-bottom: 20px;
+}
+@media only screen and (min-width: 576px) {
+  .main-join-form__title {
+    font-size: 55px;
+  }
+}
+@media only screen and (min-width: 992px) {
+  .main-join-form__title {
+    font-size: 65px;
+  }
+}
+.main-join-form__subtitle {
+  font-weight: 400;
+  text-align: center;
+  font-size: 20px;
+  padding-bottom: 32px;
+}
+@media only screen and (min-width: 576px) {
+  .main-join-form__subtitle {
+    font-size: 30px;
+  }
+}
+@media only screen and (min-width: 992px) {
+  .main-join-form__subtitle {
+    font-size: 35px;
+  }
+}
+
 .card-slider {
-  padding: 50px 0;
+  padding-bottom: 50px;
 }
 .card-slider__item-card {
   position: relative;
@@ -583,9 +757,8 @@ h2 {
 .card-slider__pagination {
   width: 110px !important;
   position: relative;
-  height: 30px;
   padding: 8px 18px;
-  background: rgba(79, 79, 79, 0.7);
+  /*    background: rgba(79, 79, 79, 0.7); */
   border-radius: 5px;
   margin: 15px auto;
 }
@@ -636,6 +809,9 @@ h2 {
 }
 
 .article-card a {
+  text-decoration: none;
+}
+.article-card__link {
   text-decoration: none;
 }
 .article-card_type_media {
@@ -933,7 +1109,7 @@ h2 {
 }
 .main-about__text {
   display: inline-block;
-  font-size: 16px;
+  font-size: 15px;
   line-height: 140%;
   text-align: center;
   padding: 45px 30px;
@@ -1000,13 +1176,17 @@ h2 {
 }
 @media only screen and (min-width: 768px) {
   .main-numbers__num {
-    font-size: 40px;
+    font-size: 38px;
   }
 }
 @media only screen and (min-width: 1200px) {
   .main-numbers__num {
     font-size: 45px;
   }
+}
+
+.media {
+  margin-bottom: 112px;
 }
 
 .section {
@@ -1048,35 +1228,34 @@ h2 {
   /*   font-size: 20px; */
   line-height: 27px;
   color: #ffffff;
-}
-@media (min-width: 768px) {
-  .section__btn {
+  /*     @media (min-width: 768px) {
     width: 103px;
-    /*  font-size: 20px; */
-  }
+    /*  font-size: 20px; 
+  } */
+  width: 100%;
 }
-@media (max-width: 500px) {
+@media (max-width: 768px) {
   .section__btn {
-    height: 60px;
-    width: 100%;
+    /*  height: 60px; */
     /*  font-size: 20px; */
   }
 }
 .section__input {
   height: 56px;
-  width: 100%;
-  /*    font-size: var(--font-size-md); */
+  border-radius: 5px;
+  font-size: var(--font-size-md);
 }
 .section__input_type_date {
-  position: relative;
-  /*      font-size: var(--font-size-md); */
-  padding-left: 15px;
-  padding-right: 15px;
+  font-size: var(--font-size-md);
+  box-sizing: border-box;
 }
 .section__icon {
   position: absolute;
   top: 10px;
   right: 215px;
+}
+.section_type_gallery {
+  max-width: 1160px;
 }
 
 @media (min-width: 1200px) {
@@ -1094,7 +1273,7 @@ h2 {
     margin-bottom: 38px;
   }
 }
-@media (max-width: 500px) {
+@media (max-width: 576px) {
   .section__text {
     font-size: 15px;
     height: 119px;
@@ -1110,16 +1289,6 @@ h2 {
     height: fit-content;
   }
 }
-:root {
-  --mdc-theme-primary: #da8a3a;
-  --mdc-button-outline-color: rgba(20, 20, 200, 0.2);
-  --mdc-typography-font-family: "Segoe UI";
-}
-
-.mdc-select {
-  height: 70px;
-}
-
 input {
   border: 1px solid #9f9f9f;
   border-radius: 5px;
@@ -1130,6 +1299,9 @@ input {
   background-clip: border-box;
 }
 
+/* .swiper-volonteer .swiper-pagination-bullet-active {
+  background-color: white !important;
+} */
 .card-volonteer {
   display: flex;
   justify-content: flex-start;
@@ -1160,6 +1332,7 @@ input {
   height: 467px;
   background-size: cover;
   margin-right: 30px;
+  border-radius: 5px;
 }
 @media (min-width: 768px) {
   .card-volonteer__img {
@@ -1270,4 +1443,44 @@ input {
 
 .text-shadow {
   text-shadow: 1px 1px rgba(0, 0, 0, 0.04), 2px 2px rgba(0, 0, 0, 0.04), 3px 3px rgba(0, 0, 0, 0.04), 4px 4px rgba(0, 0, 0, 0.04), 0.125rem 0.125rem rgba(0, 0, 0, 0.04), 6px 6px rgba(0, 0, 0, 0.04), 7px 7px rgba(0, 0, 0, 0.04), 8px 8px rgba(0, 0, 0, 0.04), 9px 9px rgba(0, 0, 0, 0.04), 0.3125rem 0.3125rem rgba(0, 0, 0, 0.04), 11px 11px rgba(0, 0, 0, 0.04), 12px 12px rgba(0, 0, 0, 0.04), 13px 13px rgba(0, 0, 0, 0.04), 14px 14px rgba(0, 0, 0, 0.04), 0.625rem 0.625rem rgba(0, 0, 0, 0.04), 16px 16px rgba(0, 0, 0, 0.04), 17px 17px rgba(0, 0, 0, 0.04), 18px 18px rgba(0, 0, 0, 0.04), 19px 19px rgba(0, 0, 0, 0.04), 1.25rem 1.25rem rgba(0, 0, 0, 0.04);
+}
+
+.error-page {
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+@media only screen and (min-width: 768px) {
+  .error-page {
+    padding-top: 48px;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .error-page {
+    padding-top: 56px;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .error-page {
+    padding-bottom: 48px;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .error-page {
+    padding-bottom: 56px;
+  }
+}
+.error-page__description {
+  margin-bottom: 48px;
+  font-size: 20px;
+  line-height: 30px;
+  color: #9F9F9F;
+}
+.error-page__btn {
+  width: 100%;
+  display: block;
+}
+.error-page__img {
+  max-width: inherit;
+  height: 100%;
+  object-fit: none;
 }

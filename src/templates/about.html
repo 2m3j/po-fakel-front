@@ -5,371 +5,284 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
-    <title>О нас</title>
+   <title>О нас</title>
 </head>
-
 <body>
-    <!--     <header class="header">
-        <div class="container-header">
-            <div class="header__wrapper">
-                <img src="images/logo.png" alt="logo" class="header__logo">
-                <ul class="header__nav">
-                    <li class="header__item">О нас</li>
-                    <li class="header__item">Имена</li>
-                    <button class="dropbtn" onclick='myFunction()'>
-                        <li class="header__item">Галерея</li>
-                    </button>
-                    <div class="vector">
-                        <img src="images/vector-down.png" alt="vector" class="header__img-vector-down"
-                             id="vectorId-down">
-                        <img src="images/vector-up.png" alt="vector" class="header__img-vector-up" id="vectorId-up">
-                    </div>
-                    <div class="dropdown-content" id="myDropdown">
-                        <a class="header__sel" href="#">Фото</a>
-                        <a class="header__sel" href="#">Видео</a>
-                        <a class="header__sel" href="#">Аудио</a>
-                    </div>
-                    <li class="header__item">Новости</li>
-                    <li class="header__item">Контакты</li>
-                </ul>
-                <div class="header__img-box">
-                    <input type="text" placeholder="Поиск по сайту..." class="header__search">
-                    <img src="images/magnifier.png" alt="magnifier" class="header__magnifier">
-                </div>
-            </div>
-        </div>
-    </header> -->
-    <main class="main">
-        <section class="section">
-            <div class="container">
-                <div class="row">
-                    <h1 class="section__title">О нас</h1>
-                    <p class="col-xs-12  col-md-6  mb-4 section__text ">Приказом № 169 от 27 декабря 2000 года ректор
+<header class="header">
+    <%= require('raw-loader!./layout/header/branding.html').default %>
+</header>
+<main class="main">
+    <section class="section">
+        <div class="container">
+            <h1 class="section__title">О нас</h1>
+            <div class="section__text">
+                    <div class="row">
+
+                    <p class=" col-xs-12  col-md-6  mb-4  ">Приказом № 169 от 27 декабря 2000 года ректор
                         ВятГУ Кондратов Василий Михайлович дал жизнь поисковому отряду «Факел» Вятского Государственного
                         университета.
                         <br>
                         Ежегодно с этого времени каждую весну студенты Вятского государственного университета участвуют
-                        в «Вахтах Памяти» по поиску и захоронению останков павших защитников Отечества, погибших
-                        и пропавших без вести в годы Великой Отечественной. Первым командиром отряда стал Домрачев
-                        Сергей (ФАМ), затем в 2003 — Чурин Сергей (БФ), с 2005 года — Порошин Михаил.
-                        <br>
-                        <br>
-                        Руководство Вуза ежегодно изыскивает достаточно крупные средства, чтобы профинансировать
-                        студенческие экспедиции.
-                    </p>
-                    <p class="section__text col-12 col-xs-12 col-md-6 mb-4  ">Студенты ВятГУ — основа этого отряда.
-                        Ребята из отрядов других регионов и из Кировской области по старой доброй памяти называют
-                        «Факел» не иначе, как «Политех».
-                        <br>
-                        <br>
-                        Идут годы. Студенты становятся специалистами, но многие так и не оставляют увлечения поисковой
-                        работой. Поэтому в настоящее время в составе отряда помимо нынешних студентов много выпускников
-                        разных лет и разных факультетов. Люди в свободное от работы время, в период отпуска отправляются
-                        на 3 недели в весенний залитый водой Новгородский лес, кишащий клещами и гадюками. <span
-                            class="section__span">И никто из них не променяет этот лес ни на какие курортные
-                            пляжи!</span>
-                    </p>
-                </div>
-                <div class="section__text_type_unfold d-block d-md-none">
-                    <button class="section__button section__button_type_unfold section__span">РАЗВЕРНУТЬ</button>
-                </div>
+                    в «Вахтах Памяти» по поиску и захоронению останков павших защитников Отечества, погибших
+                    и пропавших без вести в годы Великой Отечественной. Первым командиром отряда стал Домрачев
+                    Сергей (ФАМ), затем в 2003 — Чурин Сергей (БФ), с 2005 года — Порошин Михаил.
+                    <br>
+                    <br>
+                    Руководство Вуза ежегодно изыскивает достаточно крупные средства, чтобы профинансировать
+                    студенческие экспедиции.
+                </p>
+                <p class=" col-12 col-xs-12 col-md-6 mb-4  ">Студенты ВятГУ — основа этого отряда.
+                    Ребята из отрядов других регионов и из Кировской области по старой доброй памяти называют
+                    «Факел» не иначе, как «Политех».
+                    <br>
+                    <br>
+                    Идут годы. Студенты становятся специалистами, но многие так и не оставляют увлечения поисковой
+                    работой. Поэтому в настоящее время в составе отряда помимо нынешних студентов много выпускников
+                    разных лет и разных факультетов. Люди в свободное от работы время, в период отпуска отправляются
+                    на 3 недели в весенний залитый водой Новгородский лес, кишащий клещами и гадюками. <span
+                    class="section__span">И никто из них не променяет этот лес ни на какие курортные
+                                пляжи!</span>
+                            </p>
+                        </div>
             </div>
-            <div class="container">
-                <div class="row mt-4">
-                    <div class="col-12 col-md-4 mb-4 mr-4 d-none d-lg-block">
-                        <div class="image-tile image-tile_type_page-aboutus">
-                            <!--  <div class="image-tile__wrapper" style="background-image: url(images/aboutus1.png)">
-                </div> -->
-                            <img src="images/aboutus1.png" alt="Люди в полевых условиях">
-                        </div>
-                    </div>
-                    <div class="col-12 col-md-8  d-none d-lg-block">
-                        <div class="image-tile image-tile_type_page-aboutus">
-                            <!--    <div class="image-tile__wrapper" style="background-image: url(images/aboutus2.png)">
-                </div> -->
-                            <img src="images/aboutus2.png" alt="Люди в полевых условиях">
-                        </div>
+            <div class="section__text_type_unfold d-sm-none">
+                <button class="section__button section__button_type_unfold section__span">РАЗВЕРНУТЬ</button>
+            </div>
+        </div>
+        <div class="container section_type_gallery">
+            <div class="row mt-4">
+                <div class="col-12 col-md-4 mb-4 mr-4 d-none d-md-block">
+                    <div class="image-tile image-tile_type_page-aboutus">
+                        <img src="images/aboutus1.png" alt="Люди в полевых условиях">
                     </div>
                 </div>
-                <div class="row">
-                    <div class="col-12 col-md-8 mr-4 mb-4  d-none d-lg-block">
-                        <div class="image-tile image-tile_type_page-aboutus ">
-                            <!--   <div class="image-tile__wrapper" style="background-image: url(images/aboutus3.png)">
-                </div> -->
-                            <img src="images/aboutus3.png" alt="Люди в полевых условиях">
-                        </div>
-                    </div>
-                    <div class="col-12 col-md-4  d-none d-lg-block">
-                        <div class="image-tile image-tile_type_page-aboutus">
-                            <!-- <div class="image-tile__wrapper" style="background-image: url(images/aboutus4.png)">
-                </div> -->
-                            <img src="images/aboutus4.png" alt="Люди в полевых условиях">
-                        </div>
+                <div class="col-12 col-md-8  d-none d-md-block">
+                    <div class="image-tile image-tile_type_page-aboutus">
+                        <img src="images/aboutus2.png" alt="Люди в полевых условиях">
                     </div>
                 </div>
             </div>
-            <div class="container d-block d-sm-none">
-                <div class="swiper card-slider aboutus__slider ">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide card-slider__item card-slider__item_page_aboutus">
-                            <div class="card-slider__item-card" style="background-image:url(images/aboutus1.png)">
-                            </div>
-                        </div>
-                        <div class="swiper-slide card-slider__item card-slider__item_page_aboutus">
-                            <div class="card-slider__item-card" style="background-image:url(images/aboutus2.png)">
-                            </div>
-                        </div>
-                        <div class="swiper-slide card-slider__item card-slider__item_page_aboutus">
-                            <div class="card-slider__item-card" style="background-image:url(images/aboutus3.png)">
-                            </div>
-                        </div>
-                        <div class="swiper-slide card-slider__item card-slider__item_page_aboutus">
-                            <div class="card-slider__item-card" style="background-image:url(images/aboutus4.png)">
-                            </div>
-                        </div>
-
+            <div class="row">
+                <div class="col-12 col-md-8 mr-4 mb-4  d-none d-md-block">
+                    <div class="image-tile image-tile_type_page-aboutus ">
+                        <img src="images/aboutus3.png" alt="Люди в полевых условиях">
                     </div>
-
-                    <div class="swiper-pagination card-slider__pagination"></div>
+                </div>
+                <div class="col-12 col-md-4  d-none d-md-block">
+                    <div class="image-tile image-tile_type_page-aboutus">
+                        <img src="images/aboutus4.png" alt="Люди в полевых условиях">
+                    </div>
                 </div>
             </div>
-        </section>
-        <section class="section about-volunteer-stories " style="background-image:url(images/volonteer-bgr.png)">
-            <div class="container">
-                <div class="swiper swiper-volonteer ">
-                    <h2 class="section__title">Истории участников</h2>
-                    <div class="card-volonteer__navigation d-none d-md-flex">
-                        <span class="card-volonteer__navigation-left swiper-button-left">
-                            <img src="images/ar-left.png" alt="arrow">
-                        </span>
-                        <span class="card-volonteer__navigation-right swiper-button-right">
-                            <img src="images/ar-right.png" alt="arrow">
-                        </span>
-                    </div>
-                    <div class="swiper-wrapper">
-                        <div class="row swiper-slide card-volonteer__item-card">
-                            <div class="flip flip-vertical d-md-none card-volonteer__img">
-                                <div class="front" style="background-image: url(images/swetochka.png)">
-                                </div>
-                                <div class="back">
-                                    <blockquote class="card-volonteer__text">Поиск — это то, что невозможно пережить
-                                        в обычной
-                                        жизни: жизнь на природе в течение трёх недель, когда приезжаешь в лес, где порой
-                                        кружат
-                                        снежинки, а уезжаешь из полного жизни, цветов и аромата майского леса.
-                                        Это две пары
-                                        левых сапог, которые весело чавкают по болоту, это болотный чай из котла,
-                                        задушевные
-                                        костровые разговоры, и конечно чувство, что вы одна команда, главная цель
-                                        которой:
-                                        помочь солдату завершить свой путь и вернуться домой.<br></blockquote>
-                                    <p class="card-volonteer__author">Света</p>
-                                </div>
-                            </div>
-                            <div class="card-volonteer d-none d-md-flex">
-                                <div class=" col-12 col-md-5 card-volonteer__img"
-                                    style="background-image:url(images/swetochka.png)">
-                                </div>
-                                <div class="col-12 col-md-7">
-                                    <blockquote class="card-volonteer__text">Поиск — это то, что невозможно пережить
-                                        в обычной
-                                        жизни: жизнь на природе в течение трёх недель, когда приезжаешь в лес,
-                                        где порой
-                                        кружат
-                                        снежинки, а уезжаешь из полного жизни, цветов и аромата майского леса.
-                                        Это две пары
-                                        левых сапог, которые весело чавкают по болоту, это болотный чай из котла,
-                                        задушевные
-                                        костровые разговоры, и конечно чувство, что вы одна команда, главная цель
-                                        которой:
-                                        помочь солдату завершить свой путь и вернуться домой.<br></blockquote>
-                                    <p class="card-volonteer__author">Света</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="swiper-slide card-volonteer__item-card row">
-                            <div class="flip flip-vertical d-md-none card-volonteer__img">
-                                <div class="front" style="background-image: url(images/alenushka.png)">
-                                </div>
-                                <div class="back">
-                                    <blockquote class="card-volonteer__text" style="font-size: 13px">Решила поехать
-                                        очень спонтанно, просто
-                                        увидела
-                                        видеоприглашение и сразу возникла мысль «хочу». А человек я очень домашний
-                                        и необщительный, так что это желание было действительно ОЧЕНЬ странным.
-                                        «Хочу в лес»
-                                        не давало покоя и вот я, никогда ничего не писавшая незнакомым людям,
-                                        уже пишу Мише
-                                        и уточняю подробности с трясущимися руками, узнаю, что едем через три недели
-                                        и трясусь от страха ещё сильнее, но пишу, что еду. Никаких ожиданий, никаких
-                                        знаний
-                                        о существовании поискового движения не было совсем, просто в один момент
-                                        что-то
-                                        внутри загорелось и в корне поменяло мою жизнь. Атмосфера пребывания
-                                        в отряде
-                                        разбудила что-то внутри и Новгородский лес уже не отпустил. Пять вахт
-                                        без перерыва
-                                        и иногда с некоторым страхом приходит мысль, что когда-то настанет сезон,
-                                        в который
-                                        у меня не получится поехать. И это стало пугать. Как это я не изваляюсь
-                                        в грязи
-                                        и не выйду с утра к костру со стучащими зубами?<br></blockquote>
-                                    <p class="card-volonteer__author">Алёна</p>
-                                </div>
-                            </div>
-                            <div class="card-volonteer d-none d-md-flex">
-                                <div class="col col-md-5 card-volonteer__img"
-                                    style="background-image:url(images/alenushka.png)">
-                                </div>
-                                <div class="col-12 col-md-7">
-                                    <blockquote class="card-volonteer__text">Решила поехать очень спонтанно, просто
-                                        увидела
-                                        видеоприглашение и сразу возникла мысль «хочу». А человек я очень домашний
-                                        и необщительный, так что это желание было действительно ОЧЕНЬ странным.
-                                        «Хочу
-                                        в лес»
-                                        не давало покоя и вот я, никогда ничего не писавшая незнакомым людям,
-                                        уже пишу
-                                        Мише
-                                        и уточняю подробности с трясущимися руками, узнаю, что едем через три недели
-                                        и трясусь от страха ещё сильнее, но пишу, что еду. Никаких ожиданий, никаких
-                                        знаний
-                                        о существовании поискового движения не было совсем, просто в один момент
-                                        что-то
-                                        внутри загорелось и в корне поменяло мою жизнь. Атмосфера пребывания
-                                        в отряде
-                                        разбудила что-то внутри и Новгородский лес уже не отпустил. Пять вахт
-                                        без перерыва
-                                        и иногда с некоторым страхом приходит мысль, что когда-то настанет сезон,
-                                        в который
-                                        у меня не получится поехать. И это стало пугать. Как это я не изваляюсь
-                                        в грязи
-                                        и не выйду с утра к костру со стучащими зубами?<br></blockquote>
-                                    <p class="card-volonteer__author">Алёна</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="swiper-slide card-volonteer__item-card row">
-                            <div class="flip flip-vertical d-md-none card-volonteer__img">
-                                <div class="front" style="background-image: url(images/jenya.png)">
-                                </div>
-                                <div class="back">
-                                    <blockquote class="card-volonteer__text">Хотел съездить в интересную поездку. Пожить
-                                        пару недель в лесу, послушать рассказы про ВОВ. Продолжаю ездить, потому
-                                        что поиск
-                                        зацепил специфическим видом отдыха. Живым общением с ребятами из отряда.
-                                        Полезным
-                                        делом для себя и для общества.<br></blockquote>
-                                    <p class="card-volonteer__author">Женя</p>
-                                </div>
-                            </div>
-                            <div class="card-volonteer d-none d-md-flex">
-                                <div class=" col col-md-5 card-volonteer__img"
-                                    style="background-image:url(images/jenya.png)">
-                                </div>
-                                <div class="col-12 col-md-7">
-                                    <blockquote class="card-volonteer__text">Хотел съездить в интересную поездку.
-                                        Пожить
-                                        пару недель в лесу, послушать рассказы про ВОВ. Продолжаю ездить, потому
-                                        что поиск
-                                        зацепил специфическим видом отдыха. Живым общением с ребятами из отряда.
-                                        Полезным
-                                        делом для себя и для общества.<br></blockquote>
-                                    <p class="card-volonteer__author">Женя</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="swiper-slide card-volonteer__item-card row">
-                            <div class="flip flip-vertical d-md-none card-volonteer__img">
-                                <div class="front" style="background-image: url(images/lera.png)">
-                                </div>
-                                <div class="back">
-                                    <blockquote class="card-volonteer__text">Первый раз на Вахту поехала после того как
-                                        Миша
-                                        в красках рассказал о том, что из себя представляет поиск. После слов "эта
-                                        работа
-                                        больше для парней" особенно захотела поехать. И не долго думая уже был собран
-                                        первый
-                                        поисковый рюкзак и с тех пор пути назад уже не было. В первую вахту очень много
-                                        думала о тех, кого ищем, о том как могла сложиться их судьба. В результате эти
-                                        мысли
-                                        плотно засели в моей голове и без поиска я уже свою жизнь не представляю.<br>
-                                    </blockquote>
-                                    <p class="card-volonteer__author">Лера</p>
-                                </div>
-                            </div>
-                            <div class="card-volonteer d-none d-md-flex">
-                                <div class=" col col-md-5 card-volonteer__img"
-                                    style="background-image:url(images/lera.png)">
-                                </div>
-                                <div class="col col-md-7 ">
-                                    <blockquote class="card-volonteer__text">Первый раз на Вахту поехала после того как
-                                        Миша
-                                        в красках рассказал о том, что из себя представляет поиск. После слов "эта
-                                        работа
-                                        больше для парней" особенно захотела поехать. И не долго думая уже был собран
-                                        первый
-                                        поисковый рюкзак и с тех пор пути назад уже не было. В первую вахту очень много
-                                        думала о тех, кого ищем, о том как могла сложиться их судьба. В результате эти
-                                        мысли
-                                        плотно засели в моей голове и без поиска я уже свою жизнь не представляю.<br>
-                                    </blockquote>
-                                    <p class="card-volonteer__author">Лера</p>
-                                </div>
-                            </div>
+        </div>
+        <div class="container d-block d-md-none">
+            <div class="swiper card-slider aboutus__slider p-0">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide card-slider__item card-slider__item_page_aboutus">
+                        <div class="card-slider__item-card" style="background-image:url(images/aboutus1.png)">
                         </div>
                     </div>
-                    <div class="swiper-pagination card-slider__pagination"></div>
+                    <div class="swiper-slide card-slider__item card-slider__item_page_aboutus">
+                        <div class="card-slider__item-card" style="background-image:url(images/aboutus2.png)">
+                        </div>
+                    </div>
+                    <div class="swiper-slide card-slider__item card-slider__item_page_aboutus">
+                        <div class="card-slider__item-card" style="background-image:url(images/aboutus3.png)">
+                        </div>
+                    </div>
+                    <div class="swiper-slide card-slider__item card-slider__item_page_aboutus">
+                        <div class="card-slider__item-card" style="background-image:url(images/aboutus4.png)">
+                        </div>
+                    </div>
                 </div>
+                <div class="swiper-pagination card-slider__pagination"></div>
             </div>
-            </div>
-            </div>
-            </div>
-
-            </div>
-        </section>
-        <section class=" section media">
-            <div class="container">
-                <h1 class="section__title">СМИ о нас</h1>
-                <form>
-                    <div class="row g-10 ">
-                        <div class="col-12 col-md-5 col-lg-4 mb-4 mb-md-0">
-                            <mwc-select outlined label="Имя бойца" id="outlined" class="section__input">
-                                <mwc-list-item selected></mwc-list-item>
-                                <mwc-list-item value="1">Феноберцев_Роман_Филиппович</mwc-list-item>
-                                <mwc-list-item value="2">Халемин_Степан_Александрович</mwc-list-item>
-                                <mwc-list-item value="3">Серболин_Максим_Никитович</mwc-list-item>
-                            </mwc-select>
+        </div>
+    </section>
+    <section class="section about-volunteer-stories " style="background-image:url(images/volonteer-bgr.png)">
+        <div class="container">
+            <div class="swiper swiper-volonteer ">
+                <h2 class="section__title">Истории участников</h2>
+                <div class="card-volonteer__navigation d-none d-md-flex">
+                            <span class="card-volonteer__navigation-left swiper-button-left">
+                                <img src="images/ar-left.png" alt="arrow">
+                            </span>
+                    <span class="card-volonteer__navigation-right swiper-button-right">
+                                <img src="images/ar-right.png" alt="arrow">
+                            </span>
+                </div>
+                <div class="swiper-wrapper">
+                    <div class="row swiper-slide card-volonteer__item-card">
+                        <div class="flip flip-vertical d-md-none card-volonteer__img">
+                            <div class="front" style="background-image: url(images/swetochka.png)">
+                            </div>
+                            <div class="back">
+                                <blockquote class="card-volonteer__text">Поиск — это то, что невозможно пережить
+                                    в обычной
+                                    жизни: жизнь на природе в течение трёх недель, когда приезжаешь в лес, где порой
+                                    кружат
+                                    снежинки, а уезжаешь из полного жизни, цветов и аромата майского леса.
+                                    Это две пары
+                                    левых сапог, которые весело чавкают по болоту, это болотный чай из котла,
+                                    задушевные
+                                    костровые разговоры, и конечно чувство, что вы одна команда, главная цель
+                                    которой:
+                                    помочь солдату завершить свой путь и вернуться домой.<br></blockquote>
+                                <p class="card-volonteer__author">Света</p>
+                            </div>
                         </div>
-                        <div class="col-12 col-md-5 col-lg-4 mb-4 mb-md-0">
-                            <!--  <div>Value: <span id="outlinedValue"></span></div> -->
-                            <input data-provide="datepicker" type="text" name="date" placeholder="Период публикации" onfocus="(this.type='date')"
-                                onblur="(this.type='text')"
-                                class="section__input section__input_type_date form-control">
-                        </div>
-                        <div class="col-12 col-md-2 col-lg-4">
-                            <div class="section__btn">
-                                <button type="submit" class="section__btn section__input">Искать</button>
+                        <div class="card-volonteer d-none d-md-flex">
+                            <div class=" col-12 col-md-5 card-volonteer__img"
+                                 style="background-image:url(images/swetochka.png)">
+                            </div>
+                            <div class="col-12 col-md-7">
+                                <blockquote class="card-volonteer__text">Поиск — это то, что невозможно пережить
+                                    в обычной
+                                    жизни: жизнь на природе в течение трёх недель, когда приезжаешь в лес,
+                                    где порой
+                                    кружат
+                                    снежинки, а уезжаешь из полного жизни, цветов и аромата майского леса.
+                                    Это две пары
+                                    левых сапог, которые весело чавкают по болоту, это болотный чай из котла,
+                                    задушевные
+                                    костровые разговоры, и конечно чувство, что вы одна команда, главная цель
+                                    которой:
+                                    помочь солдату завершить свой путь и вернуться домой.<br></blockquote>
+                                <p class="card-volonteer__author">Света</p>
                             </div>
                         </div>
                     </div>
-                </form>
-                <div class="cards row g-5"></div>
-            </div>
-        </section>
-        <template id="card-template">
-            <article class="card news__columns-one col-lg-4 col-sm-6 col-xs-12 " aria-label="Карточка">
-                <div class="article-card-one">
-                    <a class="article-card__link" href=`${item.link}` target="_blank" rel="noopener noreferrer">
-                        <h3 class="article-card__title article-card__title_type_media">${item.subtitle}</h3>
-                        <p class="article-card__text article-card__text_type_media">${item.text}</p>
-                        <img src=`${item.image}` alt="news" class="article-card__image">
-                    </a>
+                    <div class="swiper-slide card-volonteer__item-card row">
+                        <div class="flip flip-vertical d-md-none card-volonteer__img">
+                            <div class="front" style="background-image: url(images/alenushka.png)">
+                            </div>
+                            <div class="back">
+                                <blockquote class="card-volonteer__text" >Решила поехать спонтанно - просто увидела приглашение, и возникла мысль «хочу». Эта мысль не давала покоя, и я написала Мише, чтобы уточнить подробности. Узнав, что едем через три недели, не смотря на страх, написала, что еду. 
+                                    Атмосфера  в отряде разбудила что-то внутри, и Новгородский лес уже не отпустил. Иногда  приходит мысль, что когда-то настанет сезон, в который я не смогу поехать, и это стало пугать. Как это я не изваляюсь в грязи и не выйду с утра к костру со стучащими зубами?<br></blockquote>
+                                <p class="card-volonteer__author">Алёна</p>
+                            </div>
+                        </div>
+                        <div class="card-volonteer d-none d-md-flex">
+                            <div class="col col-md-5 card-volonteer__img"
+                                 style="background-image:url(images/alenushka.png)">
+                            </div>
+                            <div class="col-12 col-md-7">
+                                <blockquote class="card-volonteer__text">Решила поехать очень спонтанно, просто
+                                    увидела
+                                    видеоприглашение и сразу возникла мысль «хочу». А человек я очень домашний
+                                    и необщительный, так что это желание было действительно ОЧЕНЬ странным.
+                                    «Хочу
+                                    в лес»
+                                    не давало покоя и вот я, никогда ничего не писавшая незнакомым людям,
+                                    уже пишу
+                                    Мише
+                                    и уточняю подробности с трясущимися руками, узнаю, что едем через три недели
+                                    и трясусь от страха ещё сильнее, но пишу, что еду. Никаких ожиданий, никаких
+                                    знаний
+                                    о существовании поискового движения не было совсем, просто в один момент
+                                    что-то
+                                    внутри загорелось и в корне поменяло мою жизнь. Атмосфера пребывания
+                                    в отряде
+                                    разбудила что-то внутри и Новгородский лес уже не отпустил. Пять вахт
+                                    без перерыва
+                                    и иногда с некоторым страхом приходит мысль, что когда-то настанет сезон,
+                                    в который
+                                    у меня не получится поехать. И это стало пугать. Как это я не изваляюсь
+                                    в грязи
+                                    и не выйду с утра к костру со стучащими зубами?<br></blockquote>
+                                <p class="card-volonteer__author">Алёна</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide card-volonteer__item-card row">
+                        <div class="flip flip-vertical d-md-none card-volonteer__img">
+                            <div class="front" style="background-image: url(images/jenya.png)">
+                            </div>
+                            <div class="back">
+                                <blockquote class="card-volonteer__text">Хотел съездить в интересную поездку. Пожить
+                                    пару недель в лесу, послушать рассказы про ВОВ. Продолжаю ездить, потому
+                                    что поиск
+                                    зацепил специфическим видом отдыха. Живым общением с ребятами из отряда.
+                                    Полезным
+                                    делом для себя и для общества.<br></blockquote>
+                                <p class="card-volonteer__author">Женя</p>
+                            </div>
+                        </div>
+                        <div class="card-volonteer d-none d-md-flex">
+                            <div class=" col col-md-5 card-volonteer__img"
+                                 style="background-image:url(images/jenya.png)">
+                            </div>
+                            <div class="col-12 col-md-7">
+                                <blockquote class="card-volonteer__text">Хотел съездить в интересную поездку.
+                                    Пожить
+                                    пару недель в лесу, послушать рассказы про ВОВ. Продолжаю ездить, потому
+                                    что поиск
+                                    зацепил специфическим видом отдыха. Живым общением с ребятами из отряда.
+                                    Полезным
+                                    делом для себя и для общества.<br></blockquote>
+                                <p class="card-volonteer__author">Женя</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide card-volonteer__item-card row">
+                        <div class="flip flip-vertical d-md-none card-volonteer__img">
+                            <div class="front" style="background-image: url(images/lera.png)">
+                            </div>
+                            <div class="back">
+                                <blockquote class="card-volonteer__text">Первый раз на Вахту поехала после того как
+                                    Миша
+                                    в красках рассказал о том, что из себя представляет поиск. После слов "эта
+                                    работа
+                                    больше для парней" особенно захотела поехать. И не долго думая уже был собран
+                                    первый
+                                    поисковый рюкзак и с тех пор пути назад уже не было. В первую вахту очень много
+                                    думала о тех, кого ищем, о том как могла сложиться их судьба. В результате эти
+                                    мысли
+                                    плотно засели в моей голове и без поиска я уже свою жизнь не представляю.<br>
+                                </blockquote>
+                                <p class="card-volonteer__author">Лера</p>
+                            </div>
+                        </div>
+                        <div class="card-volonteer d-none d-md-flex">
+                            <div class=" col col-md-5 card-volonteer__img"
+                                 style="background-image:url(images/lera.png)">
+                            </div>
+                            <div class="col col-md-7 ">
+                                <blockquote class="card-volonteer__text">Первый раз на Вахту поехала после того как
+                                    Миша
+                                    в красках рассказал о том, что из себя представляет поиск. После слов "эта
+                                    работа
+                                    больше для парней" особенно захотела поехать. И не долго думая уже был собран
+                                    первый
+                                    поисковый рюкзак и с тех пор пути назад уже не было. В первую вахту очень много
+                                    думала о тех, кого ищем, о том как могла сложиться их судьба. В результате эти
+                                    мысли
+                                    плотно засели в моей голове и без поиска я уже свою жизнь не представляю.<br>
+                                </blockquote>
+                                <p class="card-volonteer__author">Лера</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-            </article>
-        </template>
+                <div class="swiper-pagination card-slider__pagination"></div>
+            </div>
+        </div>
+        </div>
+        </div>
+        </div>
+        </div>
+    </section>
+    <section class="section media">
+        <div class="container">
+            <h1 class="section__title">СМИ о нас</h1>
+            <div class="media-form" id="media-form">
+            </div>
+        </div>
+    </section>
+</main>
+<%= require('raw-loader!./layout/footer.html').default %>
 </body>
-
+<%= require('raw-loader!./layout/bottom-scripts.html').default %>
 </html>

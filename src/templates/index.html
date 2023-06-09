@@ -4,21 +4,21 @@
     <meta charset="UTF-8"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" href="/libs/swiper/swiper-bundle.min.css"/>
+    <script src="/libs/swiper/swiper-bundle.min.js"></script>
     <title>Факел</title>
 </head>
 
 <body>
 <header class="header header_entity_show">
     <%= require('raw-loader!./layout/header/branding.html').default %>
-    <%= require('raw-loader!./layout/header/entity.html').default %>
+    <%= require('raw-loader!./layout/header/main-form.html').default %>
 </header>
 <main>
     <section class="main-about">
         <div class="container">
             <h2>О нас</h2>
-            <a href="#" class="main-about__btn btn btn_xl btn_outline">Подробнее</a>
+            <a href="#" class="main-about__btn btn btn_xl btn_outline d-none d-md-block">Подробнее</a>
             <div class="main-about__row">
                 <img src="images/photo-one.png" alt="photo"/>
                 <p class="main-about__text">
