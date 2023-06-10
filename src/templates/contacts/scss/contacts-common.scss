@@ -1,31 +1,5 @@
-.wrapper {
-    position: relative;
-}
-.wrapper-contacts {
-
-    /* .wrapper-contacts__header */
-    &__header {
-        background-color: #cecece;
-    }
-    /* .wrapper-contacts__main */
-    &__main {
-        @include media_from('xs') {
-            padding-bottom: 85px;
-        }
-        @include media_from('lg') {
-            padding-bottom: 121px;
-        }
-        @include media_from('xl') {
-            padding-bottom: 185px;
-        }
-        
-    }
-    /* .wrapper-contacts__footer */
-    &__footer {
-    }
-}
-.breadcrumbs {
-
+.breadcrumbs-v1 {
+    @include block-padding;
     /* .breadcrumbs__list */
     &__list {
         display: flex;
