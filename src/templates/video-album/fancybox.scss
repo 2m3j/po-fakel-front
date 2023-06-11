@@ -22,15 +22,21 @@
                         padding: 60px 30px;
                     }
         
-                    .popup__image {
+                    .popup__video {
                         max-width: 1120px;
                         max-height: 640px;
                         position: relative;
         
-                        img {
-                            max-width: 1120px;
-                            max-height: 640px;
-                            object-fit: cover;
+                        iframe {
+                            width: 100vw;
+                            height: 500px;
+                            vertical-align: top;
+                            @include media_from('sm') {
+                                width: 100%;
+                            }
+                            @include media_from('lg') {
+                                height: 640px;
+                            }
                         }
         
                         .popup__prev {
