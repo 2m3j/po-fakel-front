@@ -26,8 +26,13 @@ body.lock {
     background: #FCFCFC;
     color: $font-color;
     padding-bottom: 102px;
+    padding-top: 24px;
     @include media_from('sm') {
         padding-bottom: 112px;
+        padding-top: 40px;
+    }
+    @include media_from('lg') {
+        padding-top: 64px;
     }
 }
 
