@@ -1,29 +1,28 @@
-export default class Card {
-  constructor(data, cardsTemplate) {
-    this._solder = data.solder;
-    this._subtitle = data.subtitle;
-    this._text = data.text;
-    this._image = data.image;
-    this._link = data.link;
-    this._handleImageClick = data.handleImageClick;
-    this._template = cardsTemplate;
-    this.data = data;
-  }
-  _getTemplate() {
-    return this._template.cloneNode(true);
-  }
-  // Creating a card
-  createCard() {
-    this._cardElement = this._getTemplate();
-    this._cardImage = this._cardElement.querySelector(".article-card__image");
-    this._cardLink = this._cardElement.querySelector(".article-card__link");
-    this._cardElement.querySelector(".article-card__title").textContent =
-      this._subtitle;
-    this._cardElement.querySelector(".article-card__text").textContent =
-      this._text;
-    this._cardImage.alt = `${this._solder}`;
-    this._cardImage.src = this._image;
-    this._cardLink.href = `${this._link}`;
-    return this._cardElement;
-  }
+import React from "react";
+
+function Card({ item }) {
+  return (
+    <article
+      className="card news__columns-one col-lg-4 col-sm-6 col-xs-12 "
+      aria-label="Карточка"
+    >
+      <div className="article-card-one">
+        <a
+          className="article-card__link"
+          href={item.link}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <h3 className="article-card__title article-card__title_type_media">
+            {item.subtitle}
+          </h3>
+          <p className="article-card__text article-card__text_type_media">
+            {item.text}
+          </p>
+          <img src={item.image} alt="news" className="article-card__image" />
+        </a>
+      </div>
+    </article>
+  );
 }
+export default Card;

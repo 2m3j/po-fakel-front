@@ -1,3 +1,20 @@
+/*!****************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/sass-loader/dist/cjs.js!./src/components/SearchForm/SearchForm.scss ***!
+  \****************************************************************************************************************************************************************/
+.smi-search-form__container-more {
+  width: 100%;
+  display: none;
+  align-items: center;
+  justify-content: center;
+}
+.smi-search-form__more {
+  margin-top: 32px;
+  font-size: 16px;
+  background: none;
+}
+.smi-search-form__container-more_visible {
+  display: flex;
+}
 /*!****************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./src/css/bootstrap-reboot.min.css ***!
   \****************************************************************************************************************/
@@ -107,6 +124,18 @@ html, body {
   color: #202020;
 }
 
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  display: flex;
+  flex: 1 auto;
+  flex-direction: column;
+}
+
 h1,
 h2,
 h3,
@@ -138,6 +167,27 @@ a:hover {
   color: #da8a3a;
 }
 
+h1 {
+  font-size: 35px;
+  margin-bottom: 24px;
+  font-weight: 600;
+}
+@media only screen and (min-width: 768px) {
+  h1 {
+    font-size: 43px;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  h1 {
+    font-size: 50px;
+  }
+}
+@media only screen and (min-width: 768px) {
+  h1 {
+    margin-bottom: 32px;
+  }
+}
+
 h2 {
   font-size: 30px;
   margin-bottom: 24px;
@@ -145,7 +195,7 @@ h2 {
 }
 @media only screen and (min-width: 768px) {
   h2 {
-    font-size: 40px;
+    font-size: 38px;
   }
 }
 @media only screen and (min-width: 1200px) {
@@ -255,6 +305,7 @@ body.noscroll {
   width: 12px;
   height: 8px;
   fill: #f5f5f5;
+  margin-left: 5px;
 }
 .top-nav a:hover, .top-nav span:hover {
   color: #da8a3a;
@@ -423,7 +474,7 @@ body.noscroll {
 .mobile-nav__item svg {
   width: 0.7rem;
   height: 0.7rem;
-  margin-right: 5px;
+  margin-right: 0.5rem;
   margin-bottom: 0.3rem;
   fill: #b31f1f;
 }
@@ -444,9 +495,10 @@ body.noscroll {
   display: flex;
   flex-direction: column;
   background: #595959;
+  position: relative;
 }
 .header_entity_show {
-  background: linear-gradient(180deg, rgba(10, 10, 10, 0.8) 0%, rgba(10, 10, 10, 0.1) 100%), url("../images/bgrd.png") no-repeat;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.8) 33%, rgba(0, 0, 0, 0.5) 100%);
   background-size: cover;
   min-height: 90vh;
 }
@@ -465,6 +517,9 @@ body.noscroll {
   height: 100%;
   background: rgba(255, 255, 255, 0.2);
   backdrop-filter: blur(5px);
+}
+.header__main-join-form {
+  margin: auto 0;
 }
 
 .header-branding {
@@ -490,43 +545,30 @@ body.noscroll {
   fill: #f5f5f5;
 }
 
+.header__cover {
+  height: 90vh;
+  left: 0;
+  object-fit: cover;
+  top: 0;
+  transform: none;
+  width: 100%;
+  max-width: 1000%;
+  position: absolute;
+  z-index: -1;
+}
+@media only screen and (min-width: 768px) {
+  .header__cover {
+    height: 100vh;
+  }
+}
+
 .header-entity {
-  margin: auto 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   color: #f5f5f5;
+  padding-bottom: 10px;
 }
-.header-entity__title {
-  font-weight: 700;
-  text-align: center;
-  font-size: 36px;
-  padding-bottom: 20px;
-}
-@media only screen and (min-width: 576px) {
-  .header-entity__title {
-    font-size: 55px;
-  }
-}
-@media only screen and (min-width: 992px) {
-  .header-entity__title {
-    font-size: 65px;
-  }
-}
-.header-entity__subtitle {
-  font-weight: 400;
-  text-align: center;
-  font-size: 20px;
-  padding-bottom: 32px;
-}
-@media only screen and (min-width: 576px) {
-  .header-entity__subtitle {
-    font-size: 30px;
-  }
-}
-@media only screen and (min-width: 992px) {
-  .header-entity__subtitle {
-    font-size: 35px;
+@media only screen and (min-width: 768px) {
+  .header-entity {
+    padding-bottom: 30px;
   }
 }
 
@@ -577,7 +619,13 @@ body.noscroll {
   }
 }
 .footer-nav {
-  margin-top: 30px;
+  padding: 0;
+  margin: 30px 0 0;
+}
+@media only screen and (min-width: 576px) {
+  .footer-nav {
+    columns: 2;
+  }
 }
 @media only screen and (min-width: 768px) {
   .footer-nav {
@@ -625,8 +673,47 @@ body.noscroll {
   fill: #f3f3f3;
 }
 
+.main-join-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #f5f5f5;
+}
+.main-join-form__title {
+  font-weight: 700;
+  text-align: center;
+  font-size: 36px;
+  padding-bottom: 20px;
+}
+@media only screen and (min-width: 576px) {
+  .main-join-form__title {
+    font-size: 55px;
+  }
+}
+@media only screen and (min-width: 992px) {
+  .main-join-form__title {
+    font-size: 65px;
+  }
+}
+.main-join-form__subtitle {
+  font-weight: 400;
+  text-align: center;
+  font-size: 20px;
+  padding-bottom: 32px;
+}
+@media only screen and (min-width: 576px) {
+  .main-join-form__subtitle {
+    font-size: 30px;
+  }
+}
+@media only screen and (min-width: 992px) {
+  .main-join-form__subtitle {
+    font-size: 35px;
+  }
+}
+
 .card-slider {
-  padding: 50px 0;
+  padding-bottom: 50px;
 }
 .card-slider__item-card {
   position: relative;
@@ -670,9 +757,8 @@ body.noscroll {
 .card-slider__pagination {
   width: 110px !important;
   position: relative;
-  height: 30px;
   padding: 8px 18px;
-  background: rgba(79, 79, 79, 0.7);
+  /*    background: rgba(79, 79, 79, 0.7); */
   border-radius: 5px;
   margin: 15px auto;
 }
@@ -723,6 +809,9 @@ body.noscroll {
 }
 
 .article-card a {
+  text-decoration: none;
+}
+.article-card__link {
   text-decoration: none;
 }
 .article-card_type_media {
@@ -1020,7 +1109,7 @@ body.noscroll {
 }
 .main-about__text {
   display: inline-block;
-  font-size: 16px;
+  font-size: 15px;
   line-height: 140%;
   text-align: center;
   padding: 45px 30px;
@@ -1087,13 +1176,17 @@ body.noscroll {
 }
 @media only screen and (min-width: 768px) {
   .main-numbers__num {
-    font-size: 40px;
+    font-size: 38px;
   }
 }
 @media only screen and (min-width: 1200px) {
   .main-numbers__num {
     font-size: 45px;
   }
+}
+
+.media {
+  margin-bottom: 112px;
 }
 
 .section {
@@ -1135,35 +1228,34 @@ body.noscroll {
   /*   font-size: 20px; */
   line-height: 27px;
   color: #ffffff;
-}
-@media (min-width: 768px) {
-  .section__btn {
+  /*     @media (min-width: 768px) {
     width: 103px;
-    /*  font-size: 20px; */
-  }
+    /*  font-size: 20px; 
+  } */
+  width: 100%;
 }
-@media (max-width: 500px) {
+@media (max-width: 768px) {
   .section__btn {
-    height: 60px;
-    width: 100%;
+    /*  height: 60px; */
     /*  font-size: 20px; */
   }
 }
 .section__input {
   height: 56px;
-  width: 100%;
-  /*    font-size: var(--font-size-md); */
+  border-radius: 5px;
+  font-size: var(--font-size-md);
 }
 .section__input_type_date {
-  position: relative;
-  /*      font-size: var(--font-size-md); */
-  padding-left: 15px;
-  padding-right: 15px;
+  font-size: var(--font-size-md);
+  box-sizing: border-box;
 }
 .section__icon {
   position: absolute;
   top: 10px;
   right: 215px;
+}
+.section_type_gallery {
+  max-width: 1160px;
 }
 
 @media (min-width: 1200px) {
@@ -1181,7 +1273,7 @@ body.noscroll {
     margin-bottom: 38px;
   }
 }
-@media (max-width: 500px) {
+@media (max-width: 576px) {
   .section__text {
     font-size: 15px;
     height: 119px;
@@ -1197,16 +1289,6 @@ body.noscroll {
     height: fit-content;
   }
 }
-:root {
-  --mdc-theme-primary: #da8a3a;
-  --mdc-button-outline-color: rgba(20, 20, 200, 0.2);
-  --mdc-typography-font-family: "Segoe UI";
-}
-
-.mdc-select {
-  height: 70px;
-}
-
 input {
   border: 1px solid #9f9f9f;
   border-radius: 5px;
@@ -1217,6 +1299,9 @@ input {
   background-clip: border-box;
 }
 
+/* .swiper-volonteer .swiper-pagination-bullet-active {
+  background-color: white !important;
+} */
 .card-volonteer {
   display: flex;
   justify-content: flex-start;
@@ -1247,6 +1332,7 @@ input {
   height: 467px;
   background-size: cover;
   margin-right: 30px;
+  border-radius: 5px;
 }
 @media (min-width: 768px) {
   .card-volonteer__img {
@@ -1357,4 +1443,44 @@ input {
 
 .text-shadow {
   text-shadow: 1px 1px rgba(0, 0, 0, 0.04), 2px 2px rgba(0, 0, 0, 0.04), 3px 3px rgba(0, 0, 0, 0.04), 4px 4px rgba(0, 0, 0, 0.04), 0.125rem 0.125rem rgba(0, 0, 0, 0.04), 6px 6px rgba(0, 0, 0, 0.04), 7px 7px rgba(0, 0, 0, 0.04), 8px 8px rgba(0, 0, 0, 0.04), 9px 9px rgba(0, 0, 0, 0.04), 0.3125rem 0.3125rem rgba(0, 0, 0, 0.04), 11px 11px rgba(0, 0, 0, 0.04), 12px 12px rgba(0, 0, 0, 0.04), 13px 13px rgba(0, 0, 0, 0.04), 14px 14px rgba(0, 0, 0, 0.04), 0.625rem 0.625rem rgba(0, 0, 0, 0.04), 16px 16px rgba(0, 0, 0, 0.04), 17px 17px rgba(0, 0, 0, 0.04), 18px 18px rgba(0, 0, 0, 0.04), 19px 19px rgba(0, 0, 0, 0.04), 1.25rem 1.25rem rgba(0, 0, 0, 0.04);
+}
+
+.error-page {
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+@media only screen and (min-width: 768px) {
+  .error-page {
+    padding-top: 48px;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .error-page {
+    padding-top: 56px;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .error-page {
+    padding-bottom: 48px;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .error-page {
+    padding-bottom: 56px;
+  }
+}
+.error-page__description {
+  margin-bottom: 48px;
+  font-size: 20px;
+  line-height: 30px;
+  color: #9F9F9F;
+}
+.error-page__btn {
+  width: 100%;
+  display: block;
+}
+.error-page__img {
+  max-width: inherit;
+  height: 100%;
+  object-fit: none;
 }
