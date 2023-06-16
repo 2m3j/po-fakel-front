@@ -39,94 +39,6 @@
                             }
                         }
         
-                        .popup__prev {
-                            visibility: hidden;
-                            position: absolute;
-                            width: 30px;
-                            height: 30px;
-                            top: 45%;
-                            left: 2%;
-                            border: 2px solid #FFFFFF;
-                            border-radius: 10px;
-                            display: flex;
-                            justify-content: center;
-                            align-items: center;
-                            background-color: transparent;
-                            @include media_from('sm') {
-                                visibility: visible;
-                                width: 30px;
-                                height: 30px;
-            
-                                svg {
-                                    width: 20px;
-                                    height: 20px;
-                                }
-                            }
-                            @include media_from('lg') {
-                                width: 40px;
-                                height: 37px;
-            
-                                svg {
-                                    width: 25px;
-                                    height: 24px;
-                                }
-                            }
-        
-                            &:hover {
-                                background-color: #FFFFFF;
-                                border: 2px solid $theme-color;
-        
-                                svg {
-                                    path {
-                                        stroke: #000000;
-                                    }                       
-                                }
-                            }
-                        }
-                        .popup__next {
-                            visibility: hidden;
-                            position: absolute;
-                            width: 30px;
-                            height: 30px;
-                            top: 45%;
-                            right: 2%;
-                            border: 2px solid #FFFFFF;
-                            border-radius: 10px;
-                            display: flex;
-                            justify-content: center;
-                            align-items: center;
-                            background-color: transparent;
-                            @include media_from('sm') {
-                                visibility: visible;
-                                width: 30px;
-                                height: 30px;
-            
-                                svg {
-                                    width: 20px;
-                                    height: 20px;
-                                }
-                            }
-                            @include media_from('lg') {
-                                width: 40px;
-                                height: 37px;
-            
-                                svg {
-                                    width: 25px;
-                                    height: 24px;
-                                }
-                            }
-        
-                            &:hover {
-                                background-color: #FFFFFF;
-                                border: 2px solid $theme-color;
-        
-                                svg {
-                                    path {
-                                        stroke: #000000;
-                                    }
-                                }
-                            }
-                        }
                     }
                     .popup__title {
                         margin-top: 20px;
@@ -173,42 +85,24 @@
 
 .fancybox__content>.f-button.is-close-btn {
     visibility: hidden;
-    position: absolute;
-    right: 10px;
-    top: 10px;
-    border: 2px solid $theme-color;
-    border-radius: 10px;
-    background-color: #FFFFFF;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 
-    svg {
-        path {
-            stroke: black;
-        }
-    }
     @include media_from('sm') {
         visibility: visible;
-        width: 30px;
-        height: 30px;
-
-        svg {
-            width: 15px;
-            height: 15px;
-        }
     }
-    @include media_from('lg') {
-        width: 40px;
-        height: 37px;
+}
 
-        svg {
-            width: 25px;
-            height: 24px;
-        }
+.f-button.is-next {
+    visibility: hidden;
+
+    @include media_from('sm') {
+        visibility: visible;
     }
+}
 
-    &:hover {
-        background-color: $theme-color;
+.f-button.is-prev {
+    visibility: hidden;
+
+    @include media_from('sm') {
+        visibility: visible;
     }
 }
