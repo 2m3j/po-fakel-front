@@ -18,16 +18,6 @@
     }
 }
 .names-main {
-    /* .names-main__breadcrumbs */
-    &__breadcrumbs {
-        // margin-top: 40px;
-        @include media_from('xs') {
-            margin-bottom: 56px;
-        }
-        @include media_from('lg') {
-            margin-bottom: 74px;
-        }
-    }
     /* .names-main__search */
     &__search {
         padding-top: 40px;

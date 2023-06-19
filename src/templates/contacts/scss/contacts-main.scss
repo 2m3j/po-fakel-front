@@ -1,31 +1,10 @@
 .main-contacts {
     padding-bottom: 58px;
-    @include media_from('xs') {
-        padding-top: 32px;
-    }
-    @include media_from('sm') {
-        padding-top: 58px;
-    }
-    @include media_from('lg') {
-        padding-top: 68px;
-    }
     /* .main-contacts__container */
     &__container {
     }
     /* .main-contacts__feedback */
     &__feedback {
-    }
-    /* .main-contacts__breadcrumbs */
-    &__breadcrumbs {
-        @include media_from('xs') {
-            margin-bottom: 32px;
-        }
-        @include media_from('sm') {
-            margin-bottom: 56px;
-        }
-        @include media_from('lg') {
-            margin-bottom: 68px;
-        }
     }
     /* .main-contacts__content */
     &__content {
