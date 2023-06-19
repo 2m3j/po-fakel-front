@@ -93,3 +93,32 @@ if (document.querySelector('.search-names__slider')) {
     },
   });
 }
+if (document.querySelector('.media-main-details__slider')) {
+  new Swiper(".media-main-details__slider", {
+    // loop: true,
+    navigation: {
+      nextEl: ".search-btn-swiper__next",
+      prevEl: ".search-btn-swiper__prev",
+    },
+    pagination: {
+      el: ".media-main-details__pagination",
+      clickable: true,
+    },
+    /*   slidesPerView: auto, */
+    slidesPerView: 1,
+    spaceBetween: 20,
+    breakpoints: {
+      560: {
+        slidesPerView: 1,
+      },
+      768: {
+        slidesPerView: 2,
+        spaceBetween: 20,
+      },
+      992: {
+        slidesPerView: 3,
+        spaceBetween: 30,
+      },
+    },
+  });
+}
