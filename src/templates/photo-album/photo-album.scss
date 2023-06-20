@@ -1,20 +1,6 @@
-@import "./__bread-crumb.scss";
-@import "./__main";
-
-ul {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-}
-
-a {
-    text-decoration: none;
-}
-
-p {
-    margin: 0;
-    padding: 0;
-}
+@import "../../scss/components/bread-crumb.scss";
+@import "../../scss/components/preview-list.scss";
+@import "../../scss/components/pagination.scss";
 
 .photo-album {
     background: #FCFCFC;
@@ -30,7 +16,7 @@ p {
     }
 }
 
-.container {
+.photo-album-container {
     max-width: 1170px;
     padding-left: 20px;
     padding-right: 20px;
@@ -38,5 +24,24 @@ p {
     @include media_from('md') {
         padding-left: 30px;
         padding-right: 30px;
+    }
+}
+
+.photo-album__main {
+    .photo-album__main__title {
+        @include h2-font-size;
+        font-weight: 600;
+        @include media_from('sm') {
+            margin-bottom: 52px;
+        }
+        @include media_from('lg') {
+            margin-bottom: 45px;
+        }
+    }
+
+    .photo-album__main__pagination {
+        display: flex;
+        justify-content: center;
+        margin-top: 32px;
     }
 }
