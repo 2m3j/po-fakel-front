@@ -1,0 +1,51 @@
+.swiper-btn-prev {
+    display: none;
+    position: absolute;
+    top: 0;
+    right: 122px;
+    width: 48px;
+    height: 48px;
+    border: 2px solid $theme-color;
+    border-radius: 10px;
+    cursor: pointer;
+    @include media_from('sm') {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &:hover:not(:disabled) {
+        background: $theme-color;
+    }
+
+    &:disabled {
+        cursor: default;
+        opacity: 0.5;
+    }
+}
+.swiper-btn-next {
+    display: none;
+    position: absolute;
+    top: 0;
+    right: 50px;
+    width: 48px;
+    height: 48px;
+    border: 2px solid $theme-color;
+    border-radius: 10px;
+    cursor: pointer;
+    @include media_from('sm') {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &:hover:not(:disabled) {
+        background: $theme-color;
+    }
+
+
+    &:disabled {
+        cursor: default;
+        opacity: 0.5;
+    }
+}

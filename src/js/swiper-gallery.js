@@ -1,4 +1,4 @@
-export const swiper = new Swiper('.swiper', {
+export const swiper_gallery = new Swiper('.swiper-gallery', {
   direction: 'horizontal',
   loop: 'true',
   breakpoints: {
