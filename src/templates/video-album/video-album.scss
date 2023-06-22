@@ -1,0 +1,47 @@
+@import "../../components/bread-crumb/bread-crumb.scss";
+@import "../../components/fancybox/fancybox.scss";
+@import "../../components/pagination/pagination.scss";
+
+.video-album {
+    background: #FCFCFC;
+    color: $font-color;
+    padding-bottom: 112px;
+    padding-top: 24px;
+    @include media_from('sm') {
+        padding-bottom: 128px;
+        padding-top: 40px;
+    }
+    @include media_from('lg') {
+        padding-top: 64px;
+    }
+}
+
+.video-album-container {
+    max-width: 1170px;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin: 0 auto;
+    @include media_from('md') {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+}
+
+.video-album__main {
+    .video-album__main__title {
+        @include h2-font-size;
+        font-weight: 600;
+        @include media_from('sm') {
+            margin-bottom: 52px;
+        }
+        @include media_from('lg') {
+            margin-bottom: 45px;
+        }
+    }
+
+    .photo-album__main__pagination {
+        display: flex;
+        justify-content: center;
+        margin-top: 32px;
+    }
+}

@@ -1,0 +1,74 @@
+@import "../../components/bread-crumb/bread-crumb.scss";
+@import "../../components/fancybox/fancybox.scss";
+@import "../../components/pagination/pagination.scss";
+
+.photo-album-specific {
+    background: #FCFCFC;
+    color: $font-color;
+    padding-bottom: 112px;
+    padding-top: 24px;
+    @include media_from('sm') {
+        padding-bottom: 128px;
+        padding-top: 40px;
+    }
+    @include media_from('lg') {
+        padding-top: 64px;
+    }
+}
+
+.photo-album-specific-container {
+    max-width: 1170px;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin: 0 auto;
+    @include media_from('md') {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+}
+
+.photo-album-specific__main {
+    .photo-album-specific__main__title {
+        @include h2-font-size;
+        font-weight: 600;
+        margin-bottom: 16px;
+        @include media_from('md') {
+            margin-bottom: 20px;
+        }
+        @include media_from('xl') {
+            margin-bottom: 21px;
+        }
+    }
+
+    .photo-album-specific__main__text {
+        max-width: 760px;
+        margin-bottom: 24px;
+        @include media_from('md') {
+            margin-bottom: 32px;
+        }
+        @include media_from('xl') {
+            margin-bottom: 56px;
+        }
+        p {
+            font-size: 15px;
+            line-height: 150%;
+            font-weight: 400;
+            margin: 0;
+            padding: 0;
+            @include media_from('md') {
+                font-size: 20px;
+                line-height: 150%;
+            }
+            @include media_from('xl') {
+                font-size: 20px;
+                line-height: 27px;
+            }
+        }
+    }
+
+    .photo-album-specific__main__pagination {
+        display: flex;
+        justify-content: center;
+        margin-top: 32px;
+    }
+}
