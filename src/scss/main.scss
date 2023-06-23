@@ -6,8 +6,20 @@
 
 html, body {
   font-size: 16px;
-  font-family: "Segoe UI", serif;
+  font-family: 'Montserrat', sans-serif;
   color: $font-color;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  display: flex;
+  flex: 1 auto;
+  flex-direction: column;
 }
 
 h1,
@@ -40,4 +52,20 @@ a {
   &:hover {
     color: $theme-color;
   }
+}
+
+h1 {
+  @include h1-font-size;
+  @include h1-padding-bottom;
+  font-weight: 600;
+}
+
+h2 {
+  @include h2-font-size;
+  @include h2-padding-bottom;
+  font-weight: 600;
+}
+
+body.noscroll {
+  overflow: hidden;
 }

@@ -1,11 +1,5 @@
 @import "/src/components/image-tile/style";
 
 .main-gallery {
-  &__title {
-    font-weight: 600;
-    font-size: 45px;
-    line-height: 60px;
-    color: #202020;
-    margin-bottom: 50px;
-  }
+  @include block-padding;
 }

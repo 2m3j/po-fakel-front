@@ -1,18 +1,8 @@
 @import "/src/components/article-card/style";
 
 .main-news {
-  padding: 80px 0;
-  background-color: #F3F3F3;
-  margin-top: 130px;
-
-  &__title {
-    font-weight: 600;
-    font-size: 45px;
-    line-height: 60px;
-    color: #202020;
-    margin-bottom: 50px;
-
-  }
+  @include block-padding;
+  background-color: $main-news-background-color;
 
   &__link {
     margin-top: 20px;

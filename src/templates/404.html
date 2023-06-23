@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="/libs/swiper/swiper-bundle.min.css"/>
+    <script src="/libs/swiper/swiper-bundle.min.js"></script>
+    <title>Ошибка 404</title>
+</head>
+<body>
+<header class="header">
+    <%= require('raw-loader!./layout/header/branding.html').default %>
+</header>
+<main>
+    <!--Экран с ошибкой 500 имеет точно же такую стилизацию, как и 404й. Необходимо лишь поменять текст в заголовке и описании ошибки, и изменить
+    фоновую фотографию. В остальном экраны идентичны.-->
+    <section class="error-page">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-md-6 col-xl-5">
+                    <h1>Мы не можем найти нужную страницу</h1>
+                    <p class="error-page__description">Ошибка 404. Неудачная попытка
+                        выполнить операцию. Вернитесь
+                        на главную.</p>
+                    <a href="/" class="btn btn_xl error-page__btn">На главную</a>
+                </div>
+                <div class="col-12 col-md-6 col-xl-7 d-none d-md-block">
+                    <img alt="" class="error-page__img" src="/images/error-404-bg.png">
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+<%= require('raw-loader!./layout/footer.html').default %>
+</body>
+<%= require('raw-loader!./layout/bottom-scripts.html').default %>
+</html>

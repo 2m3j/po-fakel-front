@@ -1,53 +1,89 @@
 <div class="header-branding">
-  <div class="container">
-    <div class="header-branding__wrapper">
-      <a href="/"><img src="images/logo.svg" alt="logo" class="header-branding__logo"/></a>
-      <ul class="top-nav d-none d-lg-flex">
-        <li class="top-nav__item"><a href="about.html">О нас</a></li>
-        <li class="top-nav__item"><a href="names.html">Имена</a></li>
-        <li class="top-nav__item">
-          <a href="#">
-            Галерея
-            <svg>
-              <use href="images/svg/symbol/svg/sprite.symbol.svg#arrow-down_corner"></use>
-            </svg>
-          </a>
-          <ul class="top-nav-sub">
-            <li class="top-nav-sub__item">
-              <a href="#">Фото</a>
-            </li>
-            <li class="top-nav-sub__item">
-              <a href="#">Видео</a>
-            </li>
-            <li class="top-nav-sub__item">
-              <a href="#">Аудио</a>
-            </li>
-          </ul>
-        </li>
-        <li class="top-nav__item"><a href="news.html">Новости</a></li>
-        <li class="top-nav__item"><a href="contacts.html">Контакты</a></li>
-      </ul>
-      <form class="top-search d-none d-lg-flex" name="search" method="get" action="/search.html">
-        <input
-                class="top-search__input"
-                name="search"
-                type="text"
-                placeholder="Поиск по сайту..."
-        />
-        <button class="top-search__submit" type="submit" name="search" title="найти">
-          <svg>
-            <use href="images/svg/symbol/svg/sprite.symbol.svg#search"></use>
-          </svg>
-        </button>
-      </form>
-      <div class="header-branding__mobile-buttons d-flex d-lg-none">
-        <a href="/search.html">
-          <svg class="svg-icon svg-icon_size_xl me-3">
-            <use href="images/svg/symbol/svg/sprite.symbol.svg#search"></use>
-          </svg>
-        </a>
-        <div class="mobile-nav-btn"></div>
-      </div>
+    <div class="container">
+        <div class="header-branding__wrapper">
+            <a href="/"><img src="images/logo.svg" alt="logo" class="header-branding__logo"/></a>
+            <ul class="top-nav d-none d-lg-flex">
+                <li class="top-nav__item"><a href="about.html">О нас</a></li>
+                <li class="top-nav__item"><a href="names.html">Имена</a></li>
+                <li class="top-nav__item">
+                    <a href="gallery.html">
+                        Галерея
+                        <svg>
+                            <use href="images/svg/symbol/svg/sprite.symbol.svg#arrow-down_corner"></use>
+                        </svg>
+                    </a>
+                    <ul class="top-nav-sub">
+                        <li class="top-nav-sub__item">
+                            <a href="photo-album.html">Фото</a>
+                        </li>
+                        <li class="top-nav-sub__item">
+                            <a href="video-album.html">Видео</a>
+                        </li>
+                        <li class="top-nav-sub__item">
+                            <a href="audio-album.html">Аудио</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="top-nav__item"><a href="news.html">Новости</a></li>
+                <li class="top-nav__item"><a href="contacts.html">Контакты</a></li>
+            </ul>
+            <form class="top-search d-none d-lg-flex" name="search" method="get" action="/search.html">
+                <input
+                        class="top-search__input"
+                        name="search"
+                        type="text"
+                        placeholder="Поиск по сайту..."
+                />
+                <button class="top-search__submit" type="submit" name="search" title="найти">
+                    <svg>
+                        <use href="images/svg/symbol/svg/sprite.symbol.svg#search"></use>
+                    </svg>
+                </button>
+            </form>
+            <div class="header-branding__mobile-buttons d-flex d-lg-none">
+                <a href="/search.html">
+                    <svg class="svg-icon svg-icon_size_xl me-3">
+                        <use href="images/svg/symbol/svg/sprite.symbol.svg#search"></use>
+                    </svg>
+                </a>
+                <div class="mobile-nav-btn">
+                    <span class="mobile-nav-btn__line"></span>
+                </div>
+            </div>
+        </div>
     </div>
-  </div>
+</div>
+<div class="mobile-nav d-lg-none">
+    <ul class="container">
+        <li class="mobile-nav__item"><a href="about.html">О нас</a></li>
+        <li class="mobile-nav__item"><a href="names.html">Имена</a></li>
+        <li class="mobile-nav__item">
+            <a href="#">
+                Галерея
+            </a>
+            <ul>
+                <li>
+                    <a href="#">
+                        <svg>
+                            <use href="images/svg/symbol/svg/sprite.symbol.svg#star"></use>
+                        </svg>Фото
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <svg>
+                            <use href="images/svg/symbol/svg/sprite.symbol.svg#star"></use>
+                        </svg>Видео</a>
+                </li>
+                <li>
+                    <a href="#">
+                        <svg>
+                            <use href="images/svg/symbol/svg/sprite.symbol.svg#star"></use>
+                        </svg>Аудио</a>
+                </li>
+            </ul>
+        </li>
+        <li class="mobile-nav__item"><a href="news.html">Новости</a></li>
+        <li class="mobile-nav__item"><a href="contacts.html">Контакты</a></li>
+    </ul>
 </div>

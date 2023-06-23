@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Фотоальбомы</title>
+  </head>
+  <body>
+    <header class="header">
+      <%= require('raw-loader!./layout/header/branding.html').default %>
+    </header>
+    <main>
+      <div class="photo-album">
+        <div class="photo-album-container">
+          <section class="bread-crumb-block">
+            <ul class="bread-crumb">
+              <li><a href="#">Главная</a></li>
+              <svg fill="none" width="20" height="20" viewBox="0 0 24 24">
+                <use href="images/svg/symbol/svg/sprite.symbol.svg#arrow-bread-crumbs"></use>
+              </svg>
+              <li><a href="#">Галерея</a></li>
+              <svg fill="none" width="20" height="20" viewBox="0 0 24 24">
+                <use href="images/svg/symbol/svg/sprite.symbol.svg#arrow-bread-crumbs"></use>
+              </svg>
+              <li class="active-crumb">Фотоальбомы</li>
+            </ul>
+          </section>
+          <section class="photo-album__main">
+            <h2 class="photo-album__main__title">Фотоальбомы</h2>
+            <ul class="preview-list">
+              <li class="preview-list__item">
+                <a href="#"></a>
+                <div class="preview-list__item__gradient"></div>
+                <img src="images/photo-album/Вахта Памяти. Осень 2022.jpg" alt="Фото" />
+                <span class="preview-list__item__name"
+                  >Вахта Памяти<br />
+                  Осень 2022</span
+                >
+              </li>
+              <li class="preview-list__item">
+                <a href="#"></a>
+                <div class="preview-list__item__gradient"></div>
+                <img src="images/photo-album/Вахта Памяти. Весна 2022.jpg" alt="Фото" />
+                <span class="preview-list__item__name"
+                  >Вахта Памяти<br />
+                  Весна 2022</span
+                >
+              </li>
+              <li class="preview-list__item">
+                <a href="#"></a>
+                <div class="preview-list__item__gradient"></div>
+                <img src="images/photo-album/Вахта Памяти. Осень 2021.jpg" alt="Фото" />
+                <span class="preview-list__item__name"
+                  >Вахта Памяти<br />
+                  Осень 2021</span
+                >
+              </li>
+              <li class="preview-list__item">
+                <a href="#"></a>
+                <div class="preview-list__item__gradient"></div>
+                <img src="images/photo-album/Вахта Памяти. Осень 2020.jpg" alt="Фото" />
+                <span class="preview-list__item__name"
+                  >Вахта Памяти<br />
+                  Осень 2020</span
+                >
+              </li>
+              <li class="preview-list__item">
+                <a href="#"></a>
+                <div class="preview-list__item__gradient"></div>
+                <img src="images/photo-album/Игра Воин России-2019.jpg" alt="Фото" />
+                <span class="preview-list__item__name">Игра Воин России-2019</span>
+              </li>
+              <li class="preview-list__item">
+                <a href="#"></a>
+                <div class="preview-list__item__gradient"></div>
+                <img src="images/photo-album/Вахта Памяти. Весна 2019.jpg" alt="Фото" />
+                <span class="preview-list__item__name"
+                  >Вахта Памяти<br />
+                  Весна 2019</span
+                >
+              </li>
+              <li class="preview-list__item">
+                <a href="#"></a>
+                <div class="preview-list__item__gradient"></div>
+                <img
+                  src="images/photo-album/Вахта Памяти. Наброски поисковой жизни.jpg"
+                  alt="Фото"
+                />
+                <span class="preview-list__item__name"
+                  >Вахта Памяти<br />
+                  Наброски поисковой жизни.</span
+                >
+              </li>
+              <li class="preview-list__item">
+                <a href="#"></a>
+                <div class="preview-list__item__gradient"></div>
+                <img src="images/photo-album/Вахта Памяти. Весна 2018 года.jpg" alt="Фото" />
+                <span class="preview-list__item__name"
+                  >Вахта Памяти<br />
+                  Весна 2018 года</span
+                >
+              </li>
+              <li class="preview-list__item">
+                <a href="#"></a>
+                <div class="preview-list__item__gradient"></div>
+                <img src="images/photo-album/День Рождения отряда - 2017.jpg" alt="Фото" />
+                <span class="preview-list__item__name">День Рождения отряда - 2017</span>
+              </li>
+              <li class="preview-list__item">
+                <a href="#"></a>
+                <div class="preview-list__item__gradient"></div>
+                <img src="images/photo-album/Вахта Памяти. Осень 2017 года.jpg" alt="Фото" />
+                <span class="preview-list__item__name"
+                  >Вахта Памяти<br />
+                  Осень 2017 года</span
+                >
+              </li>
+              <li class="preview-list__item">
+                <a href="#"></a>
+                <div class="preview-list__item__gradient"></div>
+                <img src="images/photo-album/4 декабря в Плацдарме (2016 год).jpg" alt="Фото" />
+                <span class="preview-list__item__name">4 декабря в Плацдарме (2016 год)</span>
+              </li>
+              <li class="preview-list__item">
+                <a href="#"></a>
+                <div class="preview-list__item__gradient"></div>
+                <img src="images/photo-album/Вахта Памяти. Осень 2016 год.jpg" alt="Фото" />
+                <span class="preview-list__item__name"
+                  >Вахта Памяти<br />
+                  Осень 2016 год</span
+                >
+              </li>
+            </ul>
+            <div class="photo-album__main__pagination">
+              <div class="pagination">
+                <button class="btn_first-page" disabled>
+                  <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
+                    <use
+                      href="images/svg/symbol/svg/sprite.symbol.svg#pagination-db-arrow-right"
+                    ></use>
+                  </svg>
+                </button>
+                <button class="btn_back" disabled>
+                  <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
+                    <use href="images/svg/symbol/svg/sprite.symbol.svg#pagination-arrow-left"></use>
+                  </svg>
+                </button>
+                <button class="btn-page active-btn">1</button>
+                <button class="btn-page">2</button>
+                <button class="btn-page">3</button>
+                <button class="btn_forward">
+                  <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
+                    <use
+                      href="images/svg/symbol/svg/sprite.symbol.svg#pagination-arrow-right"
+                    ></use>
+                  </svg>
+                </button>
+                <button class="btn_last-page">
+                  <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
+                    <use
+                      href="images/svg/symbol/svg/sprite.symbol.svg#pagination-db-arrow-right"
+                    ></use>
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+    </main>
+    <footer><%= require('raw-loader!./layout/footer.html').default %></footer>
+  </body>
+  <%= require('raw-loader!./layout/bottom-scripts.html').default %>
+</html>

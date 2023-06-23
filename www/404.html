@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="/libs/swiper/swiper-bundle.min.css"/>
+    <script src="/libs/swiper/swiper-bundle.min.js"></script>
+    <title>Ошибка 404</title>
+<script defer src="js/app.bundle.js"></script><link href="css/app.css" rel="stylesheet"></head>
+<body>
+<header class="header">
+    <div class="header-branding">
+    <div class="container">
+        <div class="header-branding__wrapper">
+            <a href="/"><img src="images/logo.svg" alt="logo" class="header-branding__logo"/></a>
+            <ul class="top-nav d-none d-lg-flex">
+                <li class="top-nav__item"><a href="about.html">О нас</a></li>
+                <li class="top-nav__item"><a href="names.html">Имена</a></li>
+                <li class="top-nav__item">
+                    <a href="gallery.html">
+                        Галерея
+                        <svg>
+                            <use href="images/svg/symbol/svg/sprite.symbol.svg#arrow-down_corner"></use>
+                        </svg>
+                    </a>
+                    <ul class="top-nav-sub">
+                        <li class="top-nav-sub__item">
+                            <a href="photo-album.html">Фото</a>
+                        </li>
+                        <li class="top-nav-sub__item">
+                            <a href="video-album.html">Видео</a>
+                        </li>
+                        <li class="top-nav-sub__item">
+                            <a href="audio-album.html">Аудио</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="top-nav__item"><a href="news.html">Новости</a></li>
+                <li class="top-nav__item"><a href="contacts.html">Контакты</a></li>
+            </ul>
+            <form class="top-search d-none d-lg-flex" name="search" method="get" action="/search.html">
+                <input
+                        class="top-search__input"
+                        name="search"
+                        type="text"
+                        placeholder="Поиск по сайту..."
+                />
+                <button class="top-search__submit" type="submit" name="search" title="найти">
+                    <svg>
+                        <use href="images/svg/symbol/svg/sprite.symbol.svg#search"></use>
+                    </svg>
+                </button>
+            </form>
+            <div class="header-branding__mobile-buttons d-flex d-lg-none">
+                <a href="/search.html">
+                    <svg class="svg-icon svg-icon_size_xl me-3">
+                        <use href="images/svg/symbol/svg/sprite.symbol.svg#search"></use>
+                    </svg>
+                </a>
+                <div class="mobile-nav-btn">
+                    <span class="mobile-nav-btn__line"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="mobile-nav d-lg-none">
+    <ul class="container">
+        <li class="mobile-nav__item"><a href="about.html">О нас</a></li>
+        <li class="mobile-nav__item"><a href="names.html">Имена</a></li>
+        <li class="mobile-nav__item">
+            <a href="#">
+                Галерея
+            </a>
+            <ul>
+                <li>
+                    <a href="#">
+                        <svg>
+                            <use href="images/svg/symbol/svg/sprite.symbol.svg#star"></use>
+                        </svg>Фото
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <svg>
+                            <use href="images/svg/symbol/svg/sprite.symbol.svg#star"></use>
+                        </svg>Видео</a>
+                </li>
+                <li>
+                    <a href="#">
+                        <svg>
+                            <use href="images/svg/symbol/svg/sprite.symbol.svg#star"></use>
+                        </svg>Аудио</a>
+                </li>
+            </ul>
+        </li>
+        <li class="mobile-nav__item"><a href="news.html">Новости</a></li>
+        <li class="mobile-nav__item"><a href="contacts.html">Контакты</a></li>
+    </ul>
+</div>
+</header>
+<main>
+    <!--Экран с ошибкой 500 имеет точно же такую стилизацию, как и 404й. Необходимо лишь поменять текст в заголовке и описании ошибки, и изменить
+    фоновую фотографию. В остальном экраны идентичны.-->
+    <section class="error-page">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-md-6 col-xl-5">
+                    <h1>Мы не можем найти нужную страницу</h1>
+                    <p class="error-page__description">Ошибка 404. Неудачная попытка
+                        выполнить операцию. Вернитесь
+                        на главную.</p>
+                    <a href="/" class="btn btn_xl error-page__btn">На главную</a>
+                </div>
+                <div class="col-12 col-md-6 col-xl-7 d-none d-md-block">
+                    <img alt="" class="error-page__img" src="/images/error-404-bg.png">
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+<footer class="footer">
+    <div class="container">
+        <div class="row justify-content-between footer__container">
+            <div class="col-8 col-sm-7 col-md-9 col-xl-8">
+                <div class="row">
+                    <div class="col-12 col-md-5 col-lg-3">
+                        <a href="/"><img src="images/logo.svg" alt="logo" class="footer__logo"/></a>
+                    </div>
+                    <div class="col-12 col-md-7 col-lg-9">
+                        <div class="row">
+                            <div class="col-sm-12 col-lg-6">
+                                <div class="footer__contact_item">
+                                    <a href="tel:+79536952867" target="_blank">
+                                        <svg class="svg-icon">
+                                            <use href="images/svg/symbol/svg/sprite.symbol.svg#phone"></use>
+                                        </svg>
+                                        +79536952867
+                                    </a>
+                                </div>
+                                <div class="footer__contact_item">
+                                    <a href="mailto:mporoshin@yandex.ru" target="_blank">
+                                        <svg class="svg-icon">
+                                            <use href="images/svg/symbol/svg/sprite.symbol.svg#envelope"></use>
+                                        </svg>
+                                        mporoshin@yandex.ru
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-sm-12 col-lg-6">
+                                <h4 class="footer__social-title">Мы в социальных сетях</h4>
+                                <div class="footer__social-networks">
+                                    <a href="#" target="_blank">
+                                        <svg class="svg-icon svg-icon_size_xl">
+                                            <use href="images/svg/symbol/svg/sprite.symbol.svg#vk"></use>
+                                        </svg>
+                                    </a>
+                                    <a href="#" target="_blank">
+                                        <svg class="svg-icon svg-icon_size_xl">
+                                            <use href="images/svg/symbol/svg/sprite.symbol.svg#whatsapp"></use>
+                                        </svg>
+                                    </a>
+                                    <a href="#" target="_blank">
+                                        <svg class="svg-icon svg-icon_size_xl">
+                                            <use href="images/svg/symbol/svg/sprite.symbol.svg#viber"></use>
+                                        </svg>
+                                    </a>
+                                    <a href="#" target="_blank">
+                                        <svg class="svg-icon svg-icon_size_xl">
+                                            <use href="images/svg/symbol/svg/sprite.symbol.svg#telegram"></use>
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-4 col-sm-5 col-md-3 col-xl-4">
+                <ul class="footer-nav">
+                    <li class="footer-nav__item">
+                        <a href="#">О нас</a>
+                    </li>
+                    <li class="footer-nav__item">
+                        <a href="#">Имена</a>
+                    </li>
+                    <li class="footer-nav__item">
+                        <a href="#">Галерея</a>
+                    </li>
+                    <li class="footer-nav__item">
+                        <a href="#">Новости</a>
+                    </li>
+                    <li class="footer-nav__item">
+                        <a class="footer__link" href="#">Контакты</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer__copyright">
+            <svg class="svg-icon svg-icon_size_xs">
+                <use href="images/svg/symbol/svg/sprite.symbol.svg#copyright"></use>
+            </svg>
+            Поисковый отряд Факел 2000-2023
+        </div>
+    </div>
+</footer>
+</body>
+<script type="text/javascript">
+    window.addEventListener('load', function () {
+        window.mobileNav.start();
+    });
+</script>
+
+</html>

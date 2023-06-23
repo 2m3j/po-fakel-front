@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css"
+    />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <title>Галерея</title>
+  <script defer src="js/app.bundle.js"></script><link href="css/app.css" rel="stylesheet"></head>
+  <body>
+    <header class="header">
+      <div class="header-branding">
+    <div class="container">
+        <div class="header-branding__wrapper">
+            <a href="/"><img src="images/logo.svg" alt="logo" class="header-branding__logo"/></a>
+            <ul class="top-nav d-none d-lg-flex">
+                <li class="top-nav__item"><a href="about.html">О нас</a></li>
+                <li class="top-nav__item"><a href="names.html">Имена</a></li>
+                <li class="top-nav__item">
+                    <a href="gallery.html">
+                        Галерея
+                        <svg>
+                            <use href="images/svg/symbol/svg/sprite.symbol.svg#arrow-down_corner"></use>
+                        </svg>
+                    </a>
+                    <ul class="top-nav-sub">
+                        <li class="top-nav-sub__item">
+                            <a href="photo-album.html">Фото</a>
+                        </li>
+                        <li class="top-nav-sub__item">
+                            <a href="video-album.html">Видео</a>
+                        </li>
+                        <li class="top-nav-sub__item">
+                            <a href="audio-album.html">Аудио</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="top-nav__item"><a href="news.html">Новости</a></li>
+                <li class="top-nav__item"><a href="contacts.html">Контакты</a></li>
+            </ul>
+            <form class="top-search d-none d-lg-flex" name="search" method="get" action="/search.html">
+                <input
+                        class="top-search__input"
+                        name="search"
+                        type="text"
+                        placeholder="Поиск по сайту..."
+                />
+                <button class="top-search__submit" type="submit" name="search" title="найти">
+                    <svg>
+                        <use href="images/svg/symbol/svg/sprite.symbol.svg#search"></use>
+                    </svg>
+                </button>
+            </form>
+            <div class="header-branding__mobile-buttons d-flex d-lg-none">
+                <a href="/search.html">
+                    <svg class="svg-icon svg-icon_size_xl me-3">
+                        <use href="images/svg/symbol/svg/sprite.symbol.svg#search"></use>
+                    </svg>
+                </a>
+                <div class="mobile-nav-btn">
+                    <span class="mobile-nav-btn__line"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="mobile-nav d-lg-none">
+    <ul class="container">
+        <li class="mobile-nav__item"><a href="about.html">О нас</a></li>
+        <li class="mobile-nav__item"><a href="names.html">Имена</a></li>
+        <li class="mobile-nav__item">
+            <a href="#">
+                Галерея
+            </a>
+            <ul>
+                <li>
+                    <a href="#">
+                        <svg>
+                            <use href="images/svg/symbol/svg/sprite.symbol.svg#star"></use>
+                        </svg>Фото
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <svg>
+                            <use href="images/svg/symbol/svg/sprite.symbol.svg#star"></use>
+                        </svg>Видео</a>
+                </li>
+                <li>
+                    <a href="#">
+                        <svg>
+                            <use href="images/svg/symbol/svg/sprite.symbol.svg#star"></use>
+                        </svg>Аудио</a>
+                </li>
+            </ul>
+        </li>
+        <li class="mobile-nav__item"><a href="news.html">Новости</a></li>
+        <li class="mobile-nav__item"><a href="contacts.html">Контакты</a></li>
+    </ul>
+</div>
+    </header>
+    <main>
+      <div class="gallery">
+        <section class="bread-crumb-block">
+          <div class="gallery-container">
+            <ul class="bread-crumb">
+              <li><a href="#">Главная</a></li>
+              <svg fill="none" width="20" height="20" viewBox="0 0 24 24">
+                <use href="images/svg/symbol/svg/sprite.symbol.svg#arrow-bread-crumbs"></use>
+              </svg>
+              <li class="active-crumb">Галерея</li>
+            </ul>
+          </div>
+        </section>
+        <section class="gallery__main">
+          <div class="gallery-container">
+            <h2 class="gallery__main__title">Галерея</h2>
+          </div>
+          <div class="photo-album-block">
+            <div class="gallery-container-block">
+              <h3 class="gallery-album-block-title"><a href="">Фотоальбомы</a></h3>
+              <ul class="preview">
+                <li class="preview__item">
+                  <a href=""></a>
+                  <div class="preview__item__gradient"></div>
+                  <img src="images/photo-album/Вахта Памяти. Осень 2022.jpg" alt="Фото" />
+                  <span class="preview__item__name"
+                    >Вахта Памяти<br />
+                    Осень 2022</span
+                  >
+                </li>
+                <li class="preview__item">
+                  <a href=""></a>
+                  <div class="preview__item__gradient"></div>
+                  <img src="images/photo-album/Вахта Памяти. Весна 2022.jpg" alt="Фото" />
+                  <span class="preview__item__name"
+                    >Вахта Памяти<br />
+                    Весна 2022</span
+                  >
+                </li>
+                <li class="preview__item">
+                  <a href=""></a>
+                  <div class="preview__item__gradient"></div>
+                  <img src="images/photo-album/Вахта Памяти. Осень 2021.jpg" alt="Фото" />
+                  <span class="preview__item__name"
+                    >Вахта Памяти<br />
+                    Осень 2021</span
+                  >
+                </li>
+              </ul>
+              <a class="gallery-link-to-page" href="">Перейти к разделу</a>
+            </div>
+          </div>
+          <div class="audio-album-block">
+            <div class="gallery-container-block">
+              <h3 class="gallery-album-block-title"><a href="">Аудиозаписи</a></h3>
+              <div class="swiper-gallery">
+                <div class="swiper-wrapper swiper-gallery-wrapper">
+                  <div class="swiper-slide swiper-gallery-slide">
+                    <div class="swiper-gallery-slide__item__image">
+                      <div class="swiper-gallery-slide__item__gradient"></div>
+                      <img
+                        src="images/audio-album/Миша Порошин - Волховская застольная.jpg"
+                        alt="Фото"
+                      />
+                      <p class="swiper-gallery-slide__item__name">
+                        Миша Порошин - Волховская застольная
+                        <span>(муз. И. Любан, сл. П. Шубин)</span>
+                      </p>
+                    </div>
+                    <audio class="swiper-gallery-slide__item__audio" src="" controls></audio>
+                  </div>
+                  <div class="swiper-slide swiper-gallery-slide">
+                    <div class="swiper-gallery-slide__item__image">
+                      <div class="swiper-gallery-slide__item__gradient"></div>
+                      <img src="images/audio-album/Миша Порошин - Эх, дороги.jpg" alt="Фото" />
+                      <p class="swiper-gallery-slide__item__name">
+                        Миша Порошин - Эх, дороги…<span>(Муз. А. Новиков, сл. Л. Ошанин)</span>
+                      </p>
+                    </div>
+                    <audio class="swiper-gallery-slide__item__audio" src="" controls></audio>
+                  </div>
+                  <div class="swiper-slide swiper-gallery-slide">
+                    <div class="swiper-gallery-slide__item__image">
+                      <div class="swiper-gallery-slide__item__gradient"></div>
+                      <img src="images/audio-album/Миша Порошин - Женька.jpg" alt="Фото" />
+                      <p class="swiper-gallery-slide__item__name">
+                        Миша Порошин - Женька. <span>(Муз. Е. Жарковский , сл. К. Ваншенкин)</span>
+                      </p>
+                    </div>
+                    <audio class="swiper-gallery-slide__item__audio" src="" controls></audio>
+                  </div>
+                  <div class="swiper-slide swiper-gallery-slide">
+                    <div class="swiper-gallery-slide__item__image">
+                      <div class="swiper-gallery-slide__item__gradient"></div>
+                      <img src="images/audio-album/Миша Порошин - Колоколенка.jpg" alt="Фото" />
+                      <p class="swiper-gallery-slide__item__name">
+                        Миша Порошин - Колоколенка <span>(Муз. и сл. Л. Сергеев)</span>
+                      </p>
+                    </div>
+                    <audio class="swiper-gallery-slide__item__audio" src="" controls></audio>
+                  </div>
+                  <div class="swiper-slide swiper-gallery-slide">
+                    <div class="swiper-gallery-slide__item__image">
+                      <div class="swiper-gallery-slide__item__gradient"></div>
+                      <img
+                        src="images/audio-album/Миша Порошин - На безымянной высоте (из хф “Тишина”).jpg"
+                        alt="Фото"
+                      />
+                      <p class="swiper-gallery-slide__item__name">
+                        Миша Порошин - На безымянной высоте (из х/ф “Тишина”)
+                        <span>(Муз. В. Баснер, сл. М. Матусовский)</span>
+                      </p>
+                    </div>
+                    <audio class="swiper-gallery-slide__item__audio" src="" controls></audio>
+                  </div>
+                  <div class="swiper-slide swiper-gallery-slide">
+                    <div class="swiper-gallery-slide__item__image">
+                      <div class="swiper-gallery-slide__item__gradient"></div>
+                      <img
+                        src="images/audio-album/Миша Порошин - Нам нужна одна Победа.jpg"
+                        alt="Фото"
+                      />
+                      <p class="swiper-gallery-slide__item__name">
+                        Миша Порошин - Нам нужна одна Победа <span>(Муз. и сл. Б. Окуджава)</span>
+                      </p>
+                    </div>
+                    <audio class="swiper-gallery-slide__item__audio" src="" controls></audio>
+                  </div>
+                  <div class="swiper-slide swiper-gallery-slide">
+                    <div class="swiper-gallery-slide__item__image">
+                      <div class="swiper-gallery-slide__item__gradient"></div>
+                      <img src="images/audio-album/Миша Порошин - Облака.jpg" alt="Фото" />
+                      <p class="swiper-gallery-slide__item__name">
+                        Миша Порошин - Облака <span>(Муз. и сл. Вадим Егоров)</span>
+                      </p>
+                    </div>
+                    <audio class="swiper-gallery-slide__item__audio" src="" controls></audio>
+                  </div>
+                  <div class="swiper-slide swiper-gallery-slide">
+                    <div class="swiper-gallery-slide__item__image">
+                      <div class="swiper-gallery-slide__item__gradient"></div>
+                      <img src="images/audio-album/Миша Порошин - Помни войну.jpg" alt="Фото" />
+                      <p class="swiper-gallery-slide__item__name">
+                        Миша Порошин - Помни войну. <span>(Муз. и сл. Ю. Визбор)</span>
+                      </p>
+                    </div>
+                    <audio class="swiper-gallery-slide__item__audio" src="" controls></audio>
+                  </div>
+                  <div class="swiper-slide swiper-gallery-slide">
+                    <div class="swiper-gallery-slide__item__image">
+                      <div class="swiper-gallery-slide__item__gradient"></div>
+                      <img
+                        src="images/audio-album/Миша Порошин - Туман. (Из кф “Хроника пикирующего бомбардировщика”).jpg"
+                        alt="Фото"
+                      />
+                      <p class="swiper-gallery-slide__item__name">
+                        Миша Порошин - Туман. (Из к/ф “Хроника пикирующего бомбардировщика”)
+                        <span>(Муз. А. Колкер, сл. К. Рыжов)</span>
+                      </p>
+                    </div>
+                    <audio class="swiper-gallery-slide__item__audio" src="" controls></audio>
+                  </div>
+                  <div class="swiper-slide swiper-gallery-slide">
+                    <div class="swiper-gallery-slide__item__image">
+                      <div class="swiper-gallery-slide__item__gradient"></div>
+                      <img src="images/audio-album/Миша Порошин – В землянке.jpg" alt="Фото" />
+                      <p class="swiper-gallery-slide__item__name">
+                        Миша Порошин – В землянке. <span>(Муз. К. Листов, сл. А. Сурков)</span>
+                      </p>
+                    </div>
+                    <audio class="swiper-gallery-slide__item__audio" src="" controls></audio>
+                  </div>
+                  <div class="swiper-slide swiper-gallery-slide">
+                    <div class="swiper-gallery-slide__item__image">
+                      <div class="swiper-gallery-slide__item__gradient"></div>
+                      <img src="images/audio-album/Миша Порошин — Гимн Долины.jpg" alt="Фото" />
+                      <p class="swiper-gallery-slide__item__name">
+                        Миша Порошин — Гимн Долины <span>(Муз. и сл. И. Щукин)</span>
+                      </p>
+                    </div>
+                    <audio class="swiper-gallery-slide__item__audio" src="" controls></audio>
+                  </div>
+                  <div class="swiper-slide swiper-gallery-slide">
+                    <div class="swiper-gallery-slide__item__image">
+                      <div class="swiper-gallery-slide__item__gradient"></div>
+                      <img
+                        src="images/audio-album/Миша Порошин — Рассказ ветерана.jpg"
+                        alt="Фото"
+                      />
+                      <p class="swiper-gallery-slide__item__name">
+                        Миша Порошин — Рассказ ветерана. <span>(Муз. и сл. Ю. Визбор)</span>
+                      </p>
+                    </div>
+                    <audio class="swiper-gallery-slide__item__audio" src="" controls></audio>
+                  </div>
+                </div>
+              </div>
+              <button class="swiper-btn-prev">
+                <svg width="30" height="30" viewBox="0 0 30 30">
+                  <use
+                    href="images/svg/symbol/svg/sprite.symbol.svg#swiper-gallery-arrow-left"
+                  ></use>
+                </svg>
+              </button>
+              <button class="swiper-btn-next">
+                <svg width="30" height="30" viewBox="0 0 30 30">
+                  <use
+                    href="images/svg/symbol/svg/sprite.symbol.svg#swiper-gallery-arrow-right"
+                  ></use>
+                </svg>
+              </button>
+              <a class="gallery-link-to-page" href="">Перейти к разделу</a>
+            </div>
+          </div>
+          <div class="video-album-block">
+            <div class="gallery-container-block">
+              <h3 class="gallery-album-block-title"><a href="">Видео</a></h3>
+              <div class="fancybox-list">
+                <button class="fancybox-list__item" data-fancybox="gallery" data-src="#popup_1">
+                  <div class="fancybox-list__item__gradient"></div>
+                  <img src="images/video-album/Экспедиция  2020 Часть 1 Блиндаж.jpg" alt="Фото" />
+                  <span class="fancybox-list__item__name"
+                    >Экспедиция  2020<br />
+                    Часть 1 Блиндаж</span
+                  >
+                </button>
+                <div id="popup_1" style="display: none" class="fancybox__content">
+                  <div class="popup__body">
+                    <div class="popup__content">
+                      <div class="popup__video">
+                        <iframe
+                          src="https://www.youtube.com/embed/r8GaBS47so8"
+                          class="iframe"
+                          title="YouTube video player"
+                          frameborder="0"
+                          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                          allowfullscreen
+                        ></iframe>
+                      </div>
+                      <div class="popup__title">
+                        <h3>"Вахта памяти 2021"</h3>
+                      </div>
+                      <div class="popup__text">
+                        <p>
+                          Поисковые работы Весенней Вахты Памяти проводились с 24 апреля по 8 мая в
+                          окрестностях Гридинской дороги – заброшенной лесной дороги от трассы
+                          Демянск-Старая Русса к урочищу Гридино, в  6 км от д. Давыдово и в 7 км от
+                          д. Рамушево Старорусского района Новгородской области. Поисковым отрядом
+                          «Факел» г. Киров в составе 25 человек были обнаружены незахороненные
+                          верховые останки 18 военнослужащих Красной Армии. При бойцах были
+                          обнаружены 7  смертных медальонов.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <button class="fancybox-list__item" data-fancybox="gallery" data-src="#popup_2">
+                  <div class="fancybox-list__item__gradient"></div>
+                  <img src="images/video-album/Экспедиция  2020 Часть 2 Офицер.jpg" alt="Фото" />
+                  <span class="fancybox-list__item__name"
+                    >Экспедиция 2020<br />
+                    Часть 2 Офицер</span
+                  >
+                </button>
+                <div id="popup_2" style="display: none" class="fancybox__content">
+                  <div class="popup__body">
+                    <div class="popup__content">
+                      <div class="popup__video">
+                        <iframe
+                          src="https://www.youtube.com/embed/ML8w4V_HxJQ"
+                          class="iframe"
+                          title="YouTube video player"
+                          frameborder="0"
+                          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                          allowfullscreen
+                        ></iframe>
+                      </div>
+                      <div class="popup__title">
+                        <h3>"Вахта памяти 2021"</h3>
+                      </div>
+                      <div class="popup__text">
+                        <p>
+                          Поисковые работы Весенней Вахты Памяти проводились с 24 апреля по 8 мая в
+                          окрестностях Гридинской дороги – заброшенной лесной дороги от трассы
+                          Демянск-Старая Русса к урочищу Гридино, в  6 км от д. Давыдово и в 7 км от
+                          д. Рамушево Старорусского района Новгородской области. Поисковым отрядом
+                          «Факел» г. Киров в составе 25 человек были обнаружены незахороненные
+                          верховые останки 18 военнослужащих Красной Армии. При бойцах были
+                          обнаружены 7  смертных медальонов.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <button class="fancybox-list__item" data-fancybox="gallery" data-src="#popup_3">
+                  <div class="fancybox-list__item__gradient"></div>
+                  <img
+                    src="images/video-album/Экспедиция  2020 Часть 3 Последний бой.jpg"
+                    alt="Фото"
+                  />
+                  <span class="fancybox-list__item__name"
+                    >Экспедиция 2020<br />
+                    Часть 3 Последний бой</span
+                  >
+                </button>
+                <div id="popup_3" style="display: none" class="fancybox__content">
+                  <div class="popup__body">
+                    <div class="popup__content">
+                      <div class="popup__video">
+                        <iframe
+                          src="https://www.youtube.com/embed/r8GaBS47so8"
+                          class="iframe"
+                          title="YouTube video player"
+                          frameborder="0"
+                          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                          allowfullscreen
+                        ></iframe>
+                      </div>
+                      <div class="popup__title">
+                        <h3>"Вахта памяти 2021"</h3>
+                      </div>
+                      <div class="popup__text">
+                        <p>
+                          Поисковые работы Весенней Вахты Памяти проводились с 24 апреля по 8 мая в
+                          окрестностях Гридинской дороги – заброшенной лесной дороги от трассы
+                          Демянск-Старая Русса к урочищу Гридино, в  6 км от д. Давыдово и в 7 км от
+                          д. Рамушево Старорусского района Новгородской области. Поисковым отрядом
+                          «Факел» г. Киров в составе 25 человек были обнаружены незахороненные
+                          верховые останки 18 военнослужащих Красной Армии. При бойцах были
+                          обнаружены 7  смертных медальонов.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <a class="gallery-link-to-page" href="">Перейти к разделу</a>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+    <footer><footer class="footer">
+    <div class="container">
+        <div class="row justify-content-between footer__container">
+            <div class="col-8 col-sm-7 col-md-9 col-xl-8">
+                <div class="row">
+                    <div class="col-12 col-md-5 col-lg-3">
+                        <a href="/"><img src="images/logo.svg" alt="logo" class="footer__logo"/></a>
+                    </div>
+                    <div class="col-12 col-md-7 col-lg-9">
+                        <div class="row">
+                            <div class="col-sm-12 col-lg-6">
+                                <div class="footer__contact_item">
+                                    <a href="tel:+79536952867" target="_blank">
+                                        <svg class="svg-icon">
+                                            <use href="images/svg/symbol/svg/sprite.symbol.svg#phone"></use>
+                                        </svg>
+                                        +79536952867
+                                    </a>
+                                </div>
+                                <div class="footer__contact_item">
+                                    <a href="mailto:mporoshin@yandex.ru" target="_blank">
+                                        <svg class="svg-icon">
+                                            <use href="images/svg/symbol/svg/sprite.symbol.svg#envelope"></use>
+                                        </svg>
+                                        mporoshin@yandex.ru
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-sm-12 col-lg-6">
+                                <h4 class="footer__social-title">Мы в социальных сетях</h4>
+                                <div class="footer__social-networks">
+                                    <a href="#" target="_blank">
+                                        <svg class="svg-icon svg-icon_size_xl">
+                                            <use href="images/svg/symbol/svg/sprite.symbol.svg#vk"></use>
+                                        </svg>
+                                    </a>
+                                    <a href="#" target="_blank">
+                                        <svg class="svg-icon svg-icon_size_xl">
+                                            <use href="images/svg/symbol/svg/sprite.symbol.svg#whatsapp"></use>
+                                        </svg>
+                                    </a>
+                                    <a href="#" target="_blank">
+                                        <svg class="svg-icon svg-icon_size_xl">
+                                            <use href="images/svg/symbol/svg/sprite.symbol.svg#viber"></use>
+                                        </svg>
+                                    </a>
+                                    <a href="#" target="_blank">
+                                        <svg class="svg-icon svg-icon_size_xl">
+                                            <use href="images/svg/symbol/svg/sprite.symbol.svg#telegram"></use>
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-4 col-sm-5 col-md-3 col-xl-4">
+                <ul class="footer-nav">
+                    <li class="footer-nav__item">
+                        <a href="#">О нас</a>
+                    </li>
+                    <li class="footer-nav__item">
+                        <a href="#">Имена</a>
+                    </li>
+                    <li class="footer-nav__item">
+                        <a href="#">Галерея</a>
+                    </li>
+                    <li class="footer-nav__item">
+                        <a href="#">Новости</a>
+                    </li>
+                    <li class="footer-nav__item">
+                        <a class="footer__link" href="#">Контакты</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer__copyright">
+            <svg class="svg-icon svg-icon_size_xs">
+                <use href="images/svg/symbol/svg/sprite.symbol.svg#copyright"></use>
+            </svg>
+            Поисковый отряд Факел 2000-2023
+        </div>
+    </div>
+</footer></footer>
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+    <script>
+      Fancybox.bind('[data-fancybox]', {
+        Thumbs: false,
+      });
+    </script>
+  </body>
+  <script type="text/javascript">
+    window.addEventListener('load', function () {
+        window.mobileNav.start();
+    });
+</script>
+
+</html>

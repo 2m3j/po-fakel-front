@@ -1,5 +1,7 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin'),
-    MiniCssExtractPlugin = require('mini-css-extract-plugin');
+    MiniCssExtractPlugin = require('mini-css-extract-plugin'),
+    CssMinimizerPlugin = require("css-minimizer-webpack-plugin"),
+    webpack = require("webpack");
 
 const path = {
     src: {
@@ -45,6 +47,11 @@ module.exports = {
             },
         ],
     },
+    optimization: {
+        minimizer: [
+            new CssMinimizerPlugin(),
+        ],
+    },
     output: {
         path: path.production.base,
         filename: 'js/[name].bundle.js'
@@ -63,6 +70,37 @@ module.exports = {
             template: path.src.templates + "about.html",
             inject: true
         }),
+        new HtmlWebpackPlugin({
+            filename: path.production.base + '404.html',
+            template: path.src.templates + "404.html",
+            inject: true
+        }),
+        new HtmlWebpackPlugin({
+            filename: path.production.base + 'photo-album.html',
+            template: path.src.templates + 'photo-album.html',
+            inject: true,
+        }),
+        new HtmlWebpackPlugin({
+            filename: path.production.base + 'photo-album-specific.html',
+            template: path.src.templates + 'photo-album-specific.html',
+            inject: true,
+        }),
+        new HtmlWebpackPlugin({
+            filename: path.production.base + 'audio-album.html',
+            template: path.src.templates + 'audio-album.html',
+            inject: true,
+        }),
+        new HtmlWebpackPlugin({
+            filename: path.production.base + 'video-album.html',
+            template: path.src.templates + 'video-album.html',
+            inject: true,
+        }),
+        new HtmlWebpackPlugin({
+            filename: path.production.base + 'gallery.html',
+            template: path.src.templates + 'gallery.html',
+            inject: true,
+        }),
+        new webpack.ContextReplacementPlugin(/moment[/\\]locale$/, /ru/),
     ],
     devServer: {
         static: path.production.base,

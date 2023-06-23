@@ -1,0 +1,21 @@
+.error-page {
+  @include block-padding;
+
+  &__description {
+    margin-bottom: 48px;
+    font-size: 20px;
+    line-height: 30px;
+    color: #9F9F9F;
+  }
+
+  &__btn {
+    width: 100%;
+    display: block;
+  }
+
+  &__img {
+    max-width: inherit;
+    height: 100%;
+    object-fit: none;
+  }
+}

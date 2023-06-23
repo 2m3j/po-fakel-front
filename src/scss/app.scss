@@ -3,7 +3,9 @@
 @import "/src/css/fonts.css";
 
 @import "var";
-@import "media";
+@import "mixins/media";
+@import "mixins/positioning";
+@import "mixins/fonts";
 @import "main";
 @import "/src/components/btn/style";
 @import "src/components/svg-icon/style";
@@ -15,3 +17,9 @@
 @import "/src/templates/about/about-section.scss";
 @import "/src/templates/about/about-main.scss";
 @import "src/components/flip/style.scss";
+@import "/src/templates/404/error-content.scss";
+@import "/src/templates/photo-album/photo-album.scss";
+@import "/src/templates/photo-album-specific/photo-album-specific.scss";
+@import "/src/templates/audio-album/audio-album.scss";
+@import "/src/templates/video-album/video-album.scss";
+@import "/src/templates/gallery/gallery.scss";
