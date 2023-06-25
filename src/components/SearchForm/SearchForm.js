@@ -186,15 +186,22 @@ function SearchForm() {
               </button>
             </div>
           </div>
-          <div className="cards row g-5">
-            <Section items={cards} showned={showned} />
-          </div>
+          {cards ? (
+            <div className="cards row g-5">
+              <Section items={cards} showned={showned} />
+            </div>
+          ) : (
+            ""
+          )}
           <div
             className={`smi-search-form__container-more ${
               isMore ? "smi-search-form__container-more_visible" : ""
             }`}
           >
-            <button className="btn btn_outline btn_xl smi-search-form__more" onClick={handleMoreClick}>
+            <button
+              className="btn btn_outline btn_xl smi-search-form__more"
+              onClick={handleMoreClick}
+            >
               Больше новостей
             </button>
           </div>
