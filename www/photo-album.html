@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Фотоальбомы</title>
+  <script defer src="js/app.bundle.js"></script><link href="css/app.css" rel="stylesheet"></head>
+  <body>
+    <header class="header">
+      <div class="header-branding">
+    <div class="container">
+        <div class="header-branding__wrapper">
+            <a href="/"><img src="images/logo.svg" alt="logo" class="header-branding__logo"/></a>
+            <ul class="top-nav d-none d-lg-flex">
+                <li class="top-nav__item"><a href="about.html">О нас</a></li>
+                <li class="top-nav__item"><a href="names.html">Имена</a></li>
+                <li class="top-nav__item">
+                    <a href="gallery.html">
+                        Галерея
+                        <svg>
+                            <use href="images/svg/symbol/svg/sprite.symbol.svg#arrow-down_corner"></use>
+                        </svg>
+                    </a>
+                    <ul class="top-nav-sub">
+                        <li class="top-nav-sub__item">
+                            <a href="photo-album.html">Фото</a>
+                        </li>
+                        <li class="top-nav-sub__item">
+                            <a href="video-album.html">Видео</a>
+                        </li>
+                        <li class="top-nav-sub__item">
+                            <a href="audio-album.html">Аудио</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="top-nav__item"><a href="news.html">Новости</a></li>
+                <li class="top-nav__item"><a href="contacts.html">Контакты</a></li>
+            </ul>
+            <form class="top-search d-none d-lg-flex" name="search" method="get" action="/search.html">
+                <input
+                        class="top-search__input"
+                        name="search"
+                        type="text"
+                        placeholder="Поиск по сайту..."
+                />
+                <button class="top-search__submit" type="submit" name="search" title="найти">
+                    <svg>
+                        <use href="images/svg/symbol/svg/sprite.symbol.svg#search"></use>
+                    </svg>
+                </button>
+            </form>
+            <div class="header-branding__mobile-buttons d-flex d-lg-none">
+                <a href="/search.html">
+                    <svg class="svg-icon svg-icon_size_xl me-3">
+                        <use href="images/svg/symbol/svg/sprite.symbol.svg#search"></use>
+                    </svg>
+                </a>
+                <div class="mobile-nav-btn">
+                    <span class="mobile-nav-btn__line"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="mobile-nav d-lg-none">
+    <ul class="container">
+        <li class="mobile-nav__item"><a href="about.html">О нас</a></li>
+        <li class="mobile-nav__item"><a href="names.html">Имена</a></li>
+        <li class="mobile-nav__item">
+            <a href="#">
+                Галерея
+            </a>
+            <ul>
+                <li>
+                    <a href="#">
+                        <svg>
+                            <use href="images/svg/symbol/svg/sprite.symbol.svg#star"></use>
+                        </svg>Фото
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <svg>
+                            <use href="images/svg/symbol/svg/sprite.symbol.svg#star"></use>
+                        </svg>Видео</a>
+                </li>
+                <li>
+                    <a href="#">
+                        <svg>
+                            <use href="images/svg/symbol/svg/sprite.symbol.svg#star"></use>
+                        </svg>Аудио</a>
+                </li>
+            </ul>
+        </li>
+        <li class="mobile-nav__item"><a href="news.html">Новости</a></li>
+        <li class="mobile-nav__item"><a href="contacts.html">Контакты</a></li>
+    </ul>
+</div>
+    </header>
+    <main>
+      <div class="photo-album">
+        <div class="photo-album-container">
+          <section class="bread-crumb-block">
+            <ul class="bread-crumb">
+              <li><a href="#">Главная</a></li>
+              <svg fill="none" width="20" height="20" viewBox="0 0 24 24">
+                <use href="images/svg/symbol/svg/sprite.symbol.svg#arrow-bread-crumbs"></use>
+              </svg>
+              <li><a href="#">Галерея</a></li>
+              <svg fill="none" width="20" height="20" viewBox="0 0 24 24">
+                <use href="images/svg/symbol/svg/sprite.symbol.svg#arrow-bread-crumbs"></use>
+              </svg>
+              <li class="active-crumb">Фотоальбомы</li>
+            </ul>
+          </section>
+          <section class="photo-album__main">
+            <h2 class="photo-album__main__title">Фотоальбомы</h2>
+            <ul class="preview-list">
+              <li class="preview-list__item">
+                <a href="#"></a>
+                <div class="preview-list__item__gradient"></div>
+                <img src="images/photo-album/Вахта Памяти. Осень 2022.jpg" alt="Фото" />
+                <span class="preview-list__item__name"
+                  >Вахта Памяти<br />
+                  Осень 2022</span
+                >
+              </li>
+              <li class="preview-list__item">
+                <a href="#"></a>
+                <div class="preview-list__item__gradient"></div>
+                <img src="images/photo-album/Вахта Памяти. Весна 2022.jpg" alt="Фото" />
+                <span class="preview-list__item__name"
+                  >Вахта Памяти<br />
+                  Весна 2022</span
+                >
+              </li>
+              <li class="preview-list__item">
+                <a href="#"></a>
+                <div class="preview-list__item__gradient"></div>
+                <img src="images/photo-album/Вахта Памяти. Осень 2021.jpg" alt="Фото" />
+                <span class="preview-list__item__name"
+                  >Вахта Памяти<br />
+                  Осень 2021</span
+                >
+              </li>
+              <li class="preview-list__item">
+                <a href="#"></a>
+                <div class="preview-list__item__gradient"></div>
+                <img src="images/photo-album/Вахта Памяти. Осень 2020.jpg" alt="Фото" />
+                <span class="preview-list__item__name"
+                  >Вахта Памяти<br />
+                  Осень 2020</span
+                >
+              </li>
+              <li class="preview-list__item">
+                <a href="#"></a>
+                <div class="preview-list__item__gradient"></div>
+                <img src="images/photo-album/Игра Воин России-2019.jpg" alt="Фото" />
+                <span class="preview-list__item__name">Игра Воин России-2019</span>
+              </li>
+              <li class="preview-list__item">
+                <a href="#"></a>
+                <div class="preview-list__item__gradient"></div>
+                <img src="images/photo-album/Вахта Памяти. Весна 2019.jpg" alt="Фото" />
+                <span class="preview-list__item__name"
+                  >Вахта Памяти<br />
+                  Весна 2019</span
+                >
+              </li>
+              <li class="preview-list__item">
+                <a href="#"></a>
+                <div class="preview-list__item__gradient"></div>
+                <img
+                  src="images/photo-album/Вахта Памяти. Наброски поисковой жизни.jpg"
+                  alt="Фото"
+                />
+                <span class="preview-list__item__name"
+                  >Вахта Памяти<br />
+                  Наброски поисковой жизни.</span
+                >
+              </li>
+              <li class="preview-list__item">
+                <a href="#"></a>
+                <div class="preview-list__item__gradient"></div>
+                <img src="images/photo-album/Вахта Памяти. Весна 2018 года.jpg" alt="Фото" />
+                <span class="preview-list__item__name"
+                  >Вахта Памяти<br />
+                  Весна 2018 года</span
+                >
+              </li>
+              <li class="preview-list__item">
+                <a href="#"></a>
+                <div class="preview-list__item__gradient"></div>
+                <img src="images/photo-album/День Рождения отряда - 2017.jpg" alt="Фото" />
+                <span class="preview-list__item__name">День Рождения отряда - 2017</span>
+              </li>
+              <li class="preview-list__item">
+                <a href="#"></a>
+                <div class="preview-list__item__gradient"></div>
+                <img src="images/photo-album/Вахта Памяти. Осень 2017 года.jpg" alt="Фото" />
+                <span class="preview-list__item__name"
+                  >Вахта Памяти<br />
+                  Осень 2017 года</span
+                >
+              </li>
+              <li class="preview-list__item">
+                <a href="#"></a>
+                <div class="preview-list__item__gradient"></div>
+                <img src="images/photo-album/4 декабря в Плацдарме (2016 год).jpg" alt="Фото" />
+                <span class="preview-list__item__name">4 декабря в Плацдарме (2016 год)</span>
+              </li>
+              <li class="preview-list__item">
+                <a href="#"></a>
+                <div class="preview-list__item__gradient"></div>
+                <img src="images/photo-album/Вахта Памяти. Осень 2016 год.jpg" alt="Фото" />
+                <span class="preview-list__item__name"
+                  >Вахта Памяти<br />
+                  Осень 2016 год</span
+                >
+              </li>
+            </ul>
+            <div class="photo-album__main__pagination">
+              <div class="pagination">
+                <button class="btn_first-page" disabled>
+                  <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
+                    <use
+                      href="images/svg/symbol/svg/sprite.symbol.svg#pagination-db-arrow-right"
+                    ></use>
+                  </svg>
+                </button>
+                <button class="btn_back" disabled>
+                  <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
+                    <use href="images/svg/symbol/svg/sprite.symbol.svg#pagination-arrow-left"></use>
+                  </svg>
+                </button>
+                <button class="btn-page active-btn">1</button>
+                <button class="btn-page">2</button>
+                <button class="btn-page">3</button>
+                <button class="btn_forward">
+                  <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
+                    <use
+                      href="images/svg/symbol/svg/sprite.symbol.svg#pagination-arrow-right"
+                    ></use>
+                  </svg>
+                </button>
+                <button class="btn_last-page">
+                  <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
+                    <use
+                      href="images/svg/symbol/svg/sprite.symbol.svg#pagination-db-arrow-right"
+                    ></use>
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+    </main>
+    <footer><footer class="footer">
+    <div class="container">
+        <div class="row justify-content-between footer__container">
+            <div class="col-8 col-sm-7 col-md-9 col-xl-8">
+                <div class="row">
+                    <div class="col-12 col-md-5 col-lg-3">
+                        <a href="/"><img src="images/logo.svg" alt="logo" class="footer__logo"/></a>
+                    </div>
+                    <div class="col-12 col-md-7 col-lg-9">
+                        <div class="row">
+                            <div class="col-sm-12 col-lg-6">
+                                <div class="footer__contact_item">
+                                    <a href="tel:+79536952867" target="_blank">
+                                        <svg class="svg-icon">
+                                            <use href="images/svg/symbol/svg/sprite.symbol.svg#phone"></use>
+                                        </svg>
+                                        +79536952867
+                                    </a>
+                                </div>
+                                <div class="footer__contact_item">
+                                    <a href="mailto:mporoshin@yandex.ru" target="_blank">
+                                        <svg class="svg-icon">
+                                            <use href="images/svg/symbol/svg/sprite.symbol.svg#envelope"></use>
+                                        </svg>
+                                        mporoshin@yandex.ru
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-sm-12 col-lg-6">
+                                <h4 class="footer__social-title">Мы в социальных сетях</h4>
+                                <div class="footer__social-networks">
+                                    <a href="#" target="_blank">
+                                        <svg class="svg-icon svg-icon_size_xl">
+                                            <use href="images/svg/symbol/svg/sprite.symbol.svg#vk"></use>
+                                        </svg>
+                                    </a>
+                                    <a href="#" target="_blank">
+                                        <svg class="svg-icon svg-icon_size_xl">
+                                            <use href="images/svg/symbol/svg/sprite.symbol.svg#whatsapp"></use>
+                                        </svg>
+                                    </a>
+                                    <a href="#" target="_blank">
+                                        <svg class="svg-icon svg-icon_size_xl">
+                                            <use href="images/svg/symbol/svg/sprite.symbol.svg#viber"></use>
+                                        </svg>
+                                    </a>
+                                    <a href="#" target="_blank">
+                                        <svg class="svg-icon svg-icon_size_xl">
+                                            <use href="images/svg/symbol/svg/sprite.symbol.svg#telegram"></use>
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-4 col-sm-5 col-md-3 col-xl-4">
+                <ul class="footer-nav">
+                    <li class="footer-nav__item">
+                        <a href="#">О нас</a>
+                    </li>
+                    <li class="footer-nav__item">
+                        <a href="#">Имена</a>
+                    </li>
+                    <li class="footer-nav__item">
+                        <a href="#">Галерея</a>
+                    </li>
+                    <li class="footer-nav__item">
+                        <a href="#">Новости</a>
+                    </li>
+                    <li class="footer-nav__item">
+                        <a class="footer__link" href="#">Контакты</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer__copyright">
+            <svg class="svg-icon svg-icon_size_xs">
+                <use href="images/svg/symbol/svg/sprite.symbol.svg#copyright"></use>
+            </svg>
+            Поисковый отряд Факел 2000-2023
+        </div>
+    </div>
+</footer></footer>
+  </body>
+  <script type="text/javascript">
+    window.addEventListener('load', function () {
+        window.mobileNav.start();
+    });
+</script>
+
+</html>

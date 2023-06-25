@@ -76,6 +76,31 @@ module.exports = {
             inject: true
         }),
         new HtmlWebpackPlugin({
+            filename: path.production.base + 'photo-album.html',
+            template: path.src.templates + 'photo-album.html',
+            inject: true,
+        }),
+        new HtmlWebpackPlugin({
+            filename: path.production.base + 'photo-album-specific.html',
+            template: path.src.templates + 'photo-album-specific.html',
+            inject: true,
+        }),
+        new HtmlWebpackPlugin({
+            filename: path.production.base + 'audio-album.html',
+            template: path.src.templates + 'audio-album.html',
+            inject: true,
+        }),
+        new HtmlWebpackPlugin({
+            filename: path.production.base + 'video-album.html',
+            template: path.src.templates + 'video-album.html',
+            inject: true,
+        }),
+        new HtmlWebpackPlugin({
+            filename: path.production.base + 'gallery.html',
+            template: path.src.templates + 'gallery.html',
+            inject: true,
+        }),
+        new HtmlWebpackPlugin({
             filename: path.production.base + 'contacts.html',
             template: path.src.templates + "contacts.html",
             inject: true
