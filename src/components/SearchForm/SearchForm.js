@@ -77,11 +77,11 @@ function SearchForm() {
     setMore(isThereMore);
   }, [showned]);
 
-  useEffect(() => {
+/*   useEffect(() => {
     if (methods.formState.isSubmitSuccessful) {
       methods.reset();
     }
-  }, [methods.formState.isSubmitted]);
+  }, [methods.formState.isSubmitted]); */
 
   //Handlers
   const handleMoreClick = (e) => {
