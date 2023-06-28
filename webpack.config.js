@@ -100,6 +100,21 @@ module.exports = {
             template: path.src.templates + 'gallery.html',
             inject: true,
         }),
+        new HtmlWebpackPlugin({
+            filename: path.production.base + 'contacts.html',
+            template: path.src.templates + "contacts.html",
+            inject: true
+        }),
+        new HtmlWebpackPlugin({
+            filename: path.production.base + 'names.html',
+            template: path.src.templates + "names.html",
+            inject: true
+        }),
+        new HtmlWebpackPlugin({
+            filename: path.production.base + 'detailsPage.html',
+            template: path.src.templates + "detailsPage.html",
+            inject: true
+        }),
         new webpack.ContextReplacementPlugin(/moment[/\\]locale$/, /ru/),
     ],
     devServer: {

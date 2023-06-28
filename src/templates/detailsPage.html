@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+</head>
+<body>
+    <header class="header">
+        <%= require('raw-loader!./layout/header/branding.html').default %>
+    </header>
+    <main class="details-page__main main-details">
+        <section class="main-details__breadcrumbs breadcrumbs-v1">
+            <div class="breadcrumbs-v1__container container">
+                <ul class="breadcrumbs-v1__list">
+                    <li class="breadcrumbs-v1__item">
+                        <a href="/" class="breadcrumbs-v1__link">Главная</a>
+                        <svg width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M6 7.4L0 1.4L1.4 0L6 4.6L10.6 0L12 1.4L6 7.4Z" fill="#F3F3F3"/>
+                        </svg>
+                    </li>
+                    <li class="breadcrumbs-v1__item">
+                        <a href="/" class="breadcrumbs-v1__link">Имена</a>
+                        <svg width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M6 7.4L0 1.4L1.4 0L6 4.6L10.6 0L12 1.4L6 7.4Z" fill="#F3F3F3"/>
+                        </svg>
+                    </li>
+                    <li class="breadcrumbs-v1__item">
+                        <span class="breadcrumbs-v1__current">
+                            Феноберцев Роман Филиппович
+                        </span>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <section class="main-details__info info-main-details">
+            <div class="info-main-details__container container">
+                <h1 class="info-main-details__title">Феноберцев Роман Филиппович</h1>
+                <div class="info-main-details__content">
+                    <div class="info-main-details__image">
+                        <img src="images/man-one.png" alt="Феноберцев Роман Филиппович">
+                    </div>
+                    <div class="info-main-details__inner">
+                        <ul class="info-main-details__list list-info-main">
+                            <li class="list-info-main__item">
+                                <strong>
+                                    Дата рождения:
+                                </strong>
+                                1916 г.
+                            </li>
+                            <li class="list-info-main__item">
+                                <strong>
+                                    Воинское звание и часть:
+                                </strong>
+                                Красноармеец 312 сп, 26 сп, связист.
+                            </li>
+                            <li class="list-info-main__item">
+                                <strong>
+                                    Место рождения:
+                                </strong>
+                                Смоленская обл., Руднянский р-н, д. Пожавская
+                            </li>
+                            <li class="list-info-main__item">
+                                <strong>
+                                    Место проживания:
+                                </strong>
+                                г. Красноярск, ул. Ломоносова, барак № 13
+                            </li>
+                            <li class="list-info-main__item">
+                                <strong>
+                                    Родственники:
+                                </strong>
+                                Отец — Филипп Петрович (адрес тот же)
+                                Жена — Мотостанская Анна Г. Адрес жены: г. Красноярск, ул. 1905 года, д. 6, кв. 1.
+                            </li>
+                            <li class="list-info-main__item">
+                                <strong>
+                                    Дата и место призыва:
+                                </strong>
+                                Кагановический РВК Красноярского края
+                            </li>
+                            <li class="list-info-main__item">
+                                <strong>
+                                    Выбыл:
+                                </strong>
+                                По информации из донесения о безвозвратных потерях Роман Филиппович пропал без вести 29 апреля 1942 года в Старорусском районе.
+                            </li>
+                            <li class="list-info-main__item">
+                                <strong>
+                                    Найден:
+                                </strong>
+                                1 октября 1942 года. Родственники найдены.
+                            </li>
+                            <li class="list-info-main__item">
+                                <strong>
+                                    Похоронен:
+                                </strong>
+                                3 декабря 2022 года на Бадалыкском кладбище г. Красноярска рядом с могилой сестры Чириной (Феноберцевой) Зои Филипповны.
+                            </li>
+                        </ul>
+                        <ul class="info-main-details__awards awards-info-main">
+                            <li class="awards-info-main__image">
+                                <img src="images/detailsPage/awards-1.jpg" alt="Награды">
+                            </li>
+                            <li class="awards-info-main__image">
+                                <img src="images/detailsPage/awards-2.jpg" alt="Награды">
+                            </li>
+                            <li class="awards-info-main__image">
+                                <img src="images/detailsPage/awards-3.jpg" alt="Награды">
+                            </li>
+                            <li class="awards-info-main__image">
+                                <img src="images/detailsPage/awards-4.jpg" alt="Награды">
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="main-details__media media-main-details">
+            <div class="media-main-details__container container">
+                <div class="media-main-details__top">
+                    <h2 class="media-main-details__title">
+                        Фотографии
+                    </h2>
+                    <div class="media-main-details__btns search-btn-swiper">
+                        <button class="search-btn-swiper__prev">
+                            <svg width="14" height="23" viewBox="0 0 14 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M10.5625 21.8747L0.958031 12.2987C0.844031 12.1847 0.763471 12.0612 0.716351 11.9282C0.668471 11.7952 0.644531 11.6527 0.644531 11.5007C0.644531 11.3487 0.668471 11.2062 0.716351 11.0732C0.763471 10.9402 0.844031 10.8167 0.958031 10.7027L10.5625 1.09822C10.8285 0.832219 11.161 0.699219 11.56 0.699219C11.959 0.699219 12.301 0.841719 12.586 1.12672C12.871 1.41172 13.0135 1.74422 13.0135 2.12422C13.0135 2.50422 12.871 2.83672 12.586 3.12172L4.20703 11.5007L12.586 19.8797C12.852 20.1457 12.985 20.4733 12.985 20.8624C12.985 21.2523 12.8425 21.5897 12.5575 21.8747C12.2725 22.1597 11.94 22.3022 11.56 22.3022C11.18 22.3022 10.8475 22.1597 10.5625 21.8747Z" fill="#202020"/>
+                            </svg>
+                        </button>
+                        <button class="search-btn-swiper__next">
+                            <svg width="14" height="23" viewBox="0 0 14 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M3.43747 21.8747L13.042 12.2987C13.156 12.1847 13.2365 12.0612 13.2836 11.9282C13.3315 11.7952 13.3555 11.6527 13.3555 11.5007C13.3555 11.3487 13.3315 11.2062 13.2836 11.0732C13.2365 10.9402 13.156 10.8167 13.042 10.7027L3.43747 1.09822C3.17147 0.832219 2.83897 0.699219 2.43997 0.699219C2.04097 0.699219 1.69897 0.841719 1.41397 1.12672C1.12897 1.41172 0.986468 1.74422 0.986468 2.12422C0.986468 2.50422 1.12897 2.83672 1.41397 3.12172L9.79297 11.5007L1.41397 19.8797C1.14797 20.1457 1.01497 20.4733 1.01497 20.8624C1.01497 21.2523 1.15747 21.5897 1.44247 21.8747C1.72747 22.1597 2.05997 22.3022 2.43997 22.3022C2.81997 22.3022 3.15247 22.1597 3.43747 21.8747Z" fill="#202020"/>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+                <div class="media-main-details__slider swiper">
+                    <div class="media-main-details__wrapper swiper-wrapper">
+                        <div class="media-main-details__slide slide-media-details swiper-slide">
+                            <div class="slide-media-details__info">
+                                <img src="images/detailsPage/Фото-1.jpg" class="slide-media-details__image" alt="Фотография">
+                                <div class="slide-media-details__name">
+                                    Феноберцев Роман Филиппович
+                                </div>
+                            </div>
+                        </div>
+                        <div class="media-main-details__slide slide-media-details swiper-slide">
+                            <div class="slide-media-details__info">
+                                <img src="images/detailsPage/Фото-2.jpg" class="slide-media-details__image" alt="Фотография">
+                                <div class="slide-media-details__name">
+                                    Запись, сделанная рукой Феноберцева Р.Ф.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="media-main-details__slide slide-media-details swiper-slide">
+                            <div class="slide-media-details__info">
+                                <img src="images/detailsPage/Фото-3.jpg" class="slide-media-details__image" alt="Фотография">
+                                <div class="slide-media-details__name">
+                                    Записка из медальона
+                                </div>
+                            </div>
+                        </div>
+                        <div class="media-main-details__slide slide-media-details swiper-slide">
+                            <div class="slide-media-details__info">
+                                <img src="images/detailsPage/Фото-4.jpg" class="slide-media-details__image" alt="Фотография">
+                                <div class="slide-media-details__name">
+                                    Личные вещи
+                                </div>
+                            </div>
+                        </div>
+                        <div class="media-main-details__slide slide-media-details swiper-slide">
+                            <div class="slide-media-details__info">
+                                <img src="images/detailsPage/Фото-5.jpg" class="slide-media-details__image" alt="Фотография">
+                                <div class="slide-media-details__name">
+                                    Торжественное захоронение
+                                </div>
+                            </div>
+                        </div>
+                        <div class="media-main-details__slide slide-media-details swiper-slide">
+                            <div class="slide-media-details__info">
+                                <img src="images/detailsPage/Фото-6.jpg" class="slide-media-details__image" alt="Фотография">
+                                <div class="slide-media-details__name">
+                                    Информация из донесения о безвозвратных потерях 25 сд по состоянию на 30 мая 1942 г.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="media-main-details__slide slide-media-details swiper-slide">
+                            <div class="slide-media-details__info">
+                                <img src="images/detailsPage/Фото-7.jpg" class="slide-media-details__image" alt="Фотография">
+                                <div class="slide-media-details__name">
+                                    Именной список участников Великой Отечественной войны, от которых родственники не имеют сведений
+                                </div>
+                            </div>
+                        </div>
+                        <div class="media-main-details__slide slide-media-details swiper-slide">
+                            <div class="slide-media-details__info">
+                                <img src="images/detailsPage/Фото-8.jpg" class="slide-media-details__image" alt="Фотография">
+                                <div class="slide-media-details__name">
+                                    Именной список безвозвратных потерях 312 сп 26 сд по состоянию на 19 мая 1942 г.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="media-main-details__slide slide-media-details swiper-slide">
+                            <div class="slide-media-details__info">
+                                <img src="images/detailsPage/Фото-9.jpg" class="slide-media-details__image" alt="Фотография">
+                                <div class="slide-media-details__name">
+                                    Книга памяти. Красноярский край. Том 1
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="media-main-details__pagination"></div>
+                </div>
+            </div>
+        </section>
+        <section class="main-details__documents documents-main-details">
+            <div class="documents-main-details__container container">
+                <h2 class="documents-main-details__title">Документы</h2>
+                <div class="documents-main-details__content">
+                    <ul class="documents-main-details__list">
+                        <li class="documents-main-details__item item-documents-details">
+                            <div class="item-documents-details__image">
+                                <img src="images/detailsPage/docs.png" alt="docs">
+                            </div>
+                            <div class="item-documents-details__texts">
+                                <a href="" class="item-documents-details__download">
+                                    Информация из донесения о безвозвратных потерях 25 сд по состоянию на 30 мая 1942 г. Источник информации: ЦАМО ф. 58, оп. 818883, д. 167.
+                                </a>
+                                <div class="item-documents-details__size">
+                                    PDF (262 КБ)
+                                </div>
+                            </div>
+                        </li>
+                        <li class="documents-main-details__item item-documents-details">
+                            <div class="item-documents-details__image">
+                                <img src="images/detailsPage/docs.png" alt="docs">
+                            </div>
+                            <div class="item-documents-details__texts">
+                                <a href="" class="item-documents-details__download">
+                                    Именной список участников Великой Отечественной войны, от которых родственники не имеют сведений. Источник информации: ЦАМО ф. 58, оп. 977520, д. 26.
+                                </a>
+                                <div class="item-documents-details__size">
+                                    PDF (270 КБ)
+                                </div>
+                            </div>
+                        </li>
+                        <li class="documents-main-details__item item-documents-details">
+                            <div class="item-documents-details__image">
+                                <img src="images/detailsPage/docs.png" alt="docs">
+                            </div>
+                            <div class="item-documents-details__texts">
+                                <a href="" class="item-documents-details__download">
+                                    Именной список безвозвратных потерях 312 сп 26 сд по состоянию на 19 мая 1942 г. Источник информации: ЦАМО ф. 6864, оп. 261227, д. 1.
+                                </a>
+                                <div class="item-documents-details__size">
+                                    PDF (262 КБ)
+                                </div>
+                            </div>
+                        </li>
+                        <li class="documents-main-details__item item-documents-details">
+                            <div class="item-documents-details__image">
+                                <img src="images/detailsPage/docs.png" alt="docs">
+                            </div>
+                            <div class="item-documents-details__texts">
+                                <a href="" class="item-documents-details__download">
+                                    Книга памяти. Красноярский край. Том 1
+                                </a>
+                                <div class="item-documents-details__size">
+                                    PDF (360 КБ)
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <section class="main-details__mass-media mass-media-details">
+            <div class="mass-media-details__container container">
+                <h2 class="mass-media-details__title">СМИ о бойце</h2>
+                <div class="mass-media-details__content">
+                    <div class="mass-media-details__cards">
+                        <article class="mass-media-details__card cards-mass-media">
+                            <h3 class="cards-mass-media__subtitle">
+                                Поисковики нашли родственников солдата, пропавшего без вести в 1942г.
+                            </h3>
+                            <p class="cards-mass-media__descr">
+                                Поисковики отряда «Факел» из города Киров, работая в ходе осеннего этапа межрегиональной Вахты Памяти «Поисковой экспедиции «Долина», нашли останки семи солдат. Личность одного из них установили по записке из смертного медальона, а позже удалось найти семью погибшего бойца.
+                            </p>
+                            <div class="cards-mass-media__image">
+                                <img src="images/detailsPage/card-1.jpg" alt="Фотография">
+                            </div>
+                        </article>
+                        <article class="mass-media-details__card cards-mass-media">
+                            <h3 class="cards-mass-media__subtitle">
+                                «Отец, наш Ромка вернулся». В Красноярске похоронили останки красноармейца
+                            </h3>
+                            <p class="cards-mass-media__descr">
+                                Волнительное мероприятие прошло в День Неизвестного Солдата, 3 декабря, на Мемориале Победы. В Красноярске на Бадалыкском кладбище были захоронены останки красноармейца Феноберцева Романа Филипповича. 
+                            </p>
+                            <div class="cards-mass-media__image">
+                                <img src="images/detailsPage/card-2.jpg" alt="Фотография">
+                            </div>
+                        </article>
+                        <article class="mass-media-details__card cards-mass-media">
+                            <h3 class="cards-mass-media__subtitle">
+                                В Красноярске захоронили останки погибшего во время ВОВ солдата
+                            </h3>
+                            <p class="cards-mass-media__descr">
+                                В Красноярске захоронили останки солдата, погибшего во время Великой Отечественной войны, призванного на воинскую службу с территории Красноярского края. 
+                            </p>
+                            <div class="cards-mass-media__image">
+                                <img src="images/detailsPage/card-3.jpg" alt="Фотография">
+                            </div>
+                        </article>
+                    </div>
+                    <div class="mass-media-details__btns btns-mass-media-details">
+                        <button class="btns-mass-media-details__btn">Больше новостей</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <%= require('raw-loader!./layout/footer.html').default %>
+    </footer>
+</body>
+</html>

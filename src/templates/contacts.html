@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Контакты</title>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css"
+    />
+</head>
+<body>
+<header class="header">
+    <%= require('raw-loader!./layout/header/branding.html').default %>
+</header>
+<main>
+    <div class="breadcrumbs-v1">
+        <div>
+            <div class="breadcrumbs-v1__container container">
+                <ul class="breadcrumbs-v1__list">
+                    <li class="breadcrumbs-v1__item">
+                        <a href="/" class="breadcrumbs-v1__link">Главная</a>
+                        <p></p>
+                        <svg width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M6 7.4L0 1.4L1.4 0L6 4.6L10.6 0L12 1.4L6 7.4Z" fill="#F3F3F3"/>
+                        </svg>
+                    </li>
+                    <li class="breadcrumbs-v1__item">
+                                <span class="breadcrumbs-v1__current">
+                                    Контакты
+                                </span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <section class="main-contacts">
+        <div class="main-contacts__container container">
+            <div class="main-contacts__content">
+                <h1 class="main-contacts__title">Контакты</h1>
+                <p class="main-contacts__descr">
+                    Поисковый отряд &laquo;Факел&raquo; Вятского государственного университета (Кировская областная
+                    общественная молодёжная поисковая организация &laquo;ДОЛГ&raquo;)
+                </p>
+                <div class="main-contacts__info info-contacts">
+                    <div class="info-contacts__img">
+                        <img src="images/contacts_photo.jpg" alt="Михаил Юрьевич">
+                    </div>
+                    <div class="info-contacts__content">
+                        <div class="info-contacts__more more-info-contacts">
+                            <p class="info-contacts__text more-info-contacts__text">
+                                Михаил Юрьевич Порошин&nbsp;&mdash; командир поискового отряда &laquo;Факел&raquo; с&nbsp;2005&nbsp;года,
+                                который считает своей миссией сохранить память о&nbsp;героических поступках наших
+                                предков. <span id="dots">...</span><span id="more">Под его началом отряд из&nbsp;добровольцев, объединённых общей идеей, превратился в&nbsp;жизнеспособный коллектив со&nbsp;своими традициями, правилами и&nbsp;преемственностью.
+                                        Михаил Юрьевич поддерживает связь с&nbsp;большинством родственников, найденных отрядом бойцов, ведёт с&nbsp;ними переписку, помогает другим в&nbsp;поиске информации о&nbsp;пропавших без вести во&nbsp;время войны.
+                                        Историк по&nbsp;профессии, он&nbsp;ориентируется в&nbsp;архивных материалах, картах, военной литературе. Михаил Юрьевич вошёл в&nbsp;число организаторов проведения уроков мужества для учащихся школ, ссузов и&nbsp;вузов&nbsp;г. Кирова.</span>
+                            </p>
+                            <button onclick="window.contactsPage.showMore()" class="more-info-contacts__btn" id="myBtn">
+                                Читать далее
+                            </button>
+                        </div>
+                        <ul class="info-contacts__list">
+                            <li class="info-contacts__item">
+                                <a href="tel:79536952867" class="info-contacts__link">
+                                    <svg class="svg-icon svg-icon_size_xl">
+                                        <use href="images/svg/symbol/svg/sprite.symbol.svg#phone"></use>
+                                    </svg>
+                                    <span>
+                                        +7-953-695-28-67
+                                    </span>
+                                </a>
+                                (<a href="#" target="_blank" class="info-contacts__link"><span>WhatsApp</span></a>,
+                                <a href="#" target="_blank" class="info-contacts__link"><span>Viber</span></a>,
+                                <a href="#" target="_blank" class="info-contacts__link"><span>Telegram</span></a>)
+                            </li>
+                            <li class="info-contacts__item">
+                                <a href="mailto:mporoshin@yandex.ru" class="info-contacts__link">
+                                    <svg class="svg-icon svg-icon_size_xl">
+                                        <use href="images/svg/symbol/svg/sprite.symbol.svg#envelope"></use>
+                                    </svg>
+                                    <span>mporoshin@yandex.ru</span>
+                                </a>
+                            </li>
+                            <li class="info-contacts__item">
+                                <a target="_blank" href="https://vk.com/fakel.kirov" class="info-contacts__link">
+                                    <svg class="svg-icon svg-icon_size_xl">
+                                        <use href="images/svg/symbol/svg/sprite.symbol.svg#vk"></use>
+                                    </svg>
+                                    <span>
+                                                vk.com/fakel.kirov
+                                            </span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="main-contacts__feedback feedback-contacts">
+        <div class="feedback-contacts__container container">
+            <h2 class="feedback-contacts__title">Обратная связь</h2>
+            <div class="form-contacts__form">
+                <form action="https://jsonplaceholder.typicode.com/posts" method="POST"
+                      class="feedback-contacts__form form-contacts">
+                    <div class="form-contacts__fields">
+                        <div class="form-contacts__field">
+                            <input data-path="userName" id="userName" class="form-contacts__input" name="name"
+                                   type="text"
+                                   required>
+                            <label id="placeholderName" class="form-contacts__placeholder">Введите ваше имя*</label>
+                            <button class="form-contacts__delete _active" type="button">
+                                <svg width="30" height="30" viewBox="0 0 30 30" fill="none"
+                                     xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M15 16.75L8.875 22.875C8.64583 23.1042 8.35417 23.2188 8 23.2188C7.64583 23.2188 7.35417 23.1042 7.125 22.875C6.89583 22.6458 6.78125 22.3542 6.78125 22C6.78125 21.6458 6.89583 21.3542 7.125 21.125L13.25 15L7.125 8.875C6.89583 8.64583 6.78125 8.35417 6.78125 8C6.78125 7.64583 6.89583 7.35417 7.125 7.125C7.35417 6.89583 7.64583 6.78125 8 6.78125C8.35417 6.78125 8.64583 6.89583 8.875 7.125L15 13.25L21.125 7.125C21.3542 6.89583 21.6458 6.78125 22 6.78125C22.3542 6.78125 22.6458 6.89583 22.875 7.125C23.1042 7.35417 23.2188 7.64583 23.2188 8C23.2188 8.35417 23.1042 8.64583 22.875 8.875L16.75 15L22.875 21.125C23.1042 21.3542 23.2188 21.6458 23.2188 22C23.2188 22.3542 23.1042 22.6458 22.875 22.875C22.6458 23.1042 22.3542 23.2188 22 23.2188C21.6458 23.2188 21.3542 23.1042 21.125 22.875L15 16.75Z"
+                                          fill="#4F4F4F"/>
+                                </svg>
+                            </button>
+                            <div class="form-contacts__success">
+                                <svg width="20" height="14" viewBox="0 0 20 14" fill="none"
+                                     xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M6.93729 13.9688C6.77062 13.9688 6.61437 13.9425 6.46854 13.89C6.3227 13.8375 6.18729 13.7492 6.06229 13.625L0.687287 8.25C0.458121 8.02083 0.348537 7.72375 0.358537 7.35875C0.368537 6.99375 0.488537 6.69708 0.718537 6.46875C0.947704 6.23958 1.23937 6.125 1.59354 6.125C1.9477 6.125 2.23937 6.23958 2.46854 6.46875L6.93729 10.9375L17.531 0.34375C17.7602 0.114583 18.0573 0 18.4223 0C18.7873 0 19.084 0.114583 19.3123 0.34375C19.5415 0.572917 19.656 0.87 19.656 1.235C19.656 1.6 19.5415 1.89667 19.3123 2.125L7.81229 13.625C7.68729 13.75 7.55187 13.8388 7.40604 13.8913C7.2602 13.9438 7.10395 13.9696 6.93729 13.9688Z"
+                                          fill="#4F4F4F"/>
+                                </svg>
+                            </div>
+                            <span data-error="userName" class="form-contacts__message"></span>
+                        </div>
+                        <div class="form-contacts__inner">
+                            <div class="form-contacts__field">
+                                <!-- <input data-path="userTel" id="userPhone" class="form-contacts__input" name="phone" type="tel" required> -->
+                                <input data-path="userTel" id="userPhone" class="form-contacts__input" name="tel"
+                                       type="text" required>
+                                <label id="placeholderPhone" class="form-contacts__placeholder">Введите
+                                    ваш телефон</label>
+                                <button class="form-contacts__delete _active" type="button">
+                                    <svg width="30" height="30" viewBox="0 0 30 30" fill="none"
+                                         xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M15 16.75L8.875 22.875C8.64583 23.1042 8.35417 23.2188 8 23.2188C7.64583 23.2188 7.35417 23.1042 7.125 22.875C6.89583 22.6458 6.78125 22.3542 6.78125 22C6.78125 21.6458 6.89583 21.3542 7.125 21.125L13.25 15L7.125 8.875C6.89583 8.64583 6.78125 8.35417 6.78125 8C6.78125 7.64583 6.89583 7.35417 7.125 7.125C7.35417 6.89583 7.64583 6.78125 8 6.78125C8.35417 6.78125 8.64583 6.89583 8.875 7.125L15 13.25L21.125 7.125C21.3542 6.89583 21.6458 6.78125 22 6.78125C22.3542 6.78125 22.6458 6.89583 22.875 7.125C23.1042 7.35417 23.2188 7.64583 23.2188 8C23.2188 8.35417 23.1042 8.64583 22.875 8.875L16.75 15L22.875 21.125C23.1042 21.3542 23.2188 21.6458 23.2188 22C23.2188 22.3542 23.1042 22.6458 22.875 22.875C22.6458 23.1042 22.3542 23.2188 22 23.2188C21.6458 23.2188 21.3542 23.1042 21.125 22.875L15 16.75Z"
+                                              fill="#4F4F4F"/>
+                                    </svg>
+                                </button>
+                                <div class="form-contacts__success">
+                                    <svg width="20" height="14" viewBox="0 0 20 14" fill="none"
+                                         xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M6.93729 13.9688C6.77062 13.9688 6.61437 13.9425 6.46854 13.89C6.3227 13.8375 6.18729 13.7492 6.06229 13.625L0.687287 8.25C0.458121 8.02083 0.348537 7.72375 0.358537 7.35875C0.368537 6.99375 0.488537 6.69708 0.718537 6.46875C0.947704 6.23958 1.23937 6.125 1.59354 6.125C1.9477 6.125 2.23937 6.23958 2.46854 6.46875L6.93729 10.9375L17.531 0.34375C17.7602 0.114583 18.0573 0 18.4223 0C18.7873 0 19.084 0.114583 19.3123 0.34375C19.5415 0.572917 19.656 0.87 19.656 1.235C19.656 1.6 19.5415 1.89667 19.3123 2.125L7.81229 13.625C7.68729 13.75 7.55187 13.8388 7.40604 13.8913C7.2602 13.9438 7.10395 13.9696 6.93729 13.9688Z"
+                                              fill="#4F4F4F"/>
+                                    </svg>
+                                </div>
+                                <span data-error="userTel" class="form-contacts__message"></span>
+                            </div>
+                            <div class="form-contacts__field">
+                                <input data-path="userEmail" id="userMail" class="form-contacts__input" name="email"
+                                       type="mail" required>
+                                <label id="placeholderMail" class="form-contacts__placeholder">Введите
+                                    ваш email*</label>
+                                <button class="form-contacts__delete _active" type="button">
+                                    <svg width="30" height="30" viewBox="0 0 30 30" fill="none"
+                                         xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M15 16.75L8.875 22.875C8.64583 23.1042 8.35417 23.2188 8 23.2188C7.64583 23.2188 7.35417 23.1042 7.125 22.875C6.89583 22.6458 6.78125 22.3542 6.78125 22C6.78125 21.6458 6.89583 21.3542 7.125 21.125L13.25 15L7.125 8.875C6.89583 8.64583 6.78125 8.35417 6.78125 8C6.78125 7.64583 6.89583 7.35417 7.125 7.125C7.35417 6.89583 7.64583 6.78125 8 6.78125C8.35417 6.78125 8.64583 6.89583 8.875 7.125L15 13.25L21.125 7.125C21.3542 6.89583 21.6458 6.78125 22 6.78125C22.3542 6.78125 22.6458 6.89583 22.875 7.125C23.1042 7.35417 23.2188 7.64583 23.2188 8C23.2188 8.35417 23.1042 8.64583 22.875 8.875L16.75 15L22.875 21.125C23.1042 21.3542 23.2188 21.6458 23.2188 22C23.2188 22.3542 23.1042 22.6458 22.875 22.875C22.6458 23.1042 22.3542 23.2188 22 23.2188C21.6458 23.2188 21.3542 23.1042 21.125 22.875L15 16.75Z"
+                                              fill="#4F4F4F"/>
+                                    </svg>
+                                </button>
+                                <div class="form-contacts__success">
+                                    <svg width="20" height="14" viewBox="0 0 20 14" fill="none"
+                                         xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M6.93729 13.9688C6.77062 13.9688 6.61437 13.9425 6.46854 13.89C6.3227 13.8375 6.18729 13.7492 6.06229 13.625L0.687287 8.25C0.458121 8.02083 0.348537 7.72375 0.358537 7.35875C0.368537 6.99375 0.488537 6.69708 0.718537 6.46875C0.947704 6.23958 1.23937 6.125 1.59354 6.125C1.9477 6.125 2.23937 6.23958 2.46854 6.46875L6.93729 10.9375L17.531 0.34375C17.7602 0.114583 18.0573 0 18.4223 0C18.7873 0 19.084 0.114583 19.3123 0.34375C19.5415 0.572917 19.656 0.87 19.656 1.235C19.656 1.6 19.5415 1.89667 19.3123 2.125L7.81229 13.625C7.68729 13.75 7.55187 13.8388 7.40604 13.8913C7.2602 13.9438 7.10395 13.9696 6.93729 13.9688Z"
+                                              fill="#4F4F4F"/>
+                                    </svg>
+                                </div>
+                                <span data-error="userEmail" class="form-contacts__message"></span>
+                            </div>
+                        </div>
+                        <div class="form-contacts__field">
+                            <textarea id="userComment" maxlength="500" class="form-contacts__textarea" required
+                                      name="comments"></textarea>
+                            <label id="labelComment" class="form-contacts__placeholder">Введите ваше сообщение*</label>
+                            <div class="form-contacts__counter">
+                                <span class="form-contacts__current">0</span>
+                                <span class="form-contacts__total">/ 500</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-contacts__btns btns-form-contacts">
+                        <div class="btns-form-contacts__col btns-form-contacts__col_capcha">
+                            <div class="btns-form-contacts__reminder">*Поля обязательны для заполнения</div>
+                            <div class="btns-form-contacts__captcha">
+                                <div class="g-recapcha" data-sitekey="6Ldl988lAAAAAHTj3JGJRz5zbXVP_Ewfi2nDsydq">
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="btns-form-contacts__col btns-form-contacts__col_sec">
+                            <div class="btns-form-contacts__checkbox checkbox-contacts">
+                                <input id="contactsFormCheckbox" class="checkbox-contacts__input" type="checkbox"
+                                       value="1"
+                                       name="form[]" required>
+                                <label for="contactsFormCheckbox" class="checkbox-contacts__label">
+                                    <div class="checkbox-contacts__text">Я согласен(а) на обработку <a href="#">персональных
+                                        данных</a></div>
+                                </label>
+                            </div>
+                            <button type="submit" class="btns-form-contacts__btn">Отправить</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+</main>
+<%= require('raw-loader!./layout/footer.html').default %>
+</body>
+<%= require('raw-loader!./layout/bottom-scripts.html').default %>
+<script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+<script type="text/javascript">
+    window.addEventListener('load', function () {
+        window.contactsPage.start();
+    });
+</script>
+</html>

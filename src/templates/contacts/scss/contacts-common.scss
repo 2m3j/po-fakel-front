@@ -1,0 +1,85 @@
+.breadcrumbs-v1 {
+    @include block-padding;
+    /* .breadcrumbs__list */
+    &__list {
+        display: flex;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+    /* .breadcrumbs__item */
+    &__item {
+        position: relative;
+        svg {
+            position: absolute;
+            right: -20px;
+            transform: rotate(270deg);
+            path {
+                fill: #000;
+            }
+            @include media_from('xs') {
+                top: 9px;
+            }
+            @include media_from('sm') {
+                top: 11px;
+                right: -30px;
+            }
+            @include media_from('xl') {
+                top: 13px;
+            }
+        }
+        &:not(:last-child) {
+            margin-right: 24px;
+        }
+        @include media_from('sm') {
+            &:not(:last-child) {
+                margin-right: 36px;
+            }
+        }
+        @include media_from('md') {
+            &:not(:last-child) {
+                margin-right: 3rem;
+            }
+        }
+    }
+    /* .breadcrumbs__link */
+    &__link {
+        font-family: var(--mdc-typography-font-family), Verdana, Geneva, Tahoma, sans-serif;
+        font-weight: 600;
+        line-height: 130%;
+        color: var(--blackTextColor);
+        text-decoration: none;
+        @media (any-hover: hover){
+            &:focus-visible {
+                color: #DA8A3A;
+                outline: none;
+            }
+        }
+        @include media_from('xs') {
+            font-size: 15px;
+        }
+        @include media_from('sm') {
+            font-size: 20px;
+        }
+        @include media_from('lg') {
+            font-size: 24px;
+        }
+    }
+    /* .breadcrumbs__current */
+    &__current {
+        font-family: var(--mdc-typography-font-family), Verdana, Geneva, Tahoma, sans-serif;
+        font-weight: 600;
+        line-height: 130%;
+        white-space: nowrap;
+        color: var(--mdc-theme-primary);
+        @include media_from('xs') {
+            font-size: 15px;
+        }
+        @include media_from('sm') {
+            font-size: 20px;
+        }
+        @include media_from('lg') {
+            font-size: 24px;
+        }
+    }
+}
