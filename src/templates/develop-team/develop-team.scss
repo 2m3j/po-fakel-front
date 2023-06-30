@@ -2,6 +2,7 @@
 @import "../../components/swiper-gallery/swiper-gallery.scss";
 @import "./_title";
 @import "./_about";
+@import "./develop-team-grid.scss";
 
 .develop-team {
     background: #FCFCFC;
@@ -25,5 +26,32 @@
     @include media_from('md') {
         padding-left: 30px;
         padding-right: 30px;
+    }
+}
+
+.develop-team__initiator {
+    margin-bottom: 30px;
+    @include media_from('md') {
+        margin-bottom: 35px;
+    }
+    @include media_from('xl') {
+        margin-bottom: 40px;
+    }
+    .develop-team__initiator__title {
+        margin-bottom: 24px;
+        @include media_from('xl') {
+            margin-bottom: 32px;
+        }
+    }
+}
+
+.develop-team-section-h3 {
+    color: #000;
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    @include media_from('xl') {
+        font-size: 35px;
     }
 }
