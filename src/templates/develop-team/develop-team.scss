@@ -1,0 +1,27 @@
+@import "../../components/bread-crumb/bread-crumb.scss";
+@import "../../components/swiper-gallery/swiper-gallery.scss";
+
+.develop-team {
+    background: #FCFCFC;
+    color: $font-color;
+    padding-bottom: 102px;
+    padding-top: 24px;
+    @include media_from('sm') {
+        padding-bottom: 112px;
+        padding-top: 40px;
+    }
+    @include media_from('lg') {
+        padding-top: 64px;
+    }
+}
+
+.develop-team-container {
+    max-width: 1170px;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin: 0 auto;
+    @include media_from('md') {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+}

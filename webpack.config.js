@@ -115,6 +115,11 @@ module.exports = {
             template: path.src.templates + "detailsPage.html",
             inject: true
         }),
+        new HtmlWebpackPlugin({
+            filename: path.production.base + 'develop-team.html',
+            template: path.src.templates + "develop-team.html",
+            inject: true
+        }),
         new webpack.ContextReplacementPlugin(/moment[/\\]locale$/, /ru/),
     ],
     devServer: {
