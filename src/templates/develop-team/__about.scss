@@ -1,0 +1,35 @@
+.develop-team__about {
+    margin-bottom: 27px;
+    @include media_from('md') {
+        margin-bottom: 59px;
+    }
+    @include media_from('xl') {
+        margin-bottom: 44px;
+    }
+}
+
+.develop-team__about__container {
+    border-radius: 5px;
+    background: #E9E9E9;
+    padding: 10px;
+}
+
+.develop-team__about__container__h3 {
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    color: $font-color;
+    margin-bottom: 24px;
+    @include media_from('xl') {
+        font-size: 35px;
+    }
+}
+
+.develop-team__about__container__h4 {
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 150%;
+    color: #000;
+    margin: 0;
+}
