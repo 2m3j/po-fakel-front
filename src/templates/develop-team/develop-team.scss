@@ -49,7 +49,30 @@
     padding-top: 40px;
     padding-bottom: 40px;
     background: #E9E9E9;
+    margin-bottom: 30px;
+    @include media_from('md') {
+        margin-bottom: 35px;
+    }
+    @include media_from('xl') {
+        margin-bottom: 40px;
+    }
     .develop-team__designer__title {
+        margin-bottom: 24px;
+        @include media_from('xl') {
+            margin-bottom: 32px;
+        }
+    }
+}
+
+.develop-team__developer {
+    margin-bottom: 30px;
+    @include media_from('md') {
+        margin-bottom: 42px;
+    }
+    @include media_from('xl') {
+        margin-bottom: 56px;
+    }
+    .develop-team__developer__title {
         margin-bottom: 24px;
         @include media_from('xl') {
             margin-bottom: 32px;
