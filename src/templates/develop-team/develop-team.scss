@@ -45,6 +45,18 @@
     }
 }
 
+.develop-team__designer {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    background: #E9E9E9;
+    .develop-team__designer__title {
+        margin-bottom: 24px;
+        @include media_from('xl') {
+            margin-bottom: 32px;
+        }
+    }
+}
+
 .develop-team-section-h3 {
     color: #000;
     font-size: 25px;

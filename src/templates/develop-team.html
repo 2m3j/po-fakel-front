@@ -1,109 +1,380 @@
 <!DOCTYPE html>
 <html lang="ru">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
     <title>Команда разработки</title>
-</head>
-<body>
+  </head>
+  <body>
     <header class="header">
-        <%= require('raw-loader!./layout/header/branding.html').default %>
+      <%= require('raw-loader!./layout/header/branding.html').default %>
     </header>
     <main>
-        <div class="develop-team">
-            <section class="bread-crumb-block">
-                <div class="develop-team-container">
-                    <ul class="bread-crumb">
-                        <li><a href="#">Главная</a></li>
-                        <svg fill="none" width="20" height="20" viewBox="0 0 24 24">
-                          <use href="images/svg/symbol/svg/sprite.symbol.svg#arrow-bread-crumbs"></use>
-                        </svg>
-                        <li class="active-crumb">Команда разработки</li>
-                      </ul>
+      <div class="develop-team">
+        <section class="bread-crumb-block">
+          <div class="develop-team-container">
+            <ul class="bread-crumb">
+              <li><a href="#">Главная</a></li>
+              <svg fill="none" width="20" height="20" viewBox="0 0 24 24">
+                <use href="images/svg/symbol/svg/sprite.symbol.svg#arrow-bread-crumbs"></use>
+              </svg>
+              <li class="active-crumb">Команда разработки</li>
+            </ul>
+          </div>
+        </section>
+        <section class="develop-team__title">
+          <div class="develop-team-container">
+            <h2 class="develop-team__title__heading">Команда разработки</h2>
+          </div>
+        </section>
+        <section class="develop-team__about">
+          <div class="develop-team-container">
+            <div class="develop-team__about__container">
+              <h3 class="develop-team__about__container__h3">О проекте</h3>
+              <h4 class="develop-team__about__container__h4">Информация о проекте</h4>
+            </div>
+          </div>
+        </section>
+        <section class="develop-team__initiator">
+          <div class="develop-team-container">
+            <div class="develop-team__initiator__title">
+              <h3 class="develop-team__initiator__title__h3 develop-team-section-h3">
+                Инициаторы проекта (Заказчик, Менеджер проекта)
+              </h3>
+            </div>
+            <ul class="develop-team-grid">
+              <li class="develop-team-grid__item">
+                <div class="develop-team-grid__item__image-block">
+                  <img
+                    src="images/develop-team/Светлана Овчинникова.png"
+                    width="100%"
+                    height="100%"
+                    alt="Фото"
+                  />
                 </div>
-            </section>
-            <section class="develop-team__title">
-                <div class="develop-team-container">
-                    <h2 class="develop-team__title__heading">Команда разработки</h2>
-                </div>
-            </section>
-            <section class="develop-team__about">
-                <div class="develop-team-container">
-                    <div class="develop-team__about__container">
-                        <h3 class="develop-team__about__container__h3">О проекте</h3>
-                        <h4 class="develop-team__about__container__h4">Информация о проекте</h4>
-                    </div>
-                </div>
-            </section>
-            <section class="develop-team__initiator">
-                <div class="develop-team-container">
-                    <div class="develop-team__initiator__title">
-                        <h3 class="develop-team__initiator__title__h3 develop-team-section-h3">Инициаторы проекта (Заказчик, Менеджер проекта)</h3>
-                    </div>
-                    <ul class="develop-team-grid">
-                        <li class="develop-team-grid__item">
-                            <div class="develop-team-grid__item__image-block">
-                                <img src="images/develop-team/Светлана Овчинникова.png" width="100%" height="100%" alt="Фото">
-                            </div>
-                            <div class="develop-team-grid__item__info-block">
-                                <h4 class="develop-team-grid__item__info-block__position">Инициатор проекта Тестировщик</h4>
-                                <p class="develop-team-grid__item__info-block__name">Светлана Овчинникова</p>
-                                <div class="develop-team-grid__item__info-block__contacts">
-                                    <span>Контакты:</span>
-                                    <ul class="develop-team-grid__item__info-block__contacts__list">
-                                        <li class="develop-team-grid__item__info-block__contacts__list__item">
-                                            <a href="">Telegram</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="develop-team-grid__item">
-                            <div class="develop-team-grid__item__image-block">
-                                <img src="images/develop-team/avatar-develop.png" width="100%" height="100%" alt="Фото">
-                            </div>
-                            <div class="develop-team-grid__item__info-block">
-                                <h4 class="develop-team-grid__item__info-block__position">Должность</h4>
-                                <p class="develop-team-grid__item__info-block__name">Скотт Кли́нтон Ривз</p>
-                                <div class="develop-team-grid__item__info-block__contacts">
-                                    <span>Контакты:</span>
-                                    <ul class="develop-team-grid__item__info-block__contacts__list">
-                                        <li class="develop-team-grid__item__info-block__contacts__list__item">
-                                            <a href="">sania.gamayunov@yandex.ru</a>
-                                        </li>
-                                        <li class="develop-team-grid__item__info-block__contacts__list__item">
-                                            <a href="">+7 901 381 68 43</a>
-                                        </li>
-                                        <li class="develop-team-grid__item__info-block__contacts__list__item">
-                                            <a href="">Telegram</a>
-                                        </li>
-                                        <li class="develop-team-grid__item__info-block__contacts__list__item">
-                                            <a href="">Linkedin</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <div class="develop-team-grid__item__info-block__portfolio">
-                                    <span>Портфолио:</span>
-                                    <ul class="develop-team-grid__item__info-block__portfolio__list">
-                                        <li class="develop-team-grid__item__info-block__portfolio__list__item">
-                                            <a href="">Behance</a>
-                                        </li>
-                                        <li class="develop-team-grid__item__info-block__portfolio__list__item">
-                                            <a href="">Notion / резюме</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </li>
+                <div class="develop-team-grid__item__info-block">
+                  <h4 class="develop-team-grid__item__info-block__position">
+                    Инициатор проекта Тестировщик
+                  </h4>
+                  <p class="develop-team-grid__item__info-block__name">Светлана Овчинникова</p>
+                  <div class="develop-team-grid__item__info-block__contacts">
+                    <span>Контакты:</span>
+                    <ul class="develop-team-grid__item__info-block__contacts__list">
+                      <li class="develop-team-grid__item__info-block__contacts__list__item">
+                        <a href="https://t.me/turoso43" target="_blank">Telegram</a>
+                      </li>
                     </ul>
+                  </div>
                 </div>
-            </section>
-        </div>
+              </li>
+              <li class="develop-team-grid__item">
+                <div class="develop-team-grid__item__image-block">
+                  <img
+                    src="images/develop-team/avatar-develop.png"
+                    width="100%"
+                    height="100%"
+                    alt="Фото"
+                  />
+                </div>
+                <div class="develop-team-grid__item__info-block">
+                  <h4 class="develop-team-grid__item__info-block__position">Должность</h4>
+                  <p class="develop-team-grid__item__info-block__name">Скотт Кли́нтон Ривз</p>
+                  <div class="develop-team-grid__item__info-block__contacts">
+                    <span>Контакты:</span>
+                    <ul class="develop-team-grid__item__info-block__contacts__list">
+                      <li class="develop-team-grid__item__info-block__contacts__list__item">
+                        <a href="">sania.gamayunov@yandex.ru</a>
+                      </li>
+                      <li class="develop-team-grid__item__info-block__contacts__list__item">
+                        <a href="">+7 901 381 68 43</a>
+                      </li>
+                      <li class="develop-team-grid__item__info-block__contacts__list__item">
+                        <a href="">Telegram</a>
+                      </li>
+                      <li class="develop-team-grid__item__info-block__contacts__list__item">
+                        <a href="">Linkedin</a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="develop-team-grid__item__info-block__portfolio">
+                    <span>Портфолио:</span>
+                    <ul class="develop-team-grid__item__info-block__portfolio__list">
+                      <li class="develop-team-grid__item__info-block__portfolio__list__item">
+                        <a href="">Behance</a>
+                      </li>
+                      <li class="develop-team-grid__item__info-block__portfolio__list__item">
+                        <a href="">Notion / резюме</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </section>
+        <section class="develop-team__designer">
+          <div class="develop-team-container">
+            <div class="develop-team__designer__title">
+              <h3 class="develop-team__designer__title__h3 develop-team-section-h3">Дизайнеры</h3>
+            </div>
+            <ul class="develop-team-grid">
+              <li class="develop-team-grid__item">
+                <div class="develop-team-grid__item__image-block">
+                  <img
+                    src="images/develop-team/Гамаюнов Александр Валерьевич.png"
+                    width="100%"
+                    height="100%"
+                    alt="Фото"
+                  />
+                </div>
+                <div class="develop-team-grid__item__info-block">
+                  <h4 class="develop-team-grid__item__info-block__position">UI/UX дизайнер</h4>
+                  <p class="develop-team-grid__item__info-block__name">
+                    Гамаюнов Александр Валерьевич
+                  </p>
+                  <div class="develop-team-grid__item__info-block__contacts">
+                    <span>Контакты:</span>
+                    <ul class="develop-team-grid__item__info-block__contacts__list">
+                      <li class="develop-team-grid__item__info-block__contacts__list__item">
+                        <a href="mailto:sania.gamayunov@yandex.ru">sania.gamayunov@yandex.ru</a>
+                      </li>
+                      <li class="develop-team-grid__item__info-block__contacts__list__item">
+                        <a href="tel:+79013816843">+7 901 381 68 43</a>
+                      </li>
+                      <li class="develop-team-grid__item__info-block__contacts__list__item">
+                        <a href="https://t.me/S270590" target="_blank">Telegram</a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="develop-team-grid__item__info-block__portfolio">
+                    <span>Портфолио:</span>
+                    <ul class="develop-team-grid__item__info-block__portfolio__list">
+                      <li class="develop-team-grid__item__info-block__portfolio__list__item">
+                        <a href="https://www.behance.net/GAMAYUNOV" target="_blank">Behance</a>
+                      </li>
+                      <li class="develop-team-grid__item__info-block__portfolio__list__item">
+                        <a
+                          href="https://www.notion.so/4ab4cab60c9c4a3f8d2d37079bf2a61e"
+                          target="_blank"
+                          >Notion / резюме</a
+                        >
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </li>
+              <li class="develop-team-grid__item">
+                <div class="develop-team-grid__item__image-block">
+                  <img
+                    src="images/develop-team/Гуленкова Яна Александровна.png"
+                    width="100%"
+                    height="100%"
+                    alt="Фото"
+                  />
+                </div>
+                <div class="develop-team-grid__item__info-block">
+                  <h4 class="develop-team-grid__item__info-block__position">UI/UX дизайнер</h4>
+                  <p class="develop-team-grid__item__info-block__name">
+                    Гуленкова Яна Александровна
+                  </p>
+                  <div class="develop-team-grid__item__info-block__contacts">
+                    <span>Контакты:</span>
+                    <ul class="develop-team-grid__item__info-block__contacts__list">
+                      <li class="develop-team-grid__item__info-block__contacts__list__item">
+                        <a href="mailto:yana.altufeva@yandex.ru">yana.altufeva@yandex.ru</a>
+                      </li>
+                      <li class="develop-team-grid__item__info-block__contacts__list__item">
+                        <a href="https://t.me/yana_gulenkova" target="_blank">Telegram</a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="develop-team-grid__item__info-block__portfolio">
+                    <span>Портфолио:</span>
+                    <ul class="develop-team-grid__item__info-block__portfolio__list">
+                      <li class="develop-team-grid__item__info-block__portfolio__list__item">
+                        <a href="https://www.behance.net/gulenkova" target="_blank">Behance</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </li>
+              <li class="develop-team-grid__item">
+                <div class="develop-team-grid__item__image-block">
+                  <img
+                    src="images/develop-team/avatar-develop.png"
+                    width="100%"
+                    height="100%"
+                    alt="Фото"
+                  />
+                </div>
+                <div class="develop-team-grid__item__info-block">
+                  <h4 class="develop-team-grid__item__info-block__position">Должность</h4>
+                  <p class="develop-team-grid__item__info-block__name">Скотт Кли́нтон Ривз</p>
+                  <div class="develop-team-grid__item__info-block__contacts">
+                    <span>Контакты:</span>
+                    <ul class="develop-team-grid__item__info-block__contacts__list">
+                      <li class="develop-team-grid__item__info-block__contacts__list__item">
+                        <a href="">sania.gamayunov@yandex.ru</a>
+                      </li>
+                      <li class="develop-team-grid__item__info-block__contacts__list__item">
+                        <a href="">+7 901 381 68 43</a>
+                      </li>
+                      <li class="develop-team-grid__item__info-block__contacts__list__item">
+                        <a href="">Telegram</a>
+                      </li>
+                      <li class="develop-team-grid__item__info-block__contacts__list__item">
+                        <a href="">Linkedin</a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="develop-team-grid__item__info-block__portfolio">
+                    <span>Портфолио:</span>
+                    <ul class="develop-team-grid__item__info-block__portfolio__list">
+                      <li class="develop-team-grid__item__info-block__portfolio__list__item">
+                        <a href="">Behance</a>
+                      </li>
+                      <li class="develop-team-grid__item__info-block__portfolio__list__item">
+                        <a href="">Notion / резюме</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </li>
+              <li class="develop-team-grid__item">
+                <div class="develop-team-grid__item__image-block">
+                  <img
+                    src="images/develop-team/avatar-develop.png"
+                    width="100%"
+                    height="100%"
+                    alt="Фото"
+                  />
+                </div>
+                <div class="develop-team-grid__item__info-block">
+                  <h4 class="develop-team-grid__item__info-block__position">Должность</h4>
+                  <p class="develop-team-grid__item__info-block__name">Скотт Кли́нтон Ривз</p>
+                  <div class="develop-team-grid__item__info-block__contacts">
+                    <span>Контакты:</span>
+                    <ul class="develop-team-grid__item__info-block__contacts__list">
+                      <li class="develop-team-grid__item__info-block__contacts__list__item">
+                        <a href="">sania.gamayunov@yandex.ru</a>
+                      </li>
+                      <li class="develop-team-grid__item__info-block__contacts__list__item">
+                        <a href="">+7 901 381 68 43</a>
+                      </li>
+                      <li class="develop-team-grid__item__info-block__contacts__list__item">
+                        <a href="">Telegram</a>
+                      </li>
+                      <li class="develop-team-grid__item__info-block__contacts__list__item">
+                        <a href="">Linkedin</a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="develop-team-grid__item__info-block__portfolio">
+                    <span>Портфолио:</span>
+                    <ul class="develop-team-grid__item__info-block__portfolio__list">
+                      <li class="develop-team-grid__item__info-block__portfolio__list__item">
+                        <a href="">Behance</a>
+                      </li>
+                      <li class="develop-team-grid__item__info-block__portfolio__list__item">
+                        <a href="">Notion / резюме</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </li>
+              <li class="develop-team-grid__item">
+                <div class="develop-team-grid__item__image-block">
+                  <img
+                    src="images/develop-team/avatar-develop.png"
+                    width="100%"
+                    height="100%"
+                    alt="Фото"
+                  />
+                </div>
+                <div class="develop-team-grid__item__info-block">
+                  <h4 class="develop-team-grid__item__info-block__position">Должность</h4>
+                  <p class="develop-team-grid__item__info-block__name">Скотт Кли́нтон Ривз</p>
+                  <div class="develop-team-grid__item__info-block__contacts">
+                    <span>Контакты:</span>
+                    <ul class="develop-team-grid__item__info-block__contacts__list">
+                      <li class="develop-team-grid__item__info-block__contacts__list__item">
+                        <a href="">sania.gamayunov@yandex.ru</a>
+                      </li>
+                      <li class="develop-team-grid__item__info-block__contacts__list__item">
+                        <a href="">+7 901 381 68 43</a>
+                      </li>
+                      <li class="develop-team-grid__item__info-block__contacts__list__item">
+                        <a href="">Telegram</a>
+                      </li>
+                      <li class="develop-team-grid__item__info-block__contacts__list__item">
+                        <a href="">Linkedin</a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="develop-team-grid__item__info-block__portfolio">
+                    <span>Портфолио:</span>
+                    <ul class="develop-team-grid__item__info-block__portfolio__list">
+                      <li class="develop-team-grid__item__info-block__portfolio__list__item">
+                        <a href="">Behance</a>
+                      </li>
+                      <li class="develop-team-grid__item__info-block__portfolio__list__item">
+                        <a href="">Notion / резюме</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </li>
+              <li class="develop-team-grid__item">
+                <div class="develop-team-grid__item__image-block">
+                  <img
+                    src="images/develop-team/avatar-develop.png"
+                    width="100%"
+                    height="100%"
+                    alt="Фото"
+                  />
+                </div>
+                <div class="develop-team-grid__item__info-block">
+                  <h4 class="develop-team-grid__item__info-block__position">Должность</h4>
+                  <p class="develop-team-grid__item__info-block__name">Скотт Кли́нтон Ривз</p>
+                  <div class="develop-team-grid__item__info-block__contacts">
+                    <span>Контакты:</span>
+                    <ul class="develop-team-grid__item__info-block__contacts__list">
+                      <li class="develop-team-grid__item__info-block__contacts__list__item">
+                        <a href="">sania.gamayunov@yandex.ru</a>
+                      </li>
+                      <li class="develop-team-grid__item__info-block__contacts__list__item">
+                        <a href="">+7 901 381 68 43</a>
+                      </li>
+                      <li class="develop-team-grid__item__info-block__contacts__list__item">
+                        <a href="">Telegram</a>
+                      </li>
+                      <li class="develop-team-grid__item__info-block__contacts__list__item">
+                        <a href="">Linkedin</a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="develop-team-grid__item__info-block__portfolio">
+                    <span>Портфолио:</span>
+                    <ul class="develop-team-grid__item__info-block__portfolio__list">
+                      <li class="develop-team-grid__item__info-block__portfolio__list__item">
+                        <a href="">Behance</a>
+                      </li>
+                      <li class="develop-team-grid__item__info-block__portfolio__list__item">
+                        <a href="">Notion / резюме</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </section>
+      </div>
     </main>
     <footer><%= require('raw-loader!./layout/footer.html').default %></footer>
-</body>
-<%= require('raw-loader!./layout/bottom-scripts.html').default %>
+  </body>
+  <%= require('raw-loader!./layout/bottom-scripts.html').default %>
 </html>

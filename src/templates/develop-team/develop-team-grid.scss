@@ -15,19 +15,22 @@
 
 .develop-team-grid__item {
     display: block;
-    height: 545px;
+    height: 100%;
+    min-height: 545px;
     @include media_from('sm') {
        display: flex;
-       height: 330px;
+       min-height: 330px;
     }
     .develop-team-grid__item__image-block {
         width: 280px;
         min-width: 280px;
         height: 280px;
+        margin-bottom: 16px;
         @include media_from('sm') {
             width: 250px;
             min-width: 250px;
             height: 330px;
+            margin-bottom: 0;
          }
         img {
             border-radius: 5px;
