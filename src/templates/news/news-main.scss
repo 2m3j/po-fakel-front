@@ -1,0 +1,90 @@
+.news-main {
+    margin-bottom: 122px;
+    /* .news-main__articles */
+    &__articles {
+    }
+}
+//========================================================================================================================================================
+.articles-news {
+    /* .articles-news__container */
+    &__container {
+    }
+    /* .articles-news__title */
+    &__title {
+        font-family: Montserrat;
+        font-weight: 600;
+        color: $blackTextColor;
+        @include media_from('xs') {
+            margin-bottom: 8px;
+            font-size: 30px;
+        }
+        @include media_from('md') {
+            margin-bottom: 24px;
+            font-size: 40px;
+        }
+        @include media_from('lg') {
+            margin-bottom: 32px;
+            font-size: 45px;
+        }
+    }
+    /* .articles-news__date */
+    &__date {
+        display: none;
+        margin-bottom: 56px;
+        font-weight: 600;
+        font-size: 20px;
+        font-family: Montserrat;
+        line-height: 150%;
+        color: #4F4F4F;
+        @include media_from('md') {
+            display: block;
+        }
+        
+    }
+    /* .articles-news__image */
+    &__image {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        img {
+            margin-bottom: 16px;
+        }
+    }
+    /* .articles-news__descr */
+    &__descr {
+        font-family: Montserrat;
+        font-size: 16px;
+        line-height: 150%;
+        color: $blackTextColor;
+        @include media_from('xs') {
+            padding-bottom: 34px;
+        }
+        @include media_from('md') {
+            margin-bottom: 38px;
+        }
+        @include media_from('lg') {
+            margin-bottom: 42px;
+        }
+    }
+    &__text {
+        margin: 0;
+        font-family: Montserrat;
+        line-height: 150%;
+        color: #000;
+        @include media_from('xs') {
+            &:not(:last-child) {
+                margin-bottom: 16px;
+            }
+        }
+        @include media_from('md') {
+            &:not(:last-child) {
+                margin-bottom: 18px;
+            }
+        }
+        @include media_from('lg') {
+            &:not(:last-child) {
+                margin-bottom: 20px;
+            }            
+        }
+    }
+}
