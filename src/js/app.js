@@ -2,9 +2,10 @@ import '/src/components/card-slider/index';
 import { aboutSearch } from './about-search';
 import MobileNav from '../components/mobile-nav/MobileNav';
 import './swiper-gallery';
-import Contacts from "../templates/contacts/js/contacts"
+import ContactsPage from "../templates/contacts/js/contacts"
 
 window.mobileNav = new MobileNav();
+window.contactsPage = new ContactsPage();
 const button = document.querySelector('.section__button_type_unfold');
 const text = document.querySelectorAll('.section__text');
 const mediaForm = document.querySelector('.media-form');
