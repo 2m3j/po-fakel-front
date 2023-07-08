@@ -125,6 +125,11 @@ module.exports = {
             template: path.src.templates + "news-group.html",
             inject: true
         }),
+        new HtmlWebpackPlugin({
+            filename: path.production.base + 'search.html',
+            template: path.src.templates + "search.html",
+            inject: true
+        }),
         new webpack.ContextReplacementPlugin(/moment[/\\]locale$/, /ru/),
     ],
     devServer: {
