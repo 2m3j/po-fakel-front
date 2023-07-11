@@ -115,6 +115,21 @@ module.exports = {
             template: path.src.templates + "detailsPage.html",
             inject: true
         }),
+        new HtmlWebpackPlugin({
+            filename: path.production.base + 'news.html',
+            template: path.src.templates + "news.html",
+            inject: true
+        }),
+        new HtmlWebpackPlugin({
+            filename: path.production.base + 'news-group.html',
+            template: path.src.templates + "news-group.html",
+            inject: true
+        }),
+        new HtmlWebpackPlugin({
+            filename: path.production.base + 'search.html',
+            template: path.src.templates + "search.html",
+            inject: true
+        }),
         new webpack.ContextReplacementPlugin(/moment[/\\]locale$/, /ru/),
     ],
     devServer: {

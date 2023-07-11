@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>news-group</title>
+</head>
+<body>
+    <header class="header">
+        <%= require('raw-loader!./layout/header/branding.html').default %>
+    </header>
+    <main class="news news-group">
+        <section class="news-group__breadcrumbs breadcrumbs-v1">
+            <div class="breadcrumbs-v1__container container">
+                <ul class="breadcrumbs-v1__list">
+                    <li class="breadcrumbs-v1__item">
+                        <a href="/" class="breadcrumbs-v1__link">Главная</a>
+                        <svg width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M6 7.4L0 1.4L1.4 0L6 4.6L10.6 0L12 1.4L6 7.4Z" fill="#F3F3F3"/>
+                        </svg>
+                    </li>
+                    <li class="breadcrumbs-v1__item">
+                        <span class="breadcrumbs-v1__current">
+                            Новости
+                        </span>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <section class="news-group__articles articles-news-group">
+            <div class="articles-news-group__head head-news-group">
+                <div class="head-news-group__container container">
+                    <h2 class="head-news-group__title">Новости отряда</h2>
+                    <form class="head-news-group__filter">
+                        <label class="head-news-group__label">
+                            <input id="opa" autocomplete="off" type="date" name="form[]" placeholder="От" value="" class="head-news-group__input">
+                        </label>
+                        <label class="head-news-group__label">
+                            <input autocomplete="off" type="date" name="form[]" placeholder="До" value="" class="head-news-group__input">
+                        </label>
+                        <button class="head-news-group__btn">Искать</button>
+                    </form>
+                </div>
+            </div>
+            <div class="articles-news-group__body body-news-group">
+                <div class="body-news-group__container container">
+                    <article class="body-news-group__card">
+                        <div class="body-news-group__image">
+                            <img src="images/news/news-group/group-1.jpg" alt="Новости">
+                        </div>
+                        <div class="body-news-group__date">27.12.2022</div>
+                        <h3 class="body-news-group__subtitle">22Й ДЕНЬ РОЖДЕНИЯ ОТРЯДА «ФАКЕЛ»</h3>
+                        <p class="body-news-group__descr">
+                            В&nbsp;этот день исполнилось 22&nbsp;года нашему замечательному, любимому, боевому и&nbsp;трудовому поисковому отряду &laquo;Факел&raquo;. Поисковый отряд &laquo;Факел&raquo; был основан студентами Вятского государственного университета...Читать далее
+                        </p>
+                    </article>
+                    <article class="body-news-group__card">
+                        <div class="body-news-group__image">
+                            <img src="images/news/news-group/group-2.jpg" alt="Новости">
+                        </div>
+                        <div class="body-news-group__date">27.12.2022</div>
+                        <h3 class="body-news-group__subtitle">ДЕНЬ НЕИЗВЕСТНОГО СОЛДАТА</h3>
+                        <p class="body-news-group__descr">
+                            Этот день можно по праву назвать ещё и «Днём поисковика». Не праздник, конечно, а своеобразный рубежный день, когда десятки и сотни поисковых отрядов подводят итоги своих полевых сезонов. В день…Читать далее
+                        </p>
+                    </article>
+                    <article class="body-news-group__card">
+                        <div class="body-news-group__image">
+                            <img src="images/news/news-group/group-3.jpg" alt="Новости">
+                        </div>
+                        <div class="body-news-group__date">27.12.2022</div>
+                        <h3 class="body-news-group__subtitle">НАЙДЕНА СЕМЬЯ ФЕНОБЕРЦЕВА РОМАНА ФИЛИППОВИЧА</h3>
+                        <p class="body-news-group__descr">
+                            Поисковики отряда «Факел» г. Киров, работая в ходе осеннего этапа межрегиональной Вахты Памяти «Поисковой экспедиции „Долина“, нашли останки 7 солдат. Личность одного из них удалось установить по записке из смертного... Читать далее
+                        </p>
+                    </article>
+                    <article class="body-news-group__card">
+                        <div class="body-news-group__image">
+                            <img src="images/news/news-group/group-4.jpg" alt="Новости">
+                        </div>
+                        <div class="body-news-group__date">27.12.2022</div>
+                        <h3 class="body-news-group__subtitle">ПОИСК РОДСТВЕННИКОВ: ФЕНОБЕРЦЕВ РОМАН ФИЛЛИПОВИЧ</h3>
+                        <p class="body-news-group__descr">
+                            В ходе осеннего этапа межрегиональной Вахты Памяти «Поисковой экспедиции «Долина» отрядом «Факел» были обнаружены останки 7 солдат. Личность одного из них удалось установить по записки из смертного медальона…Читать далее
+                        </p>
+                    </article>
+                    <article class="body-news-group__card">
+                        <div class="body-news-group__image">
+                            <img src="images/news/news-group/group-5.jpg" alt="Новости">
+                        </div>
+                        <div class="body-news-group__date">27.12.2022</div>
+                        <h3 class="body-news-group__subtitle">ГВАРДЕЕЦ ВАНЯ. ЧАСТЬ 3: «КАК ИСКАЛИ РОДСТВЕННИКОВ»</h3>
+                        <p class="body-news-group__descr">
+                            Необычным и непривычным оказался для нашего поискового отряда «Факел» боевой путь гвардейца Ивана Григорьевича Дементьева. Поэтому поиск родственников гвардейца Дементьева для нас стал делом чести…Читать далее
+                        </p>
+                    </article>
+                        <article class="body-news-group__card">
+                            <div class="body-news-group__image">
+                                <img src="images/news/news-group/group-6.jpg" alt="Новости">
+                            </div>
+                            <div class="body-news-group__date">27.12.2022</div>
+                            <h3 class="body-news-group__subtitle">ГВАРДЕЕЦ ВАНЯ. ЧАСТЬ 2: «КАК ВЫЯСНИЛИ, ЧТО БОЕЦ ДЕМЕНТЬЕВ И.Г. ЧИСЛИЛСЯ ДЕЗЕРТИРОМ»</h3>
+                            <p class="body-news-group__descr">
+                                Итак, боец найден. Имя прочитано. Личность установлена. А список потерь 22 гвардейского миномётного полка дал нам информацию ОБД Мемориал к очень глубокому размышлению... Читать далее
+                            </p>
+                        </article>
+                </div>
+            </div>
+            <div class="articles-news-group__pagging pagging">
+                <button class="pagging__btn pagging__btn_prev">
+                    <svg width="13" height="22" viewBox="0 0 13 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M11.5 21L1.5 11L11.5 1" stroke="#4F4F4F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>                                    
+                </button>
+                <div class="pagging__digits">
+                    <button class="pagging__digit _active">1</button>
+                    <button class="pagging__digit">2</button>
+                    <button class="pagging__digit">3</button>
+                </div>
+                <button class="pagging__btn pagging__btn_next">
+                    <svg width="13" height="22" viewBox="0 0 13 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1.5 21L11.5 11L1.5 1" stroke="#202020" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>                                    
+                </button>
+                <button class="pagging__btn pagging__btn_all">
+                    <svg width="13" height="23" viewBox="0 0 13 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1.5 21.5L11.5 11.5L1.5 1.5" stroke="#202020" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    <svg width="13" height="23" viewBox="0 0 13 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1.5 21.5L11.5 11.5L1.5 1.5" stroke="#202020" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>                                                                            
+                </button>
+            </div>
+            <button class="articles-news-group__button">Больше новостей</button>
+        </section>
+    </main>
+    <footer class="footer">
+        <%= require('raw-loader!./layout/footer.html').default %>
+    </footer>
+</body>
+</html>

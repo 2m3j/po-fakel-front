@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>search</title>
+</head>
+<body>
+    <header class="header">
+        <%= require('raw-loader!./layout/header/branding.html').default %>
+    </header>
+    <main class="search">
+        <section class="breadcrumbs-v1">
+            <div class="breadcrumbs-v1__container container">
+                <ul class="breadcrumbs-v1__list">
+                    <li class="breadcrumbs-v1__item">
+                        <a href="/" class="breadcrumbs-v1__link">Главная</a>
+                        <svg width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M6 7.4L0 1.4L1.4 0L6 4.6L10.6 0L12 1.4L6 7.4Z" fill="#F3F3F3"/>
+                        </svg>
+                    </li>
+                    <li class="breadcrumbs-v1__item">
+                        <span class="breadcrumbs-v1__current">
+                            Результаты поиска
+                        </span>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <section class="search__filter filter-search">
+            <div class="filter-search__container container">
+                <form class="filter-search__form">
+                    <label class="filter-search__label" for="filterSearch"></label>
+                    <input id="filterSearch" autocomplete="off" value="Новости" type="text" name="form[]" data-error="Ошибка" placeholder="Поиск" class="filter-search__input">
+                    <button class="filter-search__btn">Искать</button>
+                </form>
+            </div>
+        </section>
+        <section class="search__body body-search">
+            <div class="body-search__container container">
+                <ol class="body-search__content">
+                    <li class="body-search__item item-body-search">
+                        <strong class="item-body-search__title">Феноберцев Роман Филиппович</strong>
+                        <span class="item-body-search__topic">Новости</span>
+                        <p class="item-body-search__descr">Дата рождения: 1916 г. Воинское звание и часть: Красноармеец 312 сп, 26 сп, связист. Место рождения: Смоленская обл., Руднянский р-н, д. Пожавская... <a href="#">Перейти</a></p>
+                    </li>
+                    <li class="body-search__item item-body-search">
+                        <strong class="item-body-search__title">Поисковики нашли родственников солдата, пропавшего без вести в 1942г.</strong>
+                        <span class="item-body-search__topic">Новости</span>
+                        <p class="item-body-search__descr">Поисковики отряда «Факел» из города Киров, работая в ходе осеннего этапа межрегиональной Вахты Памяти «Поисковой экспедиции «Долина», нашли останки...<a href="#">Перейти</a></p>
+                    </li>
+                    <li class="body-search__item item-body-search">
+                        <strong class="item-body-search__title">«Отец, наш Ромка вернулся». В Красноярске похоронили останки...</strong>
+                        <span class="item-body-search__topic">Новости</span>
+                        <p class="item-body-search__descr">Волнительное мероприятие прошло в День Неизвестного Солдата, 3 декабря, на Мемориале Победы. В Красноярске на Бадалыкском кладбище были захоронены останки... <a href="#">Перейти</a></p>
+                    </li>
+                    <li class="body-search__item item-body-search">
+                        <strong class="item-body-search__title">В Красноярске захоронили останки погибшего во время ВОВ солдата</strong>
+                        <span class="item-body-search__topic">Новости</span>
+                        <p class="item-body-search__descr">В Красноярске захоронили останки солдата, погибшего во время Великой Отечественной войны, призванного на воинскую службу с территории Красноярского края. <a href="#">Перейти</a></p>
+                    </li>
+                    <li class="body-search__item item-body-search">
+                        <strong class="item-body-search__title">В Красноярске захоронили останки погибшего во время ВОВ солдата</strong>
+                        <span class="item-body-search__topic">Новости</span>
+                        <p class="item-body-search__descr">В Красноярске захоронили останки солдата, погибшего во время Великой Отечественной войны, призванного на воинскую службу с территории Красноярского края. <a href="#">Перейти</a></p>
+                    </li>
+                    <li class="body-search__item item-body-search">
+                        <strong class="item-body-search__title">В Красноярске захоронили останки погибшего во время ВОВ солдата</strong>
+                        <span class="item-body-search__topic">Новости</span>
+                        <p class="item-body-search__descr">В Красноярске захоронили останки солдата, погибшего во время Великой Отечественной войны, призванного на воинскую службу с территории Красноярского края. <a href="#">Перейти</a></p>
+                    </li>
+                    <li class="body-search__item item-body-search">
+                        <strong class="item-body-search__title">В Красноярске захоронили останки погибшего во время ВОВ солдата</strong>
+                        <span class="item-body-search__topic">Новости</span>
+                        <p class="item-body-search__descr">В Красноярске захоронили останки солдата, погибшего во время Великой Отечественной войны, призванного на воинскую службу с территории Красноярского края. <a href="#">Перейти</a></p>
+                    </li>
+                </ol>
+                <div class="body-search__pagging pagging">
+                    <button class="pagging__btn pagging__btn_prev">
+                        <svg width="13" height="22" viewBox="0 0 13 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M11.5 21L1.5 11L11.5 1" stroke="#4F4F4F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>                                    
+                    </button>
+                    <div class="pagging__digits">
+                        <button class="pagging__digit _active">1</button>
+                        <button class="pagging__digit">2</button>
+                        <button class="pagging__digit">3</button>
+                    </div>
+                    <button class="pagging__btn pagging__btn_next">
+                        <svg width="13" height="22" viewBox="0 0 13 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M1.5 21L11.5 11L1.5 1" stroke="#202020" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>                                    
+                    </button>
+                    <button class="pagging__btn pagging__btn_all">
+                        <svg width="13" height="23" viewBox="0 0 13 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M1.5 21.5L11.5 11.5L1.5 1.5" stroke="#202020" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        <svg width="13" height="23" viewBox="0 0 13 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M1.5 21.5L11.5 11.5L1.5 1.5" stroke="#202020" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>                                                                            
+                    </button>
+                </div>
+                <div class="body-search__btns">
+                    <button class="body-search__btnAll">Показать больше</button>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="wrapper-names__footer">
+        <%= require('raw-loader!./layout/footer.html').default %>
+    </footer>
+</body>
+</html>
