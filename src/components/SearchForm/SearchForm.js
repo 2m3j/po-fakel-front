@@ -77,7 +77,7 @@ function SearchForm() {
     setMore(isThereMore);
   }, [showned]);
 
-/*   useEffect(() => {
+  /*   useEffect(() => {
     if (methods.formState.isSubmitSuccessful) {
       methods.reset();
     }
@@ -187,7 +187,7 @@ function SearchForm() {
             </div>
           </div>
           {cards ? (
-            <div className="cards row g-5">
+            <div className="cards row g-4">
               <Section items={cards} showned={showned} />
             </div>
           ) : (
