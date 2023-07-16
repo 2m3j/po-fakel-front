@@ -3,6 +3,7 @@
 @import "./_title";
 @import "./_about";
 @import "./develop-team-grid.scss";
+@import "../../components/swiper-develop-team/swiper-develop-team.scss";
 
 .develop-team {
     background: #FCFCFC;
@@ -76,6 +77,24 @@
         margin-bottom: 24px;
         @include media_from('xl') {
             margin-bottom: 32px;
+        }
+    }
+}
+
+.develop-team__reviews {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    background: #E9E9E9;
+    overflow: hidden;
+
+    .develop-team-container {
+        position: relative;
+
+        .develop-team__reviews__title {
+            margin-bottom: 25px;
+            @include media_from('lg') {
+                margin-bottom: 30px;
+            }
         }
     }
 }

@@ -2,6 +2,7 @@ import '/src/components/card-slider/index';
 import { aboutSearch } from './about-search';
 import MobileNav from '../components/mobile-nav/MobileNav';
 import './swiper-gallery';
+import './swiper-develop-team';
 import ContactsPage from "../templates/contacts/js/contacts"
 
 window.mobileNav = new MobileNav();
