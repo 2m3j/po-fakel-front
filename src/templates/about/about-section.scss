@@ -1,11 +1,7 @@
-.media {
-  margin-bottom: 112px;
-}
 .section {
-  margin-top: 100px;
   color: #202020;
   --font-size-md: 20px;
-
+  @include block-padding-bottom;
   &__text {
     font-size: 20px;
     line-height: 150%;
@@ -35,23 +31,13 @@
     background: none;
   }
   &__btn {
-    width: 349px;
+    width: 100%;
     height: 56px;
     background: #da8a3a;
     border-radius: 10px;
     font-weight: 600;
-    /*   font-size: 20px; */
     line-height: 27px;
     color: #ffffff;
-    /*     @media (min-width: 768px) {
-      width: 103px;
-      /*  font-size: 20px; 
-    } */
-    width: 100%;
-    @media (max-width: 768px) {
-      /*  height: 60px; */
-      /*  font-size: 20px; */
-    }
   }
   &__input {
     height: 56px;
@@ -74,8 +60,6 @@
 
 @media (min-width: 1200px) {
   .section {
-    margin-left: 165px;
-    margin-right: 165px;
     --font-size-md: 18px;
   }
 }

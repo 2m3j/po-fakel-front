@@ -12,31 +12,21 @@
     <header class="header">
         <%= require('raw-loader!./layout/header/branding.html').default %>
     </header>
-    <main class="details-page__main main-details">
-        <section class="main-details__breadcrumbs breadcrumbs-v1">
-            <div class="breadcrumbs-v1__container container">
-                <ul class="breadcrumbs-v1__list">
-                    <li class="breadcrumbs-v1__item">
-                        <a href="/" class="breadcrumbs-v1__link">Главная</a>
-                        <svg width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M6 7.4L0 1.4L1.4 0L6 4.6L10.6 0L12 1.4L6 7.4Z" fill="#F3F3F3"/>
-                        </svg>
-                    </li>
-                    <li class="breadcrumbs-v1__item">
-                        <a href="/" class="breadcrumbs-v1__link">Имена</a>
-                        <svg width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M6 7.4L0 1.4L1.4 0L6 4.6L10.6 0L12 1.4L6 7.4Z" fill="#F3F3F3"/>
-                        </svg>
-                    </li>
-                    <li class="breadcrumbs-v1__item">
-                        <span class="breadcrumbs-v1__current">
-                            Феноберцев Роман Филиппович
-                        </span>
-                    </li>
-                </ul>
-            </div>
+    <main>
+        <section class="bread-crumb-block container">
+            <ul class="bread-crumb">
+                <li><a href="#">Главная</a></li>
+                <svg fill="none" width="20" height="20" viewBox="0 0 24 24">
+                    <use href="images/svg/symbol/svg/sprite.symbol.svg#arrow-bread-crumbs"></use>
+                </svg>
+                <li><a href="/names.html">Имена</a></li>
+                <svg fill="none" width="20" height="20" viewBox="0 0 24 24">
+                    <use href="images/svg/symbol/svg/sprite.symbol.svg#arrow-bread-crumbs"></use>
+                </svg>
+                <li class="active-crumb">Феноберцев Роман Филиппович</li>
+            </ul>
         </section>
-        <section class="main-details__info info-main-details">
+        <section class="info-main-details">
             <div class="info-main-details__container container">
                 <h1 class="info-main-details__title">Феноберцев Роман Филиппович</h1>
                 <div class="info-main-details__content">
@@ -119,7 +109,7 @@
                 </div>
             </div>
         </section>
-        <section class="main-details__media media-main-details">
+        <section class="media-main-details">
             <div class="media-main-details__container container">
                 <div class="media-main-details__top">
                     <h2 class="media-main-details__title">
@@ -217,7 +207,7 @@
                 </div>
             </div>
         </section>
-        <section class="main-details__documents documents-main-details">
+        <section class="documents-main-details">
             <div class="documents-main-details__container container">
                 <h2 class="documents-main-details__title">Документы</h2>
                 <div class="documents-main-details__content">
@@ -278,7 +268,7 @@
                 </div>
             </div>
         </section>
-        <section class="main-details__mass-media mass-media-details">
+        <section class="mass-media-details">
             <div class="mass-media-details__container container">
                 <h2 class="mass-media-details__title">СМИ о бойце</h2>
                 <div class="mass-media-details__content">

@@ -1,35 +1,3 @@
-.main-details {
-    padding-top: 24px;
-    padding-bottom: 40px;
-    @include media_from('sm') {
-        padding-top: 40px;
-        padding-bottom: 56px;
-    }
-    @include media_from('md') {
-        padding-top: 64px;
-        padding-bottom: 85px;
-    }
-    background-color: #FCFCFC;
-    /* .main-details__info */
-    &__breadcrumbs {
-        margin-bottom: 40px;
-        @include media_from('sm') {
-            margin-bottom: 56px;
-        }
-        @include media_from('md') {
-            margin-bottom: 74px;
-        }
-    }
-    &__info {
-    }
-    /* .main-details__media */
-    &__media {
-    }
-    &__documents {
-    }
-    &__mass-media {
-    }
-}
 .info-main-details {
     margin-bottom: 40px;
     @include media_from('sm') {

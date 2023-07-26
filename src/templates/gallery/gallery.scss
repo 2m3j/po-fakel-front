@@ -6,41 +6,6 @@
 .gallery {
     background: #FCFCFC;
     color: $font-color;
-    padding-bottom: 102px;
-    padding-top: 24px;
-    @include media_from('sm') {
-        padding-bottom: 112px;
-        padding-top: 40px;
-    }
-    @include media_from('lg') {
-        padding-top: 64px;
-    }
-}
-
-.gallery-container {
-    max-width: 1170px;
-    padding-left: 20px;
-    padding-right: 20px;
-    margin: 0 auto;
-    @include media_from('md') {
-        padding-left: 30px;
-        padding-right: 30px;
-    }
-}
-
-.gallery-container-block {
-    max-width: 1170px;
-    padding-left: 20px;
-    padding-right: 0;
-    margin: 0 auto;
-    position: relative;
-    @include media_from('md') {
-        padding-left: 30px;
-        padding-right: 10px;
-    }
-    @include media_from('xl') {
-        padding-right: 30px;
-    }
 }
 
 .gallery__main {
@@ -56,14 +21,8 @@
         }
     }
 
-    .photo-album-block {
-        margin-bottom: 24px;
-        @include media_from('md') {
-            margin-bottom: 48px;
-        }
-        @include media_from('xl') {
-            margin-bottom: 56px;
-        }
+    .photo-album-block, .video-album-block {
+        @include block-padding-bottom;
     }
 
     .audio-album-block {
@@ -71,14 +30,7 @@
         padding-top: 20px;
         padding-bottom: 20px;
         margin-bottom: 24px;
-        @include media_from('md') {
-            padding-top: 40px;
-            padding-bottom: 40px;
-            margin-bottom: 48px;
-        }
-        @include media_from('xl') {
-            margin-bottom: 56px;
-        }
+        @include block-padding;
     }
 }
 .gallery-album-block-title {
