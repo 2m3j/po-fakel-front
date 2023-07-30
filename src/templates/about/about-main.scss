@@ -1,9 +1,6 @@
 .about-volunteer-stories {
   background-clip: border-box;
 }
-/* .swiper-volonteer .swiper-pagination-bullet-active {
-  background-color: white !important;
-} */
 .card-volonteer {
   display: flex;
   justify-content: flex-start;
@@ -29,7 +26,6 @@
     background-size: cover;
     width: 350px;
     height: 467px;
-    background-size: cover;
     margin-right: 30px;
     border-radius: 5px;
     @media (min-width: 768px) {

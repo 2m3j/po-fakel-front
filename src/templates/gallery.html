@@ -17,21 +17,21 @@
       <%= require('raw-loader!./layout/header/branding.html').default %>
     </header>
     <main>
+      <section class="bread-crumb-block container">
+        <ul class="bread-crumb">
+          <li><a href="#">Главная</a></li>
+          <svg fill="none" width="20" height="20" viewBox="0 0 24 24">
+            <use href="images/svg/symbol/svg/sprite.symbol.svg#arrow-bread-crumbs"></use>
+          </svg>
+          <li class="active-crumb">Галерея</li>
+        </ul>
+      </section>
       <div class="gallery">
-        <section class="bread-crumb-block container">
-          <ul class="bread-crumb">
-            <li><a href="#">Главная</a></li>
-            <svg fill="none" width="20" height="20" viewBox="0 0 24 24">
-              <use href="images/svg/symbol/svg/sprite.symbol.svg#arrow-bread-crumbs"></use>
-            </svg>
-            <li class="active-crumb">Галерея</li>
-          </ul>
-        </section>
         <section class="gallery__main">
           <div class="container">
-            <h2 class="gallery__main__title">Галерея</h2>
+            <h1>Галерея</h1>
             <div class="photo-album-block">
-              <h3 class="gallery-album-block-title"><a href="">Фотоальбомы</a></h3>
+              <h2>Фотоальбомы</h2>
               <ul class="preview">
                 <li class="preview__item">
                   <a href=""></a>
@@ -65,8 +65,8 @@
             </div>
           </div>
           <div class="audio-album-block">
-            <div class="container">
-              <h3 class="gallery-album-block-title"><a href="">Аудиозаписи</a></h3>
+            <div class="container audio-album-block__container">
+              <h2>Аудиозаписи</h2>
               <div class="swiper-gallery">
                 <div class="swiper-wrapper swiper-gallery-wrapper">
                   <div class="swiper-slide swiper-gallery-slide">
@@ -228,7 +228,7 @@
           </div>
           <div class="video-album-block">
             <div class="container">
-              <h3 class="gallery-album-block-title"><a href="">Видео</a></h3>
+              <h2>Видео</h2>
               <div class="fancybox-list">
                 <button class="fancybox-list__item" data-fancybox="gallery" data-src="#popup_1">
                   <div class="fancybox-list__item__gradient"></div>
@@ -252,7 +252,7 @@
                         ></iframe>
                       </div>
                       <div class="popup__title">
-                        <h3>"Вахта памяти 2021"</h3>
+                        <h2>"Вахта памяти 2021"</h2>
                       </div>
                       <div class="popup__text">
                         <p>
@@ -290,7 +290,7 @@
                         ></iframe>
                       </div>
                       <div class="popup__title">
-                        <h3>"Вахта памяти 2021"</h3>
+                        <h2>"Вахта памяти 2021"</h2>
                       </div>
                       <div class="popup__text">
                         <p>
@@ -331,7 +331,7 @@
                         ></iframe>
                       </div>
                       <div class="popup__title">
-                        <h3>"Вахта памяти 2021"</h3>
+                        <h2>"Вахта памяти 2021"</h2>
                       </div>
                       <div class="popup__text">
                         <p>

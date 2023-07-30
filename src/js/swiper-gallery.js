@@ -1,7 +1,8 @@
 if (document.querySelector('.swiper-gallery')) {
     new Swiper('.swiper-gallery', {
-        direction: 'horizontal',
-        loop: 'true',
+        loop: true,
+        slidesPerView: 1,
+        grabCursor: true,
         breakpoints: {
             320: {
                 slidesPerView: 1,
@@ -11,33 +12,12 @@ if (document.querySelector('.swiper-gallery')) {
                 slidesPerView: 2,
                 spaceBetween: 20,
             },
-            1200: {
+            992: {
                 slidesPerView: 3,
                 spaceBetween: 30,
             },
-        },
-        navigation: {
-            nextEl: '.swiper-btn-next',
-            prevEl: '.swiper-btn-prev',
-        },
-        freeMode: true,
-    });
-}
-if (document.querySelector('.swiper-gallery')) {
-    new Swiper('.swiper-gallery', {
-        direction: 'horizontal',
-        loop: 'true',
-        breakpoints: {
-            320: {
-                slidesPerView: 1,
-                spaceBetween: 20,
-            },
-            768: {
-                slidesPerView: 2,
-                spaceBetween: 20,
-            },
             1200: {
-                slidesPerView: 3,
+                slidesPerView: 4,
                 spaceBetween: 30,
             },
         },
