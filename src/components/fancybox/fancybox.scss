@@ -81,8 +81,11 @@
     }
       @include media_from('lg') {
         grid-template-columns: repeat(3, 1fr);
-        grid-column-gap: 30px;
-        grid-row-gap: 30px;
+          grid-column-gap: 20px;
+          grid-row-gap: 20px;
+    }
+    @include media_from('xl') {
+        grid-template-columns: repeat(4, 1fr);
     }
 }
 
@@ -212,18 +215,8 @@
                         @include media_from('sm') {
                             display: block;
                         }
-                        h3 {
-                            @include media_from('sm') {
-                                font-weight: 600;
-                                font-size: 20px;
-                                line-height: 150%;
-                            }
-                            @include media_from('lg') {
-                                font-weight: 700;
-                                font-size: 35px;
-                                line-height: 43px;
-                            }
-                        }
+                        @include h2-font-size;
+                        font-weight: 600;
                     }
 
                     .popup__text {
