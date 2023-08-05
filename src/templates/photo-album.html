@@ -169,7 +169,7 @@
         </div>
       </div>
     </main>
-    <footer><%= require('raw-loader!./layout/footer.html').default %></footer>
+    <%= require('raw-loader!./layout/footer.html').default %>
+    <%= require('raw-loader!./layout/bottom-scripts.html').default %>
   </body>
-  <%= require('raw-loader!./layout/bottom-scripts.html').default %>
 </html>
