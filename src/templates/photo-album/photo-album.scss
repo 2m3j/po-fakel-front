@@ -2,12 +2,14 @@
 @import "../../components/preview-list/preview-list.scss";
 @import "../../components/pagination/pagination.scss";
 
-.photo-album__main {
-  @include block-padding-bottom;
+.photo-album {
+  &__main {
+    @include block-padding-bottom;
 
-  .photo-album__main__pagination {
-    display: flex;
-    justify-content: center;
-    margin-top: 32px;
+    .photo-album__main__pagination {
+      display: flex;
+      justify-content: center;
+      margin-top: 32px;
+    }
   }
 }

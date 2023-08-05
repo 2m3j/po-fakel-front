@@ -20,13 +20,6 @@
     justify-content: space-between;
     align-self: center;
   }
-
-  &__title {
-    font-weight: 600;
-    font-size: 45px;
-    line-height: 60px;
-    margin-bottom: 50px;
-  }
   &__button {
     background: none;
   }
@@ -67,9 +60,6 @@
   .section__text {
     font-size: 18px;
   }
-  .section__title {
-    margin-bottom: 38px;
-  }
 }
 @media (max-width: 576px) {
   .section__text {
@@ -80,10 +70,6 @@
       text-align: center;
     }
   }
-  .section__title {
-    margin-bottom: 30px;
-  }
-
   .section__text_type_unfold {
     height: fit-content;
   }

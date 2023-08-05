@@ -15,11 +15,7 @@ if (document.querySelector('.swiper-gallery')) {
             992: {
                 slidesPerView: 3,
                 spaceBetween: 30,
-            },
-            1200: {
-                slidesPerView: 4,
-                spaceBetween: 30,
-            },
+            }
         },
         navigation: {
             nextEl: '.swiper-btn-next',

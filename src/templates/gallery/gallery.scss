@@ -4,61 +4,61 @@
 @import "../../components/swiper-gallery/swiper-gallery.scss";
 
 .gallery {
-    background: #FCFCFC;
-    color: $font-color;
-}
-
-.gallery__main {
+  &__main {
 
     .photo-album-block {
-        @include block-padding-bottom;
+      @include block-padding-bottom;
     }
+
     .video-album-block {
-        @include block-padding;
+      @include block-padding;
     }
+
     .audio-album-block {
-        background: #E9E9E9;
-        @include block-padding;
-        &__container {
-            position: relative;
-        }
+      background: #E9E9E9;
+      @include block-padding;
+
+      &__container {
+        position: relative;
+      }
     }
+  }
 }
 
 .gallery-link-to-page {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 246px;
-    height: 50px;
-    background: $theme-color;
-    border: 2px solid transparent;
-    border-radius: 10px;
-    font-weight: 600;
-    font-size: 16px;
-    line-height: 23px;
-    color: #FFFFFF;
-    margin: 0 auto;
-    margin-top: 20px;
-    transition: all 0.2s ease-in-out;
-    text-decoration: none;
-    @include media_from('md') {
-        width: 276px;
-        height: 55px;
-        font-size: 18px;
-        line-height: 25px;
-        margin-top: 32px;
-    }
-    @include media_from('xl') {
-        width: 286px;
-        height: 57px;
-        font-size: 20px;
-        line-height: 27px;
-    }
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 246px;
+  height: 50px;
+  background: $theme-color;
+  border: 2px solid transparent;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 23px;
+  color: #FFFFFF;
+  margin: 0 auto;
+  margin-top: 20px;
+  transition: all 0.2s ease-in-out;
+  text-decoration: none;
+  @include media_from('md') {
+    width: 276px;
+    height: 55px;
+    font-size: 18px;
+    line-height: 25px;
+    margin-top: 32px;
+  }
+  @include media_from('xl') {
+    width: 286px;
+    height: 57px;
+    font-size: 20px;
+    line-height: 27px;
+  }
 
-    &:hover {
-        background: #FFFFFF;
-        color: $font-color;
-        border-color: $theme-color;
-    }
+  &:hover {
+    background: #FFFFFF;
+    color: $font-color;
+    border-color: $theme-color;
+  }
 }

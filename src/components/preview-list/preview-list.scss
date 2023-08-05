@@ -13,9 +13,6 @@
         grid-column-gap: 20px;
         grid-row-gap: 20px;
     }
-    @include media_from('xl') {
-        grid-template-columns: repeat(4, 1fr);
-    }
 }
 
 .preview-list__item {
