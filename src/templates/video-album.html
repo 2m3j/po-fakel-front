@@ -17,21 +17,21 @@
       <%= require('raw-loader!./layout/header/branding.html').default %>
     </header>
     <main>
+      <section class="bread-crumb-block container">
+        <ul class="bread-crumb">
+          <li><a href="#">Главная</a></li>
+          <svg fill="none" width="20" height="20" viewBox="0 0 24 24">
+            <use href="images/svg/symbol/svg/sprite.symbol.svg#arrow-bread-crumbs"></use>
+          </svg>
+          <li><a href="#">Галерея</a></li>
+          <svg fill="none" width="20" height="20" viewBox="0 0 24 24">
+            <use href="images/svg/symbol/svg/sprite.symbol.svg#arrow-bread-crumbs"></use>
+          </svg>
+          <li class="active-crumb">Видео</li>
+        </ul>
+      </section>
       <div class="video-album">
         <div class="container">
-          <section class="bread-crumb-block">
-            <ul class="bread-crumb">
-              <li><a href="#">Главная</a></li>
-              <svg fill="none" width="20" height="20" viewBox="0 0 24 24">
-                <use href="images/svg/symbol/svg/sprite.symbol.svg#arrow-bread-crumbs"></use>
-              </svg>
-              <li><a href="#">Галерея</a></li>
-              <svg fill="none" width="20" height="20" viewBox="0 0 24 24">
-                <use href="images/svg/symbol/svg/sprite.symbol.svg#arrow-bread-crumbs"></use>
-              </svg>
-              <li class="active-crumb">Видео</li>
-            </ul>
-          </section>
           <section class="video-album__main">
             <h1>Видео</h1>
             <div class="fancybox-grid">
