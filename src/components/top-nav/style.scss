@@ -1,5 +1,13 @@
 .top-nav {
+  padding: 0;
   margin-bottom: 0;
+  @include media_from('md') {
+    padding-right: 10px;
+  }
+  @include media_from('lg') {
+    padding-right: 0;
+  }
+  margin-right: 10px;
   @mixin active {
     color: $theme-color;
 
