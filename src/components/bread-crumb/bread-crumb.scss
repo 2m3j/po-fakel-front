@@ -1,13 +1,9 @@
 .bread-crumb-block {
-  margin-bottom: 30px;
-  margin-top: 30px;
+  margin-bottom: 15px;
+  margin-top: 15px;
   @include media_from('sm') {
-    margin-bottom: 40px;
-    margin-top: 40px;
-  }
-  @include media_from('lg') {
-    margin-bottom: 50px;
-    margin-top: 50px;
+    margin-bottom: 20px;
+    margin-top: 20px;
   }
 
   .bread-crumb {

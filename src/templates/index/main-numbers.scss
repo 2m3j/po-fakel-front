@@ -22,7 +22,7 @@
     }
 
     font-size: 18px;
-    @include media_from('md') {
+    @include media_from('xl') {
       font-size: 20px;
     }
   }
