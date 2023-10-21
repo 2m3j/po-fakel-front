@@ -1,6 +1,5 @@
-if (document.querySelector('.swiper-gallery')) {
-    new Swiper('.swiper-gallery', {
-        loop: true,
+if (document.querySelector('.swiper-gallery .swiper')) {
+    new Swiper('.swiper-gallery .swiper', {
         slidesPerView: 1,
         grabCursor: true,
         breakpoints: {
@@ -18,9 +17,8 @@ if (document.querySelector('.swiper-gallery')) {
             }
         },
         navigation: {
-            nextEl: '.swiper-btn-next',
-            prevEl: '.swiper-btn-prev',
-        },
-        freeMode: true,
+            nextEl: '.swiper-gallery__navigation-right',
+            prevEl: '.swiper-gallery__navigation-left',
+        }
     });
 }

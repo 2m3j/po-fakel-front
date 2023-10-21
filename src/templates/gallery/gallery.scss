@@ -17,10 +17,6 @@
     .audio-album-block {
       background: #E9E9E9;
       @include block-padding;
-
-      &__container {
-        position: relative;
-      }
     }
   }
 }

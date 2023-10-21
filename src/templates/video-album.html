@@ -30,17 +30,17 @@
           <li class="active-crumb">Видео</li>
         </ul>
       </section>
-      <div class="video-album">
+      <section class="video-album">
         <div class="container">
-          <section class="video-album__main">
+          <div class="video-album__main">
             <h1>Видео</h1>
             <div class="fancybox-grid">
-              <button class="fancybox-grid__item" data-fancybox="gallery" data-src="#popup_1">
+              <a class="fancybox-grid__item" data-fancybox="gallery" href="/ajax-video.html" data-type="ajax">
                 <div class="fancybox-grid__item__gradient"></div>
                 <img src="images/video-album/Экспедиция  2020 Часть 1 Блиндаж.jpg" alt="Фото" />
                 <span class="fancybox-grid__item__name">Экспедиция 2020<br />
                   Часть 1 Блиндаж</span>
-              </button>
+              </a>
               <div id="popup_1" style="display: none" class="fancybox__content">
                 <div class="popup__body">
                   <div class="popup__content">
@@ -338,9 +338,9 @@
                 </button>
               </div>
             </div>
-          </section>
+          </div>
         </div>
-      </div>
+      </section>
     </main>
     <footer><%= require('raw-loader!./layout/footer.html').default %></footer>
     <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
