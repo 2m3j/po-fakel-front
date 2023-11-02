@@ -114,6 +114,8 @@
     justify-content: end;
     height: 100%;
     padding: 25px;
+    background: linear-gradient(179.82deg, transparent 64.58%, rgba(0, 0, 0, 0.6) 79.64%);
+    cursor: pointer;
   }
 
   &__name {
@@ -186,54 +188,38 @@
 }
 
 .mass-media-details {
-  @include block-padding-bottom;
-
   &__cards {
+
+    display: grid;
+    grid-template-columns: 1fr;
+    @include media_from('md') {
+      grid-template-columns: 1fr 1fr;
+    }
+    @include media_from('xl') {
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+    gap: 30px;
+
     &:not(:last-child) {
       margin-bottom: 30px;
-    }
-
-    @include media_from('sm') {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 30px;
     }
   }
 
   &__card {
-    flex: 1 1 250px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
     border-radius: 5px;
     background-color: #fff;
-    @include media_from('xs') {
-      &:not(:last-child) {
-        margin-bottom: 20px;
-      }
-    }
-    @include media_from('sm') {
-      &:not(:last-child) {
-        margin-bottom: 0;
-      }
-    }
-    @include media_from('md') {
-      max-width: 50%;
-    }
   }
-
-  &__btns {
-  }
-
-  @include block-padding-bottom;
 }
 
 .cards-mass-media {
-  display: grid;
-
   &__subtitle {
     text-decoration: none;
     font-weight: 600;
     font-size: 20px;
     line-height: 135%;
-    margin-bottom: 15px;
   }
 
   &__descr {
@@ -245,15 +231,15 @@
 
     font-size: 16px;
     line-height: 150%;
-    margin-bottom: 20px;
   }
 
   &__image {
-    align-self: flex-end;
-
     img {
       width: 100%;
       max-width: 100%;
+      border-radius: 5px;
+      object-fit: cover;
+      height: 250px;
     }
   }
 }
@@ -273,6 +259,11 @@
     line-height: 120%;
     @include media_from('md') {
       font-size: 20px;
+    }
+
+    &:hover {
+      transition: 0.3s all;
+      box-shadow: 0 0 10px $theme-color;
     }
   }
 }

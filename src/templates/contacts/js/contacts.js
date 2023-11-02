@@ -10,19 +10,32 @@ export default class ContractsPage {
             formInputs = document.querySelectorAll('.form-contacts__input'),
             deleteInputsValue = document.querySelectorAll('.form-contacts__delete'),
             successInputsValue = document.querySelectorAll('.form-contacts__success'),
-            errorMessage = document.querySelectorAll('.form-contacts__message');
+            errorMessage = document.querySelectorAll('.form-contacts__message'),
+            btn = document.querySelectorAll('.btns-form-contacts__btn')[0] ?? null,
+            form = document.querySelector('.form-contacts');
         textarea.addEventListener('input', () => {
-            if (textarea.value !== '') {
+            if (textarea.value.length >= 5) {
+                textareaPlaceholder.classList.add('_active', '_success');
+                textarea.classList.add('_active', '_success');
+                isValidMessage = true;
+                this.#valid(textarea, errorMessage[3], '')
+            } else if (textarea.value.length > 0 && textarea.value.length < 5) {
+                this.#notValidate(textarea, errorMessage[3], 'Минимальная длина 5 символов')
+                isValidMessage = false;
                 textareaPlaceholder.classList.add('_active');
                 textarea.classList.add('_active');
+                textareaPlaceholder.classList.remove('_success');
+                textarea.classList.remove('_success');
             } else {
-                textareaPlaceholder.classList.remove('_active');
-                textarea.classList.remove('_active');
+                textareaPlaceholder.classList.remove('_active', '_success');
+                textarea.classList.remove('_active', '_success');
+                isValidMessage = false;
+                this.#valid(textarea, errorMessage[3], '')
             }
-
             textareaCurrent.textContent = textarea.value.length;
         });
-
+        let isValidName, isValidEmail, isValidMessage = false;
+        let isValidPhone = true;
         formInputs.forEach((item, i) => {
             item.addEventListener('input', e => {
                 if (item.value !== '') {
@@ -54,17 +67,20 @@ export default class ContractsPage {
                 }
 
                 if (i === 0) {
-                    // let regFio = /^\w+\s\w+\s\w+$/iu;
-                    // let regFio = /^([а-яё]+|[a-z]+)$/i;
                     let regFio = /^[a-zа-яё\s]+$/iu;
 
                     if (!this.#validate(regFio, item.value) && item.value !== '') {
                         this.#notValidate(item, errorMessage[i], 'Используйте кириллицу или латиницу')
+                        isValidName = false;
+                    } else if (item.value.length > 0 && item.value.length < 3) {
+                        this.#notValidate(item, errorMessage[i], 'Минимальная длина 3 символа')
+                        isValidName = false;
                     } else {
                         this.#valid(item, errorMessage[i], '')
+                        isValidName = true;
                     }
 
-                    if (regFio.test(item.value.trim())) {
+                    if (regFio.test(item.value.trim()) && item.value.length >= 3) {
                         namePlaceholder.classList.add('_success');
                         item.classList.add('_success');
                         successInputsValue[i].classList.add('_active');
@@ -75,21 +91,14 @@ export default class ContractsPage {
                         successInputsValue[i].classList.remove('_active');
                     }
                 } else if (i === 1) {
-                    let regDigit = /^[0-9]+$/gm,
-                        regNotDigit = /\D+/g;
+                    let regDigit = /^([78])\d{10}$/gm;
 
                     if (!this.#validate(regDigit, item.value) && item.value !== '') {
-                        this.#notValidate(item, errorMessage[i], 'Используйте только цифры')
+                        this.#notValidate(item, errorMessage[i], 'Введите мобильный номер, например, 79536952867')
+                        isValidPhone = false;
                     } else {
                         this.#valid(item, errorMessage[i], '')
-                    }
-
-                    if (regNotDigit.test(item.value)) {
-                        phonePlaceholder.classList.add('_error');
-                        item.classList.add('_error');
-                    } else {
-                        phonePlaceholder.classList.remove('_error');
-                        item.classList.remove('_error');
+                        isValidPhone = true;
                     }
 
                     if (regDigit.test(item.value)) {
@@ -106,9 +115,11 @@ export default class ContractsPage {
                     let regMail = /\w+@\w+\.\w+/;
 
                     if (!this.#validate(regMail, item.value) && item.value !== '') {
-                        this.#notValidate(item, errorMessage[i], 'Используйте знаки «@» и точку')
+                        this.#notValidate(item, errorMessage[i], 'Введите корректный e-mail адрес')
+                        isValidEmail = false;
                     } else {
                         this.#valid(item, errorMessage[i], '')
+                        isValidEmail = true;
                     }
 
                     if (regMail.test(item.value)) {
@@ -129,8 +140,6 @@ export default class ContractsPage {
                             item.value = '';
                             btn.classList.add('_active');
                             item.classList.remove('_active');
-                            item.classList.remove('_error');
-                            phonePlaceholder.classList.remove('_error');
                             item.classList.remove('_success');
                             phonePlaceholder.classList.remove('_success');
                             removeClassPlaceholders();
@@ -156,25 +165,39 @@ export default class ContractsPage {
             }
         });
 
-        document.querySelector('.form-contacts').addEventListener('submit', e => {
+        form.addEventListener('submit', async (e) => {
             e.preventDefault();
-            document.querySelector(".form-contacts__form").innerHTML = '<div class="alert alert-success">Сообщение отправлено<div>';
+            let recaptcha = document.getElementById('g-recaptcha-response');
+            if (isValidName && isValidPhone && isValidEmail && isValidMessage && (recaptcha && recaptcha.value !== '')) {
+                let params = new FormData(form);
+                if (params.has('g-recaptcha-response')) {
+                    params.append('gRecaptchaResponse', params.get('g-recaptcha-response'));
+                    params.delete('g-recaptcha-response');
+                }
+                let response = await fetch(form.action, {
+                    method: 'POST', body: params, headers: {
+                        'Accept': 'application/json',
+                    }
+                });
+                if (response.ok) {
+                    document.querySelector(".form-contacts__form").innerHTML = '<div class="alert alert-success">Сообщение отправлено<div>';
+                } else {
+                    document.querySelector(".form-contacts__messages").innerHTML = '<div class="alert alert-danger">Ошибка отправки сообщения.<div>';
+                }
+            }
         });
     }
 
     showMore() {
-        const dots = document.getElementById("dots"),
-            moreText = document.getElementById("more"),
-            btnText = document.getElementById("myBtn");
-
-        if (dots.style.display === "none") {
-            dots.style.display = "inline";
-            btnText.innerHTML = "Читать далее";
-            moreText.style.display = "none";
-        } else {
-            dots.style.display = "none";
+        const moreText = document.getElementById("more-info-contacts__txt"),
+            btnText = document.getElementById("more-info-contacts__btn");
+        let moreTextStyle = window.getComputedStyle(moreText);
+        if (moreTextStyle.display === "none") {
             btnText.innerHTML = "Свернуть";
-            moreText.style.display = "inline";
+            moreText.classList.add('d-inline');
+        } else {
+            btnText.innerHTML = "Читать далее";
+            moreText.classList.remove('d-inline');
         }
     }
 

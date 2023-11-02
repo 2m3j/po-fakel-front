@@ -5,7 +5,11 @@
 }
 
 html, body {
-  font-size: 16px;
+  font-size: 18px;
+  @include media_from('md') {
+    font-size: 20px;
+  }
+  line-height: 150%;
   font-family: 'Montserrat', sans-serif;
   color: $font-color;
 }

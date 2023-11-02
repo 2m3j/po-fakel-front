@@ -5,41 +5,26 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Контакты</title>
-    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
-    <link
-            rel="stylesheet"
-            href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css"
-    />
+    <script src="https://www.google.com/recaptcha/api.js?explicit&hl=ru" async defer></script>
 </head>
 <body>
 <header class="header">
     <%= require('raw-loader!./layout/header/branding.html').default %>
 </header>
 <main>
-    <div class="breadcrumbs-v1">
-        <div>
-            <div class="breadcrumbs-v1__container container">
-                <ul class="breadcrumbs-v1__list">
-                    <li class="breadcrumbs-v1__item">
-                        <a href="/" class="breadcrumbs-v1__link">Главная</a>
-                        <p></p>
-                        <svg width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M6 7.4L0 1.4L1.4 0L6 4.6L10.6 0L12 1.4L6 7.4Z" fill="#F3F3F3"/>
-                        </svg>
-                    </li>
-                    <li class="breadcrumbs-v1__item">
-                                <span class="breadcrumbs-v1__current">
-                                    Контакты
-                                </span>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </div>
+    <section class="bread-crumb-block container">
+        <ul class="bread-crumb">
+            <li><a href="/">Главная</a></li>
+            <svg fill="none" width="20" height="20" viewBox="0 0 24 24">
+                <use href="images/svg/symbol/svg/sprite.symbol.svg#arrow-bread-crumbs"></use>
+            </svg>
+            <li class="active-crumb">Контакты</li>
+        </ul>
+    </section>
     <section class="main-contacts">
-        <div class="main-contacts__container container">
+        <div class="container">
             <div class="main-contacts__content">
-                <h1 class="main-contacts__title">Контакты</h1>
+                <h1>Контакты</h1>
                 <p class="main-contacts__descr">
                     Поисковый отряд &laquo;Факел&raquo; Вятского государственного университета (Кировская областная
                     общественная молодёжная поисковая организация &laquo;ДОЛГ&raquo;)
@@ -53,18 +38,18 @@
                             <p class="info-contacts__text more-info-contacts__text">
                                 Михаил Юрьевич Порошин&nbsp;&mdash; командир поискового отряда &laquo;Факел&raquo; с&nbsp;2005&nbsp;года,
                                 который считает своей миссией сохранить память о&nbsp;героических поступках наших
-                                предков. <span id="dots">...</span><span id="more">Под его началом отряд из&nbsp;добровольцев, объединённых общей идеей, превратился в&nbsp;жизнеспособный коллектив со&nbsp;своими традициями, правилами и&nbsp;преемственностью.
+                                предков. <span id="more-info-contacts__txt">Под его началом отряд из&nbsp;добровольцев, объединённых общей идеей, превратился в&nbsp;жизнеспособный коллектив со&nbsp;своими традициями, правилами и&nbsp;преемственностью.
                                         Михаил Юрьевич поддерживает связь с&nbsp;большинством родственников, найденных отрядом бойцов, ведёт с&nbsp;ними переписку, помогает другим в&nbsp;поиске информации о&nbsp;пропавших без вести во&nbsp;время войны.
                                         Историк по&nbsp;профессии, он&nbsp;ориентируется в&nbsp;архивных материалах, картах, военной литературе. Михаил Юрьевич вошёл в&nbsp;число организаторов проведения уроков мужества для учащихся школ, ссузов и&nbsp;вузов&nbsp;г. Кирова.</span>
                             </p>
-                            <button onclick="window.contactsPage.showMore()" class="more-info-contacts__btn" id="myBtn">
+                            <button onclick="window.contactsPage.showMore()" class="more-info-contacts__btn" id="more-info-contacts__btn">
                                 Читать далее
                             </button>
                         </div>
                         <ul class="info-contacts__list">
                             <li class="info-contacts__item">
                                 <a href="tel:79536952867" class="info-contacts__link">
-                                    <svg class="svg-icon svg-icon_size_xl">
+                                    <svg class="svg-icon svg-icon_size_lg">
                                         <use href="images/svg/symbol/svg/sprite.symbol.svg#phone"></use>
                                     </svg>
                                     <span>
@@ -77,7 +62,7 @@
                             </li>
                             <li class="info-contacts__item">
                                 <a href="mailto:mporoshin@yandex.ru" class="info-contacts__link">
-                                    <svg class="svg-icon svg-icon_size_xl">
+                                    <svg class="svg-icon svg-icon_size_lg">
                                         <use href="images/svg/symbol/svg/sprite.symbol.svg#envelope"></use>
                                     </svg>
                                     <span>mporoshin@yandex.ru</span>
@@ -85,12 +70,10 @@
                             </li>
                             <li class="info-contacts__item">
                                 <a target="_blank" href="https://vk.com/fakel.kirov" class="info-contacts__link">
-                                    <svg class="svg-icon svg-icon_size_xl">
+                                    <svg class="svg-icon svg-icon_size_lg">
                                         <use href="images/svg/symbol/svg/sprite.symbol.svg#vk"></use>
                                     </svg>
-                                    <span>
-                                                vk.com/fakel.kirov
-                                            </span>
+                                    <span>vk.com/fakel.kirov</span>
                                 </a>
                             </li>
                         </ul>
@@ -100,9 +83,10 @@
         </div>
     </section>
     <section class="main-contacts__feedback feedback-contacts">
-        <div class="feedback-contacts__container container">
-            <h2 class="feedback-contacts__title">Обратная связь</h2>
+        <div class="container">
+            <h2>Обратная связь</h2>
             <div class="form-contacts__form">
+                <div class="form-contacts__messages"></div>
                 <form action="https://jsonplaceholder.typicode.com/posts" method="POST"
                       class="feedback-contacts__form form-contacts">
                     <div class="form-contacts__fields">
@@ -129,9 +113,8 @@
                         </div>
                         <div class="form-contacts__inner">
                             <div class="form-contacts__field">
-                                <!-- <input data-path="userTel" id="userPhone" class="form-contacts__input" name="phone" type="tel" required> -->
-                                <input data-path="userTel" id="userPhone" class="form-contacts__input" name="tel"
-                                       type="text" required>
+                                <input data-path="userTel" id="userPhone" class="form-contacts__input" name="phone"
+                                       type="text">
                                 <label id="placeholderPhone" class="form-contacts__placeholder">Введите
                                     ваш телефон</label>
                                 <button class="form-contacts__delete _active" type="button">
@@ -152,7 +135,7 @@
                             </div>
                             <div class="form-contacts__field">
                                 <input data-path="userEmail" id="userMail" class="form-contacts__input" name="email"
-                                       type="mail" required>
+                                       type="email" required>
                                 <label id="placeholderMail" class="form-contacts__placeholder">Введите
                                     ваш email*</label>
                                 <button class="form-contacts__delete _active" type="button">
@@ -173,29 +156,31 @@
                             </div>
                         </div>
                         <div class="form-contacts__field">
+                            <div class="form-contacts__field-container">
                             <textarea id="userComment" maxlength="500" class="form-contacts__textarea" required
-                                      name="comments"></textarea>
-                            <label id="labelComment" class="form-contacts__placeholder">Введите ваше сообщение*</label>
-                            <div class="form-contacts__counter">
-                                <span class="form-contacts__current">0</span>
-                                <span class="form-contacts__total">/ 500</span>
+                                      name="message"></textarea>
+                                <label id="labelComment" class="form-contacts__placeholder">Введите ваше
+                                    сообщение*</label>
+                                <div class="form-contacts__counter">
+                                    <span class="form-contacts__current">0</span>
+                                    <span class="form-contacts__total">/ 500</span>
+                                </div>
                             </div>
+                            <span data-error="userComment" class="form-contacts__message"></span>
                         </div>
                     </div>
                     <div class="form-contacts__btns btns-form-contacts">
                         <div class="btns-form-contacts__col btns-form-contacts__col_capcha">
                             <div class="btns-form-contacts__reminder">*Поля обязательны для заполнения</div>
                             <div class="btns-form-contacts__captcha">
-                                <div class="g-recapcha" data-sitekey="6Ldl988lAAAAAHTj3JGJRz5zbXVP_Ewfi2nDsydq">
-
+                                <div class="g-recaptcha" data-sitekey="6LdcycQoAAAAANIHTgaTcRgSrUOoTMjoPVuyY6SZ">
                                 </div>
                             </div>
                         </div>
                         <div class="btns-form-contacts__col btns-form-contacts__col_sec">
                             <div class="btns-form-contacts__checkbox checkbox-contacts">
                                 <input id="contactsFormCheckbox" class="checkbox-contacts__input" type="checkbox"
-                                       value="1"
-                                       name="form[]" required>
+                                       name="agree" required>
                                 <label for="contactsFormCheckbox" class="checkbox-contacts__label">
                                     <div class="checkbox-contacts__text">Я согласен(а) на обработку <a href="#">персональных
                                         данных</a></div>
@@ -211,7 +196,6 @@
 </main>
 <%= require('raw-loader!./layout/footer.html').default %>
 <%= require('raw-loader!./layout/bottom-scripts.html').default %>
-<script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
 <script type="text/javascript">
     window.addEventListener('load', function () {
         window.contactsPage.start();

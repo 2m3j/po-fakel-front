@@ -1,0 +1,25 @@
+.posts-article {
+  @include block-padding-bottom;
+  font-size: 18px;
+  @include media_from('md') {
+    font-size: 20px;
+  }
+
+  &__date {
+    padding-bottom: 15px;
+    @include media_from('md') {
+      padding-bottom: 25px;
+    }
+    @include media_from('xl') {
+      padding-bottom: 30px;
+    }
+    font-weight: 600;
+  }
+
+  &__content {
+    @include media_from('md') {
+      max-width: 80%;
+    }
+    line-height: 1.8;
+  }
+}

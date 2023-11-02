@@ -1,60 +1,82 @@
-.about-volunteer-stories {
-  background-clip: border-box;
-}
-.card-volonteer {
-  display: flex;
-  justify-content: flex-start;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  &__text {
-    font-size: 20px;
-    line-height: 150%;
-    align-self: stretch;
-    @media (max-width: 1200px) {
-      font-size: 15px;
-    }
+.story-card {
+  @include media_from('md') {
+    display: flex;
+    gap: 30px;
   }
+
+  &__text {
+  }
+
   &__author {
     font-weight: 600;
-    font-size: 20px;
-    line-height: 150%;
     text-align: end;
-    padding-right: 20px;
+    padding-right: 1em;
   }
+
   &__img {
-    background-position: center;
-    background-size: cover;
-    width: 350px;
-    height: 467px;
-    margin-right: 30px;
-    border-radius: 5px;
-    @media (min-width: 768px) {
-      width: 280px;
-      height: 460px;
+    text-align: center;
+    margin-bottom: 20px;
+    flex: 1 0 auto;
+
+    img {
+      width: 100%;
+      max-width: 300px;
+      border-radius: 5px;
     }
-    @media (min-width: 1200px) {
-      width: 222px;
-      height: 296px;
+
+    @include media_from('md') {
+      margin-bottom: 0;
+      text-align: left;
     }
   }
-  &__item-card {
-    display: flex;
-    --bs-gutter-x: 0;
-    justify-content: center;
+}
+
+.about-stories {
+  background-color: #F3F3F3;
+  @include block-padding;
+
+  &__slider {
+    position: relative;
   }
+
   &__navigation {
+    display: none;
+    @include media_from('lg') {
+      display: block;
+    }
+
+    button {
+      background-color: transparent;
+    }
+
     position: absolute;
     text-align: right;
-    top: -0;
+    top: -60px;
     right: 0;
-  }
+    @include media_from('lg') {
+      display: block;
+    }
 
-  &__navigation-left {
-    margin-right: 10px;
-  }
+    &-prev, &-next {
+      width: 48px;
+      height: 48px;
+      border: 2px solid $theme-color;
+      border-radius: 10px;
+      transition: filter .5s ease 0s;
+      outline: none;
 
-  &__navigation-left,
-  &__navigation-right {
-    cursor: pointer;
+      &:hover, &:focus-visible {
+        transition: 0.3s all;
+        box-shadow: 0 0 10px $theme-color;
+      }
+    }
+
+    &-next {
+      margin-left: 10px;
+    }
   }
+}
+
+.about-media {
+  @include block-padding;
 }

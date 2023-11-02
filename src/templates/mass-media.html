@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/libs/swiper/swiper-bundle.min.css"/>
+    <script src="/libs/swiper/swiper-bundle.min.js"></script>
+    <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css"
+    />
+    <title>О нас</title>
+</head>
+<body>
+<header class="header">
+    <%= require('raw-loader!./layout/header/branding.html').default %>
+</header>
+<main>
+    <section class="bread-crumb-block container">
+        <ul class="bread-crumb">
+            <li><a href="#">Главная</a></li>
+            <svg fill="none" width="20" height="20" viewBox="0 0 24 24">
+                <use href="images/svg/symbol/svg/sprite.symbol.svg#arrow-bread-crumbs"></use>
+            </svg>
+            <li class="active-crumb">СМИ о нас</li>
+        </ul>
+    </section>
+    <section class="about-media mass-media-details">
+        <div class="container">
+            <h1>СМИ о нас</h1>
+            <div class="mass-media-details__cards">
+                <div class="mass-media-details__card cards-mass-media">
+                    <div class="cards-mass-media__image">
+                        <img src="images/detailsPage/card-1.jpg" alt="Фотография">
+                    </div>
+                    <a href="#" target="_blank" class="cards-mass-media__subtitle">
+                        Поисковики нашли родственников солдата, пропавшего без вести в 1942г.
+                    </a>
+                    <div class="cards-mass-media__descr">
+                        Поисковики отряда «Факел» из города Киров, работая в ходе осеннего этапа межрегиональной
+                        Вахты Памяти «Поисковой экспедиции «Долина», нашли останки семи солдат. Личность одного из
+                        них установили по записке из смертного медальона, а позже удалось найти семью погибшего
+                        бойца.
+                    </div>
+                </div>
+                <div class="mass-media-details__card cards-mass-media">
+                    <div class="cards-mass-media__image">
+                        <img src="images/detailsPage/card-2.jpg" alt="Фотография">
+                    </div>
+                    <div class="cards-mass-media__subtitle">
+                        «Отец, наш Ромка вернулся». В Красноярске похоронили останки красноармейца
+                    </div>
+                    <div class="cards-mass-media__descr">
+                        Волнительное мероприятие прошло в День Неизвестного Солдата, 3 декабря, на Мемориале
+                        Победы. В Красноярске на Бадалыкском кладбище были захоронены останки красноармейца
+                        Феноберцева Романа Филипповича. 
+                    </div>
+                </div>
+                <div class="mass-media-details__card cards-mass-media">
+                    <div class="cards-mass-media__image">
+                        <img src="images/detailsPage/card-2.jpg" alt="Фотография">
+                    </div>
+                    <div class="cards-mass-media__subtitle">
+                        В Красноярске захоронили останки погибшего во время ВОВ солдата
+                    </div>
+                    <div class="cards-mass-media__descr">
+                        В Красноярске захоронили останки солдата, погибшего во время Великой Отечественной войны,
+                        призванного на воинскую службу с территории Красноярского края. 
+                    </div>
+                </div>
+            </div>
+            <div class="mass-media-details__btns btns-mass-media-details">
+                <button class="btns-mass-media-details__btn">Больше новостей</button>
+            </div>
+        </div>
+    </section>
+</main>
+<%= require('raw-loader!./layout/footer.html').default %>
+<%= require('raw-loader!./layout/bottom-scripts.html').default %>
+<script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+<script type="text/javascript">
+    window.addEventListener('load', function () {
+        window.aboutPage.start();
+        Fancybox.bind('[data-fancybox]', {
+            Thumbs: false,
+        });
+    });
+</script>
+</body>
+</html>
