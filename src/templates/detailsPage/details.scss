@@ -116,6 +116,7 @@
     padding: 25px;
     background: linear-gradient(179.82deg, transparent 64.58%, rgba(0, 0, 0, 0.6) 79.64%);
     cursor: pointer;
+    border-radius: 15px;
   }
 
   &__name {
@@ -187,6 +188,10 @@
   }
 }
 
+.soldier-mass-media {
+  @include block-padding-bottom;
+}
+
 .mass-media-details {
   &__cards {
 
@@ -255,15 +260,13 @@
     border: 2px solid $theme-color;
     border-radius: 10px;
     font-weight: 600;
-    font-size: 16px;
     line-height: 120%;
-    @include media_from('md') {
-      font-size: 20px;
-    }
+    text-decoration: none;
 
     &:hover {
       transition: 0.3s all;
       box-shadow: 0 0 10px $theme-color;
+      color:inherit;
     }
   }
 }
