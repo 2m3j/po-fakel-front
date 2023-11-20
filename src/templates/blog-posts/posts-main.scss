@@ -20,6 +20,26 @@
     @include media_from('md') {
       max-width: 80%;
     }
-    line-height: 1.8;
+    line-height: 1.6;
+  }
+
+  .article-image {
+    text-align: center;
+
+    figcaption {
+      font-size: 14px;
+      @include media_from('md') {
+        font-size: 16px;
+      }
+      color: #626d7a;
+      line-height: 18px;
+      margin-top: 12px;
+      margin-bottom: 1rem;
+    }
+
+    img {
+      max-width: 100%;
+      cursor: pointer;
+    }
   }
 }
