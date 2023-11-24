@@ -61,6 +61,7 @@
   width: 100%;
   z-index: 500;
   font-size: 16px;
+  overflow-y: auto;
 
   &_opened {
     display: block;
