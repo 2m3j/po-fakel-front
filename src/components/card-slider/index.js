@@ -31,7 +31,8 @@ if (document.querySelector('.main-names .card-slider .swiper')) {
         },
     });
 }
-if (document.querySelector('.about-stories__slider .swiper')) {
+const aboutSliders = document.querySelectorAll('.about-stories__slider .swiper .swiper-slide');
+if (aboutSliders.length) {
     new Swiper(".about-stories__slider .swiper", {
         loop: true,
         autoHeight: true,
@@ -48,6 +49,7 @@ if (document.querySelector('.about-stories__slider .swiper')) {
             el: ".swiper-pagination",
             clickable: true,
         },
+        initialSlide: Math.floor(Math.random() * aboutSliders.length - 1)
     });
 }
 if (document.querySelector('.search-names__slider .swiper')) {
