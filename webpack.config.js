@@ -17,7 +17,7 @@ const path = {
 
 
 module.exports = {
-    mode: 'production',
+    mode: 'development',
     entry: {
         app: [path.src.js + 'app.js', path.src.scss + 'app.scss'],
     },
