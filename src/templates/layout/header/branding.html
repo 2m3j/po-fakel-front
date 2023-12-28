@@ -3,7 +3,19 @@
         <div class="header-branding__wrapper">
             <a href="/"><img src="images/logo.svg" alt="logo" class="header-branding__logo"/></a>
             <ul class="top-nav d-none d-lg-flex">
-                <li class="top-nav__item"><a href="about.html">О нас</a></li>
+                <li class="top-nav__item">
+                    <a href="about.html">
+                        О нас
+                        <svg>
+                            <use href="images/svg/symbol/svg/sprite.symbol.svg#arrow-down_corner"></use>
+                        </svg>
+                    </a>
+                    <ul class="top-nav-sub">
+                        <li class="top-nav-sub__item">
+                            <a href="mass-media.html">СМИ</a>
+                        </li>
+                    </ul>
+                </li>
                 <li class="top-nav__item"><a href="names.html">Имена</a></li>
                 <li class="top-nav__item">
                     <a href="gallery.html">
@@ -24,7 +36,7 @@
                         </li>
                     </ul>
                 </li>
-                <li class="top-nav__item"><a href="news.html">Новости</a></li>
+                <li class="top-nav__item"><a href="news-group.html">Новости</a></li>
                 <li class="top-nav__item"><a href="contacts.html">Контакты</a></li>
             </ul>
             <form class="top-search d-none d-lg-flex" name="search" method="get" action="/search.html">

@@ -9,7 +9,7 @@
 
   &:hover {
     color: $btn-with-background-font-color;
-    transition: 0.1s all;
+    transition: 0.3s all;
     box-shadow: 0 0 5px $btn-background-color;
   }
 
@@ -32,7 +32,7 @@
     }
 
     &:hover {
-      transition: 0.1s all;
+      transition: 0.3s all;
       box-shadow: 0 0 10px $btn-background-color;
     }
   }

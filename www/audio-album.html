@@ -13,7 +13,19 @@
         <div class="header-branding__wrapper">
             <a href="/"><img src="images/logo.svg" alt="logo" class="header-branding__logo"/></a>
             <ul class="top-nav d-none d-lg-flex">
-                <li class="top-nav__item"><a href="about.html">О нас</a></li>
+                <li class="top-nav__item">
+                    <a href="about.html">
+                        О нас
+                        <svg>
+                            <use href="images/svg/symbol/svg/sprite.symbol.svg#arrow-down_corner"></use>
+                        </svg>
+                    </a>
+                    <ul class="top-nav-sub">
+                        <li class="top-nav-sub__item">
+                            <a href="mass-media.html">СМИ</a>
+                        </li>
+                    </ul>
+                </li>
                 <li class="top-nav__item"><a href="names.html">Имена</a></li>
                 <li class="top-nav__item">
                     <a href="gallery.html">
@@ -34,7 +46,7 @@
                         </li>
                     </ul>
                 </li>
-                <li class="top-nav__item"><a href="news.html">Новости</a></li>
+                <li class="top-nav__item"><a href="news-group.html">Новости</a></li>
                 <li class="top-nav__item"><a href="contacts.html">Контакты</a></li>
             </ul>
             <form class="top-search d-none d-lg-flex" name="search" method="get" action="/search.html">
@@ -99,25 +111,25 @@
 </div>
     </header>
     <main>
+      <section class="bread-crumb-block container">
+        <ul class="bread-crumb">
+          <li><a href="/">Главная</a></li>
+          <svg fill="none" width="20" height="20" viewBox="0 0 24 24">
+            <use href="images/svg/symbol/svg/sprite.symbol.svg#arrow-bread-crumbs"></use>
+          </svg>
+          <li><a href="/gallery.html">Галерея</a></li>
+          <svg fill="none" width="20" height="20" viewBox="0 0 24 24">
+            <use href="images/svg/symbol/svg/sprite.symbol.svg#arrow-bread-crumbs"></use>
+          </svg>
+          <li class="active-crumb">Аудиозаписи</li>
+        </ul>
+      </section>
       <div class="audio-album">
-        <div class="audio-album-container">
-          <section class="bread-crumb-block">
-            <ul class="bread-crumb">
-              <li><a href="#">Главная</a></li>
-              <svg fill="none" width="20" height="20" viewBox="0 0 24 24">
-                <use href="images/svg/symbol/svg/sprite.symbol.svg#arrow-bread-crumbs"></use>
-              </svg>
-              <li><a href="#">Галерея</a></li>
-              <svg fill="none" width="20" height="20" viewBox="0 0 24 24">
-                <use href="images/svg/symbol/svg/sprite.symbol.svg#arrow-bread-crumbs"></use>
-              </svg>
-              <li class="active-crumb">Аудиозаписи</li>
-            </ul>
-          </section>
+        <div class="container">
           <section class="audio-album__main">
             <h2 class="audio-album__main__title">Аудиозаписи</h2>
-            <ul class="audio-album-preview-list">
-              <li class="audio-album-preview-list__item">
+            <div class="audio-album-preview-list">
+              <div class="audio-album-preview-list__item">
                 <div class="audio-album-preview-list__item__image">
                   <a href=""></a>
                   <div class="audio-album-preview-list__item__gradient"></div>
@@ -130,8 +142,8 @@
                   </p>
                 </div>
                 <audio class="audio-album-preview-list__item__audio" src="" controls></audio>
-              </li>
-              <li class="audio-album-preview-list__item">
+              </div>
+              <div class="audio-album-preview-list__item">
                 <div class="audio-album-preview-list__item__image">
                   <div class="audio-album-preview-list__item__gradient"></div>
                   <img src="images/audio-album/Миша Порошин - Эх, дороги.jpg" alt="Фото" />
@@ -139,9 +151,9 @@
                     Миша Порошин - Эх, дороги…<span>(Муз. А. Новиков, сл. Л. Ошанин)</span>
                   </p>
                 </div>
-                <audio class="audio-album-preview-list__item__audio" src="" controls></audio>
-              </li>
-              <li class="audio-album-preview-list__item">
+                <audio class="audio-album-preview-list__item__audio" src="" controls preload=metadata></audio>
+              </div>
+              <div class="audio-album-preview-list__item">
                 <div class="audio-album-preview-list__item__image">
                   <div class="audio-album-preview-list__item__gradient"></div>
                   <img src="images/audio-album/Миша Порошин - Женька.jpg" alt="Фото" />
@@ -150,8 +162,8 @@
                   </p>
                 </div>
                 <audio class="audio-album-preview-list__item__audio" src="" controls></audio>
-              </li>
-              <li class="audio-album-preview-list__item">
+              </div>
+              <div class="audio-album-preview-list__item">
                 <div class="audio-album-preview-list__item__image">
                   <div class="audio-album-preview-list__item__gradient"></div>
                   <img src="images/audio-album/Миша Порошин - Колоколенка.jpg" alt="Фото" />
@@ -160,8 +172,8 @@
                   </p>
                 </div>
                 <audio class="audio-album-preview-list__item__audio" src="" controls></audio>
-              </li>
-              <li class="audio-album-preview-list__item">
+              </div>
+              <div class="audio-album-preview-list__item">
                 <div class="audio-album-preview-list__item__image">
                   <div class="audio-album-preview-list__item__gradient"></div>
                   <img
@@ -174,8 +186,8 @@
                   </p>
                 </div>
                 <audio class="audio-album-preview-list__item__audio" src="" controls></audio>
-              </li>
-              <li class="audio-album-preview-list__item">
+              </div>
+              <div class="audio-album-preview-list__item">
                 <div class="audio-album-preview-list__item__image">
                   <div class="audio-album-preview-list__item__gradient"></div>
                   <img
@@ -187,8 +199,8 @@
                   </p>
                 </div>
                 <audio class="audio-album-preview-list__item__audio" src="" controls></audio>
-              </li>
-              <li class="audio-album-preview-list__item">
+              </div>
+              <div class="audio-album-preview-list__item">
                 <div class="audio-album-preview-list__item__image">
                   <div class="audio-album-preview-list__item__gradient"></div>
                   <img src="images/audio-album/Миша Порошин - Облака.jpg" alt="Фото" />
@@ -197,8 +209,8 @@
                   </p>
                 </div>
                 <audio class="audio-album-preview-list__item__audio" src="" controls></audio>
-              </li>
-              <li class="audio-album-preview-list__item">
+              </div>
+              <div class="audio-album-preview-list__item">
                 <div class="audio-album-preview-list__item__image">
                   <div class="audio-album-preview-list__item__gradient"></div>
                   <img src="images/audio-album/Миша Порошин - Помни войну.jpg" alt="Фото" />
@@ -207,8 +219,8 @@
                   </p>
                 </div>
                 <audio class="audio-album-preview-list__item__audio" src="" controls></audio>
-              </li>
-              <li class="audio-album-preview-list__item">
+              </div>
+              <div class="audio-album-preview-list__item">
                 <div class="audio-album-preview-list__item__image">
                   <div class="audio-album-preview-list__item__gradient"></div>
                   <img
@@ -221,8 +233,8 @@
                   </p>
                 </div>
                 <audio class="audio-album-preview-list__item__audio" src="" controls></audio>
-              </li>
-              <li class="audio-album-preview-list__item">
+              </div>
+              <div class="audio-album-preview-list__item">
                 <div class="audio-album-preview-list__item__image">
                   <div class="audio-album-preview-list__item__gradient"></div>
                   <img src="images/audio-album/Миша Порошин – В землянке.jpg" alt="Фото" />
@@ -231,8 +243,8 @@
                   </p>
                 </div>
                 <audio class="audio-album-preview-list__item__audio" src="" controls></audio>
-              </li>
-              <li class="audio-album-preview-list__item">
+              </div>
+              <div class="audio-album-preview-list__item">
                 <div class="audio-album-preview-list__item__image">
                   <div class="audio-album-preview-list__item__gradient"></div>
                   <img src="images/audio-album/Миша Порошин — Гимн Долины.jpg" alt="Фото" />
@@ -241,8 +253,8 @@
                   </p>
                 </div>
                 <audio class="audio-album-preview-list__item__audio" src="" controls></audio>
-              </li>
-              <li class="audio-album-preview-list__item">
+              </div>
+              <div class="audio-album-preview-list__item">
                 <div class="audio-album-preview-list__item__image">
                   <div class="audio-album-preview-list__item__gradient"></div>
                   <img src="images/audio-album/Миша Порошин — Рассказ ветерана.jpg" alt="Фото" />
@@ -251,8 +263,8 @@
                   </p>
                 </div>
                 <audio class="audio-album-preview-list__item__audio" src="" controls></audio>
-              </li>
-            </ul>
+              </div>
+            </div>
             <div class="audio-album__main__pagination">
               <div class="pagination">
                 <button class="btn_first-page" disabled>
@@ -290,7 +302,7 @@
         </div>
       </div>
     </main>
-    <footer><footer class="footer">
+      <footer class="footer">
     <div class="container">
         <div class="row justify-content-between footer__container">
             <div class="col-8 col-sm-7 col-md-9 col-xl-8">
@@ -372,14 +384,21 @@
                 <use href="images/svg/symbol/svg/sprite.symbol.svg#copyright"></use>
             </svg>
             Поисковый отряд Факел 2000-2023
+            <br>
+            <a class="footer__developers" href="#">
+                Сделано с
+                <svg class="svg-icon">
+                    <use href="images/svg/symbol/svg/sprite.symbol.svg#heart"></use>
+                </svg>
+            </a>
         </div>
     </div>
-</footer></footer>
-  </body>
-  <script type="text/javascript">
+</footer>
+      <script type="text/javascript">
     window.addEventListener('load', function () {
         window.mobileNav.start();
     });
 </script>
 
+  </body>
 </html>

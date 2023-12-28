@@ -7,6 +7,9 @@
 
   &__link {
     margin-top: 20px;
+    @include media_from('lg') {
+      margin-top: 40px;
+    }
   }
 
   &__link-wrapper {

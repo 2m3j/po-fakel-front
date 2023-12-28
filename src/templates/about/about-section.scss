@@ -1,112 +1,46 @@
-.media {
-  margin-bottom: 112px;
-}
-.section {
-  margin-top: 100px;
-  color: #202020;
-  --font-size-md: 20px;
+.about-details {
+  @include block-padding-bottom;
 
-  &__text {
-    font-size: 20px;
-    line-height: 150%;
-    color: #202020;
-
-    &_type_unfold {
-      height: fit-content;
+  #about-details__more {
+    display: none;
+    @include media_from('sm') {
+      display: inline;
     }
   }
-  &__span {
-    color: #da8a3a;
-  }
 
-  &__title-btn {
+  #about-details__more-btn {
+    display: inline;
+    color: $theme-color;
+    background-color: inherit;
+    @include media_from('sm') {
+      display: none;
+    }
+  }
+}
+
+.about-gallery {
+  @include block-padding-bottom;
+  &__wrapper {
     display: flex;
-    justify-content: space-between;
-    align-self: center;
+    flex-wrap: wrap;
+    gap: 10px;
   }
 
-  &__title {
-    font-weight: 600;
-    font-size: 45px;
-    line-height: 60px;
-    margin-bottom: 50px;
-  }
-  &__button {
-    background: none;
-  }
-  &__btn {
-    width: 349px;
-    height: 56px;
-    background: #da8a3a;
-    border-radius: 10px;
-    font-weight: 600;
-    /*   font-size: 20px; */
-    line-height: 27px;
-    color: #ffffff;
-    /*     @media (min-width: 768px) {
-      width: 103px;
-      /*  font-size: 20px; 
-    } */
-    width: 100%;
-    @media (max-width: 768px) {
-      /*  height: 60px; */
-      /*  font-size: 20px; */
+  &__item {
+    flex: 1 1 250px;
+    @include media_from('lg') {
+      flex: 1 1 350px;
+    }
+    @include media_from('xl') {
+      flex: 1 1 250px;
+    }
+    img {
+      width: 100%;
+      object-fit: cover;
+      height: 100%;
+      max-height: 250px;
+      border-radius: 5px;
+      cursor: pointer;
     }
   }
-  &__input {
-    height: 56px;
-    border-radius: 5px;
-    font-size: var(--font-size-md);
-    &_type_date {
-      font-size: var(--font-size-md);
-      box-sizing: border-box;
-    }
-  }
-  &__icon {
-    position: absolute;
-    top: 10px;
-    right: 215px;
-  }
-  &_type_gallery {
-    max-width: 1160px;
-  }
-}
-
-@media (min-width: 1200px) {
-  .section {
-    margin-left: 165px;
-    margin-right: 165px;
-    --font-size-md: 18px;
-  }
-}
-@media (max-width: 800px) {
-  .section__text {
-    font-size: 18px;
-  }
-  .section__title {
-    margin-bottom: 38px;
-  }
-}
-@media (max-width: 576px) {
-  .section__text {
-    font-size: 15px;
-    height: 119px;
-    overflow: hidden;
-    &_type_unfold {
-      text-align: center;
-    }
-  }
-  .section__title {
-    margin-bottom: 30px;
-  }
-
-  .section__text_type_unfold {
-    height: fit-content;
-  }
-}
-
-input {
-  border: 1px solid #9f9f9f;
-  border-radius: 5px;
-  --mdc-typography-font-size: var(--font-size-md);
 }

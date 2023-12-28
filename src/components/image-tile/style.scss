@@ -34,7 +34,7 @@
 
     &:hover {
       color: $image-tile-btn-font-color;
-      transition: 0.1s all;
+      transition: 0.3s all;
       box-shadow: 0 0 10px $image-tile-btn-shadow-color;
     }
 
@@ -80,20 +80,5 @@
     @include media_from('md') {
       display: none;
     }
-  }
-}
-
-.image-tile__wrapper_type_page-aboutus {
-  width: 100%;
-  height: 100%;
-}
-
-.image-tile_type_page-aboutus {
-  max-height: 279px;
-  @media (min-width: 768px) {
-    max-height: 315px;
-  }
-  @media (min-width: 1200px) {
-    max-height: 500px;
   }
 }

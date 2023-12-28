@@ -2,9 +2,11 @@
   a {
     text-decoration: none;
   }
+
   &__link {
     text-decoration: none;
   }
+
   &_type_media {
     padding: 20px;
   }
@@ -12,7 +14,9 @@
   &__image {
     margin-bottom: 10px;
     width: 100%;
-    /* margin-top: 20px; */
+    border-radius: 5px;
+    object-fit: cover;
+    height: 250px;
   }
 
   &__date {
@@ -37,7 +41,7 @@
     line-height: 150%;
 
     &_type_media {
-      -webkit-line-clamp: 3; /* Число отображаемых строк */
+      -webkit-line-clamp: 3;
       display: -webkit-box;
       -webkit-box-orient: vertical;
       line-height: 27px;
@@ -60,11 +64,10 @@
     }
 
     &_type_media {
-      -webkit-line-clamp: 4; /* Число отображаемых строк */
+      -webkit-line-clamp: 4;
       display: -webkit-box;
       -webkit-box-orient: vertical;
       text-overflow: ellipsis;
-      height: 96px;
       margin-bottom: 20px;
       overflow: hidden;
       @media (max-width: 560px) {

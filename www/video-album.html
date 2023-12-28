@@ -19,7 +19,19 @@
         <div class="header-branding__wrapper">
             <a href="/"><img src="images/logo.svg" alt="logo" class="header-branding__logo"/></a>
             <ul class="top-nav d-none d-lg-flex">
-                <li class="top-nav__item"><a href="about.html">О нас</a></li>
+                <li class="top-nav__item">
+                    <a href="about.html">
+                        О нас
+                        <svg>
+                            <use href="images/svg/symbol/svg/sprite.symbol.svg#arrow-down_corner"></use>
+                        </svg>
+                    </a>
+                    <ul class="top-nav-sub">
+                        <li class="top-nav-sub__item">
+                            <a href="mass-media.html">СМИ</a>
+                        </li>
+                    </ul>
+                </li>
                 <li class="top-nav__item"><a href="names.html">Имена</a></li>
                 <li class="top-nav__item">
                     <a href="gallery.html">
@@ -40,7 +52,7 @@
                         </li>
                     </ul>
                 </li>
-                <li class="top-nav__item"><a href="news.html">Новости</a></li>
+                <li class="top-nav__item"><a href="news-group.html">Новости</a></li>
                 <li class="top-nav__item"><a href="contacts.html">Контакты</a></li>
             </ul>
             <form class="top-search d-none d-lg-flex" name="search" method="get" action="/search.html">
@@ -105,32 +117,30 @@
 </div>
     </header>
     <main>
-      <div class="video-album">
-        <div class="video-album-container">
-          <section class="bread-crumb-block">
-            <ul class="bread-crumb">
-              <li><a href="#">Главная</a></li>
-              <svg fill="none" width="20" height="20" viewBox="0 0 24 24">
-                <use href="images/svg/symbol/svg/sprite.symbol.svg#arrow-bread-crumbs"></use>
-              </svg>
-              <li><a href="#">Галерея</a></li>
-              <svg fill="none" width="20" height="20" viewBox="0 0 24 24">
-                <use href="images/svg/symbol/svg/sprite.symbol.svg#arrow-bread-crumbs"></use>
-              </svg>
-              <li class="active-crumb">Видео</li>
-            </ul>
-          </section>
-          <section class="video-album__main">
-            <h2 class="video-album__main__title">Видео</h2>
+      <section class="bread-crumb-block container">
+        <ul class="bread-crumb">
+          <li><a href="/">Главная</a></li>
+          <svg fill="none" width="20" height="20" viewBox="0 0 24 24">
+            <use href="images/svg/symbol/svg/sprite.symbol.svg#arrow-bread-crumbs"></use>
+          </svg>
+          <li><a href="/gallery.html">Галерея</a></li>
+          <svg fill="none" width="20" height="20" viewBox="0 0 24 24">
+            <use href="images/svg/symbol/svg/sprite.symbol.svg#arrow-bread-crumbs"></use>
+          </svg>
+          <li class="active-crumb">Видео</li>
+        </ul>
+      </section>
+      <section class="video-album">
+        <div class="container">
+          <div class="video-album__main">
+            <h1>Видео</h1>
             <div class="fancybox-grid">
-              <button class="fancybox-grid__item" data-fancybox="gallery" data-src="#popup_1">
+              <a class="fancybox-grid__item" data-fancybox="gallery" href="/ajax-video.html" data-type="ajax">
                 <div class="fancybox-grid__item__gradient"></div>
                 <img src="images/video-album/Экспедиция  2020 Часть 1 Блиндаж.jpg" alt="Фото" />
-                <span class="fancybox-grid__item__name"
-                  >Экспедиция  2020<br />
-                  Часть 1 Блиндаж</span
-                >
-              </button>
+                <span class="fancybox-grid__item__name">Экспедиция 2020<br />
+                  Часть 1 Блиндаж</span>
+              </a>
               <div id="popup_1" style="display: none" class="fancybox__content">
                 <div class="popup__body">
                   <div class="popup__content">
@@ -428,9 +438,9 @@
                 </button>
               </div>
             </div>
-          </section>
+          </div>
         </div>
-      </div>
+      </section>
     </main>
     <footer><footer class="footer">
     <div class="container">
@@ -514,6 +524,13 @@
                 <use href="images/svg/symbol/svg/sprite.symbol.svg#copyright"></use>
             </svg>
             Поисковый отряд Факел 2000-2023
+            <br>
+            <a class="footer__developers" href="#">
+                Сделано с
+                <svg class="svg-icon">
+                    <use href="images/svg/symbol/svg/sprite.symbol.svg#heart"></use>
+                </svg>
+            </a>
         </div>
     </div>
 </footer></footer>
@@ -523,11 +540,11 @@
         Thumbs: false,
       });
     </script>
-  </body>
-  <script type="text/javascript">
+    <script type="text/javascript">
     window.addEventListener('load', function () {
         window.mobileNav.start();
     });
 </script>
 
+  </body>
 </html>

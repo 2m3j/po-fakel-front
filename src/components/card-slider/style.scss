@@ -1,5 +1,5 @@
 .card-slider {
-  padding-bottom: 50px;
+  position: relative;
 
   &__item-card {
     position: relative;
@@ -8,11 +8,6 @@
     background-size: cover;
     width: 225px;
     height: 300px;
-
-    &_page_aboutus {
-      width: 279px;
-      height: 394px;
-    }
   }
 
   &__title {
@@ -30,8 +25,12 @@
   &__navigation {
     position: absolute;
     text-align: right;
-    top: 0;
+    top: -60px;
     right: 0;
+    display: none;
+    @include media_from('lg') {
+      display: block;
+    }
   }
 
   &__navigation-left {
@@ -40,7 +39,17 @@
 
   &__navigation-left,
   &__navigation-right {
-    cursor: pointer;
+    width: 48px;
+    height: 48px;
+    border: 2px solid $theme-color;
+    border-radius: 10px;
+    transition: filter .5s ease 0s;
+    outline: none;
+
+    &:hover, &:focus-visible {
+      transition: 0.3s all;
+      box-shadow: 0 0 10px $theme-color;
+    }
   }
 
   &__item {
@@ -49,12 +58,13 @@
   }
 
   &__pagination {
-    width: 110px !important;
-    position: relative;
-    padding: 8px 18px;
- /*    background: rgba(79, 79, 79, 0.7); */
-    border-radius: 5px;
-    margin: 15px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 25px 0 10px;
+    @include media_from('lg') {
+      display: none;
+    }
   }
 }
 

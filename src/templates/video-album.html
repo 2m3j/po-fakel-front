@@ -17,32 +17,30 @@
       <%= require('raw-loader!./layout/header/branding.html').default %>
     </header>
     <main>
-      <div class="video-album">
-        <div class="video-album-container">
-          <section class="bread-crumb-block">
-            <ul class="bread-crumb">
-              <li><a href="#">Главная</a></li>
-              <svg fill="none" width="20" height="20" viewBox="0 0 24 24">
-                <use href="images/svg/symbol/svg/sprite.symbol.svg#arrow-bread-crumbs"></use>
-              </svg>
-              <li><a href="#">Галерея</a></li>
-              <svg fill="none" width="20" height="20" viewBox="0 0 24 24">
-                <use href="images/svg/symbol/svg/sprite.symbol.svg#arrow-bread-crumbs"></use>
-              </svg>
-              <li class="active-crumb">Видео</li>
-            </ul>
-          </section>
-          <section class="video-album__main">
-            <h2 class="video-album__main__title">Видео</h2>
+      <section class="bread-crumb-block container">
+        <ul class="bread-crumb">
+          <li><a href="/">Главная</a></li>
+          <svg fill="none" width="20" height="20" viewBox="0 0 24 24">
+            <use href="images/svg/symbol/svg/sprite.symbol.svg#arrow-bread-crumbs"></use>
+          </svg>
+          <li><a href="/gallery.html">Галерея</a></li>
+          <svg fill="none" width="20" height="20" viewBox="0 0 24 24">
+            <use href="images/svg/symbol/svg/sprite.symbol.svg#arrow-bread-crumbs"></use>
+          </svg>
+          <li class="active-crumb">Видео</li>
+        </ul>
+      </section>
+      <section class="video-album">
+        <div class="container">
+          <div class="video-album__main">
+            <h1>Видео</h1>
             <div class="fancybox-grid">
-              <button class="fancybox-grid__item" data-fancybox="gallery" data-src="#popup_1">
+              <a class="fancybox-grid__item" data-fancybox="gallery" href="/ajax-video.html" data-type="ajax">
                 <div class="fancybox-grid__item__gradient"></div>
                 <img src="images/video-album/Экспедиция  2020 Часть 1 Блиндаж.jpg" alt="Фото" />
-                <span class="fancybox-grid__item__name"
-                  >Экспедиция  2020<br />
-                  Часть 1 Блиндаж</span
-                >
-              </button>
+                <span class="fancybox-grid__item__name">Экспедиция 2020<br />
+                  Часть 1 Блиндаж</span>
+              </a>
               <div id="popup_1" style="display: none" class="fancybox__content">
                 <div class="popup__body">
                   <div class="popup__content">
@@ -340,9 +338,9 @@
                 </button>
               </div>
             </div>
-          </section>
+          </div>
         </div>
-      </div>
+      </section>
     </main>
     <footer><%= require('raw-loader!./layout/footer.html').default %></footer>
     <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
@@ -351,6 +349,6 @@
         Thumbs: false,
       });
     </script>
+    <%= require('raw-loader!./layout/bottom-scripts.html').default %>
   </body>
-  <%= require('raw-loader!./layout/bottom-scripts.html').default %>
 </html>

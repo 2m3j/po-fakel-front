@@ -2,19 +2,16 @@
     display: grid;
     grid-template-columns: repeat(1, 1fr);
     grid-row-gap: 10px;
-    margin: 0;
-    padding: 0;
-    list-style: none;
 
     @include media_from('sm') {
         grid-template-columns: repeat(2, 1fr);
         grid-column-gap: 20px;
         grid-row-gap: 20px;
     }
-      @include media_from('lg') {
+    @include media_from('lg') {
         grid-template-columns: repeat(3, 1fr);
-        grid-column-gap: 30px;
-        grid-row-gap: 30px;
+        grid-column-gap: 20px;
+        grid-row-gap: 20px;
     }
 }
 

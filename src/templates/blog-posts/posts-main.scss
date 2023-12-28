@@ -1,0 +1,58 @@
+.posts-article {
+  @include block-padding-bottom;
+  font-size: 18px;
+  @include media_from('md') {
+    font-size: 20px;
+  }
+
+  &__metadata {
+    padding-bottom: 15px;
+    @include media_from('md') {
+      padding-bottom: 25px;
+    }
+    @include media_from('xl') {
+      padding-bottom: 30px;
+    }
+    font-weight: 400;
+    color: #626d7a;
+
+    svg {
+      fill: #626d7a;
+    }
+
+    span {
+      white-space: nowrap;
+
+      &:not(:last-child) {
+        margin-right: 0.5rem;
+      }
+    }
+  }
+
+  &__content {
+    @include media_from('md') {
+      max-width: 80%;
+    }
+    line-height: 1.6;
+  }
+
+  .article-image {
+    text-align: center;
+
+    figcaption {
+      font-size: 14px;
+      @include media_from('md') {
+        font-size: 16px;
+      }
+      color: #626d7a;
+      line-height: 18px;
+      margin-top: 12px;
+      margin-bottom: 1rem;
+    }
+
+    img {
+      max-width: 100%;
+      cursor: pointer;
+    }
+  }
+}

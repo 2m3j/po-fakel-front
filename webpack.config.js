@@ -130,7 +130,11 @@ module.exports = {
             template: path.src.templates + "search.html",
             inject: true
         }),
-        new webpack.ContextReplacementPlugin(/moment[/\\]locale$/, /ru/),
+        new HtmlWebpackPlugin({
+            filename: path.production.base + 'mass-media.html',
+            template: path.src.templates + "mass-media.html",
+            inject: true
+        })
     ],
     devServer: {
         static: path.production.base,
