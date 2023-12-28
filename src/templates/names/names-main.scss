@@ -99,9 +99,11 @@
     z-index: 10;
     color: #fff;
     text-decoration: none;
+
     &:hover {
       color: $theme-color
     }
+
     line-height: 100%;
   }
 
@@ -228,68 +230,8 @@
     font-weight: 700;
     font-size: 14px;
   }
+
   &__year, &__text {
     font-size: 12px;
-  }
-}
-
-.pagging {
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
-  display: none;
-  @include media_from('sm') {
-    display: flex;
-  }
-
-  &__btn {
-    width: 40px;
-    height: 40px;
-    background-color: #fff;
-    outline: none;
-
-    svg path {
-      transition: all .5s ease 0s;
-    }
-
-    &:hover {
-      svg path {
-        stroke: $theme-color;
-      }
-    }
-
-    &:focus-visible {
-      svg path {
-        stroke: $theme-color;
-      }
-    }
-  }
-
-  &__digit {
-    width: 40px;
-    height: 40px;
-    border: 2px solid $theme-color;
-    border-radius: 10px;
-    font-weight: 600;
-    font-size: 20px;
-    line-height: 27px;
-    color: #202020;
-    background-color: #fff;
-    outline: none;
-    transition: all 0.5s ease 0s;
-
-    &._active {
-      color: #fff;
-      background-color: $theme-color;
-    }
-
-    &:hover, &:focus-visible {
-      transition: 0.3s all;
-      box-shadow: 0 0 10px $theme-color;
-    }
-
-    &:not(:last-child) {
-      margin-right: 8px;
-    }
   }
 }
